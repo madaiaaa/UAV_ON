@@ -90,7 +90,7 @@ def generate_caption(image_file, temperature=0.7):
     }    
 
     headers = {
-        "Authorization": "sk-1992.Dwzh6PR3RKgeoF1XWaKzLU15t1z2DteOtDPeLpvguxvUOwAE",  # 替换为你的 qwen-api
+        "Authorization": "xxx",  # 替换为你的 qwen-api
         "Content-Type": "application/json",
     }
     try:
