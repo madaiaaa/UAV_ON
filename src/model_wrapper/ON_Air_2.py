@@ -23,7 +23,7 @@ class ONAir(BaseModelWrapper):
         super().__init__()
         self.fixed = fixed
         self.gpt_client = AsyncClient(
-            api_key="sk-e34c1ee3e3194f058ce12704b037eb01",
+            api_key="xxx",
             base_url="https://api.deepseek.com"
         )
         self.start_position = [[] for _ in range(batch_size)]
