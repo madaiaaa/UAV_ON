@@ -18,19 +18,19 @@ AIRSIM_SETTINGS_TEMPLATE = {
   "SeeDocsAt": "https://microsoft.github.io/AirSim/settings/",
   "SettingsVersion": 1.2,
   "SimMode": "Multirotor",
-  "ClockSpeed": 10,
-  "ControlFrequencyHz": 100,
+  "ClockSpeed": 1, # 仿真加速
+  "ControlFrequencyHz": 100, # 控制频率
   "PhysicsFrequencyHz": 100,
   "Vehicles": {
     "Drone_1": {
       "VehicleType": "SimpleFlight",
-      "X": 0,
+      "X": 0, # 初始位置
       "Y": 0,
       "Z": 0,
       "Roll": 0,
       "Pitch": 0,
       "Yaw": 0,
-      "Cameras": {
+      "Cameras": { # 4个摄像头，分别对应前、左、右、下
         "0": {
           "X": 1,
           "Y": 0,
@@ -137,7 +137,7 @@ AIRSIM_SETTINGS_TEMPLATE = {
         },
       },
       "Sensors": {
-          "Imu": {
+          "Imu": { # IMU传感器
                 "SensorType": 2,
                 "Enabled" : True,
                 "AngularRandomWalk": 0.3,
@@ -154,8 +154,8 @@ AIRSIM_SETTINGS_TEMPLATE = {
 
 env_exec_path_dict = {
     "Barnyard_test": {###
-        'bash_name': 'Barnyard_test1',
-        'exec_path': 'Barnyard',
+        'bash_name': 'Barnyard_test1', # 启动脚本名称 (.sh)
+        'exec_path': 'Barnyard', # 场景文件夹名称
     },
     "BrushifyRoad_test": {###
         'bash_name': 'BrushifyRoad_test1',
@@ -215,7 +215,7 @@ def create_drones(drone_num_per_env=1, show_scene=False, uav_mode=True) -> dict:
     airsim_settings = copy.deepcopy(AIRSIM_SETTINGS_TEMPLATE)
     return airsim_settings
 
-
+# 检查 PID 是否存在
 def pid_exists(pid) -> bool:
     """
     Check whether pid exists in the current process table.
@@ -350,6 +350,7 @@ def KillAirVLN() -> None:
 class EventHandler(object):
     def __init__(self):
         scene_ports = []
+        # 预分配1000个端口
         for i in range(1000):
             scene_ports.append(
                 #int(args.port) + (i+1)
@@ -357,20 +358,22 @@ class EventHandler(object):
             )
         self.scene_ports = scene_ports
         
+        # 循环复用GPU列表
         scene_gpus = []
         while len(scene_gpus) < 100:
             scene_gpus += GPU_IDS.copy()
         self.scene_gpus = scene_gpus
 
-        self.scene_used_ports = []
+        self.scene_used_ports = [] # 已使用端口列表
         
-        self.port_to_scene = {}
+        self.port_to_scene = {} # 端口对应场景字典
 
     def ping(self) -> bool:
         return True
 
 
     def _open_scenes(self, ip: str , scen_id_gpu_list: list):
+        
         print(
             "{}\t关闭场景中".format(
                 str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())),
@@ -385,19 +388,23 @@ class EventHandler(object):
         )
 
         # Occupied airsim port 1
+        # 为每个场景分配空闲port
         ports = []
         index = 0
         while len(ports) < len(scen_id_gpu_list):
             pid = FromPortGetPid(self.scene_ports[index])
-            if pid is None or not isinstance(pid, int):
+            if pid is None or not isinstance(pid, int): # port空闲
                 ports.append(self.scene_ports[index])
                 print("scene_ports", self.scene_ports[index])
             index += 1
         KillPorts(ports) 
+
         # Occupied GPU 2
-        gpus = [scen_id_gpu_list[index][-1] for index in range(len(scen_id_gpu_list))]
+        # 
+        gpus = [scen_id_gpu_list[index][-1] for index in range(len(scen_id_gpu_list))] # scen_id_gpu_list 形如 [(scene_id, gpu_id), ...]
 
         # search scene path 3
+        # 查找每个场景的可执行路径（支持前缀匹配）
         choose_env_exe_paths = []
         
         for scen_id, gpu_id in scen_id_gpu_list:
@@ -423,7 +430,6 @@ class EventHandler(object):
                 if not prefix_flag:
                     print(f'can not find scene file: {scen_id}')
                     raise KeyError
-                env_info = env_exec_path_dict.get(scen_id)
                 
         p_s = []
         for index, (scen_id, gpu_id) in enumerate(scen_id_gpu_list):
@@ -441,20 +447,28 @@ class EventHandler(object):
                 p_s.append(None)
                 continue
             else:
-                subprocess_execute = "bash {}  -RenderOffscreen -NoSound -NoVSync -GraphicsAdapter={} --settings={}".format(
+                
+                # 删除offscreen参数，保持与训练环境一致
+                subprocess_execute = "bash {} -RenderOffscreen -NoSound -NoVSync -GraphicsAdapter={} --settings={}".format(
                     choose_env_exe_paths[index],
                     gpu_id,
                     str(CWD_DIR / 'settings' / str(ports[index]) / 'settings.json'),
                 )
-                time.sleep(3)
+                time.sleep(3) # 启动执行场景，串行启动，每个场景间隔3秒
                 print(subprocess_execute)
 
                 try:
+                    # 这里加上bash错误处理
                     p = subprocess.Popen(
                         subprocess_execute,
-                        stdin=None, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT,
+                        stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                         shell=True,
                     )
+                    time.sleep(1)
+                    if p.poll() is not None:
+                        out, err = p.communicate()
+                        raise RuntimeError(f"Failed to start scene {scen_id} on GPU {gpu_id}. Error: {err.decode('utf-8')}")
+
                     p_s.append(p)
                 except Exception as e:
                     print(
@@ -474,7 +488,9 @@ class EventHandler(object):
         return True, (ip, ports)
     
     def reopen_scene_from_port(self, port):
-
+        """
+        单场景热重启
+        """
         KillPorts([port])
         
         scene_id, gpu_id = self.port_to_scene[port]
@@ -503,14 +519,9 @@ class EventHandler(object):
             )
         )
         try:  
-            ip = ip
-            for item in scen_id_gpu_list:
-                try:
-                    item[0] = item[0]
-                except:
-                    pass
-                if isinstance(ip, bytes):
-                    ip = ip.decode('utf-8')
+            if isinstance(ip, bytes):
+                ip = ip.decode('utf-8')
+                
             result = self._open_scenes(ip, scen_id_gpu_list)
         except Exception as e:
             print(e)
@@ -554,20 +565,21 @@ class EventHandler(object):
 def serve_background(server, daemon=False):
     def _start_server(server):
         server.start()
-        server.close()
 
-    t = threading.Thread(target=_start_server, args=(server,))
-    t.setDaemon(daemon)
+    t = threading.Thread(target=_start_server, args=(server,), daemon=daemon)
     t.start()
     return t
 
 
 def serve(daemon=False):
     try:
+        # 创建RPC服务器实例，绑定EventHandler作为请求处理器
         server = msgpackrpc.Server(EventHandler())
+        # 定义服务器监听地址
         addr = msgpackrpc.Address(HOST, PORT)
+        # 绑定地址
         server.listen(addr)
-
+        # 在后台线程中启动服务器
         thread = serve_background(server, daemon)
 
         return addr, server, thread
@@ -593,7 +605,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "--root_path",
         type=str,
-        default="/home/syx/Desktop/UAV/UAV_ON/ENVS",
+        default="/home/madai/桌面/UAV/TEST_ENVS",
         help='root dir for env path'
     ) 
     args = parser.parse_args()

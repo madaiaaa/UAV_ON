@@ -7,6 +7,8 @@ import time
 from openai import AsyncOpenAI
 from dashscope import MultiModalConversation
 import asyncio
+import requests
+import re
 
 
 def encode_image(image_files):
@@ -56,29 +58,56 @@ def generate_caption(image_file, temperature=0.7):
     """
     
     
-    captions = []
-    user_content = []
-    for img_b64 in image_file:
-            user_content.append({'image': 'data:image/png;base64,' + img_b64})
-    messages = [{"role": "system",
-                "content": [system_prompt]},
-                {'role':'user','content': user_content}]
-    
-    try:
-        response = MultiModalConversation.call(
-            api_key="your_api_key_here",  # 替换为你的 qwen-api
-            model='qwen-vl-max',
-            messages=messages
-        )
+    url = "https://wcode.net/api/gpt/v1/chat/completions"
 
-        # 检查响应是否为空或结构异常
-        if not response or "output" not in response:
-            raise RuntimeError("DashScope API response is None or missing 'output'")
+    captions = []
+
+    messages = [{
+                    "role": "system",
+                    "content": [
+                        {"type": "text", 
+                        "text": system_prompt
+                        }
+                    ]
+                },
+                {
+                    'role':'user',
+                    'content': [
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/png;base64,{img_b64}"
+                            }
+                        }
+                        for img_b64 in image_file
+                    ]
+                }
+    ]
+
+    payload = {
+        "model": "qwen-vl-plus",
+        "messages": messages,
+    }    
+
+    headers = {
+        "Authorization": "sk-1992.Dwzh6PR3RKgeoF1XWaKzLU15t1z2DteOtDPeLpvguxvUOwAE",  # 替换为你的 qwen-api
+        "Content-Type": "application/json",
+    }
+    try:
+
+        response = requests.post(url, json=payload, headers=headers).json()
+
+        # 检查响应是否为空
+        if not response:
+            raise RuntimeError("DashScope API response is None'")
 
         # 尝试提取文本内容
-        raw = response["output"]["choices"][0]["message"].content[0]["text"].strip()
+        raw = response["choices"][0]["message"]["content"].strip()
 
         # 解析 JSON 格式
+        raw = re.search(r"```json(.*?)```", raw, re.S)
+        if raw:
+            raw = raw.group(1).strip()
         captions = json.loads(raw)
 
         if len(captions) != len(image_file):

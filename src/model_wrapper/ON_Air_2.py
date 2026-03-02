@@ -6,7 +6,7 @@ from openai import AsyncClient
 from io import BytesIO
 from src.common.param import args
 from common.prompts import fixed_system_prompt, fixed_user_prompt_template, unfixed_system_prompt, unfixed_user_prompt_template
-
+from utils.logger import logger
 import numpy as np
 import asyncio
 import math
@@ -22,7 +22,10 @@ class ONAir(BaseModelWrapper):
     def __init__(self, fixed, batch_size):
         super().__init__()
         self.fixed = fixed
-        self.gpt_client = AsyncClient()
+        self.gpt_client = AsyncClient(
+            api_key="sk-e34c1ee3e3194f058ce12704b037eb01",
+            base_url="https://api.deepseek.com"
+        )
         self.start_position = [[] for _ in range(batch_size)]
         self.start_yaw = [0 for _ in range(batch_size)]
         self.current_poses = [[] for _ in range(batch_size)]
@@ -163,10 +166,28 @@ class ONAir(BaseModelWrapper):
         return inputs, user_prompts
     
     async def unfixed_single_call(self, conversation):
-        resp = await self.gpt_client.chat.completions.create(
-            model='gpt-4.1-mini',
-            messages=conversation
-        )
+        max_retries = 3
+        resp = None
+
+        for i in range(max_retries):
+            try:
+                resp = await self.gpt_client.chat.completions.create(
+                    model='deepseek-chat',
+                    messages=conversation
+                )
+
+                if resp is None:
+                    raise ValueError("API response is None.")
+                
+                break
+            except Exception as e:
+                logger.error(f"Request failed (attempt {i+1}/{max_retries}): {str(e)}")
+                if i < max_retries - 1:
+                    await asyncio.sleep(1)
+                else:
+                    logger.error("Max retries reached. Returning failure.")
+                    return None, None, False
+                
         text = resp.choices[0].message.content.strip()
         text = text.strip("[]`\"'")
         parts = [p.strip().strip("[]`\"'") for p in text.split(",")]
@@ -177,11 +198,28 @@ class ONAir(BaseModelWrapper):
         return action, value, done 
     
     async def fixed_single_call(self, conversation):
-        
-        resp = await self.gpt_client.chat.completions.create(
-            model='gpt-4.1-mini',
-            messages=conversation
-        )
+        max_retries = 3
+        resp = None
+
+        for i in range(max_retries):
+            try:
+                resp = await self.gpt_client.chat.completions.create(
+                    model='deepseek-chat',
+                    messages=conversation
+                )
+
+                if resp is None:
+                    raise ValueError("API response is None.")
+                
+                break
+            except Exception as e:
+                logger.error(f"Request failed (attempt {i+1}/{max_retries}): {str(e)}")
+                if i < max_retries - 1:
+                    await asyncio.sleep(1)
+                else:
+                    logger.error("Max retries reached. Returning failure.")
+                    return None, None, False
+
         action = resp.choices[0].message.content.strip().strip('\'"')
         # 解析 value
         

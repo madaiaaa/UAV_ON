@@ -5,7 +5,7 @@ import numpy as np
 import copy
 
 from src.common.param import args
-from airsim_plugin.airsim_settings import AirsimActions, AirsimActionSettings
+from airsim_plugin.airsim_settings import AirsimActionSettings
 from utils.logger import logger
 
 
@@ -188,4 +188,5 @@ def getNextPosition(current_pose: airsim.Pose, action, step_size, is_fixed):
         airsim.Vector3r(new_position[0], new_position[1], new_position[2]),
         airsim.Quaternionr(x_val=new_orientation.x_val, y_val=new_orientation.y_val, z_val=new_orientation.z_val, w_val=new_orientation.w_val)
     )
+    print(f'to varify new pose : , {new_position[0]}, {new_position[1]}, {new_position[2]}, {new_orientation.x_val}, {new_orientation.y_val}, {new_orientation.z_val}, {new_orientation.w_val}')
     return (new_pose, fly_type)

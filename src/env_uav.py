@@ -15,7 +15,7 @@ from typing import Dict, List, Optional
 import tqdm
 from src.common.param import args
 from utils.logger import logger
-from airsim_plugin.airsim_settings import AirsimActions
+from airsim_plugin.airsim_settings import AirsimActionSettings
 sys.path.append(str(Path(str(os.getcwd())).resolve()))
 from airsim_plugin.AirVLNSimulatorClientTool import AirVLNSimulatorClientTool
 from utils.env_utils_uav import SimState, getNextPosition
@@ -110,15 +110,15 @@ class AirVLNENV:
             return
 
         while True:
-            if self.index_data >= len(self.data):
-                self.epoch_done = True
-                random.shuffle(self.data)
+            if self.index_data >= len(self.data): # 触发越界
+                self.epoch_done = True            # 标记本轮结束
+                random.shuffle(self.data)           
                 logger.warning('random shuffle data and pad to batch size')
-                if self.dataset_group_by_scene:
+                if self.dataset_group_by_scene:   # 按照场景分组
                     self.data = self._group_scenes()
                     logger.warning('dataset grouped by scene')
 
-                if len(batch) == 0:
+                if len(batch) == 0:               # 如果batch为空，说明越界发生在batch的起始位置，此时直接重置index_data并返回None
                     self.index_data = 0
                     self.batch = None
                     return
@@ -354,13 +354,40 @@ class AirVLNENV:
         
         result = self.simulator_tool.move_to_next_pose(poses_list=format_pose, fly_types=format_fly_type)
         
-        if not result:
-            logger.error('move_to_next_pose error')
+        # add a retry mechanism
+        if result is None:
+            retry_count = 0
+            max_retry = 3
+            while retry_count < max_retry:
+                logger.warning(f"move_to_next_pose failed, retry {retry_count+1}/{max_retry}")
+                time.sleep(1)
 
-        cnt=0
-        for index1, item in enumerate(self.machines_info):
-            for index2 ,_ in enumerate(item['open_scenes']):
-                self.sim_states[cnt].is_collisioned = result[index1][index2]['collision']
+                result = self.simulator_tool.move_to_next_pose(poses_list=format_pose, fly_types=format_fly_type)
+                if result is not None:
+                    break
+
+                retry_count += 1
+
+        if result is None:
+            logger.error("AirSim completely unresponsive. Restarting scene.")
+            
+            try:
+                self.simulator_tool.closeScenes() # close scenes
+            except:
+                pass
+                
+            time.sleep(3)
+
+            self.simulator_tool.run_call() # restart scenes
+            
+            for index, action in enumerate(action_list):
+                self.sim_states[index].is_end = True
+                self.sim_states[index].is_collisioned = False
+        else:
+            cnt=0
+            for index1, item in enumerate(self.machines_info):
+                for index2 ,_ in enumerate(item['open_scenes']):
+                        self.sim_states[cnt].is_collisioned = result[index1][index2]['collision']
 
         for index, action in enumerate(action_list):
             if self.sim_states[index].is_end == True:

@@ -243,7 +243,7 @@ class AirVLNSimulatorClientTool:
         diff = after - before
         logger.info(f"启动时间：{diff}")
 
-        assert self._confirmConnection(), 'server connect failed'
+        assert self._confirmConnection(), 'server connect failed' # 初始化无人机
         self._closeSocketConnection()
     
     def closeScenes(self):
@@ -499,3 +499,4 @@ class AirVLNSimulatorClientTool:
             logger.error('getSensorInfo failed.')
             return None
         return results 
+    

@@ -1,0 +1,35 @@
+{
+  "episode_id": "2",
+  "start_pose": {
+    "start_position": [
+      -9.528005566856024,
+      -66.4447527048503,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9570623530667257,
+      -0.28988213525911194
+    ]
+  },
+  "info": {
+    "geodesic_distance": 10,
+    "euclidean_distance": 6.8623
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " TrafficLight",
+  "object_name": "TrafficLight_5",
+  "pose": [
+    [
+      -4.092743873596191,
+      -67.59274291992188,
+      -2.9712743759155273
+    ]
+  ],
+  "size": " small(1*1=1 squares)",
+  "description": " Geometric vertical structure, dark green metallic texture with signal lights, three stacked circular lenses in standard red-yellow-green arrangement, used for controlling vehicle and pedestrian traffic.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}
