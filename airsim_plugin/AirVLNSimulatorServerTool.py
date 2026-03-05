@@ -18,7 +18,7 @@ AIRSIM_SETTINGS_TEMPLATE = {
   "SeeDocsAt": "https://microsoft.github.io/AirSim/settings/",
   "SettingsVersion": 1.2,
   "SimMode": "Multirotor",
-  "ClockSpeed": 1, # 仿真加速
+  "ClockSpeed": 10, # 仿真加速
   "ControlFrequencyHz": 100, # 控制频率
   "PhysicsFrequencyHz": 100,
   "Vehicles": {

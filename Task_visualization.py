@@ -15,7 +15,7 @@ from scipy.spatial.transform import Rotation as R
 # 统一路径前缀
 # base_path = "./Logs/unfixed_logs/BrushifyUrban/success_BrushifyUrban.json/task_26"
 
-base_path = "./Logs/eval_fixed/BrushifyUrban/BrushifyUrban.json/task_4"
+base_path = "logs/scene/success_Barnyard.json/task_41"
 
 
 
