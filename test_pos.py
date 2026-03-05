@@ -11,7 +11,7 @@ AIRSIM_SETTINGS_TEMPLATE = {
     "SeeDocsAt": "https://microsoft.github.io/AirSim/settings/",
     "SettingsVersion": 1.2,
     "SimMode": "Multirotor",
-    "ClockSpeed": 10, # 仿真加速
+    "ClockSpeed": 1, # 仿真加速
     "Vehicles": {
         "Drone_1": {
             "VehicleType": "SimpleFlight",
@@ -146,16 +146,26 @@ def launch_airsim_with_settings(env_binary_path):
     process = subprocess.Popen(cmd, shell=True, stdout=subprocess.DEVNULL)
     return process, str(CWD_DIR / 'settings'/'settings.json')
 
-def getPose_By_frame(Trajectory_path, FRAME_ID = 28):
-    with open(Trajectory_path, 'r') as f:
+def getPose_By_frame(FRAME_ID = 28):
+    with open(TRAJECTORY_PATH, 'r') as f:
         lines = f.readlines()
         data = json.loads(lines[FRAME_ID])
         pos = data["sensors"]["state"]["position"]
         quat = data["sensors"]["state"]["quaternionr"]
     return pos,quat
 
+def getTarget():
+    with open(SETTING_PATH, 'r', encoding='utf-8') as f:
+        data = json.load(f)
 
-def run_task():
+        target_pose = data.get('pose', [[]])[0]
+
+    return target_pose
+
+
+def run_task(select_bit=1):
+    # select_bit=1 表示加载FRAME_ID
+
     # 加载环境
     proc, tmp_json = launch_airsim_with_settings(ENV_PATH)
     time.sleep(5)
@@ -165,23 +175,30 @@ def run_task():
     try:
         client.confirmConnection()
 
-        # 获取位姿
-        pos, quat = getPose_By_frame(TRAJECTORY_PATH, FRAME_ID)
-
+        if select_bit:
+            # 获取位姿
+            pos, quat = getPose_By_frame(FRAME_ID)
+        else:
+            pos, quat = getTarget(), [0.0,0,0,0,0,0,0]
+        
         print(f'posision: {pos}')
         print(f"quanternionr: {quat}")
 
         client.enableApiControl(True, vehicle_name="Drone_1")
         client.armDisarm(True)
+        client.takeoffAsync()
 
         # 传送并悬空
         target_pose = airsim.Pose(
-            airsim.Vector3r(pos[0], pos[1], pos[2]),
-            airsim.Quaternionr(quat[1], quat[2], quat[3], quat[0])
+            position_val=airsim.Vector3r(x_val=pos[0], y_val=pos[1], z_val=pos[2]),
+            orientation_val=airsim.Quaternionr(x_val=quat[0], y_val=quat[1], z_val=quat[2], w_val=quat[3])
         )
         client.simSetVehiclePose(target_pose, ignore_collision=True)
+        
         vehicles = client.listVehicles()
         client.simSetObjectScale(vehicles[0],airsim.Vector3r(0.5,0.5,0.5))
+
+        
         client.simContinueForFrames(50)
         client.simPause(True)
 
@@ -190,7 +207,10 @@ def run_task():
         for cam_id, name in zip(["0", "1", "2", "3"], ["front", "left", "right", "bottom"]):
             try:
                 resp = client.simGetImages([airsim.ImageRequest(cam_id, airsim.ImageType.Scene, pixels_as_float=False, compress=True)])[0]
-                airsim.write_file(f"output_imgs/frame_{FRAME_ID}_{name}.png", resp.image_data_uint8)
+                if select_bit:
+                    airsim.write_file(f"output_imgs/frame_{FRAME_ID}_{name}.png", resp.image_data_uint8)
+                else:
+                    break
                 print(f"保存成功: {name}")
             except Exception as e:
                 print(f"相机 {cam_id} 获取失败: {e}")
@@ -202,6 +222,7 @@ def run_task():
 if __name__ == '__main__':
     ENV_PATH = "../TEST_ENVS/Barnyard/Barnyard_test1.sh" 
     TRAJECTORY_PATH = "logs/scene/success_Barnyard.json/task_41/log/trajectory.jsonl"
-    FRAME_ID = 147
+    SETTING_PATH = "logs/scene/success_Barnyard.json/task_41/object_description.json"
+    FRAME_ID = 26
     CWD_DIR = Path(str(os.path.abspath(__file__))).parent.resolve()
-    run_task()
+    run_task(1)
