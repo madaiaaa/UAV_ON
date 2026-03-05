@@ -1,0 +1,1120 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plants, tall with green leaves and some yellowing; multiple plants in a field; soil visible beneath  
+                        Left = concrete silo, cylindrical, light gray; several large rocks in the foreground; sunflowers to the right; building in the background  
+                        Right = sunflower plants, tall with green and white leaves; multiple plants in a field; bright sky in the background  
+                        Down = soil, dark brown with small rocks and pebbles; two small green leaves in the upper right corner  
+
+                        # Depth Information  
+                        FrontDepth: [[1, 0, 0], [0, 0, 1], [0, 0, 1]]  
+                        LeftDepth: [[13, 24, 0], [3, 3, 0], [1, 1, 1]]  
+                        RightDepth: [[1, 1, 2], [1, 0, 1], [0, 0, 1]]  
+                        DownDepth: [[1, 0, 0], [1, 1, 0], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower field, tall plants with green leaves and white-yellow petals; barn structure in the left background; clear sky above  
+                        Left = sunflower patch, smaller plants with green leaves and white-yellow petals; large cylindrical silo and round metal barn in the background; rocky ground in the foreground  
+                        Right = sunflower field, tall plants with green leaves and white-yellow petals; dirt path running through the field; trees visible in the distant background  
+                        Down = sunflower plant, single stem with green leaves and a white-yellow flower; close-up view of the flower against a textured ground surface  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [2, 2, 3], [1, 1, 1]]  
+                        LeftDepth: [[13, 24, 24], [7, 5, 4], [4, 4, 2]]  
+                        RightDepth: [[100, 100, 100], [2, 2, 2], [2, 1, 2]]  
+                        DownDepth: [[1, 1, 1], [2, 1, 0], [3, 3, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 2.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower field, dense and expansive; small brick building with a sloped roof on the left; scattered rocks and debris near the building; overcast sky in the background  
+                        Left = concrete silo, tall and cylindrical; wooden barn-like structure to the right of the silo; rocky terrain with sparse vegetation in the foreground; trees and distant structures visible in the background  
+                        Right = sunflower field, vast and uniform; dirt path running along the right edge of the field; trees and faint structures in the hazy distance; bright sun low on the horizon creating a glare  
+                        Down = green leafy plant with variegated leaves; cluster of gray rocks in the bottom left corner; sandy or gravelly ground with tire tracks; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [8, 7, 9], [4, 4, 4]]  
+                        LeftDepth: [[15, 24, 24], [12, 13, 10], [6, 6, 4]]  
+                        RightDepth: [[100, 100, 100], [9, 8, 9], [4, 4, 4]]  
+                        DownDepth: [[3, 2, 2], [3, 2, 2], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 4.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower field, dense and expansive; small rustic building with a chimney on the left; ocean visible in the distant background  
+                        Left = concrete silo, tall and cylindrical with a green dome; metal storage tank with a dark roof; sunflower patch in the foreground right; rocky terrain and trees in the midground  
+                        Right = sunflower field, vast and uniform; dirt path winding through the center; trees and faint structures in the hazy background; bright sun low on the horizon  
+                        Down = sunflower plants, closely packed and viewed from above; tire tracks in the soil; large gray rocks scattered in the lower left corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [15, 14, 15], [7, 6, 7]]  
+                        LeftDepth: [[100, 24, 24], [12, 19, 17], [9, 8, 7]]  
+                        RightDepth: [[100, 100, 100], [15, 14, 16], [7, 6, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 4, 5], [7, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 6.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = small wooden barn, weathered exterior; several sheep grazing; barn is in the left foreground; field of sunflowers in the midground  
+                        Left = large cylindrical silo, light gray; round metal storage tank, dark roof; silo and tank are side by side; rocky terrain with sunflowers in the foreground  
+                        Right = field of sunflowers stretching across the frame; distant trees and hills on the horizon; bright sun visible in the sky  
+                        Down = overhead view of sunflower plants growing in rows; soil and rocks visible between rows; sunflowers are in various stages of bloom  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [15, 14, 16], [7, 6, 7]]  
+                        LeftDepth: [[100, 22, 23], [15, 19, 16], [9, 6, 7]]  
+                        RightDepth: [[100, 100, 100], [15, 14, 15], [7, 6, 6]]  
+                        DownDepth: [[5, 4, 5], [5, 4, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 10.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = small wooden shed, weathered exterior; several large burlap sacks; field of sunflowers in the foreground; trees and hills in the distant background  
+                        Left = two cylindrical storage tanks, one taller than the other; field of sunflowers in the foreground; rocky terrain and ocean view in the background  
+                        Right = field of sunflowers stretching across the frame; bright sun visible in the sky; trees and fog in the distant background  
+                        Down = overhead view of sunflower plants growing in rows; green leaves and light-colored flower heads; soil visible between the plants  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 14, 15], [5, 5, 6]]  
+                        LeftDepth: [[100, 22, 24], [15, 11, 12], [5, 5, 5]]  
+                        RightDepth: [[100, 100, 100], [12, 11, 11], [5, 5, 5]]  
+                        DownDepth: [[4, 4, 4], [4, 3, 4], [4, 3, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 12.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower field, rows of plants; barn with corrugated roof on the left; trees and stacked logs in the background  
+                        Left = sunflower field, rows of plants; large cylindrical silo and round granary on the right; rocky terrain in the foreground  
+                        Right = sunflower field, rows of plants; bright sun visible in the sky; trees in the distant background  
+                        Down = sunflower plants, close-up view; green leaves and white-green flower heads; ground appears dry and textured  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [4, 4, 5], [2, 2, 2]]  
+                        LeftDepth: [[100, 22, 22], [5, 5, 5], [2, 2, 2]]  
+                        RightDepth: [[100, 100, 100], [4, 4, 5], [3, 2, 2]]  
+                        DownDepth: [[2, 1, 2], [1, 1, 1], [1, 1, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 14.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower field, dense and expansive; wooden barn with corrugated roof on the left; scattered logs and barrels near barn; trees in the distant background  
+                        Left = sunflower field, dense and expansive; large cylindrical silo with conical top on the right; smaller round silo nearby; rocky terrain with sparse vegetation in the midground; ocean visible in the far distance  
+                        Right = sunflower field, dense and expansive; sun low in the sky, creating a bright glare; trees and indistinct structures in the far background; overcast sky with diffused light  
+                        Down = sunflower plants, closely packed and viewed from above; green leaves and light-colored flower heads; gravel or dirt ground visible between plants; no other objects present  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 8, 9], [4, 3, 4]]  
+                        LeftDepth: [[100, 22, 24], [13, 8, 8], [4, 4, 4]]  
+                        RightDepth: [[100, 100, 100], [9, 8, 8], [4, 4, 4]]  
+                        DownDepth: [[3, 3, 3], [2, 2, 3], [3, 2, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 16.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower field, dense and expansive; wooden barn with corrugated roof on the left; bales of hay near barn; trees in the distant background  
+                        Left = sunflower field, dense and expansive; two large metal silos (one cylindrical, one dome-topped) on the right; rocky terrain near silos; ocean visible in the far distance  
+                        Right = sunflower field, dense and expansive; sun visible as a bright spot in the sky; trees line the horizon; mist or haze present in the distance  
+                        Down = sunflower plants, close-up view; green leaves and yellow-brown flower heads; ground appears dry and granular; no other objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [5, 4, 5], [2, 2, 2]]  
+                        LeftDepth: [[100, 22, 22], [5, 5, 5], [2, 2, 2]]  
+                        RightDepth: [[100, 100, 100], [4, 4, 5], [3, 2, 2]]  
+                        DownDepth: [[2, 1, 2], [1, 1, 1], [1, 1, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 18.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plants, green leaves and unopened buds; field of sunflowers in the foreground; ground covered with dark soil  
+                        Left = sunflower plants, yellow flowers with brown centers; silo and building in the distant background; field extends into the horizon  
+                        Right = sunflower plants, green leaves and white petals; field of sunflowers under a bright sky; some flowers are fully bloomed  
+                        Down = sunflower plant, large green leaf with visible veins; stem extending upward; ground covered with small rocks and soil  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        LeftDepth: [[0, 0, 1], [0, 0, 1], [1, 0, 0]]  
+                        RightDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [1, 1, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -10.0), 41.38],
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 20.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plants, tall with green leaves and yellow-green blooms; multiple plants in a field; some blooms are fully open, others are still budding  
+                        Left = sunflower plants, tall with green leaves and yellow-brown blooms; several plants in a field; two large silos in the background, one cylindrical and one dome-shaped  
+                        Right = sunflower plants, tall with green leaves and yellow-green blooms; multiple plants in a field; close-up view focusing on leaves and stems in the foreground  
+                        Down = sunflower plant, small with green leaves; single plant visible in the foreground; ground covered in dark soil and small stones  
+
+                        # Depth Information  
+                        FrontDepth: [[1, 1, 1], [1, 0, 0], [1, 0, 0]]  
+                        LeftDepth: [[0, 1, 2], [0, 1, 0], [0, 0, 0]]  
+                        RightDepth: [[0, 0, 0], [0, 0, 0], [1, 0, 0]]  
+                        DownDepth: [[0, 1, 0], [1, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -12.0), 41.38],
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -10.0), 41.38],
+    [(-56.03, 93.71, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 25.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plant, tall green stem, large leaves; sunflowers in the background; field extends into distance  
+                        Left = sunflower plants, multiple stems and leaves; sunflowers with brown centers; silo structure in distant background  
+                        Right = sunflower plants, some flowers drooping; bright sky with sun visible; field of green leaves in foreground  
+                        Down = sunflower plant, close-up view of stem and leaves; soil composed of small rocks and dirt; few leaves visible  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        LeftDepth: [[1, 0, 0], [0, 0, 0], [1, 0, 0]]  
+                        RightDepth: [[1, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 1], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -14.0), 41.38],
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -10.0), 41.38],
+    [(-56.03, 93.71, -10.0), 41.38],
+    [(-52.28, 97.02, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 30.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plant, large green leaf in foreground; multiple sunflowers with yellow petals and brown centers; plants densely packed in field  
+                        Left = sunflower field, tall plants with yellow flowers and green leaves; silo and barn in background; clear sky above  
+                        Right = sunflower plants, some with wilted or damaged leaves; stems and leaves dominate the frame; ground visible below  
+                        Down = green leaves on soil, small detached leaves scattered on dark, textured ground; close-up view of plant parts  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        LeftDepth: [[0, 1, 2], [0, 1, 1], [0, 0, 0]]  
+                        RightDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 1], [0, 1, 0], [0, 0, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-63.53, 87.1, -16.0), 41.38],
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -10.0), 41.38],
+    [(-56.03, 93.71, -10.0), 41.38],
+    [(-52.28, 97.02, -10.0), 41.38],
+    [(-48.53, 100.33, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 35.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plants, tall with green leaves and unopened buds; plants densely populate the field; ground is dark soil with small stones  
+                        Left = sunflower plants, some with fully bloomed flowers showing yellow petals and brown centers; plants are in a field; a stone building is visible in the distant background  
+                        Right = sunflower plants, mostly with unopened buds and green leaves; plants are arranged in rows across the field; sky is bright and overcast  
+                        Down = sunflower plant stems and leaves; leaves are scattered on the dark soil; no flowers are visible; close-up view of the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        LeftDepth: [[0, 0, 1], [0, 0, 1], [0, 0, 0]]  
+                        RightDepth: [[100, 2, 0], [1, 0, 0], [1, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 1], [1, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-59.78, 90.41, -16.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -10.0), 41.38],
+    [(-56.03, 93.71, -10.0), 41.38],
+    [(-52.28, 97.02, -10.0), 41.38],
+    [(-48.53, 100.33, -10.0), 41.38],
+    [(-44.77, 103.63, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 40.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plants, tall with green leaves and some unopened buds; plants densely populate the field; ground is dark soil  
+                        Left = sunflower plants, tall with large yellow flowers and brown centers; plants densely populate the field; a white cylindrical structure is visible in the background  
+                        Right = sunflower plants, tall with green leaves and some wilted or dried flowers; plants densely populate the field; sky is bright and overexposed  
+                        Down = sunflower plant, close-up view of large green leaves with visible veins; leaves are attached to a central stem; soil is dark and granular  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        LeftDepth: [[1, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        RightDepth: [[1, 1, 1], [1, 0, 1], [0, 0, 1]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -10.0), 41.38],
+    [(-56.03, 93.71, -10.0), 41.38],
+    [(-52.28, 97.02, -10.0), 41.38],
+    [(-48.53, 100.33, -10.0), 41.38],
+    [(-44.77, 103.63, -10.0), 41.38],
+    [(-41.02, 106.94, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 45.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plants, tall with green leaves and yellow petals; multiple sunflowers in a field; ground is dark soil  
+                        Left = sunflower plants, some with open flowers, others still buds; silo and barn in the background; field extends into distance  
+                        Right = sunflower plants, close-up view of stems and leaves; sunlight filters through foliage; field stretches into horizon  
+                        Down = sunflower plant, close-up of large green leaf with visible veins; stem and smaller leaves nearby; soil is dark and granular  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 1], [0, 0, 1], [0, 0, 1]]  
+                        LeftDepth: [[2, 0, 0], [1, 0, 0], [0, 0, 0]]  
+                        RightDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -10.0), 41.38],
+    [(-56.03, 93.71, -10.0), 41.38],
+    [(-52.28, 97.02, -10.0), 41.38],
+    [(-48.53, 100.33, -10.0), 41.38],
+    [(-44.77, 103.63, -10.0), 41.38],
+    [(-41.02, 106.94, -10.0), 41.38],
+    [(-37.27, 110.24, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 50.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plant, large green leaf in foreground; multiple sunflower buds and blooms in a field; plants arranged in rows extending into the distance  
+                        Left = sunflower plant, large open bloom with brown center; building with cylindrical structure in background; sunflowers in full bloom across the field  
+                        Right = sunflower plants, unopened buds and some blooms; bright sky with visible sun; plants densely packed in a field  
+                        Down = sunflower plant, close-up of stem and leaves; soil visible beneath; leaves show signs of discoloration or damage  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        LeftDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        RightDepth: [[1, 2, 0], [1, 1, 0], [1, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-59.78, 90.41, -14.0), 41.38],
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -10.0), 41.38],
+    [(-56.03, 93.71, -10.0), 41.38],
+    [(-52.28, 97.02, -10.0), 41.38],
+    [(-48.53, 100.33, -10.0), 41.38],
+    [(-44.77, 103.63, -10.0), 41.38],
+    [(-41.02, 106.94, -10.0), 41.38],
+    [(-37.27, 110.24, -10.0), 41.38],
+    [(-33.52, 113.55, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 55.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plant, green leaves, unopened buds; multiple plants in a field; soil visible beneath  
+                        Left = sunflower plant, yellow petals, brown centers, green leaves; numerous plants in a field; silo and barn in the background  
+                        Right = sunflower plant, green leaves, some with yellowing edges, unopened buds; multiple plants in a field; bright sky above  
+                        Down = sunflower leaf, large, green with yellow veins, slightly curled edges; single leaf on dark soil  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 0], [0, 0, 1], [0, 0, 0]]  
+                        LeftDepth: [[0, 0, 1], [0, 0, 0], [1, 0, 0]]  
+                        RightDepth: [[0, 1, 0], [0, 0, 0], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-59.78, 90.41, -12.0), 41.38],
+    [(-59.78, 90.41, -10.0), 41.38],
+    [(-56.03, 93.71, -10.0), 41.38],
+    [(-52.28, 97.02, -10.0), 41.38],
+    [(-48.53, 100.33, -10.0), 41.38],
+    [(-44.77, 103.63, -10.0), 41.38],
+    [(-41.02, 106.94, -10.0), 41.38],
+    [(-37.27, 110.24, -10.0), 41.38],
+    [(-33.52, 113.55, -10.0), 41.38],
+    [(-29.77, 116.85, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 60.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = sunflower plants, tall with green leaves and yellow blooms; multiple plants in a field; wooden fence in the background  
+                        Left = sunflower plants, tall with green leaves and yellow blooms; multiple plants in a field; buildings visible in the distant background  
+                        Right = sunflower plants, tall with green leaves and yellow blooms; multiple plants in a field; wooden fence in the midground; bright sky above  
+                        Down = sunflower plant leaves, green with some yellowing; close-up view of soil and plant stems; no blooms visible  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 0], [0, 0, 1], [0, 0, 1]]  
+                        LeftDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        RightDepth: [[0, 0, 1], [0, 0, 0], [0, 0, 0]]  
+                        DownDepth: [[1, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-59.78, 90.41, -10.0), 41.38],
+    [(-56.03, 93.71, -10.0), 41.38],
+    [(-52.28, 97.02, -10.0), 41.38],
+    [(-48.53, 100.33, -10.0), 41.38],
+    [(-44.77, 103.63, -10.0), 41.38],
+    [(-41.02, 106.94, -10.0), 41.38],
+    [(-37.27, 110.24, -10.0), 41.38],
+    [(-33.52, 113.55, -10.0), 41.38],
+    [(-29.77, 116.85, -10.0), 41.38],
+    [(-26.02, 120.16, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 65.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Teapot,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-114, -13]  
+                        **Y Range**: [min_y, max_y] = [37, 138]
+
+                        # RGB Captions
+                        Front = wooden fence, weathered, long; fence runs horizontally across the image; ground is rocky and uneven in the foreground  
+                        Left = sunflowers, tall, yellow with brown centers; multiple sunflowers in a cluster; green leaves surrounding the flowers; building partially visible in the background  
+                        Right = wooden fence, weathered, long; fence runs horizontally across the image; bright sunlight creates a lens flare in the upper right; small plants growing near the base of the fence  
+                        Down = ground surface, rocky and textured; close-up view focusing on small rocks and debris; single green leaflet visible in the bottom right corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [2, 2, 2], [1, 1, 1]]  
+                        LeftDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        RightDepth: [[100, 0, 0], [2, 2, 0], [1, 1, 1]]  
+                        DownDepth: [[1, 1, 1], [1, 0, 0], [1, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-56.03, 93.71, -10.0), 41.38],
+    [(-52.28, 97.02, -10.0), 41.38],
+    [(-48.53, 100.33, -10.0), 41.38],
+    [(-44.77, 103.63, -10.0), 41.38],
+    [(-41.02, 106.94, -10.0), 41.38],
+    [(-37.27, 110.24, -10.0), 41.38],
+    [(-33.52, 113.55, -10.0), 41.38],
+    [(-29.77, 116.85, -10.0), 41.38],
+    [(-26.02, 120.16, -10.0), 41.38],
+    [(-22.26, 123.46, -10.0), 41.38],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 70.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Teapot**, described as:  Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,35 @@
+{
+  "episode_id": "68",
+  "start_pose": {
+    "start_position": [
+      -16.323678289861668,
+      174.68443135103954,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7956403566690642,
+      -0.6057692818553317
+    ]
+  },
+  "info": {
+    "geodesic_distance": 69,
+    "euclidean_distance": 46.6074
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Horse",
+  "object_name": "horse_eat_anim_17",
+  "pose": [
+    [
+      20.307254791259766,
+      203.40725708007812,
+      -4.671274185180664
+    ]
+  ],
+  "size": " mid(5.0*1.25=6.25 squares)",
+  "description": " Organic quadruped form, brown and white patchy coat with dark mane and tail, elongated body and head with visible musculature, suitable for riding or farm use.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

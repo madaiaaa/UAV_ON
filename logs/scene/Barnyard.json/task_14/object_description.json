@@ -1,0 +1,35 @@
+{
+  "episode_id": "14",
+  "start_pose": {
+    "start_position": [
+      34.67206464368246,
+      -152.99861582890048,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7173344318441315,
+      0.6967290096521438
+    ]
+  },
+  "info": {
+    "geodesic_distance": 87,
+    "euclidean_distance": 56.7107
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Stool",
+  "object_name": "SM_Building_Int_Stool_25",
+  "pose": [
+    [
+      -13.092743873596191,
+      -179.0927276611328,
+      8.928725242614746
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

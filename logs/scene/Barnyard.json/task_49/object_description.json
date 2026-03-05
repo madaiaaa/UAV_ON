@@ -1,0 +1,35 @@
+{
+  "episode_id": "49",
+  "start_pose": {
+    "start_position": [
+      13.391418747197555,
+      -42.60102426608887,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.11142541243096757,
+      0.9937727997206347
+    ]
+  },
+  "info": {
+    "geodesic_distance": 65,
+    "euclidean_distance": 44.4735
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Cone",
+  "object_name": "S_TrafficCone_Yellow_2",
+  "pose": [
+    [
+      -0.492744117975235,
+      -82.79273986816406,
+      6.028725624084473
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Geometric conical form, bright yellow with a black base, smooth plastic surface with central reflective band, used for traffic or hazard marking.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

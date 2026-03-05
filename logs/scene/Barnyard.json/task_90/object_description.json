@@ -1,0 +1,35 @@
+{
+  "episode_id": "90",
+  "start_pose": {
+    "start_position": [
+      -77.19839844528738,
+      -113.3643118482936,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9112462677031374,
+      0.4118619181195343
+    ]
+  },
+  "info": {
+    "geodesic_distance": 85,
+    "euclidean_distance": 54.9672
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Truck",
+  "object_name": "SM_EuropeanDumpTruck_Loaded_83",
+  "pose": [
+    [
+      -120.49274444580078,
+      -81.59274291992188,
+      4.728725433349609
+    ]
+  ],
+  "size": " big(15.0*3.5=52.5 squares)",
+  "description": " Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold \"steel\" branding on cab and sides, used for heavy-duty material transport.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

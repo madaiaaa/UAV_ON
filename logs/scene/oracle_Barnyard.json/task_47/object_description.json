@@ -1,0 +1,35 @@
+{
+  "episode_id": "47",
+  "start_pose": {
+    "start_position": [
+      -128.97602830696326,
+      -70.71852452193302,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7364851015791238,
+      -0.6764537642381685
+    ]
+  },
+  "info": {
+    "geodesic_distance": 84,
+    "euclidean_distance": 54.2797
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Crates",
+  "object_name": "SM_Supply_Box_Set1_86",
+  "pose": [
+    [
+      -93.59274291992188,
+      -30.49274253845215,
+      1.7287254333496094
+    ]
+  ],
+  "size": " mid(2*2=4 squares)",
+  "description": " Geometric stacked boxes, rough brown wood with visible grain and markings, reinforced metal corners and stenciled labels, used for storage or transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

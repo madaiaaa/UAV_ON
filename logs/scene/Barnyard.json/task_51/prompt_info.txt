@@ -1,0 +1,448 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SignStop,
+                        Size: small(0.75*0.25=0.19 squares),
+                        Description: Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-15, 86]  
+                        **Y Range**: [min_y, max_y] = [-72, 29]
+
+                        # RGB Captions
+                        Front = windmill, tall, metal; sunflower field, dense, yellow; barn, red, wooden roof; road, paved, curving; trees, green, scattered  
+                        Left = road, paved, curving; silos, two, white, cylindrical; greenhouse, white, rectangular; trees, green, in background; foggy sky  
+                        Right = sunflower field, dense, yellow; barns, two, red, wooden roofs; silos, two, white, cylindrical; fence, wooden, short; trees, green, in background  
+                        Down = sunflower field, dense, yellow; rocks, gray, scattered; tree, light green, on left; aerial view, top-down  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 25, 100], [32, 24, 29], [11, 12, 13]]  
+                        LeftDepth: [[100, 100, 100], [33, 29, 20], [22, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [24, 26, 28], [13, 12, 13]]  
+                        DownDepth: [[9, 9, 10], [9, 9, 9], [13, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(35.65, -21.97, -10.0), 35.16],
+    [(35.65, -21.97, -10.0), 35.16],
+    [(35.65, -21.97, -10.0), 35.16],
+    [(35.65, -21.97, -10.0), 35.16],
+    [(35.65, -21.97, -10.0), 35.16],
+    [(35.65, -21.97, -10.0), 35.16],
+    [(35.65, -21.97, -10.0), 35.16],
+    [(35.65, -21.97, -10.0), 35.16],
+    [(35.65, -21.97, -10.0), 35.16],
+    [(35.65, -21.97, -10.0), 35.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SignStop**, described as:  Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SignStop,
+                        Size: small(0.75*0.25=0.19 squares),
+                        Description: Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-15, 86]  
+                        **Y Range**: [min_y, max_y] = [-72, 29]
+
+                        # RGB Captions
+                        Front = windmill, tall, metal; sunflower field, dense, in the foreground; barns, two, one on each side of the road; trees, scattered in the background  
+                        Left = road, paved, winding; silos, two, white and cylindrical; greenery, low-lying, along the roadside; trees, in the distant background  
+                        Right = sunflower field, dense, in the foreground; barns, two, with weathered roofs; silos, two, tall and gray; vehicles, parked near the barns; rocky terrain in the background  
+                        Down = sunflower field, extensive, covering the entire frame; rocks, scattered, in the bottom left corner; no other objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 23, 100], [32, 22, 28], [13, 12, 13]]  
+                        LeftDepth: [[100, 100, 100], [31, 28, 18], [21, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [23, 23, 29], [13, 12, 13]]  
+                        DownDepth: [[9, 9, 9], [9, 9, 9], [13, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(35.65, -21.97, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SignStop**, described as:  Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SignStop,
+                        Size: small(0.75*0.25=0.19 squares),
+                        Description: Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-15, 86]  
+                        **Y Range**: [min_y, max_y] = [-72, 29]
+
+                        # RGB Captions
+                        Front = windmill, tall, metal; sunflowers, numerous, in the foreground; barn-like structure, weathered, to the left; small red shed, right side; road extends into the distance  
+                        Left = two silos, cylindrical, white; farm buildings, scattered; road runs horizontally; trees and shrubs surround the area; hazy sky above  
+                        Right = two large white silos, cylindrical, with ladders; barn with weathered roof, red doors, to the left; sunflower field, extensive, in the foreground; smaller structures and vehicles nearby  
+                        Down = sunflower field, dense, from an aerial view; rocks and sparse vegetation on the left; uniform pattern of plants across the frame  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 19, 100], [31, 19, 29], [12, 12, 13]]  
+                        LeftDepth: [[100, 100, 100], [31, 17, 17], [9, 7, 10]]  
+                        RightDepth: [[100, 100, 100], [22, 22, 28], [13, 12, 13]]  
+                        DownDepth: [[10, 9, 10], [9, 9, 9], [9, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(35.65, -21.97, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SignStop**, described as:  Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SignStop,
+                        Size: small(0.75*0.25=0.19 squares),
+                        Description: Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-15, 86]  
+                        **Y Range**: [min_y, max_y] = [-72, 29]
+
+                        # RGB Captions
+                        Front = windmill, tall, metal; windmill stands in the foreground center; sunflowers in front, stacked crates to the right  
+                        Left = farm buildings, white structures; farm buildings in the midground; road in front, trees and fields in the background  
+                        Right = barn, red with weathered roof; barn on the left; silos next to it; sunflowers in the foreground; field crops in the background  
+                        Down = sunflower field, dense, aerial view; sunflowers cover the entire frame; rocks and a bush at the bottom left  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 16, 100], [30, 16, 28], [12, 12, 13]]  
+                        LeftDepth: [[100, 100, 100], [31, 16, 25], [8, 8, 13]]  
+                        RightDepth: [[100, 100, 100], [23, 21, 29], [13, 12, 13]]  
+                        DownDepth: [[10, 9, 10], [9, 8, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(35.65, -21.97, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SignStop**, described as:  Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SignStop,
+                        Size: small(0.75*0.25=0.19 squares),
+                        Description: Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-15, 86]  
+                        **Y Range**: [min_y, max_y] = [-72, 29]
+
+                        # RGB Captions
+                        Front = rusty windmill, tall metal structure with four blades; windmill is in the foreground; sunflowers and stacked crates nearby  
+                        Left = farm buildings, white cylindrical silos; structures are in the midground; overcast sky and distant trees in the background  
+                        Right = old barn, weathered corrugated roof; barn is to the left of two large white silos; sunflower field in the foreground  
+                        Down = dense field of sunflowers, numerous plants growing closely together; aerial view showing circular arrangement  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 13, 14], [29, 13, 33], [16, 12, 13]]  
+                        LeftDepth: [[100, 100, 100], [30, 15, 24], [9, 13, 18]]  
+                        RightDepth: [[100, 100, 100], [22, 21, 31], [12, 12, 13]]  
+                        DownDepth: [[10, 9, 9], [9, 8, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(35.65, -21.97, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+    [(52.01, -10.45, -10.0), 35.16],
+    [(52.01, -10.45, -10.0), 35.16],
+    [(52.01, -10.45, -10.0), 35.16],
+    [(52.01, -10.45, -10.0), 35.16],
+    [(52.01, -10.45, -10.0), 35.16],
+    [(52.01, -10.45, -10.0), 35.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SignStop**, described as:  Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SignStop,
+                        Size: small(0.75*0.25=0.19 squares),
+                        Description: Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-15, 86]  
+                        **Y Range**: [min_y, max_y] = [-72, 29]
+
+                        # RGB Captions
+                        Front = windmill, tall metal structure with four blades; windmill is in the foreground; road and trees in the midground; stacked crates and wooden logs to the right  
+                        Left = farm buildings, including a white barn and silos; farm structures are in the midground; road and fields in the foreground; foggy background  
+                        Right = barn, weathered red building with a corrugated roof; barn is in the foreground; two large cylindrical silos to the right; sunflowers in the foreground; rocky terrain and hills in the background  
+                        Down = sunflower field, numerous sunflowers arranged in rows; field is in the foreground; rocks and sparse vegetation in the surrounding area; top-down aerial view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 10, 11], [28, 9, 30], [16, 10, 11]]  
+                        LeftDepth: [[100, 100, 100], [17, 15, 24], [12, 13, 17]]  
+                        RightDepth: [[100, 100, 100], [22, 21, 26], [15, 12, 13]]  
+                        DownDepth: [[10, 9, 9], [9, 8, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(35.65, -21.97, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+    [(52.01, -10.45, -10.0), 35.16],
+    [(56.09, -7.57, -10.0), 35.16],
+    [(56.09, -7.57, -10.0), 35.16],
+    [(56.09, -7.57, -10.0), 35.16],
+    [(56.09, -7.57, -10.0), 35.16],
+    [(56.09, -7.57, -10.0), 35.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SignStop**, described as:  Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SignStop,
+                        Size: small(0.75*0.25=0.19 squares),
+                        Description: Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-15, 86]  
+                        **Y Range**: [min_y, max_y] = [-72, 29]
+
+                        # RGB Captions
+                        Front = metal windmill tower, tall, rusted; road stretches leftward in the midground; trees and bushes surround the area  
+                        Left = two white cylindrical silos, tall, concrete; a long low-roofed building; road in the foreground; overcast sky  
+                        Right = wooden barn, red, weathered; adjacent metal silo, gray; sunflowers in bloom to the right; dirt ground with scattered rocks  
+                        Down = sunflower field, rows planted; metal utility pole on the left; small bush nearby; gravel path alongside the field  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 6, 7], [27, 6, 7], [15, 6, 7]]  
+                        LeftDepth: [[100, 100, 100], [17, 18, 23], [14, 15, 17]]  
+                        RightDepth: [[100, 100, 100], [22, 21, 22], [15, 13, 13]]  
+                        DownDepth: [[12, 8, 9], [9, 8, 9], [10, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(35.65, -21.97, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+    [(52.01, -10.45, -10.0), 35.16],
+    [(56.09, -7.57, -10.0), 35.16],
+    [(60.18, -4.69, -10.0), 35.16],
+    [(60.18, -4.69, -10.0), 35.16],
+    [(60.18, -4.69, -10.0), 35.16],
+    [(60.18, -4.69, -10.0), 35.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SignStop**, described as:  Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: SignStop,
+                        Size: small(0.75*0.25=0.19 squares),
+                        Description: Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-15, 86]  
+                        **Y Range**: [min_y, max_y] = [-72, 29]
+
+                        # RGB Captions
+                        Front = metal tower, rusted, with wooden platform; road and trees in the background  
+                        Left = white cylindrical silos, greenhouse, and structures near a road; trees and sky in the distance  
+                        Right = red barn, weathered roof; large white tank; dirt ground with sparse vegetation  
+                        Down = metal tower, rusted, with ladder; sunflowers arranged in rows below  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 3, 4], [26, 3, 3], [15, 3, 4]]  
+                        LeftDepth: [[100, 100, 100], [19, 22, 22], [15, 16, 18]]  
+                        RightDepth: [[100, 100, 100], [21, 20, 23], [15, 15, 13]]  
+                        DownDepth: [[12, 4, 5], [11, 7, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(35.65, -21.97, -10.0), 35.16],
+    [(39.74, -19.09, -10.0), 35.16],
+    [(43.83, -16.21, -10.0), 35.16],
+    [(47.92, -13.33, -10.0), 35.16],
+    [(52.01, -10.45, -10.0), 35.16],
+    [(56.09, -7.57, -10.0), 35.16],
+    [(60.18, -4.69, -10.0), 35.16],
+    [(64.27, -1.81, -10.0), 35.16],
+    [(64.27, -1.81, -10.0), 35.16],
+    [(64.27, -1.81, -10.0), 35.16],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** SignStop**, described as:  Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

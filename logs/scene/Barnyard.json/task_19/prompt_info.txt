@@ -1,0 +1,1008 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = white cylindrical structures, large, multiple; hay bales, stacked, scattered; small buildings, distant; trees, in the background; open field under overcast sky  
+                        Left = white cylindrical structures, large, multiple; flowering plants, dense, white; windmill, tall, central; damaged building, in ruins; road, winding; bright sun in clear sky  
+                        Right = trees, green, evenly spaced; rocks, scattered; bushes, small, sparse; open grassy area; distant hills and water; overcast sky  
+                        Down = rocks, gray, various sizes; small bushes, green; concrete structure, partially visible; dirt ground; shadows from unseen objects  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [38, 48, 53], [19, 17, 17]]  
+                        LeftDepth: [[100, 100, 100], [33, 29, 30], [17, 17, 17]]  
+                        RightDepth: [[100, 100, 100], [62, 36, 36], [23, 22, 24]]  
+                        DownDepth: [[15, 15, 16], [14, 13, 15], [15, 14, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -10.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = white plastic-covered greenhouses, multiple; scattered hay bales, wooden crates, and a yellow chair; structures in the foreground, trees and ruins in the distant background  
+                        Left = white plastic-covered greenhouses, multiple; a field of white flowers; a windmill and a building with a sloped roof in the background; sun high in the sky  
+                        Right = trees with light green foliage, several; rocky terrain with sparse vegetation; ocean visible in the far distance under a hazy sky  
+                        Down = patches of green vegetation interspersed with gray rocks; ground appears dry and uneven; close-up view focusing on texture and distribution of plants and stones  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 27, 30], [18, 16, 16]]  
+                        LeftDepth: [[100, 100, 100], [36, 27, 28], [16, 16, 16]]  
+                        RightDepth: [[100, 100, 100], [49, 35, 35], [18, 18, 22]]  
+                        DownDepth: [[13, 12, 13], [12, 11, 13], [13, 12, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 2.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = white plastic-covered tunnels, large, elongated; several bales of hay scattered; small structures and trees in the background; field under overcast sky  
+                        Left = white plastic-covered tunnels, large, elongated; sun low on horizon; windmill and barn-like structure in background; field with white flowers in foreground  
+                        Right = trees, green, medium-sized; rocky terrain with sparse vegetation; ocean visible in distant background; overcast sky  
+                        Down = ground covered with small green plants and gray rocks; close-up view of textured ground; edge of white plastic tunnel on left  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 27, 40], [17, 15, 15]]  
+                        LeftDepth: [[100, 100, 100], [33, 27, 27], [16, 16, 16]]  
+                        RightDepth: [[100, 100, 100], [50, 37, 35], [18, 17, 20]]  
+                        DownDepth: [[13, 13, 14], [12, 12, 13], [13, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 6.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = white plastic-covered tunnels, long and curved; three in the foreground; scattered hay bales and wooden crates nearby; overgrown field with distant trees  
+                        Left = white plastic-covered tunnels, long and curved; multiple in a row; sun low on the horizon; white flowering plants in front; windmill in the background  
+                        Right = sparse green trees, medium-sized; rocky ground with patches of grass; ocean visible in the far distance; hazy sky above  
+                        Down = ground covered with small green bushes and dry patches; scattered gray rocks; top-down view of uneven terrain  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 37, 40], [17, 13, 14]]  
+                        LeftDepth: [[100, 100, 100], [35, 29, 29], [18, 17, 17]]  
+                        RightDepth: [[100, 100, 100], [49, 35, 34], [19, 19, 21]]  
+                        DownDepth: [[13, 13, 13], [13, 12, 13], [13, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 11.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = white cylindrical tents, two in the foreground; wooden logs, several stacked; small structures and debris scattered; overcast sky  
+                        Left = white cylindrical tents, multiple in a row; flowering plants in front; distant ruins and structures under bright sun  
+                        Right = rocky terrain with sparse vegetation; trees and bushes scattered; ocean visible in the far distance; overcast sky  
+                        Down = ground covered in low green shrubs and rocks; aerial top-down view; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [36, 39, 42], [18, 13, 18]]  
+                        LeftDepth: [[100, 100, 100], [34, 29, 30], [18, 17, 18]]  
+                        RightDepth: [[100, 100, 100], [47, 36, 34], [18, 18, 20]]  
+                        DownDepth: [[14, 11, 14], [13, 12, 13], [14, 13, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 16.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = white arched tents, large, multiple; hay bales, brown, stacked; wooden crates, dark, scattered; structures in the distant background; field with sparse vegetation  
+                        Left = white arched tents, large, multiple; windmill, metallic, rusted; water tanks, cylindrical, metal; sun high in the sky; field with crops and debris  
+                        Right = trees, green, medium-sized; rocks, gray, scattered; ocean visible in the far distance; hillside with sparse grass and shrubs  
+                        Down = small bushes, green, scattered; rocks, gray, small and numerous; sandy ground with patches of vegetation; top-down aerial view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [35, 37, 42], [18, 17, 18]]  
+                        LeftDepth: [[100, 100, 100], [33, 29, 29], [18, 17, 17]]  
+                        RightDepth: [[100, 100, 100], [46, 48, 36], [18, 18, 21]]  
+                        DownDepth: [[13, 10, 14], [13, 10, 13], [14, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 21.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = white cylindrical tents, three in total; hay bales, two stacked; scattered rocks and bushes; structure with wooden beams in the mid-ground; overcast sky  
+                        Left = white greenhouse tunnels, multiple in a row; white flowering plants in front; tombstones and a windmill-like structure in the background; bright sun low on the horizon  
+                        Right = rocky terrain with sparse green vegetation; trees scattered across the mid-ground; distant hills and a faint horizon line under a hazy sky  
+                        Down = small rectangular objects, one dark and one light-colored; patches of green shrubs and dry ground; rocky surface in the foreground; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [36, 35, 40], [18, 16, 16]]  
+                        LeftDepth: [[100, 100, 100], [28, 28, 31], [17, 17, 18]]  
+                        RightDepth: [[100, 100, 100], [46, 48, 34], [18, 18, 22]]  
+                        DownDepth: [[10, 10, 13], [10, 9, 13], [14, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 26.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = playground equipment, yellow and red; scattered logs; overgrown grass; distant trees under a hazy sky  
+                        Left = greenhouse structures, white covering; field of white flowers; windmill in the background; bright sun in the sky  
+                        Right = rocky terrain, sparse vegetation; small orange object on the ground; trees and hills in the distance; ocean visible on the horizon  
+                        Down = logs, stacked; wooden crates; patches of grass; rocky ground; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [37, 38, 42], [18, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [29, 31, 31], [18, 18, 18]]  
+                        RightDepth: [[100, 100, 100], [43, 44, 35], [18, 18, 19]]  
+                        DownDepth: [[14, 13, 13], [10, 10, 13], [11, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 31.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = small playground structure, yellow and blue; scattered logs and rocks; field of low green vegetation; distant trees and structures under overcast sky  
+                        Left = three white greenhouse tunnels; sun in the background; open field with crops; buildings and trees in the distance  
+                        Right = rocky terrain with sparse green vegetation; clusters of trees; distant hills and ocean horizon under hazy sky  
+                        Down = stacked hay bales, brown; wooden crate, dark; small block, light-colored; grassy ground with scattered rocks; large rock formation on the right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [40, 38, 39], [16, 13, 18]]  
+                        LeftDepth: [[100, 100, 100], [28, 26, 33], [18, 17, 18]]  
+                        RightDepth: [[100, 100, 100], [41, 45, 34], [19, 18, 22]]  
+                        DownDepth: [[14, 12, 13], [11, 12, 13], [11, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-109.46, -201.64, -8.0), -115.71],
+    [(-109.46, -201.64, -8.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 36.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = playground equipment, yellow and orange; scattered across a grassy field; structures in the distant background  
+                        Left = white cylindrical greenhouses, multiple; arranged in rows on a cultivated field; sun visible in the sky above  
+                        Right = trees, dense and green; rocky terrain with patches of grass; ocean visible in the far distance  
+                        Down = logs, stacked; bales of material; large rock; all situated on a patchy grassy area with scattered rocks  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [41, 38, 36], [18, 17, 18]]  
+                        LeftDepth: [[100, 100, 100], [30, 27, 27], [13, 14, 18]]  
+                        RightDepth: [[100, 100, 100], [44, 46, 32], [20, 19, 22]]  
+                        DownDepth: [[12, 12, 14], [13, 12, 13], [14, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -10.0), -115.71],
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-109.46, -201.64, -8.0), -115.71],
+    [(-104.95, -203.8, -8.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 41.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = playground equipment, including a slide and climbing structure; scattered rocks and bushes; small wooden building in the background left  
+                        Left = row of white greenhouse tunnels; windmill and stone structures in the background; sun visible in the sky  
+                        Right = rocky terrain with patches of grass and wildflowers; trees and shrubs in the mid-ground; distant hills and water body on the horizon  
+                        Down = stack of three logs; large gray rock; smaller rocks and green vegetation on the ground; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [35, 29, 30], [12, 15, 15]]  
+                        LeftDepth: [[100, 100, 100], [32, 27, 27], [15, 15, 13]]  
+                        RightDepth: [[100, 100, 100], [37, 40, 32], [17, 17, 19]]  
+                        DownDepth: [[11, 11, 12], [11, 10, 11], [11, 11, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.3, -177.11, -8.0), -115.71],
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-109.46, -201.64, -8.0), -115.71],
+    [(-104.95, -203.8, -8.0), -115.71],
+    [(-104.95, -203.8, -6.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 43.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = overgrown field with scattered debris; three white chairs and a red object in the mid-ground; trees in the distant background  
+                        Left = agricultural field with rows of white plastic-covered structures; sun visible in the sky; barn-like building and windmill in the background  
+                        Right = rocky terrain with sparse vegetation; trees lining the horizon; ocean visible in the far distance under a hazy sky  
+                        Down = ground-level view of rocky and grassy terrain; large gray rock on the right; rolled-up mat and wooden block on the left  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 25, 26], [11, 11, 12]]  
+                        LeftDepth: [[100, 100, 100], [17, 16, 26], [11, 11, 10]]  
+                        RightDepth: [[100, 100, 100], [31, 32, 37], [14, 13, 15]]  
+                        DownDepth: [[9, 8, 9], [8, 8, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-116.47, -181.61, -8.0), -115.71],
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-109.46, -201.64, -8.0), -115.71],
+    [(-104.95, -203.8, -8.0), -115.71],
+    [(-104.95, -203.8, -6.0), -115.71],
+    [(-104.95, -203.8, -4.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 45.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = playground equipment, including a slide and climbing structure; scattered across the field; surrounded by overgrown vegetation  
+                        Left = series of white, arched greenhouses; aligned in a row; positioned in the mid-ground; stacks of rolled material in the foreground  
+                        Right = rocky terrain with sparse vegetation; trees line the horizon; distant buildings visible under a hazy sky  
+                        Down = dense patch of low-lying plants; large gray rock on the right; aerial perspective showing texture of ground cover  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 18, 19], [9, 8, 9]]  
+                        LeftDepth: [[100, 100, 100], [14, 14, 20], [8, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [24, 25, 32], [10, 9, 11]]  
+                        DownDepth: [[7, 6, 7], [6, 5, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-111.96, -183.78, -8.0), -115.71],
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-109.46, -201.64, -8.0), -115.71],
+    [(-104.95, -203.8, -8.0), -115.71],
+    [(-104.95, -203.8, -6.0), -115.71],
+    [(-104.95, -203.8, -4.0), -115.71],
+    [(-104.95, -203.8, -2.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 47.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = field of green plants with white flowers; scattered hay bales in foreground; small structures and trees in distant background  
+                        Left = field of green plants with white flowers; long white greenhouse structure in center; hay bales and crates in foreground; windmill and buildings in distant background  
+                        Right = rocky terrain with sparse green vegetation; large rocks in foreground; trees and distant structures under clear sky  
+                        Down = overhead view of dense green foliage with light-colored rocks in bottom right corner; ground appears wet or reflective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 12, 14], [5, 5, 6]]  
+                        LeftDepth: [[100, 100, 100], [13, 12, 9], [6, 5, 6]]  
+                        RightDepth: [[100, 100, 100], [18, 19, 25], [6, 6, 6]]  
+                        DownDepth: [[4, 4, 5], [4, 4, 4], [4, 4, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-114.13, -188.29, -8.0), -115.71],
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-109.46, -201.64, -8.0), -115.71],
+    [(-104.95, -203.8, -8.0), -115.71],
+    [(-104.95, -203.8, -6.0), -115.71],
+    [(-104.95, -203.8, -4.0), -115.71],
+    [(-104.95, -203.8, -2.0), -115.71],
+    [(-104.95, -203.8, 0.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 49.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = playground equipment, colorful; scattered across a field of wildflowers; distant buildings in the background  
+                        Left = white cylindrical structures, large, plastic; stacked hay bales, brown and round; small wooden crates; sun high in the sky  
+                        Right = rocks, various sizes; scattered across a grassy slope; trees lining the horizon; ocean visible in the distance  
+                        Down = large gray rock, jagged; surrounded by dense green vegetation; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 12, 13], [5, 5, 6]]  
+                        LeftDepth: [[100, 100, 100], [13, 12, 11], [6, 5, 6]]  
+                        RightDepth: [[100, 100, 100], [18, 19, 25], [7, 7, 9]]  
+                        DownDepth: [[4, 4, 5], [4, 4, 4], [5, 4, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-116.3, -192.79, -8.0), -115.71],
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-109.46, -201.64, -8.0), -115.71],
+    [(-104.95, -203.8, -8.0), -115.71],
+    [(-104.95, -203.8, -6.0), -115.71],
+    [(-104.95, -203.8, -4.0), -115.71],
+    [(-104.95, -203.8, -2.0), -115.71],
+    [(-104.95, -203.8, 0.0), -115.71],
+    [(-100.45, -205.97, 0.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 54.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = field of green plants with white flowers; scattered rocks and debris; distant buildings and trees under overcast sky  
+                        Left = field of green plants with white flowers; large white cylindrical object in the mid-ground; stack of brown hay bales to the right; windmill and buildings in the background  
+                        Right = field of green plants with white flowers; scattered rocks; line of trees in the mid-ground; distant structures and water body on the horizon  
+                        Down = cluster of large gray rocks in the foreground; smaller rocks and green plants surrounding them; aerial view of rocky terrain  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 13, 15], [6, 6, 7]]  
+                        LeftDepth: [[100, 100, 100], [13, 12, 13], [6, 6, 6]]  
+                        RightDepth: [[100, 100, 100], [19, 20, 25], [8, 8, 9]]  
+                        DownDepth: [[5, 5, 5], [4, 4, 5], [5, 5, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-111.79, -194.96, -8.0), -115.71],
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-109.46, -201.64, -8.0), -115.71],
+    [(-104.95, -203.8, -8.0), -115.71],
+    [(-104.95, -203.8, -6.0), -115.71],
+    [(-104.95, -203.8, -4.0), -115.71],
+    [(-104.95, -203.8, -2.0), -115.71],
+    [(-104.95, -203.8, 0.0), -115.71],
+    [(-100.45, -205.97, 0.0), -115.71],
+    [(-95.94, -208.14, 0.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 59.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = small building, pink and white; surrounded by dense greenery and rocks; distant background with trees  
+                        Left = large cylindrical structure, metallic; three hay bales; windmill in the far distance; sun high in the sky  
+                        Right = field of low-lying plants with small white flowers; scattered dark rocks; trees in the far distance under a hazy sky  
+                        Down = cluster of large, cracked gray rocks; interspersed with green foliage and small white flowers; close-up view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [8, 8, 11], [4, 5, 5]]  
+                        LeftDepth: [[100, 100, 100], [6, 6, 7], [4, 3, 4]]  
+                        RightDepth: [[100, 100, 100], [17, 18, 26], [6, 6, 7]]  
+                        DownDepth: [[4, 4, 4], [4, 4, 4], [4, 4, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-113.96, -199.47, -8.0), -115.71],
+    [(-109.46, -201.64, -8.0), -115.71],
+    [(-104.95, -203.8, -8.0), -115.71],
+    [(-104.95, -203.8, -6.0), -115.71],
+    [(-104.95, -203.8, -4.0), -115.71],
+    [(-104.95, -203.8, -2.0), -115.71],
+    [(-104.95, -203.8, 0.0), -115.71],
+    [(-100.45, -205.97, 0.0), -115.71],
+    [(-95.94, -208.14, 0.0), -115.71],
+    [(-95.94, -208.14, 2.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 61.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Rock,
+                        Size: mid(2*2.25=4.5 squares),
+                        Description: Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-165, -64]  
+                        **Y Range**: [min_y, max_y] = [-228, -127]
+
+                        # RGB Captions
+                        Front = white flower, small, single; flower is in the foreground on a rock; background shows a field of greenery and distant buildings  
+                        Left = hay bales, stacked; bales are in the midground; sun is high in the sky behind them  
+                        Right = rocks, large, dark gray; rocks are scattered throughout the field; trees line the horizon in the distance  
+                        Down = rocks, large, dark gray with cracks; rocks are clustered together in the foreground; green plants grow around them  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [3, 4, 4], [2, 2, 2]]  
+                        LeftDepth: [[100, 100, 100], [3, 2, 3], [2, 2, 2]]  
+                        RightDepth: [[100, 100, 37], [5, 5, 8], [2, 2, 3]]  
+                        DownDepth: [[2, 1, 2], [2, 1, 2], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-109.46, -201.64, -8.0), -115.71],
+    [(-104.95, -203.8, -8.0), -115.71],
+    [(-104.95, -203.8, -6.0), -115.71],
+    [(-104.95, -203.8, -4.0), -115.71],
+    [(-104.95, -203.8, -2.0), -115.71],
+    [(-104.95, -203.8, 0.0), -115.71],
+    [(-100.45, -205.97, 0.0), -115.71],
+    [(-95.94, -208.14, 0.0), -115.71],
+    [(-95.94, -208.14, 2.0), -115.71],
+    [(-95.94, -208.14, 4.0), -115.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 63.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Rock**, described as:  Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

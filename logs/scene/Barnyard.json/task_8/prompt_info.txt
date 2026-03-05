@@ -1,0 +1,1680 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden fence, long, rustic; fence runs horizontally across the image; sunflowers with yellow petals and brown centers on the left side of the fence  
+                        Left = sunflowers, multiple, tall; flowers have yellow petals and brown centers; green leaves; densely packed in a field  
+                        Right = wooden fence, long, rustic; fence runs horizontally across the image; dirt and small rocks on the ground in the foreground; trees visible in the distant background  
+                        Down = rocky surface, granular texture; composed of small stones and pebbles in various shades of brown, gray, and white; no distinct objects or features  
+
+                        # Depth Information  
+                        FrontDepth: [[4, 100, 100], [3, 2, 2], [1, 1, 1]]  
+                        LeftDepth: [[0, 0, 1], [0, 0, 0], [0, 0, 1]]  
+                        RightDepth: [[100, 100, 100], [2, 2, 3], [1, 1, 1]]  
+                        DownDepth: [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -10.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered; sunflowers, large, yellow; wooden fence, long, brown; barn is on the left, sunflowers are in the foreground, fence runs parallel to the field  
+                        Left = sunflowers, numerous, yellow; silo, tall, cylindrical; barn, rustic; silo and barn are in the background, sunflowers fill the foreground  
+                        Right = wooden fence, long, brown; dirt path, narrow; trees, green, scattered; fence lines the path, trees are in the distance  
+                        Down = stone ground, rough texture; small plants, green leaves; stone is in the foreground, plants are growing from it  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [4, 4, 7], [4, 3, 2]]  
+                        LeftDepth: [[100, 47, 100], [2, 2, 3], [1, 1, 1]]  
+                        RightDepth: [[100, 100, 100], [8, 8, 7], [2, 2, 4]]  
+                        DownDepth: [[2, 2, 2], [1, 2, 2], [1, 1, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 2.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered roof; sunflower field, blooming; dirt path with fence on the right; barn in the left foreground  
+                        Left = sunflower field, dense and expansive; silo, cylindrical and metallic; barn, rustic wooden structure; field in the foreground, structures in the background  
+                        Right = dirt path, tire tracks; sunflower field, patchy and sparse; trees, scattered; path curves from the foreground to the midground; field occupies the right side  
+                        Down = sunflower plants, small and clustered; dirt ground, textured; wooden fence, short and slatted; plants on the left, fence on the right; close-up view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [10, 9, 13], [4, 4, 6]]  
+                        LeftDepth: [[100, 100, 100], [9, 7, 9], [4, 4, 4]]  
+                        RightDepth: [[100, 100, 100], [13, 14, 16], [6, 6, 5]]  
+                        DownDepth: [[3, 4, 4], [3, 2, 4], [3, 2, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 4.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = small wooden barn, weathered roof; circular hay bales, scattered near barn; dirt road with tire tracks, leading away from barn; field of flowering plants in foreground; trees and distant structures in background  
+                        Left = large field of sunflowers, dense and blooming; two silos, one taller than the other, behind field; wooden barn, partially visible to right; trees and distant buildings on horizon; overcast sky  
+                        Right = dirt road with deep tire tracks, extending into distance; low-lying shrubs and bushes along road; trees in mid-ground; overcast sky with faint light source on right; no visible structures or people  
+                        Down = overhead view of sunflower field, rows of plants growing alongside dirt path; woven fence running parallel to path; puddle of water on path surface; sunlight reflecting off water; no visible structures  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 18, 18], [8, 7, 9]]  
+                        LeftDepth: [[100, 100, 100], [15, 14, 15], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [19, 16, 24], [9, 9, 9]]  
+                        DownDepth: [[5, 6, 6], [5, 4, 6], [5, 5, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 6.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = dirt road, long and muddy with tire tracks; barn, small wooden structure on the left; field of yellow flowers to the left; trees in the distant background  
+                        Left = field of sunflowers, dense and expansive; silo, tall cylindrical structure; barn, wooden building with a sloped roof; trees in the background under a cloudy sky  
+                        Right = muddy dirt road, long and winding; field of green bushes and plants; trees in the distant background under a hazy sky  
+                        Down = sunflower field, dense and vibrant; dirt path, narrow and dry, running diagonally across the image; water puddle near the path; sunflowers on the left side  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 18, 18], [7, 8, 9]]  
+                        LeftDepth: [[100, 100, 100], [15, 14, 15], [6, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [17, 16, 24], [9, 9, 9]]  
+                        DownDepth: [[6, 5, 7], [5, 5, 5], [5, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 10.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = dirt road, tire tracks; wooden fence on left; barn with hay bales and barrels; trees and bushes in background; overcast sky  
+                        Left = sunflower field, dense and blooming; silo and barn in the background; ocean visible in the distance; clear sky  
+                        Right = vegetation, mixed shrubs and small trees; dirt path with tire tracks; overcast sky; distant trees on horizon  
+                        Down = plowed field, furrows running diagonally; irrigation pipe along edge; sunflowers in foreground; overcast sky  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 16, 16], [7, 8, 8]]  
+                        LeftDepth: [[100, 100, 100], [15, 14, 15], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [20, 16, 24], [9, 8, 9]]  
+                        DownDepth: [[5, 6, 6], [5, 5, 6], [6, 5, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 15.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = dirt road, deeply rutted; wooden fence on left; small building and stacked materials on left; trees and structures in distant background  
+                        Left = sunflower field, dense and blooming; gray silo and barn-like structure on right; ocean visible in distant background  
+                        Right = overgrown field, scrubby vegetation; dirt path on right; trees and indistinct structures in distant background  
+                        Down = plowed field, parallel furrows; wooden fence on left; patch of green plants and water on bottom left; aerial top-down view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 16, 13], [8, 8, 8]]  
+                        LeftDepth: [[100, 100, 100], [15, 14, 15], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [16, 16, 16], [8, 8, 9]]  
+                        DownDepth: [[6, 6, 6], [5, 5, 6], [5, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 20.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = dirt road, deeply rutted; wooden fence, short and weathered; small structures, blue-roofed, in the left background; trees and shrubs scattered across the midground; overcast sky  
+                        Left = sunflower field, dense and blooming; barn-like building, rustic with a sloped roof; silo, cylindrical and gray; hay bales, round and stacked; wooden fence, low and simple; distant landscape visible under an overcast sky  
+                        Right = dense shrubbery, light green and textured; trees, scattered and leafy, in the background; overcast sky; no visible human-made structures or paths  
+                        Down = tilled soil, furrowed into parallel lines; wooden fence, weathered and partially covered by foliage; patches of sparse vegetation; bright daylight  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 15, 11], [8, 8, 8]]  
+                        LeftDepth: [[100, 100, 100], [15, 14, 15], [7, 6, 7]]  
+                        RightDepth: [[100, 100, 100], [11, 17, 18], [8, 8, 9]]  
+                        DownDepth: [[6, 6, 6], [6, 5, 6], [6, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 25.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = dirt path, long and narrow; path runs from foreground to midground; field of white flowers in the midground; trees in the distant background  
+                        Left = barn, wooden; silo, tall and cylindrical; field of yellow flowers; wooden fence in the foreground; scattered hay bales near the barn; overcast sky in the background  
+                        Right = field of green and white plants; trees in the distant background; overcast sky above; no visible structures or paths  
+                        Down = tire tracks, deep and parallel; dirt ground with sparse vegetation; wooden fence partially visible in the bottom left corner; aerial view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 14, 11], [8, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [15, 14, 16], [7, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [9, 17, 18], [8, 7, 8]]  
+                        DownDepth: [[6, 6, 6], [6, 5, 6], [6, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-36.53, 122.89, -16.0), 10.59],
+    [(-36.53, 122.89, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 30.999999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = field with dirt tracks, patches of green and white flowering plants; trees in the distant background; overcast sky  
+                        Left = farmstead with wooden barn, metal silo, fenced garden with yellow flowers; logs, barrels, and containers near barn; cityscape visible in far distance  
+                        Right = open field with dense low-lying green and white vegetation; scattered trees in the background; bright overcast sky  
+                        Down = overhead view of tilled soil with parallel furrows; small green plants growing sporadically along furrows; patch of denser vegetation in upper right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 14, 13], [8, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [15, 14, 20], [8, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [9, 8, 19], [7, 7, 8]]  
+                        DownDepth: [[6, 5, 6], [5, 5, 6], [6, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -10.0), 10.59],
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-36.53, 122.89, -16.0), 10.59],
+    [(-31.62, 123.8, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 35.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = field with dense white and pink flowers; dirt path on the left; trees in the distant background  
+                        Left = farmstead with wooden barn, metal silo, fenced area; field of white flowers in front; logs and barrels near barn; ocean visible in the far distance  
+                        Right = field with low-lying green and white vegetation; scattered trees in the background under a hazy sky  
+                        Down = tiled ground with diagonal ridges; patch of green plants growing between tiles; close-up aerial view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 15, 15], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [14, 14, 20], [8, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [7, 7, 20], [7, 7, 8]]  
+                        DownDepth: [[6, 5, 5], [6, 5, 5], [6, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -12.0), 10.59],
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-36.53, 122.89, -16.0), 10.59],
+    [(-31.62, 123.8, -16.0), 10.59],
+    [(-26.7, 124.72, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 40.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = field with dense green and white vegetation; dirt tracks in the foreground; trees and bushes in the midground; overcast sky in the background  
+                        Left = farmstead with wooden barn, metal silo, and fenced area; hay bales and crates near barn; flower patch to the left; distant trees and sky in the background  
+                        Right = field with mixed green and dry vegetation; scattered bushes and small trees; overcast sky; distant horizon line  
+                        Down = overhead view of a field with tilled soil tracks on the left; patch of green plants with white flowers on the right; clear ground between  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 14, 15], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [15, 14, 19], [8, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [13, 7, 8], [6, 6, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [6, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -14.0), 10.59],
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-36.53, 122.89, -16.0), 10.59],
+    [(-31.62, 123.8, -16.0), 10.59],
+    [(-26.7, 124.72, -16.0), 10.59],
+    [(-21.79, 125.64, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 45.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = rocky path, narrow, winding; surrounded by green bushes and white flowers; extends from foreground to midground  
+                        Left = barn building, wooden, with a sloped roof; silo, cylindrical, metal, next to barn; hay bales, stacked; wooden fence in front; located on elevated terrain with trees in background  
+                        Right = field of green bushes and white flowers; scattered trees in the distance; overcast sky above; no visible paths or structures  
+                        Down = water surface, partially covered with green aquatic plants; muddy bank with tire tracks; close-up view focusing on plant growth and water texture  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 14, 14], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [15, 17, 18], [8, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [13, 12, 8], [6, 5, 6]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-61.11, 118.29, -16.0), 10.59],
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-36.53, 122.89, -16.0), 10.59],
+    [(-31.62, 123.8, -16.0), 10.59],
+    [(-26.7, 124.72, -16.0), 10.59],
+    [(-21.79, 125.64, -16.0), 10.59],
+    [(-16.87, 126.56, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 50.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = rocky path, winding; bushes and grasses, dense and green; trees in the distant background  
+                        Left = barn building, wooden; silo, cylindrical and gray; hay bales, stacked; fenced area; fields with tilled soil; ocean horizon in the distance  
+                        Right = bushes and grasses, dense and green; trees in the distant background; open field under a pale sky  
+                        Down = water surface, partially covered with green aquatic plants; muddy or sandy edges; vegetation along the borders  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 13, 13], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [16, 17, 18], [8, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [15, 12, 10], [6, 5, 6]]  
+                        DownDepth: [[6, 5, 5], [5, 5, 5], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-56.19, 119.21, -16.0), 10.59],
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-36.53, 122.89, -16.0), 10.59],
+    [(-31.62, 123.8, -16.0), 10.59],
+    [(-26.7, 124.72, -16.0), 10.59],
+    [(-21.79, 125.64, -16.0), 10.59],
+    [(-16.87, 126.56, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), 10.59],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 55.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = rocky path, narrow and winding; path is in the foreground; trees and bushes on either side; distant horizon visible  
+                        Left = barn building, wooden structure with a sloped roof; silo, tall and cylindrical, next to barn; hay bales, stacked near barn; fenced area in front of barn; field of crops in the background  
+                        Right = field of low-lying green plants, dense and covering ground; small trees scattered in the background; overcast sky above  
+                        Down = overhead view of muddy water, partially covered by green aquatic plants; dirt path borders left edge; rocks visible through shallow water  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 13, 13], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [16, 16, 18], [8, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [14, 12, 13], [6, 5, 5]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-51.28, 120.13, -16.0), 10.59],
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-36.53, 122.89, -16.0), 10.59],
+    [(-31.62, 123.8, -16.0), 10.59],
+    [(-26.7, 124.72, -16.0), 10.59],
+    [(-21.79, 125.64, -16.0), 10.59],
+    [(-16.87, 126.56, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), -4.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 55.99999999999998
+                        AvgHeadingChange = 1.07
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered exterior; blue barrels, stacked near entrance; dirt path curves left; rocks and shrubs in foreground; ocean visible in distant background  
+                        Left = barn with white roof, wooden structure; silo, cylindrical, gray; hay bales, stacked piles; fenced field of crops; windmill in far right background; plowed fields in foreground  
+                        Right = dense shrubbery, green and light-colored foliage; rocky terrain scattered throughout; trees in mid-ground; ocean horizon line in distant background; overcast sky above  
+                        Down = overhead view of muddy ground with tire tracks; patches of green vegetation growing in the mud; small puddles reflecting light; uneven terrain with rocks and dirt  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 13, 13], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [18, 16, 18], [8, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [13, 13, 12], [7, 6, 6]]  
+                        DownDepth: [[5, 5, 6], [5, 5, 5], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-46.36, 121.05, -16.0), 10.59],
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-36.53, 122.89, -16.0), 10.59],
+    [(-31.62, 123.8, -16.0), 10.59],
+    [(-26.7, 124.72, -16.0), 10.59],
+    [(-21.79, 125.64, -16.0), 10.59],
+    [(-16.87, 126.56, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), -4.41],
+    [(-11.96, 127.48, -16.0), -19.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 55.99999999999998
+                        AvgHeadingChange = 2.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered exterior; several hay bales, stacked near entrance; dirt path leading to barn; overcast sky in background  
+                        Left = grain silo, cylindrical metal structure; field of flowering crops; wooden fence along path; windmill in distant right background  
+                        Right = open field with scattered bushes and rocks; dirt path winding through center; trees visible in far distance under overcast sky  
+                        Down = overhead view of muddy ground with patches of green vegetation; tire tracks crisscrossing the surface; small puddles of water  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 18, 13], [8, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [18, 15, 16], [7, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [13, 13, 12], [7, 6, 6]]  
+                        DownDepth: [[5, 5, 6], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-41.45, 121.97, -16.0), 10.59],
+    [(-36.53, 122.89, -16.0), 10.59],
+    [(-31.62, 123.8, -16.0), 10.59],
+    [(-26.7, 124.72, -16.0), 10.59],
+    [(-21.79, 125.64, -16.0), 10.59],
+    [(-16.87, 126.56, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), -4.41],
+    [(-11.96, 127.48, -16.0), -19.41],
+    [(-11.96, 127.48, -16.0), -34.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 55.99999999999998
+                        AvgHeadingChange = 2.81
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, large, with snow on roof; several hay bales scattered around; windmill in the background left; dirt path leading to barn  
+                        Left = field of flowering plants, long and narrow; wooden fence running alongside; silo structure on the right; dirt road in the foreground  
+                        Right = rocky terrain with sparse green shrubs; trees in the distant background; overcast sky above; no visible structures or people  
+                        Down = overhead view of a patch of green vegetation growing in shallow water; muddy ground visible between plant clusters; no other objects present  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 17, 20], [8, 7, 8]]  
+                        LeftDepth: [[100, 100, 50], [18, 15, 16], [8, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [13, 12, 15], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 6], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-36.53, 122.89, -16.0), 10.59],
+    [(-31.62, 123.8, -16.0), 10.59],
+    [(-26.7, 124.72, -16.0), 10.59],
+    [(-21.79, 125.64, -16.0), 10.59],
+    [(-16.87, 126.56, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), -4.41],
+    [(-11.96, 127.48, -16.0), -19.41],
+    [(-11.96, 127.48, -16.0), -34.41],
+    [(-11.96, 127.48, -16.0), -49.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 55.99999999999998
+                        AvgHeadingChange = 3.53
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, large, with open doors; metal silo, cylindrical, to the left of the barn; hay bales, numerous, scattered in front of the barn; wooden fence, low, runs along the foreground; field with tilled soil and tire tracks in the foreground  
+                        Left = long row of flowering plants, white blossoms; dirt path with tire tracks running alongside the plants; wooden fence, low, borders the path on the right; trees and distant structures visible in the background under a hazy sky  
+                        Right = rocky terrain, uneven surface; small bushes and sparse vegetation scattered across the area; larger trees in the distant background; clear sky above the landscape  
+                        Down = overhead view of dense green foliage, possibly crops or wild plants; patches of bare earth and rocks visible through the vegetation; light reflections suggest water or moisture on the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 16, 20], [8, 8, 8]]  
+                        LeftDepth: [[100, 100, 100], [13, 16, 16], [7, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [13, 13, 13], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 6], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-31.62, 123.8, -16.0), 10.59],
+    [(-26.7, 124.72, -16.0), 10.59],
+    [(-21.79, 125.64, -16.0), 10.59],
+    [(-16.87, 126.56, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), -4.41],
+    [(-11.96, 127.48, -16.0), -19.41],
+    [(-11.96, 127.48, -16.0), -34.41],
+    [(-11.96, 127.48, -16.0), -49.41],
+    [(-11.96, 127.48, -16.0), -64.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 55.99999999999998
+                        AvgHeadingChange = 4.17
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = barn, wooden, with white roof; silo, cylindrical, gray; several hay bales; fenced area in the foreground; barn and silo in the midground; trees and distant structures in the background  
+                        Left = dirt path, winding; rows of flowering plants on both sides; fence along the right side; trees and fog in the distance; bright sun in the upper left  
+                        Right = rocky path, narrow; grass and shrubs on both sides; small mound of rocks in the center; trees and open land in the background; overcast sky  
+                        Down = overhead view of water surface; green aquatic plants floating; patches of clear water revealing submerged rocks; light reflections on the water  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 17, 17], [8, 8, 8]]  
+                        LeftDepth: [[100, 100, 100], [10, 17, 17], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [20, 13, 13], [7, 7, 7]]  
+                        DownDepth: [[6, 5, 5], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-26.7, 124.72, -16.0), 10.59],
+    [(-21.79, 125.64, -16.0), 10.59],
+    [(-16.87, 126.56, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), -4.41],
+    [(-11.96, 127.48, -16.0), -19.41],
+    [(-11.96, 127.48, -16.0), -34.41],
+    [(-11.96, 127.48, -16.0), -49.41],
+    [(-11.96, 127.48, -16.0), -64.41],
+    [(-11.96, 127.48, -16.0), -79.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 55.99999999999998
+                        AvgHeadingChange = 4.74
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = barn, wooden structure with white roof; silo, tall cylindrical container; hay bales, stacked in groups; wooden fence, enclosing the area; barn is on the right, silo is central, hay bales are scattered in front  
+                        Left = dirt road, winding through the landscape; fields of flowering plants on both sides; trees in the distance under a bright sky; road curves gently to the left  
+                        Right = dirt path, winding through rocky terrain; bushes and small trees along the path; rocks and sparse vegetation in the foreground; ocean visible in the distant background  
+                        Down = clear shallow water, revealing submerged rocks and pebbles; aquatic plants, green and leafy, growing densely in the water; sunlight reflecting off the surface  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 16, 18], [8, 7, 8]]  
+                        LeftDepth: [[100, 100, 100], [9, 12, 18], [6, 6, 7]]  
+                        RightDepth: [[100, 100, 100], [19, 13, 13], [8, 7, 7]]  
+                        DownDepth: [[6, 5, 5], [5, 5, 5], [5, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-21.79, 125.64, -16.0), 10.59],
+    [(-16.87, 126.56, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), -4.41],
+    [(-11.96, 127.48, -16.0), -19.41],
+    [(-11.96, 127.48, -16.0), -34.41],
+    [(-11.96, 127.48, -16.0), -49.41],
+    [(-11.96, 127.48, -16.0), -64.41],
+    [(-11.96, 127.48, -16.0), -79.41],
+    [(-11.96, 127.48, -16.0), -94.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 55.99999999999998
+                        AvgHeadingChange = 5.25
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered exterior; gray silo with green top; several hay bales scattered; fenced garden in foreground; building and silo in the midground; overcast sky  
+                        Left = dirt road, tire tracks; rows of crops on both sides; wooden fence along the right side; bright sun in the distance; trees and haze in the background; clear sky  
+                        Right = rocky terrain with sparse vegetation; dirt path winding through center; small structure or ruin in the left midground; trees and hills in the distant background; overcast sky  
+                        Down = overhead view of grassy area with patches of rocks; clusters of small plants; uneven ground texture; no visible structures or people; natural daylight  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 17, 18], [7, 8, 8]]  
+                        LeftDepth: [[100, 100, 100], [11, 13, 18], [7, 6, 7]]  
+                        RightDepth: [[100, 100, 100], [19, 11, 12], [8, 7, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [5, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-16.87, 126.56, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), -4.41],
+    [(-11.96, 127.48, -16.0), -19.41],
+    [(-11.96, 127.48, -16.0), -34.41],
+    [(-11.96, 127.48, -16.0), -49.41],
+    [(-11.96, 127.48, -16.0), -64.41],
+    [(-11.96, 127.48, -16.0), -79.41],
+    [(-11.96, 127.48, -16.0), -94.41],
+    [(-12.34, 122.49, -16.0), -94.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 60.99999999999998
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered exterior; cylindrical silo, gray with green top; several hay bales scattered; fenced garden in foreground; building and silo in the background  
+                        Left = dirt path, winding through fields; rows of crops on both sides; trees in the distance under bright sky; sun visible near horizon  
+                        Right = rocky terrain, patches of grass; dirt path curving through scene; small wooden structure partially visible; trees and bushes in background  
+                        Down = overhead view of patchy vegetation; light green plants growing sparsely; rocky ground with some soil; tire tracks visible in upper part  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 16, 20], [8, 8, 8]]  
+                        LeftDepth: [[100, 100, 100], [15, 13, 18], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [19, 15, 14], [8, 8, 7]]  
+                        DownDepth: [[6, 5, 6], [5, 5, 5], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-11.96, 127.48, -16.0), 10.59],
+    [(-11.96, 127.48, -16.0), -4.41],
+    [(-11.96, 127.48, -16.0), -19.41],
+    [(-11.96, 127.48, -16.0), -34.41],
+    [(-11.96, 127.48, -16.0), -49.41],
+    [(-11.96, 127.48, -16.0), -64.41],
+    [(-11.96, 127.48, -16.0), -79.41],
+    [(-11.96, 127.48, -16.0), -94.41],
+    [(-12.34, 122.49, -16.0), -94.41],
+    [(-12.73, 117.51, -16.0), -94.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 65.99999999999997
+                        AvgHeadingChange = 4.77
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered; silo, cylindrical and gray; hay bales, stacked in groups; wooden fence, enclosing the area; barn is on the right, silo in the background left  
+                        Left = dirt road, winding through fields; rows of crops on both sides; trees in the distance under a bright sky; sun visible near the horizon  
+                        Right = dirt path, curving through overgrown vegetation; rocks and shrubs along the path; trees in the background; no visible structures or people  
+                        Down = tire tracks, deep and parallel, imprinted in dry soil; small green plants growing between the tracks; close-up view focusing on the texture of the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 16, 17], [8, 8, 8]]  
+                        LeftDepth: [[100, 100, 100], [14, 15, 18], [7, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [22, 17, 15], [8, 7, 6]]  
+                        DownDepth: [[6, 5, 6], [5, 5, 5], [6, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-11.96, 127.48, -16.0), -4.41],
+    [(-11.96, 127.48, -16.0), -19.41],
+    [(-11.96, 127.48, -16.0), -34.41],
+    [(-11.96, 127.48, -16.0), -49.41],
+    [(-11.96, 127.48, -16.0), -64.41],
+    [(-11.96, 127.48, -16.0), -79.41],
+    [(-11.96, 127.48, -16.0), -94.41],
+    [(-12.34, 122.49, -16.0), -94.41],
+    [(-12.73, 117.51, -16.0), -94.41],
+    [(-13.11, 112.52, -16.0), -94.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 70.99999999999997
+                        AvgHeadingChange = 4.57
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, large, weathered; silo, tall, cylindrical; hay bales, stacked; wooden fence, short; barn in the right foreground; silo and stacks of hay to the left  
+                        Left = dirt road, long, winding; field of crops, green, extensive; wooden fence, continuous; sun, bright, high in the sky; road stretches into the distance  
+                        Right = dirt path, narrow, curving; hay bale, single, brown; rocks, scattered, gray; trees, distant, green; path leads uphill through a rural landscape  
+                        Down = tire tracks, deep, parallel; small plants, green, growing between tracks; dirt ground, light brown; close-up view focusing on texture and vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 14, 21], [8, 8, 9]]  
+                        LeftDepth: [[100, 100, 100], [16, 16, 17], [7, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [22, 20, 16], [9, 8, 8]]  
+                        DownDepth: [[6, 6, 6], [5, 5, 5], [6, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-11.96, 127.48, -16.0), -19.41],
+    [(-11.96, 127.48, -16.0), -34.41],
+    [(-11.96, 127.48, -16.0), -49.41],
+    [(-11.96, 127.48, -16.0), -64.41],
+    [(-11.96, 127.48, -16.0), -79.41],
+    [(-11.96, 127.48, -16.0), -94.41],
+    [(-12.34, 122.49, -16.0), -94.41],
+    [(-12.73, 117.51, -16.0), -94.41],
+    [(-13.11, 112.52, -16.0), -94.41],
+    [(-13.5, 107.54, -16.0), -94.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 75.99999999999997
+                        AvgHeadingChange = 4.38
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered exterior; silo with green top, cylindrical shape; several wooden barrels, stacked logs, and blue barrels on the ground; barn in the center-right, silo to the left  
+                        Left = dirt road, tire tracks running through the center; rows of crops on both sides; sun low in the sky, creating a hazy atmosphere; fence along the right side of the road  
+                        Right = dirt path winding through a rural area; stacks of hay bales and wooden crates along the left side; scattered rocks and bushes; trees in the background under a cloudy sky  
+                        Down = overhead view of a dirt path with distinct tire tracks; small plants growing along the edges; wooden fence section visible at the top; patches of grass and dirt throughout  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [12, 16, 18], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [16, 16, 17], [8, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [18, 21, 19], [9, 8, 8]]  
+                        DownDepth: [[6, 6, 6], [5, 5, 6], [6, 5, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-11.96, 127.48, -16.0), -34.41],
+    [(-11.96, 127.48, -16.0), -49.41],
+    [(-11.96, 127.48, -16.0), -64.41],
+    [(-11.96, 127.48, -16.0), -79.41],
+    [(-11.96, 127.48, -16.0), -94.41],
+    [(-12.34, 122.49, -16.0), -94.41],
+    [(-12.73, 117.51, -16.0), -94.41],
+    [(-13.11, 112.52, -16.0), -94.41],
+    [(-13.5, 107.54, -16.0), -94.41],
+    [(-13.88, 102.55, -16.0), -94.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 80.99999999999997
+                        AvgHeadingChange = 4.2
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered exterior; silo, cylindrical, gray with green top; stacked logs, multiple piles; blue barrels, five in a cluster; white water tank on stand; barn is central, silo to the left, logs and barrels in the foreground  
+                        Left = dirt road, tire tracks; rows of crops, green and leafy; trees in the distance; sun low on the horizon; road stretches into the background  
+                        Right = dirt path, winding; stacks of wooden pallets; hay bales, scattered; rocks and shrubs along the path; trees in the mid-ground; open landscape under overcast sky  
+                        Down = muddy ground, tire tracks; small plants growing; wooden fence post, partially buried; bundle of roots or plant matter; close-up view focusing on ground details  
+
+                        # Depth Information  
+                        FrontDepth: [[39, 100, 21], [14, 13, 15], [9, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [18, 16, 16], [8, 7, 9]]  
+                        RightDepth: [[100, 100, 100], [18, 20, 21], [8, 8, 9]]  
+                        DownDepth: [[7, 6, 7], [5, 5, 5], [6, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-11.96, 127.48, -16.0), -49.41],
+    [(-11.96, 127.48, -16.0), -64.41],
+    [(-11.96, 127.48, -16.0), -79.41],
+    [(-11.96, 127.48, -16.0), -94.41],
+    [(-12.34, 122.49, -16.0), -94.41],
+    [(-12.73, 117.51, -16.0), -94.41],
+    [(-13.11, 112.52, -16.0), -94.41],
+    [(-13.5, 107.54, -16.0), -94.41],
+    [(-13.88, 102.55, -16.0), -94.41],
+    [(-14.27, 97.57, -16.0), -94.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 85.99999999999997
+                        AvgHeadingChange = 4.04
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered exterior; two white cylindrical tanks on a wooden stand; silo with green top in the background left; barn doors partially open with cloth draped over them  
+                        Left = dirt road running through a field of crops; stacks of hay bales and wooden crates along the roadside; sun low in the sky creating a hazy atmosphere  
+                        Right = pathway winding through a rural landscape; wooden crates and logs stacked near the foreground; small structure with thatched roof on the left; trees and rocks in the midground  
+                        Down = blue cylindrical barrels arranged in a grid pattern; dirt ground with scattered debris; wooden fence partially visible at the bottom; shadow cast by an unseen object  
+
+                        # Depth Information  
+                        FrontDepth: [[36, 10, 10], [9, 9, 10], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [18, 15, 17], [8, 8, 7]]  
+                        RightDepth: [[100, 100, 100], [13, 20, 24], [9, 8, 8]]  
+                        DownDepth: [[7, 5, 7], [7, 5, 6], [6, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-11.96, 127.48, -16.0), -64.41],
+    [(-11.96, 127.48, -16.0), -79.41],
+    [(-11.96, 127.48, -16.0), -94.41],
+    [(-12.34, 122.49, -16.0), -94.41],
+    [(-12.73, 117.51, -16.0), -94.41],
+    [(-13.11, 112.52, -16.0), -94.41],
+    [(-13.5, 107.54, -16.0), -94.41],
+    [(-13.88, 102.55, -16.0), -94.41],
+    [(-14.27, 97.57, -16.0), -94.41],
+    [(-14.65, 92.58, -16.0), -94.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 90.99999999999997
+                        AvgHeadingChange = 3.89
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered exterior; two white cylindrical tanks on stands; silo with green top in background; barn is in the foreground  
+                        Left = stacks of rolled hay bales; wooden cart; field of crops under bright sun; barn in distant right; scene is outdoors in daylight  
+                        Right = wooden shed, partially visible; stacks of firewood; field with crops and trees; dirt path; shed is in the left foreground  
+                        Down = group of blue barrels, clustered together; scattered dry vegetation; wooden structure in upper left; overhead view of ground  
+
+                        # Depth Information  
+                        FrontDepth: [[33, 5, 6], [6, 5, 6], [6, 6, 6]]  
+                        LeftDepth: [[100, 100, 100], [17, 16, 16], [8, 7, 7]]  
+                        RightDepth: [[8, 100, 100], [8, 20, 25], [8, 8, 9]]  
+                        DownDepth: [[7, 6, 7], [5, 5, 7], [5, 5, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-11.96, 127.48, -16.0), -79.41],
+    [(-11.96, 127.48, -16.0), -94.41],
+    [(-12.34, 122.49, -16.0), -94.41],
+    [(-12.73, 117.51, -16.0), -94.41],
+    [(-13.11, 112.52, -16.0), -94.41],
+    [(-13.5, 107.54, -16.0), -94.41],
+    [(-13.88, 102.55, -16.0), -94.41],
+    [(-14.27, 97.57, -16.0), -94.41],
+    [(-14.65, 92.58, -16.0), -94.41],
+    [(-15.04, 87.6, -16.0), -94.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 95.99999999999997
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Hat,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-112, -11]  
+                        **Y Range**: [min_y, max_y] = [68, 169]
+
+                        # RGB Captions
+                        Front = wooden wall, vertical planks, weathered; diagonal wooden beam; small window with multiple panes; sunlight casting shadows  
+                        Left = field of crops under bright sky; large cylindrical silo with black roof; stacks of rolled hay bales; scattered logs and wooden wheels; white tank in the foreground  
+                        Right = wooden building, vertical planks, rustic; two windows with multiple panes; dirt ground with scattered logs and hay bales; trees and rocks in the background  
+                        Down = ground covered in dry leaves and dirt; wooden structure with vertical planks; open wooden door; light purple cloth draped over a box; blue barrels stacked in the foreground  
+
+                        # Depth Information  
+                        FrontDepth: [[2, 2, 2], [2, 1, 2], [2, 2, 2]]  
+                        LeftDepth: [[100, 100, 32], [18, 15, 2], [9, 5, 3]]  
+                        RightDepth: [[2, 5, 100], [2, 5, 22], [2, 5, 8]]  
+                        DownDepth: [[3, 3, 3], [4, 4, 5], [6, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-11.96, 127.48, -16.0), -94.41],
+    [(-12.34, 122.49, -16.0), -94.41],
+    [(-12.73, 117.51, -16.0), -94.41],
+    [(-13.11, 112.52, -16.0), -94.41],
+    [(-13.5, 107.54, -16.0), -94.41],
+    [(-13.88, 102.55, -16.0), -94.41],
+    [(-14.27, 97.57, -16.0), -94.41],
+    [(-14.65, 92.58, -16.0), -94.41],
+    [(-15.04, 87.6, -16.0), -94.41],
+    [(-15.42, 82.61, -16.0), -94.41],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 100.99999999999997
+                        AvgHeadingChange = 3.62
+
+                        # Reminder  
+                        - The target is ** Hat**, described as:  Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

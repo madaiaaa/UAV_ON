@@ -1,0 +1,35 @@
+{
+  "episode_id": "69",
+  "start_pose": {
+    "start_position": [
+      47.69476023756585,
+      314.4606489186109,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.16624551080114497,
+      -0.9860843930102872
+    ]
+  },
+  "info": {
+    "geodesic_distance": 24,
+    "euclidean_distance": 17.2024
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Bull",
+  "object_name": "Longhorn_cattle_Eat_anim_20",
+  "pose": [
+    [
+      52.00725555419922,
+      298.4072570800781,
+      -2.5712742805480957
+    ]
+  ],
+  "size": " mid(5.0*1.25=6.25 squares)",
+  "description": " Organic muscular form, reddish-brown coat with lighter speckling, prominent wide-spanning horns and sturdy build, suitable for farm or livestock environment.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

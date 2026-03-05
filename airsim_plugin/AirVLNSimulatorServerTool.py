@@ -605,7 +605,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "--root_path",
         type=str,
-        default="/home/madai/桌面/UAV/TEST_ENVS",
+        default="/home/sysu/uavon_script/TEST_ENVS",
         help='root dir for env path'
     ) 
     args = parser.parse_args()

@@ -1,0 +1,35 @@
+{
+  "episode_id": "91",
+  "start_pose": {
+    "start_position": [
+      -197.44905159493726,
+      125.35883347916118,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.4193377251935915,
+      -0.9078303102614849
+    ]
+  },
+  "info": {
+    "geodesic_distance": 24,
+    "euclidean_distance": 17.4268
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Human",
+  "object_name": "BP_ma_casual_02_chubby_2",
+  "pose": [
+    [
+      -200.907958984375,
+      141.59963989257812,
+      -1.711679220199585
+    ]
+  ],
+  "size": " small(1.25*1.25=1.56 squares)",
+  "description": " Organic upright form, brown jacket with dark jeans and bald head, symmetrical arm movement indicating stride, suitable for human representation or simulation.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

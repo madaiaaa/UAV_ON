@@ -1,0 +1,35 @@
+{
+  "episode_id": "53",
+  "start_pose": {
+    "start_position": [
+      -85.88899131094173,
+      -277.2836731316486,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9119788639833896,
+      0.41023718949842436
+    ]
+  },
+  "info": {
+    "geodesic_distance": 72,
+    "euclidean_distance": 49.2418
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " PullUpBars",
+  "object_name": "SM_PullupBar01_14",
+  "pose": [
+    [
+      -103.69274139404297,
+      -232.792724609375,
+      4.328725337982178
+    ]
+  ],
+  "size": " small(0.25*2.75=0.69 squares)",
+  "description": " Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

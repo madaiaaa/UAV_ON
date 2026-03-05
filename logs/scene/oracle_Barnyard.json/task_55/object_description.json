@@ -1,0 +1,35 @@
+{
+  "episode_id": "55",
+  "start_pose": {
+    "start_position": [
+      -115.59031768669959,
+      -278.69790010147096,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3566197534879845,
+      -0.9342496194391353
+    ]
+  },
+  "info": {
+    "geodesic_distance": 63,
+    "euclidean_distance": 46.6281
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Seesaw",
+  "object_name": "SM_Seesaw02_17",
+  "pose": [
+    [
+      -108.09274291992188,
+      -234.0927276611328,
+      4.328725337982178
+    ]
+  ],
+  "size": " small(4.5*0.5=2.25 squares)",
+  "description": " Geometric long bar balanced on central pivot, bright yellow and red painted metal, two tire-based stoppers and four seat handles, used for playground recreation.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

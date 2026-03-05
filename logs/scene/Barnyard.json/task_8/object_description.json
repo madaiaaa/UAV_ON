@@ -1,0 +1,35 @@
+{
+  "episode_id": "8",
+  "start_pose": {
+    "start_position": [
+      -61.10812061666034,
+      118.29151218232072,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.09226748608179514,
+      0.9957342572253632
+    ]
+  },
+  "info": {
+    "geodesic_distance": 127,
+    "euclidean_distance": 46.8478
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Hat",
+  "object_name": "SM_Hat_14",
+  "pose": [
+    [
+      -17.49274444580078,
+      101.50725555419922,
+      -10.27127456665039
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 square)",
+  "description": " Organic rounded form, brown felt or leather texture, wide-brimmed with a pinched crown, typically worn on the head for sun protection or style.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

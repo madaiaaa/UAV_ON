@@ -1,0 +1,35 @@
+{
+  "episode_id": "46",
+  "start_pose": {
+    "start_position": [
+      -59.629201182726746,
+      -37.47220246755539,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9519774243279104,
+      -0.30616822756451667
+    ]
+  },
+  "info": {
+    "geodesic_distance": 51,
+    "euclidean_distance": 38.6187
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Pans",
+  "object_name": "SM_Pans_Set2_83",
+  "pose": [
+    [
+      -96.59274291992188,
+      -29.292743682861328,
+      0.6287254095077515
+    ]
+  ],
+  "size": " small(1*0.75=0.75 squares)",
+  "description": " Geometric circular forms, metallic surfaces with dark handles, nested arrangement with visible depth and curvature, used for cooking or frying food.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

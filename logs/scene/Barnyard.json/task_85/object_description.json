@@ -1,0 +1,35 @@
+{
+  "episode_id": "85",
+  "start_pose": {
+    "start_position": [
+      -241.71869123000351,
+      -172.8724819010812,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.4510266761110749,
+      0.8925104690905287
+    ]
+  },
+  "info": {
+    "geodesic_distance": 66,
+    "euclidean_distance": 44.1392
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " SawingBuck",
+  "object_name": "SM_SawingBuck_02_73",
+  "pose": [
+    [
+      -264.6927185058594,
+      -136.09274291992188,
+      1.2287254333496094
+    ]
+  ],
+  "size": " small2.25*1=2.25 squares)",
+  "description": " Geometric wooden X-frame, natural wood texture with visible grain, central log support with attached saw, designed for holding logs during manual sawing.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

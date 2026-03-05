@@ -1,0 +1,35 @@
+{
+  "episode_id": "18",
+  "start_pose": {
+    "start_position": [
+      -144.27306786721488,
+      -7.208885715972336,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7537196615622097,
+      0.6571960679846982
+    ]
+  },
+  "info": {
+    "geodesic_distance": 67,
+    "euclidean_distance": 48.7806
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Caravan",
+  "object_name": "Caravan_31",
+  "pose": [
+    [
+      -98.39273834228516,
+      -21.292743682861328,
+      1.7287254333496094
+    ]
+  ],
+  "size": " big(7.25*4.0=29.0 squares)",
+  "description": " Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

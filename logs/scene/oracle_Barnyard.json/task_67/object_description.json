@@ -1,0 +1,35 @@
+{
+  "episode_id": "67",
+  "start_pose": {
+    "start_position": [
+      -79.37420504601883,
+      161.9994200214971,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9756724963638653,
+      -0.21923316318272457
+    ]
+  },
+  "info": {
+    "geodesic_distance": 69,
+    "euclidean_distance": 51.3028
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Sheep",
+  "object_name": "Domestic_sheep_Eat_anim_8",
+  "pose": [
+    [
+      -63.89274215698242,
+      210.90725708007812,
+      -7.571274280548096
+    ]
+  ],
+  "size": " small(2.25*0.75=1.69 squares)",
+  "description": " Organic quadruped form, light gray wool texture with natural contours, distinct head and legs visible, suitable for livestock or rural scene representation.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

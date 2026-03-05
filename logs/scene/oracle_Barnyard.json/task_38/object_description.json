@@ -1,0 +1,35 @@
+{
+  "episode_id": "38",
+  "start_pose": {
+    "start_position": [
+      143.15611150888077,
+      -17.451095237445116,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.2407893455872788,
+      -0.9705774008556196
+    ]
+  },
+  "info": {
+    "geodesic_distance": 44,
+    "euclidean_distance": 34.7798
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " AirConditioner",
+  "object_name": "SM_AirConditioner_70",
+  "pose": [
+    [
+      109.7072525024414,
+      -23.292743682861328,
+      0.5287254452705383
+    ]
+  ],
+  "size": " small(0.75*0.5=0.38 squares)",
+  "description": " Geometric box form, metallic housing with central circular fan grille, vented sides and compact build, likely used for cooling or ventilation purposes.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

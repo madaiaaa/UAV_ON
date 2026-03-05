@@ -1,0 +1,35 @@
+{
+  "episode_id": "27",
+  "start_pose": {
+    "start_position": [
+      -138.22742036783342,
+      -241.54003899269927,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8742602559185373,
+      0.48545752123255204
+    ]
+  },
+  "info": {
+    "geodesic_distance": 37,
+    "euclidean_distance": 21.5494
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " FabricSack",
+  "object_name": "SM_Fabric_Sack_Set3_54",
+  "pose": [
+    [
+      -126.69274139404297,
+      -227.292724609375,
+      4.328725337982178
+    ]
+  ],
+  "size": " small(1.5*1.5=2.25 squares)",
+  "description": " Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

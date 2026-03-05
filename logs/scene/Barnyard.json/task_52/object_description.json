@@ -1,0 +1,35 @@
+{
+  "episode_id": "52",
+  "start_pose": {
+    "start_position": [
+      79.97377933008781,
+      -67.82794283177284,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3020046569138154,
+      0.9533064497853608
+    ]
+  },
+  "info": {
+    "geodesic_distance": 52,
+    "euclidean_distance": 32.8785
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " SignStop",
+  "object_name": "S_SignStop2_11",
+  "pose": [
+    [
+      65.60725402832031,
+      -40.99274444580078,
+      5.428725242614746
+    ]
+  ],
+  "size": " small(0.75*0.25=0.19 squares)",
+  "description": " Rectangular frame structure, red and white striped pattern with thin metal supports, flat top edge with high-visibility markings, used to signal stop or block passage.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

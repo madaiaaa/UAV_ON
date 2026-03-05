@@ -1,0 +1,2016 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = distant ruined structures, overgrown vegetation; structures are in the background, partially obscured by haze  
+                        Left = road, thatched-roof huts, water tank; road runs horizontally through the middle; huts and tank on the right side of the road  
+                        Right = stacks of white cylindrical objects, overgrown vegetation; objects are in the center foreground; vegetation surrounds them  
+                        Down = wooden structure with corrugated roof, tree, rocks; structure is in the bottom left corner; tree is to the right of the structure  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [51, 12, 12], [22, 12, 11]]  
+                        LeftDepth: [[100, 100, 100], [30, 31, 55], [20, 19, 25]]  
+                        RightDepth: [[100, 100, 100], [12, 18, 25], [9, 12, 18]]  
+                        DownDepth: [[20, 11, 12], [11, 7, 8], [9, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -10.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = road, narrow and paved; trees, medium-sized and leafy; buildings, scattered in the background; road stretches from left to right across the midground  
+                        Left = barn-like building, large and wooden; water tank, cylindrical and metallic; smaller structures, clustered near the center; road runs horizontally in the midground  
+                        Right = stacks of white cylindrical objects, numerous and aligned; trees, tall and dense; structures, indistinct in the far background; stacks dominate the foreground  
+                        Down = small structure, rectangular and weathered; tree, leafy and large; rocks, scattered and gray; structure is on the left with tree to its right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [52, 12, 12], [23, 11, 11]]  
+                        LeftDepth: [[100, 100, 100], [29, 50, 56], [20, 18, 25]]  
+                        RightDepth: [[100, 100, 100], [9, 12, 20], [9, 8, 7]]  
+                        DownDepth: [[18, 7, 7], [9, 6, 6], [7, 6, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 2.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = road, narrow and unpaved; trees and bushes, dense and green; small structures, scattered in the midground; hazy sky, overcast; view from elevated position  
+                        Left = thatched-roof hut, large and circular; corrugated metal roof, long and sloped; water tank, cylindrical and metallic; small buildings, clustered near road; trees, in the background; elevated perspective  
+                        Right = sun, bright and low on horizon; field, covered with flowering plants; distant structures, indistinct; trees, lining horizon; overexposed sky, hazy; view from elevated angle  
+                        Down = corrugated metal roof, weathered and slanted; small structure, partially visible; rocks, scattered on ground; bushes, leafy and green; overhead perspective; dirt path nearby  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [41, 11, 11], [20, 12, 11]]  
+                        LeftDepth: [[100, 100, 100], [26, 29, 49], [15, 15, 17]]  
+                        RightDepth: [[100, 100, 100], [9, 11, 18], [10, 5, 5]]  
+                        DownDepth: [[14, 5, 4], [7, 4, 4], [5, 5, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 4.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = small building with thatched roof, left foreground; dense green bushes in the midground; distant trees and structures under hazy sky  
+                        Left = thatched-roof building on left; two cylindrical water tanks; road running horizontally; cluster of small buildings and stacked materials in background  
+                        Right = dense green foliage in the foreground; sun visible as bright spot in upper left; distant cityscape with buildings and trees under hazy sky  
+                        Down = corroded metal roof, left foreground; dirt path leading away from roof; scattered rocks and sparse vegetation in surrounding area  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [28, 11, 10], [17, 11, 10]]  
+                        LeftDepth: [[100, 100, 100], [25, 26, 40], [6, 12, 14]]  
+                        RightDepth: [[13, 100, 100], [9, 5, 4], [2, 2, 2]]  
+                        DownDepth: [[12, 5, 3], [5, 2, 2], [3, 3, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 6.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = small thatched-roof hut, left side; road, winding through center; trees and bushes, scattered throughout; distant buildings, faintly visible in background  
+                        Left = metal corrugated roof, foreground; cylindrical water tank, to the right of roof; small structures, clustered near road; trees, lining the road; windmill, in the far distance  
+                        Right = large bush, in the immediate foreground; smaller bushes, scattered across the midground; road, curving through the middle; distant vehicles, on the road; tall structure, in the far background  
+                        Down = rustic wooden shed, left side; metal corrugated roof, extending from shed; rocks, scattered around shed base; dirt path, leading away from shed; large bush, to the right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [38, 11, 10], [19, 12, 10]]  
+                        LeftDepth: [[100, 100, 100], [25, 28, 47], [15, 13, 16]]  
+                        RightDepth: [[100, 100, 100], [9, 11, 18], [4, 4, 5]]  
+                        DownDepth: [[13, 4, 4], [6, 3, 3], [4, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 8.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = small hut, thatched roof; trees with green foliage; road in the mid-ground; buildings and structures in the distant background  
+                        Left = cylindrical silo, metal construction; two water tanks, white color; wooden shed, thatched roof; stacks of materials near shed; road running horizontally across scene  
+                        Right = trees with dense green foliage; sunlight creating lens flare effect; city skyline with tall buildings in the far distance  
+                        Down = wooden structure, corrugated metal roof; rocks scattered on ground; dirt path leading away from structure; tree with light green leaves in foreground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [28, 11, 11], [17, 11, 10]]  
+                        LeftDepth: [[100, 100, 100], [25, 26, 40], [6, 12, 14]]  
+                        RightDepth: [[13, 100, 100], [9, 5, 5], [2, 2, 2]]  
+                        DownDepth: [[12, 3, 3], [5, 2, 2], [3, 3, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = small huts, thatched roofs; several scattered in the mid-ground; trees and bushes in the foreground  
+                        Left = thatched-roof hut, large cylindrical water tank; one hut and one tank in the foreground; huts and trees in the background  
+                        Right = dense green foliage, white flowers; fills the foreground; open area with structures visible in the distant background  
+                        Down = wooden structure, corrugated metal roof; partially visible on the left; dirt path and rocks to the right; tree with green leaves in the bottom-right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [35, 8, 8], [16, 9, 8]]  
+                        LeftDepth: [[100, 100, 100], [28, 27, 40], [13, 13, 18]]  
+                        RightDepth: [[11, 100, 100], [7, 7, 6], [8, 3, 3]]  
+                        DownDepth: [[14, 13, 9], [11, 4, 2], [6, 3, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 14.999999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large bush, leafy green, in the foreground; smaller bushes and trees in the midground; structures and a road in the distant background  
+                        Left = metal roof, corrugated, in the foreground; water tank, cylindrical, metal; small buildings with sloped roofs; dirt path and vegetation in the midground; hazy sky in the background  
+                        Right = dense tree canopy, leafy green, occupying most of the frame; sunlight filtering through leaves; faint outlines of structures and trees in the distant background  
+                        Down = wooden structure, partially visible on the left; dirt path with scattered rocks; low-lying shrubs and plants; aerial perspective looking down  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 7, 6], [33, 6, 6], [14, 7, 6]]  
+                        LeftDepth: [[100, 100, 100], [21, 21, 37], [11, 11, 15]]  
+                        RightDepth: [[8, 7, 100], [6, 6, 4], [7, 7, 4]]  
+                        DownDepth: [[11, 10, 7], [10, 4, 4], [10, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 16.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large tree, leafy green, in the foreground; field with low vegetation and scattered rocks; distant buildings under a hazy sky  
+                        Left = metal roof, corrugated, on a structure in the foreground; water tanks and thatched-roof buildings in the midground; trees and open land in the background  
+                        Right = tree, full canopy of green leaves, centered in the frame; sunlight filtering through branches; ground covered in small plants and shadows  
+                        Down = overhead view of a patchy area with sparse vegetation and rocks; wooden structure with slatted walls on the left; dirt path or cleared area in the center  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 7, 7], [14, 6, 6], [9, 7, 5]]  
+                        LeftDepth: [[100, 100, 100], [15, 16, 23], [9, 9, 12]]  
+                        RightDepth: [[8, 8, 4], [6, 6, 3], [6, 6, 2]]  
+                        DownDepth: [[9, 8, 9], [9, 4, 7], [10, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, 0.0), 91.67],
+    [(-47.31, -171.3, 0.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 18.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large tree, dense green foliage; occupies right foreground; field of low vegetation in midground; structures and trees in distant background  
+                        Left = wooden-roofed building, weathered; water tank on stand; scattered rocks and vegetation in foreground; farm-like structures in background  
+                        Right = large tree, full green canopy; stands centrally in frame; ground covered with sparse vegetation; faint structures visible in far distance  
+                        Down = ground view of dirt path, patches of grass and small plants; scattered rocks; corner of wooden structure in bottom left  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 6, 4], [18, 4, 4], [11, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [16, 18, 21], [9, 11, 11]]  
+                        RightDepth: [[4, 8, 9], [4, 5, 7], [4, 5, 7]]  
+                        DownDepth: [[7, 7, 5], [9, 7, 8], [9, 5, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -10.0), 91.67],
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, 0.0), 91.67],
+    [(-47.46, -166.3, 0.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 23.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large tree, dense green foliage; occupies right foreground; field of low-lying vegetation in midground; structures and trees in distant background  
+                        Left = wooden building, corrugated metal roof; water tank on stand; overgrown vegetation in foreground; structures and trees in background under hazy sky  
+                        Right = two large trees, thick green canopies; dirt path between them; low-lying plants in foreground; hills and trees in distant background  
+                        Down = overhead view of ground; patches of dry soil and sparse green vegetation; small rocks scattered across surface; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 2, 2], [10, 2, 1], [7, 4, 2]]  
+                        LeftDepth: [[100, 100, 100], [13, 19, 15], [9, 9, 9]]  
+                        RightDepth: [[2, 2, 7], [2, 2, 6], [2, 2, 9]]  
+                        DownDepth: [[5, 5, 7], [5, 4, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -8.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, 0.0), 91.67],
+    [(-47.46, -166.3, 0.0), 91.67],
+    [(-47.46, -166.3, 2.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 25.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = dense green foliage, partially obscuring view; field of low-lying plants in the midground; distant structures and trees under overcast sky  
+                        Left = wooden building with dark roof on the left; white cylindrical water tank; small wooden shed; field of crops and scattered rocks; hazy background with trees and structures  
+                        Right = overhead perspective of dense green tree canopy; branches and leaves fill the frame; ground with sparse vegetation visible below  
+                        Down = aerial top-down view of patchy ground with scattered green shrubs; light-colored soil or sand; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 5, 0], [9, 2, 0], [6, 2, 0]]  
+                        LeftDepth: [[100, 100, 100], [15, 16, 13], [9, 8, 6]]  
+                        RightDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 3]]  
+                        DownDepth: [[6, 3, 2], [5, 5, 2], [5, 5, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, 0.0), 91.67],
+    [(-47.46, -166.3, 0.0), 91.67],
+    [(-47.46, -166.3, 2.0), 91.67],
+    [(-47.6, -161.31, 2.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 30.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = field of low-lying green and white plants; trees in the midground; overcast sky; no visible movement  
+                        Left = two rustic wooden buildings with corrugated roofs; a large cylindrical water tank between them; field of crops in the background; distant structures under a pale sky  
+                        Right = dense canopy of green leaves and branches; sunlight filtering through; view looking upward from below the tree  
+                        Down = patchy ground with sparse green vegetation; dirt path winding through; small bushes scattered across the area; bright daylight  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 3, 2], [12, 2, 2], [6, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [17, 12, 11], [8, 5, 4]]  
+                        RightDepth: [[2, 2, 2], [2, 2, 2], [2, 1, 2]]  
+                        DownDepth: [[4, 1, 2], [4, 1, 1], [6, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, 0.0), 91.67],
+    [(-47.46, -166.3, 0.0), 91.67],
+    [(-47.46, -166.3, 2.0), 91.67],
+    [(-47.6, -161.31, 2.0), 91.67],
+    [(-47.75, -156.31, 2.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 35.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = field of low-lying plants, dense and light green; trees in the midground; structures and power lines in the distant background; overcast sky  
+                        Left = vegetation with white flowers in the foreground; wooden building with a corrugated roof on the left; water tank and another building in the midground; trees and structures in the background; hazy sky  
+                        Right = two large leafy trees, one with light-colored bark; field of flowering plants below; sunlight filtering through leaves; partial view of hanging foliage at top right  
+                        Down = overhead view of sandy ground with scattered low bushes and small plants; patches of bare soil visible; bright lighting creating shadows  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 2], [10, 10, 4], [5, 5, 5]]  
+                        LeftDepth: [[100, 100, 100], [14, 3, 4], [3, 2, 3]]  
+                        RightDepth: [[4, 3, 3], [4, 3, 1], [5, 4, 1]]  
+                        DownDepth: [[4, 4, 4], [2, 3, 4], [3, 3, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -6.0), 91.67],
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, 0.0), 91.67],
+    [(-47.46, -166.3, 0.0), 91.67],
+    [(-47.46, -166.3, 2.0), 91.67],
+    [(-47.6, -161.31, 2.0), 91.67],
+    [(-47.75, -156.31, 2.0), 91.67],
+    [(-47.75, -156.31, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 37.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = small trees, green foliage; three trees in a cluster; trees stand in the midground behind dense shrubs  
+                        Left = water tank, cylindrical, metal; wooden building with sloped roof; two structures in the background; water tank to the left of the building  
+                        Right = large tree, full green canopy; tree dominates the right side of the frame; sunlight filtering through leaves creating bright spots on ground  
+                        Down = low-lying plants, sparse, light green; plants cover the entire ground surface; overhead perspective showing texture and distribution  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [10, 9, 9], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [4, 4, 8], [3, 3, 5]]  
+                        RightDepth: [[2, 1, 2], [9, 4, 4], [5, 5, 5]]  
+                        DownDepth: [[4, 4, 4], [3, 3, 4], [4, 3, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.16, -176.3, -4.0), 91.67],
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, 0.0), 91.67],
+    [(-47.46, -166.3, 0.0), 91.67],
+    [(-47.46, -166.3, 2.0), 91.67],
+    [(-47.6, -161.31, 2.0), 91.67],
+    [(-47.75, -156.31, 2.0), 91.67],
+    [(-47.75, -156.31, 4.0), 91.67],
+    [(-47.89, -151.31, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 42.999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = small trees, green foliage; cluster of five in the mid-ground; surrounded by dense shrubs and flowering plants  
+                        Left = dilapidated buildings, weathered walls; one with a corrugated metal roof; water tank to the left; all set behind overgrown vegetation  
+                        Right = large tree, broad canopy; positioned on the right side of the frame; partially obscuring the view of the field below  
+                        Down = ground-level view of grass and small plants; patchy distribution; sunlight filtering through creating bright spots  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 9, 9], [4, 4, 5]]  
+                        LeftDepth: [[100, 100, 100], [5, 7, 9], [5, 4, 4]]  
+                        RightDepth: [[100, 8, 4], [10, 6, 5], [5, 4, 5]]  
+                        DownDepth: [[4, 3, 4], [3, 3, 3], [4, 3, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.31, -171.3, -4.0), 91.67],
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, 0.0), 91.67],
+    [(-47.46, -166.3, 0.0), 91.67],
+    [(-47.46, -166.3, 2.0), 91.67],
+    [(-47.6, -161.31, 2.0), 91.67],
+    [(-47.75, -156.31, 2.0), 91.67],
+    [(-47.75, -156.31, 4.0), 91.67],
+    [(-47.89, -151.31, 4.0), 91.67],
+    [(-48.04, -146.31, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 47.99999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = small trees, green foliage; cluster of five in the midground; field of low-lying plants in the foreground  
+                        Left = two water tanks, cylindrical, metallic; one small building with a sloped roof; field of crops in the foreground; structures in the distant background  
+                        Right = large tree, dense green leaves; field of flowering plants in the midground; faint structures in the far distance under a bright sky  
+                        Down = field of grass and small plants, green and white; close-up view focusing on texture and detail; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 9, 8], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [7, 7, 9], [4, 4, 5]]  
+                        RightDepth: [[100, 9, 8], [7, 9, 7], [4, 4, 5]]  
+                        DownDepth: [[3, 3, 3], [3, 3, 3], [4, 3, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.31, -171.3, -2.0), 91.67],
+    [(-47.31, -171.3, 0.0), 91.67],
+    [(-47.46, -166.3, 0.0), 91.67],
+    [(-47.46, -166.3, 2.0), 91.67],
+    [(-47.6, -161.31, 2.0), 91.67],
+    [(-47.75, -156.31, 2.0), 91.67],
+    [(-47.75, -156.31, 4.0), 91.67],
+    [(-47.89, -151.31, 4.0), 91.67],
+    [(-48.04, -146.31, 4.0), 91.67],
+    [(-48.18, -141.31, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 52.99999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = field of flowering plants, dense and low-growing; trees in the background, slightly left of center; clear sky above  
+                        Left = field of flowering plants, rows visible; small building with sloped roof, single-story; water tanks to the left; trees and structures in the distant background  
+                        Right = field of flowering plants, dense and low-growing; large structure with stacked cylindrical components, partially obscured by foliage; trees on the right side; bright sky with sun visible  
+                        Down = overhead view of flowering plants, mixed with green grass; central patch of bare earth; sunlight filtering through the vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 8, 9], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [8, 9, 10], [5, 4, 4]]  
+                        RightDepth: [[100, 100, 11], [6, 6, 10], [4, 4, 4]]  
+                        DownDepth: [[3, 3, 3], [3, 2, 3], [3, 3, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.31, -171.3, 0.0), 91.67],
+    [(-47.46, -166.3, 0.0), 91.67],
+    [(-47.46, -166.3, 2.0), 91.67],
+    [(-47.6, -161.31, 2.0), 91.67],
+    [(-47.75, -156.31, 2.0), 91.67],
+    [(-47.75, -156.31, 4.0), 91.67],
+    [(-47.89, -151.31, 4.0), 91.67],
+    [(-48.04, -146.31, 4.0), 91.67],
+    [(-48.18, -141.31, 4.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 57.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = trees, leafy, green; multiple trees in a cluster; field of flowering plants in the foreground  
+                        Left = small building, single-story, rustic; field of flowering plants; trees and structures in the distant background  
+                        Right = bushes, leafy, green; field of flowering plants; bright sun in the upper left; buildings in the far distance  
+                        Down = field of flowering plants, close-up view; dense vegetation covering the ground; no distinct objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [7, 5, 6], [3, 3, 3]]  
+                        LeftDepth: [[100, 100, 100], [8, 7, 7], [3, 3, 3]]  
+                        RightDepth: [[100, 100, 12], [5, 5, 7], [3, 3, 3]]  
+                        DownDepth: [[2, 2, 2], [2, 2, 2], [3, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.46, -166.3, 0.0), 91.67],
+    [(-47.46, -166.3, 2.0), 91.67],
+    [(-47.6, -161.31, 2.0), 91.67],
+    [(-47.75, -156.31, 2.0), 91.67],
+    [(-47.75, -156.31, 4.0), 91.67],
+    [(-47.89, -151.31, 4.0), 91.67],
+    [(-48.04, -146.31, 4.0), 91.67],
+    [(-48.18, -141.31, 4.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 59.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large tree, leafy green canopy; multiple smaller bushes; field of flowering plants in the foreground; building with a sloped roof in the distant background  
+                        Left = field of flowering plants, dense and widespread; small building with a sloped roof; several cranes and structures in the far background under a hazy sky  
+                        Right = field of flowering plants, sun low on the horizon; cluster of bushes and trees; buildings and cranes visible in the distant background  
+                        Down = overhead view of flowering plants, densely packed; ground visible between plants; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[24, 24, 100], [5, 4, 4], [3, 3, 3]]  
+                        LeftDepth: [[100, 100, 100], [7, 7, 7], [3, 3, 3]]  
+                        RightDepth: [[100, 100, 15], [5, 5, 5], [3, 3, 3]]  
+                        DownDepth: [[2, 2, 2], [2, 2, 2], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.46, -166.3, 2.0), 91.67],
+    [(-47.6, -161.31, 2.0), 91.67],
+    [(-47.75, -156.31, 2.0), 91.67],
+    [(-47.75, -156.31, 4.0), 91.67],
+    [(-47.89, -151.31, 4.0), 91.67],
+    [(-48.04, -146.31, 4.0), 91.67],
+    [(-48.18, -141.31, 4.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 61.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = five trees, medium-sized, leafy; trees are in a row, evenly spaced; light green foliage under a pale sky  
+                        Left = farm building, single-story, weathered; several silos and cranes in the background; crops growing in foreground fields  
+                        Right = field of white flowering plants, dense; sun low on horizon, casting soft light; structures visible in distant background  
+                        Down = ground-level view of low-lying shrubs, mixed green and white foliage; dry soil patches visible; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[36, 36, 100], [4, 2, 3], [2, 2, 3]]  
+                        LeftDepth: [[100, 100, 100], [13, 11, 12], [5, 5, 5]]  
+                        RightDepth: [[100, 100, 100], [9, 7, 6], [6, 4, 5]]  
+                        DownDepth: [[2, 2, 3], [4, 3, 3], [4, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.6, -161.31, 2.0), 91.67],
+    [(-47.75, -156.31, 2.0), 91.67],
+    [(-47.75, -156.31, 4.0), 91.67],
+    [(-47.89, -151.31, 4.0), 91.67],
+    [(-48.04, -146.31, 4.0), 91.67],
+    [(-48.18, -141.31, 4.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 2.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 63.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = leafy bush, light green and white foliage; occupies foreground; branches extend outward  
+                        Left = field of flowering plants, white blooms; background includes a building with a sloped roof; trees line the horizon  
+                        Right = wide expanse of flowering plants, white blooms; sun visible in upper left; buildings and trees in distant background  
+                        Down = ground-level view of flowering plants, white blooms; dense cluster of stems and leaves; soil visible between plants  
+
+                        # Depth Information  
+                        FrontDepth: [[1, 1, 100], [1, 1, 2], [0, 0, 0]]  
+                        LeftDepth: [[100, 100, 100], [7, 7, 1], [3, 3, 1]]  
+                        RightDepth: [[100, 100, 100], [6, 4, 5], [4, 2, 2]]  
+                        DownDepth: [[1, 1, 2], [2, 2, 2], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.75, -156.31, 2.0), 91.67],
+    [(-47.75, -156.31, 4.0), 91.67],
+    [(-47.89, -151.31, 4.0), 91.67],
+    [(-48.04, -146.31, 4.0), 91.67],
+    [(-48.18, -141.31, 4.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 2.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 65.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = leafy bush, dense foliage, light-colored leaves; positioned in the foreground; surrounded by tall green grass  
+                        Left = field of tall green and white grass; small building with a flat roof in the distant background; trees visible further back  
+                        Right = bushes with silvery-green leaves, sparse branches; situated in the midground; sunlight filtering through the foliage  
+                        Down = low-lying plants with broad green leaves; interspersed with thin grass stalks; ground appears dry and earthy  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 1, 1], [0, 0, 0], [0, 0, 0]]  
+                        LeftDepth: [[100, 100, 1], [1, 1, 1], [0, 0, 0]]  
+                        RightDepth: [[1, 1, 1], [0, 0, 1], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.75, -156.31, 4.0), 91.67],
+    [(-47.89, -151.31, 4.0), 91.67],
+    [(-48.04, -146.31, 4.0), 91.67],
+    [(-48.18, -141.31, 4.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 2.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 67.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = leafy branches, light-colored leaves; branches fill the foreground and midground; no visible movement  
+                        Left = field of flowering plants, white blooms; small structure with a sloped roof in the background; utility poles and wires extending across the scene  
+                        Right = dense cluster of flowering bushes, white blooms; sun low on the horizon to the left; trees and indistinct structures in the distant background  
+                        Down = mix of grasses and flowering plants, green and white foliage; ground covered in dry soil; overhead perspective looking down  
+
+                        # Depth Information  
+                        FrontDepth: [[1, 1, 2], [0, 0, 1], [0, 0, 1]]  
+                        LeftDepth: [[100, 100, 1], [5, 4, 1], [2, 2, 1]]  
+                        RightDepth: [[100, 100, 100], [5, 3, 4], [1, 1, 1]]  
+                        DownDepth: [[1, 1, 2], [2, 1, 1], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-47.89, -151.31, 4.0), 91.67],
+    [(-48.04, -146.31, 4.0), 91.67],
+    [(-48.18, -141.31, 4.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 2.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 69.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large green tree, leafy canopy; several smaller bushes with white flowers; tree is in the midground, bushes fill the foreground  
+                        Left = field of low-lying green plants with white flowers; small rustic building with a corrugated roof; utility poles and wires stretch across the background  
+                        Right = cluster of bushes with white flowers in the foreground; large green tree with dense foliage in the midground; distant city skyline visible on the horizon  
+                        Down = dense patch of low-lying green plants with white flowers; ground appears dry and cracked; plants are tightly packed, filling the entire frame  
+
+                        # Depth Information  
+                        FrontDepth: [[18, 15, 2], [2, 2, 2], [1, 2, 2]]  
+                        LeftDepth: [[100, 100, 100], [5, 4, 5], [2, 2, 2]]  
+                        RightDepth: [[2, 100, 21], [2, 4, 4], [2, 2, 2]]  
+                        DownDepth: [[2, 1, 2], [2, 1, 1], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-48.04, -146.31, 4.0), 91.67],
+    [(-48.18, -141.31, 4.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 2.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-43.33, -136.17, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 74.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = dense green shrubbery, leafy and textured; occupies the foreground; surrounded by smaller plants and trees in the midground  
+                        Left = field of white flowering plants, tall and clustered; building with a sloped roof in the background; power lines stretching horizontally across the scene  
+                        Right = mix of leafy green plants and taller flowering stalks; large bushy tree on the left; additional trees and foliage in the distance under a pale sky  
+                        Down = close-up view of green leafy plants with small white flowers; ground appears dark and moist; plants are densely packed in the frame  
+
+                        # Depth Information  
+                        FrontDepth: [[31, 1, 1], [2, 1, 1], [0, 0, 1]]  
+                        LeftDepth: [[100, 100, 100], [1, 2, 2], [0, 0, 1]]  
+                        RightDepth: [[4, 3, 21], [1, 1, 2], [0, 0, 1]]  
+                        DownDepth: [[0, 0, 1], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-48.18, -141.31, 4.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 2.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-43.33, -136.17, 4.0), 91.67],
+    [(-43.33, -136.17, 6.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 76.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = leafy branches, thin and intertwined; branches fill the foreground and midground; no visible movement  
+                        Left = field of flowering plants, dense and white; small building with a sloped roof in the distant background; overcast sky above  
+                        Right = mix of leafy bushes and grasses, green and light-colored; bushes dominate the midground; ground appears dry and earthy  
+                        Down = overhead view of leafy branches and foliage, light-colored leaves; branches crisscross densely; ground partially visible below  
+
+                        # Depth Information  
+                        FrontDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        LeftDepth: [[100, 100, 100], [1, 1, 1], [1, 1, 1]]  
+                        RightDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 2.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-43.33, -136.17, 4.0), 91.67],
+    [(-43.33, -136.17, 6.0), 91.67],
+    [(-43.48, -131.17, 6.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 81.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large tree with green leaves; positioned in the center background; surrounded by smaller bushes and tall grasses in the foreground  
+                        Left = field of tall flowering plants with white blooms; small building with a sloped roof in the distant background; utility poles and wires visible above the field  
+                        Right = row of leafy shrubs or small trees; ground covered in dry soil and sparse vegetation; sunlight casting shadows across the scene  
+                        Down = low-growing plants with broad green leaves; scattered seed pods and stems; close-up view of the ground-level flora  
+
+                        # Depth Information  
+                        FrontDepth: [[26, 10, 15], [1, 1, 1], [0, 0, 1]]  
+                        LeftDepth: [[100, 100, 100], [2, 1, 1], [0, 0, 1]]  
+                        RightDepth: [[6, 6, 2], [3, 1, 0], [1, 0, 0]]  
+                        DownDepth: [[0, 1, 1], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 2.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-43.33, -136.17, 4.0), 91.67],
+    [(-43.33, -136.17, 6.0), 91.67],
+    [(-43.48, -131.17, 6.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 86.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large green trees, leafy canopy; cluster of trees in the midground; clear sky above  
+                        Left = small rustic building, corrugated metal roof; field of flowering plants in the foreground; utility poles and wires in the background  
+                        Right = bushes with white blossoms, low-growing; dirt path winding through the bushes; bright sunlight casting shadows  
+                        Down = dense patch of green and white plants, mixed foliage; close-up view filling the frame; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[27, 9, 9], [4, 4, 5], [2, 2, 2]]  
+                        LeftDepth: [[100, 100, 100], [4, 4, 4], [2, 2, 2]]  
+                        RightDepth: [[29, 100, 31], [4, 4, 4], [2, 2, 2]]  
+                        DownDepth: [[2, 1, 2], [1, 1, 1], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 2.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-43.33, -136.17, 4.0), 91.67],
+    [(-43.33, -136.17, 6.0), 91.67],
+    [(-43.48, -131.17, 6.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 88.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large tree with green leaves, medium-sized trunk; multiple smaller trees in the background; tree is centered in the midground  
+                        Left = small house with a sloped roof, weathered exterior; utility poles and wires; field of crops in the foreground; house is slightly left of center in the background  
+                        Right = field of flowering plants with white blooms; large trees on the left and right edges; bright sunlight creating haze in the upper left; open sky above  
+                        Down = overhead view of dense vegetation with small green leaves; ground visible beneath the plants; no distinct objects or structures present  
+
+                        # Depth Information  
+                        FrontDepth: [[28, 10, 11], [11, 9, 8], [5, 5, 5]]  
+                        LeftDepth: [[100, 100, 100], [13, 11, 12], [5, 5, 5]]  
+                        RightDepth: [[100, 100, 100], [7, 6, 8], [4, 5, 5]]  
+                        DownDepth: [[4, 4, 4], [4, 3, 4], [4, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-48.33, -136.32, 2.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-43.33, -136.17, 4.0), 91.67],
+    [(-43.33, -136.17, 6.0), 91.67],
+    [(-43.48, -131.17, 6.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 2.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 90.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large tree, leafy green canopy; multiple trees in a cluster; trees stand in the midground behind dense vegetation  
+                        Left = small building, flat roof, weathered exterior; utility poles and wires; building is in the midground; vegetation in the foreground  
+                        Right = bushes, leafy green foliage; rows of bushes extending into the distance; sun low on the horizon; structures visible in the far background  
+                        Down = dense patch of small plants, light green leaves; ground covered with dry soil; plants fill the entire frame from an overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[28, 9, 10], [8, 7, 8], [3, 3, 4]]  
+                        LeftDepth: [[100, 100, 100], [7, 7, 7], [3, 3, 3]]  
+                        RightDepth: [[100, 100, 100], [5, 5, 4], [3, 4, 3]]  
+                        DownDepth: [[2, 2, 2], [2, 2, 2], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-43.33, -136.17, 4.0), 91.67],
+    [(-43.33, -136.17, 6.0), 91.67],
+    [(-43.48, -131.17, 6.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 2.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 92.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = tall green trees, leafy canopy; field of tall grass and white flowers in the foreground; trees stand behind the field  
+                        Left = small building with a sloped roof, thatched or corrugated metal; field of tall grass and white flowers in the foreground; building is in the midground, slightly right of center  
+                        Right = low-lying bushes, dense foliage; field of tall grass and white flowers in the foreground; bushes are in the midground, slightly left of center  
+                        Down = close-up view of tall grass, green blades with some dry, beige tips; grass fills the entire frame, no other objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[25, 10, 9], [0, 0, 1], [0, 0, 0]]  
+                        LeftDepth: [[100, 100, 100], [1, 0, 1], [0, 0, 0]]  
+                        RightDepth: [[8, 100, 30], [1, 1, 1], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-48.33, -136.32, 6.0), 91.67],
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-43.33, -136.17, 4.0), 91.67],
+    [(-43.33, -136.17, 6.0), 91.67],
+    [(-43.48, -131.17, 6.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 2.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 94.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large tree with green leaves; multiple trees in the background; field of white-flowered plants in the foreground  
+                        Left = small building with a sloped roof; utility poles and wires; field of white-flowered plants; trees in the distant background  
+                        Right = bushes with white flowers; sun shining brightly in the upper left; dirt path visible; trees in the far distance  
+                        Down = dense field of white-flowered plants; close-up view showing individual stems and leaves; no other objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[28, 9, 9], [5, 4, 5], [2, 2, 2]]  
+                        LeftDepth: [[100, 100, 100], [5, 4, 4], [2, 2, 2]]  
+                        RightDepth: [[29, 100, 36], [4, 4, 4], [2, 2, 2]]  
+                        DownDepth: [[2, 1, 2], [2, 1, 2], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-48.33, -136.32, 4.0), 91.67],
+    [(-43.33, -136.17, 4.0), 91.67],
+    [(-43.33, -136.17, 6.0), 91.67],
+    [(-43.48, -131.17, 6.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 2.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 96.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = tall green grass, dense and swaying; large leafy tree in the background; clear sky above  
+                        Left = field of flowering plants, white blooms; small rustic building with a thatched roof; utility poles and wires in the distance  
+                        Right = low-lying shrubs, silvery-green foliage; dirt path winding through the foreground; bright sunlight creating lens flare  
+                        Down = close-up view of green grass blades, some with seed heads; dry brown stems intertwined; ground covered in soil and debris  
+
+                        # Depth Information  
+                        FrontDepth: [[25, 10, 9], [0, 1, 1], [0, 0, 0]]  
+                        LeftDepth: [[100, 100, 100], [1, 0, 1], [0, 0, 0]]  
+                        RightDepth: [[8, 100, 30], [1, 1, 1], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.33, -136.17, 4.0), 91.67],
+    [(-43.33, -136.17, 6.0), 91.67],
+    [(-43.48, -131.17, 6.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 2.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 98.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 34 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = large tree, full green canopy; multiple trees in a cluster; trees stand behind dense low-lying vegetation  
+                        Left = small building, flat roof; several utility poles and wires; field of flowering plants in the foreground; building in the midground right  
+                        Right = bushes with white flowers, medium height; dirt path winding through; sunlight creating lens flare in the upper left; trees in the distant background  
+                        Down = overhead view of dense flowering plants; plants cover the entire frame; soil visible between plant clusters  
+
+                        # Depth Information  
+                        FrontDepth: [[28, 9, 9], [5, 4, 5], [2, 2, 2]]  
+                        LeftDepth: [[100, 100, 100], [4, 4, 4], [2, 2, 2]]  
+                        RightDepth: [[29, 100, 36], [4, 4, 4], [2, 2, 2]]  
+                        DownDepth: [[2, 1, 2], [2, 1, 2], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.33, -136.17, 6.0), 91.67],
+    [(-43.48, -131.17, 6.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 2.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 34
+                        DistanceTraveled = 100.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:34 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 35 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Stool,
+                        Size: small(0.75*0.75=0.56 squares),
+                        Description: Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-98, 3]  
+                        **Y Range**: [min_y, max_y] = [-227, -126]
+
+                        # RGB Captions
+                        Front = tall green grass with seed heads; several large leafy trees in the background; clear sky above  
+                        Left = field of flowering plants; small building with a sloped roof; utility poles and wires in the distance; overcast sky  
+                        Right = low-lying shrubs with white blossoms; tall green grass in the foreground; path or road behind the shrubs; bright sunlight from the left  
+                        Down = close-up view of green grass blades and seed heads; dense growth filling the frame; ground visible beneath the grass  
+
+                        # Depth Information  
+                        FrontDepth: [[25, 10, 9], [0, 0, 1], [0, 0, 0]]  
+                        LeftDepth: [[100, 100, 100], [1, 0, 1], [0, 0, 0]]  
+                        RightDepth: [[8, 100, 30], [1, 1, 1], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-43.48, -131.17, 6.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 2.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+    [(-38.48, -131.03, 4.0), 91.67],
+    [(-38.48, -131.03, 6.0), 91.67],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 35
+                        DistanceTraveled = 102.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Stool**, described as:  Geometric circular top with four tapered legs, medium-brown wooden texture, compact and backless design, intended for single-person seating.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:35 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,896 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = winding road, paved; small buildings with white roofs; trees and shrubs along roadside; sun in the upper right sky  
+                        Left = large tree, leafy green; dirt path near base; ruins and structures in distant background; overcast sky  
+                        Right = group of tents, gray fabric; field with low vegetation; rocks scattered around; distant tower-like structure; hazy horizon  
+                        Down = overhead view of forested area; dense canopy of green trees; patches of bare ground visible; sunlight filtering through leaves  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [46, 13, 19], [8, 9, 16]]  
+                        LeftDepth: [[100, 100, 100], [20, 19, 30], [15, 18, 21]]  
+                        RightDepth: [[100, 100, 100], [44, 41, 53], [22, 23, 23]]  
+                        DownDepth: [[9, 9, 18], [17, 16, 17], [16, 17, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -10.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = winding road, asphalt surface; guardrail along the left side; small wooden building on the left; sun in the upper right sky; trees and shrubs along the roadside  
+                        Left = large tree, full foliage, green leaves; road with guardrail below; ruins and structures in the distant background; overcast sky  
+                        Right = field with crops, white flowers; several tents and structures scattered across the field; rocks and bushes near the center; distant buildings and hills under a hazy sky  
+                        Down = forest canopy, dense green and brown foliage; ground covered in dry grass and small plants; aerial view showing tree patterns and shadows  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [53, 19, 44], [9, 11, 19]]  
+                        LeftDepth: [[100, 100, 100], [27, 20, 31], [16, 19, 24]]  
+                        RightDepth: [[100, 100, 100], [46, 42, 56], [24, 26, 24]]  
+                        DownDepth: [[9, 10, 20], [18, 15, 18], [18, 18, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 2.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = winding road, asphalt surface; yellow vehicle traveling on the road; small building with sloped roof to the left; trees and shrubs along the roadside; sun high in the sky  
+                        Left = large tree in the foreground; paved road curving through a desolate landscape; industrial structures and towers in the background; overcast sky with diffused light  
+                        Right = field with patches of white flowers; several cylindrical storage tanks and small buildings scattered across the area; rocky terrain and sparse vegetation; distant hills under a hazy sky  
+                        Down = dense forest canopy viewed from above; sunlight filtering through the leaves; patches of ground visible through gaps in the foliage; mist or fog partially obscuring the view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [51, 43, 42], [9, 10, 15]]  
+                        LeftDepth: [[100, 100, 100], [27, 20, 31], [18, 20, 10]]  
+                        RightDepth: [[100, 100, 100], [58, 41, 55], [24, 26, 25]]  
+                        DownDepth: [[8, 9, 19], [9, 9, 18], [19, 19, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 7.000000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = road, winding; truck, small, orange; guardrail, metal; trees, green; building, small, left side; sun, bright in sky; rubble, large pile on right  
+                        Left = road, curved; trees, dense and green; buildings, scattered in background; structures, industrial; sky, overcast; perspective, elevated  
+                        Right = field, open; crops, white flowers; barrels, stacked; rocks, scattered; structures, distant; haze, low-lying; perspective, elevated  
+                        Down = forest, aerial view; trees, dense canopy; undergrowth, light green; shadows, dappled; ground, textured; perspective, top-down  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [48, 47, 50], [9, 9, 10]]  
+                        LeftDepth: [[100, 100, 100], [22, 21, 52], [20, 11, 8]]  
+                        RightDepth: [[100, 100, 100], [59, 41, 55], [22, 25, 27]]  
+                        DownDepth: [[7, 8, 13], [7, 8, 18], [20, 18, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 12.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = yellow truck, small-sized; truck is on a winding road; sun is high in the sky  
+                        Left = large tree, leafy green; tree is in the foreground; road curves behind it  
+                        Right = pink sheep, medium-sized; sheep is grazing in a field; buildings and structures are in the background  
+                        Down = dense cluster of trees, overhead view; foliage is light green and white; ground is partially visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [45, 44, 47], [9, 7, 9]]  
+                        LeftDepth: [[100, 100, 100], [22, 21, 49], [21, 7, 9]]  
+                        RightDepth: [[100, 100, 100], [58, 41, 56], [21, 21, 27]]  
+                        DownDepth: [[7, 7, 8], [7, 7, 18], [8, 9, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 17.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = yellow truck, small-sized; truck is on a curved road; road has white lane markings and metal guardrails  
+                        Left = large tree, leafy green; tree is in the foreground; background shows distant buildings and structures  
+                        Right = white tents, multiple; tents are grouped together in a field; field has patches of green vegetation and rocks  
+                        Down = dense foliage, light green; foliage fills the entire frame; no distinct objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [42, 42, 45], [9, 9, 10]]  
+                        LeftDepth: [[100, 100, 100], [22, 24, 46], [8, 9, 25]]  
+                        RightDepth: [[100, 100, 100], [57, 41, 55], [12, 20, 27]]  
+                        DownDepth: [[7, 5, 7], [6, 5, 7], [7, 7, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 22.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = yellow vehicle, small-sized; road curves leftward; sun high in the sky; structures and greenery in background  
+                        Left = road stretches rightward; large tree in foreground; buildings and structures in mid-ground; hazy sky  
+                        Right = field with white flowering plants; several low-roofed buildings; distant structures and trees; overcast sky  
+                        Down = overhead view of dense green foliage; rocky patches visible; light-colored ground between vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [40, 40, 49], [23, 9, 10]]  
+                        LeftDepth: [[100, 100, 100], [23, 30, 43], [10, 21, 24]]  
+                        RightDepth: [[100, 100, 100], [56, 41, 47], [11, 20, 26]]  
+                        DownDepth: [[7, 6, 8], [6, 5, 6], [7, 5, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 27.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = yellow truck, large, on road; road curves right; small wooden building and silos in background; sun high in sky  
+                        Left = road stretches left to right; large green tree in foreground; buildings and structures in midground; ocean visible in distant background  
+                        Right = field of white flowers in foreground; several red-roofed buildings and white cylindrical structures in midground; rocky terrain and trees in background  
+                        Down = dense cluster of light green bushes; rocky ground with scattered stones; dry grass patches; overhead sunlight  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [37, 37, 45], [24, 23, 25]]  
+                        LeftDepth: [[100, 100, 100], [25, 30, 40], [11, 22, 24]]  
+                        RightDepth: [[100, 100, 100], [54, 42, 48], [25, 10, 21]]  
+                        DownDepth: [[7, 7, 7], [6, 6, 7], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 32.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = yellow truck, medium-sized, on paved road; road curves left with metal guardrails; large pile of rocks and industrial structures in background; sun high in clear sky  
+                        Left = road stretches into distance with two lanes; trees and small buildings on both sides; distant industrial structures including silos; overcast sky with faint sunlight  
+                        Right = field of white flowers in foreground; several cylindrical storage tanks and barn-like structures in midground; rocky terrain and sparse vegetation; ocean visible in far background under hazy sky  
+                        Down = dense cluster of light green bushes and shrubs; scattered gray rocks and patches of dry grass; partial view of a paved road with guardrail in top left corner; bright daylight  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [34, 34, 42], [23, 22, 23]]  
+                        LeftDepth: [[100, 100, 100], [26, 31, 37], [22, 23, 24]]  
+                        RightDepth: [[100, 100, 100], [53, 42, 44], [26, 10, 22]]  
+                        DownDepth: [[18, 7, 7], [6, 6, 7], [7, 7, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+    [(-100.32, -87.09, -12.0), 131.36],
+    [(-100.32, -87.09, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 37.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = yellow truck, large, on paved road; road curves right; sun in sky, bright haze; rocky terrain with small structures and greenery  
+                        Left = road stretches into distance; scattered buildings and trees; industrial silos visible; foggy atmosphere; ocean in far background  
+                        Right = field of white flowers in foreground; dirt path curves left; small red-roofed building; arched structure; rocky outcrops; overcast sky  
+                        Down = overhead view of rocky stream bed; water flows through rocks; dense green bushes; guardrail along winding path; dry vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [31, 31, 38], [24, 21, 22]]  
+                        LeftDepth: [[100, 100, 100], [28, 32, 35], [24, 23, 23]]  
+                        RightDepth: [[100, 100, 100], [55, 44, 44], [25, 25, 11]]  
+                        DownDepth: [[18, 18, 19], [10, 7, 7], [7, 7, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -10.0), 131.36],
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+    [(-100.32, -87.09, -12.0), 131.36],
+    [(-103.63, -83.34, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 42.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = yellow dump truck, large, carrying material; truck on a curved asphalt road; rocky terrain and greenery in the background  
+                        Left = road, paved, winding; trees and small buildings on the right; industrial structures and open land in the distance; overcast sky  
+                        Right = road curving left; fields of white flowers, small red-roofed buildings, and arched greenhouses; rocky outcrops and sparse trees in the midground; hazy horizon  
+                        Down = rocky embankment with scattered stones; dense green foliage in the foreground; guardrail along the top edge; dry grass and dirt near the base  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [29, 29, 35], [24, 23, 23]]  
+                        LeftDepth: [[100, 100, 100], [32, 42, 32], [24, 22, 22]]  
+                        RightDepth: [[100, 100, 100], [55, 45, 44], [23, 24, 12]]  
+                        DownDepth: [[18, 18, 19], [16, 10, 9], [11, 8, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-77.2, -113.36, -12.0), 131.36],
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+    [(-100.32, -87.09, -12.0), 131.36],
+    [(-103.63, -83.34, -12.0), 131.36],
+    [(-106.93, -79.59, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 47.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = yellow dump truck, loaded with material; truck on a paved road; winding dirt path in the background  
+                        Left = road, two-lane, curving; farm buildings, including barns and silos; trees and fields on either side; ocean visible in the distance  
+                        Right = road curving left; field of white flowers; scattered tents and structures; rocky terrain and hills in the background  
+                        Down = road with guardrail; rocky streambed with sparse vegetation; trees and bushes along the stream; overhead shadow from an unseen object  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [26, 26, 32], [24, 23, 23]]  
+                        LeftDepth: [[100, 100, 100], [34, 39, 29], [24, 22, 22]]  
+                        RightDepth: [[100, 100, 100], [53, 47, 45], [21, 24, 25]]  
+                        DownDepth: [[18, 17, 18], [16, 14, 14], [13, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-80.5, -109.61, -12.0), 131.36],
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+    [(-100.32, -87.09, -12.0), 131.36],
+    [(-103.63, -83.34, -12.0), 131.36],
+    [(-106.93, -79.59, -12.0), 131.36],
+    [(-110.24, -75.83, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 52.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = yellow dump truck, loaded with material; truck on a paved road; large pile of rocks and debris in the background  
+                        Left = winding asphalt road; two small buildings with white roofs on the right; trees and scattered structures in the midground; ocean visible in the distant background  
+                        Right = curved asphalt road on the left; field of white flowers in the foreground; cluster of small buildings and structures in the midground; hazy sky above  
+                        Down = overhead view of a paved road with a white line; guardrail along the edge; rocky terrain with sparse vegetation below  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [23, 23, 29], [24, 23, 23]]  
+                        LeftDepth: [[100, 100, 100], [35, 36, 27], [24, 21, 24]]  
+                        RightDepth: [[100, 100, 100], [52, 49, 47], [20, 23, 25]]  
+                        DownDepth: [[16, 16, 17], [16, 16, 17], [16, 13, 12]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-83.81, -105.86, -12.0), 131.36],
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+    [(-100.32, -87.09, -12.0), 131.36],
+    [(-103.63, -83.34, -12.0), 131.36],
+    [(-106.93, -79.59, -12.0), 131.36],
+    [(-110.24, -75.83, -12.0), 131.36],
+    [(-113.54, -72.08, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 57.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = yellow dump truck, large, carrying material; truck on a paved road; conveyor belt system in the midground; industrial structures and vegetation in the background  
+                        Left = winding asphalt road with white lane markings; guardrails along both sides; small wooden buildings and silos to the right; trees and distant structures in the background  
+                        Right = curved asphalt road with white lane markings; green fields and crops in the foreground; greenhouse-like structures and rocky terrain in the midground; distant hills and structures under a hazy sky  
+                        Down = paved road with white lane markings; metal guardrail along the edge; rocky embankment and green vegetation below; shadows cast by overhead objects  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 20, 25], [20, 20, 21]]  
+                        LeftDepth: [[100, 100, 100], [37, 31, 25], [23, 21, 23]]  
+                        RightDepth: [[100, 100, 100], [47, 49, 48], [18, 19, 25]]  
+                        DownDepth: [[18, 16, 16], [16, 15, 16], [18, 15, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-87.11, -102.11, -12.0), 131.36],
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+    [(-100.32, -87.09, -12.0), 131.36],
+    [(-103.63, -83.34, -12.0), 131.36],
+    [(-106.93, -79.59, -12.0), 131.36],
+    [(-110.24, -75.83, -12.0), 131.36],
+    [(-113.54, -72.08, -12.0), 131.36],
+    [(-116.84, -68.33, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 62.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = large white cylindrical tank, elevated; curved dirt road winding through rocky terrain; rows of white tents or greenhouses in the midground; sun high in the hazy sky  
+                        Left = two wooden barn-like buildings with slanted roofs; paved road curving leftward; silos and industrial structures in the distant background; trees and vegetation along the roadside  
+                        Right = paved road stretching into the distance; large field of white flowering plants in the midground; scattered industrial structures and tents in the background; bright sunlight creating a hazy atmosphere  
+                        Down = yellow dump truck driving on a paved road; guardrail running alongside the road; rocky embankment and sparse vegetation below; shadow of the truck cast on the road surface  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 18, 22], [18, 18, 20]]  
+                        LeftDepth: [[100, 100, 100], [39, 29, 24], [24, 22, 20]]  
+                        RightDepth: [[100, 100, 100], [40, 49, 49], [19, 18, 25]]  
+                        DownDepth: [[18, 17, 18], [16, 15, 16], [18, 18, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-90.41, -98.35, -12.0), 131.36],
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+    [(-100.32, -87.09, -12.0), 131.36],
+    [(-103.63, -83.34, -12.0), 131.36],
+    [(-106.93, -79.59, -12.0), 131.36],
+    [(-110.24, -75.83, -12.0), 131.36],
+    [(-113.54, -72.08, -12.0), 131.36],
+    [(-116.84, -68.33, -12.0), 131.36],
+    [(-120.15, -64.57, -12.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 67.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Truck,
+                        Size: big(15.0*3.5=52.5 squares),
+                        Description: Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-128, -27]  
+                        **Y Range**: [min_y, max_y] = [-164, -63]
+
+                        # RGB Captions
+                        Front = large white cylindrical tank; arched white greenhouse structures; dirt path winding through rocky terrain; sun in the sky  
+                        Left = curved asphalt road with white lane markings; two rustic wooden buildings with thatched roofs; silos and trees in the background; guardrail along the roadside  
+                        Right = long straight asphalt road; field of white flowering plants; distant industrial structures and trees; clear sky with bright sunlight  
+                        Down = yellow dump truck loaded with gravel; paved road with white lane markings; rocky embankment beside the road; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [39, 17, 20], [15, 15, 18]]  
+                        LeftDepth: [[100, 100, 100], [40, 25, 22], [22, 23, 18]]  
+                        RightDepth: [[100, 100, 100], [33, 49, 51], [22, 18, 23]]  
+                        DownDepth: [[18, 17, 18], [16, 15, 16], [18, 17, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-93.72, -94.6, -12.0), 131.36],
+    [(-97.02, -90.85, -12.0), 131.36],
+    [(-100.32, -87.09, -12.0), 131.36],
+    [(-103.63, -83.34, -12.0), 131.36],
+    [(-106.93, -79.59, -12.0), 131.36],
+    [(-110.24, -75.83, -12.0), 131.36],
+    [(-113.54, -72.08, -12.0), 131.36],
+    [(-116.84, -68.33, -12.0), 131.36],
+    [(-120.15, -64.57, -12.0), 131.36],
+    [(-120.15, -64.57, -10.0), 131.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 69.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Truck**, described as:  Geometric rectangular form, industrial orange and black body with six wheels and a debris-filled cargo bed, bold "steel" branding on cab and sides, used for heavy-duty material transport.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

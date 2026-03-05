@@ -1,0 +1,35 @@
+{
+  "episode_id": "61",
+  "start_pose": {
+    "start_position": [
+      -297.9336785491784,
+      -105.18029414391378,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.05738168549092244,
+      0.9983523136499564
+    ]
+  },
+  "info": {
+    "geodesic_distance": 84,
+    "euclidean_distance": 55.6128
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Truck",
+  "object_name": "SM_BoxTruck_01a_32",
+  "pose": [
+    [
+      -341.292724609375,
+      -71.09274291992188,
+      0.12872542440891266
+    ]
+  ],
+  "size": " big(4.0*7.5=30.0 squares)",
+  "description": " Geometric boxy form, matte gray metal exterior with dual rear doors and side access, black trim and utility details, designed for cargo delivery or transport use.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

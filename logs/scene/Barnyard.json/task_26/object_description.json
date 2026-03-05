@@ -1,0 +1,35 @@
+{
+  "episode_id": "26",
+  "start_pose": {
+    "start_position": [
+      -135.6786030875378,
+      -205.46489426690218,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8698700171762812,
+      -0.4932810083692016
+    ]
+  },
+  "info": {
+    "geodesic_distance": 39,
+    "euclidean_distance": 24.7124
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Lantern",
+  "object_name": "SM_Lantern_51",
+  "pose": [
+    [
+      -124.69274139404297,
+      -225.49273681640625,
+      2.428725481033325
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 square)",
+  "description": " Geometric cylindrical form, metallic blue body with glass enclosure, top-mounted handle and base support, used for portable illumination.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

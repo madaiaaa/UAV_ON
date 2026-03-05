@@ -1,0 +1,35 @@
+{
+  "episode_id": "62",
+  "start_pose": {
+    "start_position": [
+      -35.039007060492395,
+      -84.16876400314707,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5594085707292458,
+      0.8288920623305923
+    ]
+  },
+  "info": {
+    "geodesic_distance": 96,
+    "euclidean_distance": 62.8258
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Car",
+  "object_name": "SM_Sedan_01a_35",
+  "pose": [
+    [
+      -77.39274597167969,
+      -38.69274139404297,
+      2.2287254333496094
+    ]
+  ],
+  "size": " big(5.5*2.15=11.83 squares)",
+  "description": " Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

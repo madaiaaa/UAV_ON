@@ -1,0 +1,35 @@
+{
+  "episode_id": "9",
+  "start_pose": {
+    "start_position": [
+      -63.53300631526081,
+      87.10425659101278,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.35331444004409507,
+      0.9355046266354472
+    ]
+  },
+  "info": {
+    "geodesic_distance": 121,
+    "euclidean_distance": 47.7298
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Teapot",
+  "object_name": "SM_Teapod_17",
+  "pose": [
+    [
+      -17.892744064331055,
+      100.7072525024414,
+      -10.171274185180664
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Geometric rounded form, bronze-like metallic finish with slight patina, classic spout and lid with side handle, used for brewing or pouring tea.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

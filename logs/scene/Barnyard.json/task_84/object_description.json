@@ -1,0 +1,35 @@
+{
+  "episode_id": "84",
+  "start_pose": {
+    "start_position": [
+      -66.34391959649165,
+      89.52395809213768,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.44587545294714725,
+      0.8950950119731291
+    ]
+  },
+  "info": {
+    "geodesic_distance": 56,
+    "euclidean_distance": 40.981
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Cart",
+  "object_name": "SM_Cart_01_70",
+  "pose": [
+    [
+      -26.792743682861328,
+      100.10725402832031,
+      -8.77127456665039
+    ]
+  ],
+  "size": " small(2.25*1.5=3.38 squares)",
+  "description": " Geometric rectangular frame, wooden texture with large spoked wheels and extended handles, slatted side panels for containment, designed for manual or animal-pulled transport of goods.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

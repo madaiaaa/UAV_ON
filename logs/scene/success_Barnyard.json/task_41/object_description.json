@@ -1,0 +1,35 @@
+{
+  "episode_id": "41",
+  "start_pose": {
+    "start_position": [
+      -61.88945354194736,
+      -39.21327921952757,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9656086182409298,
+      -0.25999999303623517
+    ]
+  },
+  "info": {
+    "geodesic_distance": 52,
+    "euclidean_distance": 36.908
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Table",
+  "object_name": "SM_Table01_76",
+  "pose": [
+    [
+      -96.29273986816406,
+      -29.092742919921875,
+      1.7287254333496094
+    ]
+  ],
+  "size": " small(1.5*1.5=2.25 squares)",
+  "description": " Geometric rectangular form, rusted metallic surface with mottled texture, four tapered legs with slight discoloration, likely used for placing items or working.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "15",
+  "start_pose": {
+    "start_position": [
+      33.2332399485781,
+      -193.25161098155277,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3470978458317863,
+      -0.9378289211892186
+    ]
+  },
+  "info": {
+    "geodesic_distance": 74,
+    "euclidean_distance": 51.1492
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Table",
+  "object_name": "SM_Building_Int_Small_Drawer_28",
+  "pose": [
+    [
+      -13.992743492126465,
+      -181.89273071289062,
+      9.028725624084473
+    ]
+  ],
+  "size": " small(1*1=1 squares)",
+  "description": " Geometric rectangular form, polished wooden surface with four straight legs, compact and symmetrical, suitable for small workspace or decorative use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

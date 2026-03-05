@@ -1,0 +1,35 @@
+{
+  "episode_id": "36",
+  "start_pose": {
+    "start_position": [
+      125.17524591092817,
+      20.94871845772255,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.798495372992972,
+      -0.6020009462690358
+    ]
+  },
+  "info": {
+    "geodesic_distance": 61,
+    "euclidean_distance": 43.1243
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Safe",
+  "object_name": "SM_Safe_67",
+  "pose": [
+    [
+      111.50725555419922,
+      -18.49274444580078,
+      3.828725576400757
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Geometric box-like shape, dark metallic surface with reinforced door and locking wheel, subtle wear and tear around edges, designed for secure storage of valuables.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

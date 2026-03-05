@@ -1,0 +1,560 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Car,
+                        Size: big(5.5*2.15=11.83 squares),
+                        Description: Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-149, -48]  
+                        **Y Range**: [min_y, max_y] = [-127, -26]
+
+                        # RGB Captions
+                        Front = small building complex, rustic style; multiple structures clustered together; surrounded by sparse vegetation and rocky terrain; road curves in the foreground  
+                        Left = road, paved, curving rightward; dense green trees lining the roadside; distant cityscape visible on the horizon; clear sky above  
+                        Right = yellow dump truck, large size; truck traveling on a paved road; arched greenhouses in the background; rocky landscape with sparse vegetation  
+                        Down = paved road, two lanes; white center line; guardrails on both sides; rocky embankment to the left; dry grass and small plants along the roadside  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [24, 16, 39], [22, 14, 13]]  
+                        LeftDepth: [[100, 100, 100], [22, 34, 38], [20, 20, 20]]  
+                        RightDepth: [[100, 100, 100], [15, 15, 25], [13, 14, 21]]  
+                        DownDepth: [[16, 16, 16], [14, 14, 15], [16, 14, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-98.69, -76.99, -10.0), 68.03],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Car**, described as:  Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Car,
+                        Size: big(5.5*2.15=11.83 squares),
+                        Description: Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-149, -48]  
+                        **Y Range**: [min_y, max_y] = [-127, -26]
+
+                        # RGB Captions
+                        Front = two wooden sheds with white roofs; rocky terrain; utility poles and wires; a water tank to the right  
+                        Left = winding paved road; green trees lining the road; distant buildings under a hazy sky  
+                        Right = yellow dump truck on a paved road; dirt path alongside; rows of green plants; utility poles in the background  
+                        Down = curved paved road with white center line; metal guardrails on both sides; dry grass and rocks beside the road  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 15, 37], [19, 12, 11]]  
+                        LeftDepth: [[100, 100, 100], [24, 34, 44], [21, 20, 20]]  
+                        RightDepth: [[100, 100, 100], [34, 14, 22], [11, 12, 21]]  
+                        DownDepth: [[16, 15, 15], [15, 15, 15], [16, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.9999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Car**, described as:  Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Car,
+                        Size: big(5.5*2.15=11.83 squares),
+                        Description: Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-149, -48]  
+                        **Y Range**: [min_y, max_y] = [-127, -26]
+
+                        # RGB Captions
+                        Front = two wooden sheds, weathered, with white roofs; shed on the left has "BARRACK" written on it; sheds are in the midground; a water tank and a small structure are to the right of the sheds; rocky terrain surrounds the area  
+                        Left = winding paved road, curving to the right; trees line both sides of the road; distant buildings and a tower are visible on the horizon; overcast sky above  
+                        Right = curved dirt path, bordered by low fences; white arched structures, possibly greenhouses, are in the midground; power lines run parallel to the path; rocky and sparse vegetation in the foreground  
+                        Down = overhead view of a paved road with a white centerline; guardrails on both sides; shadows cast by unseen objects; rocky terrain and sparse vegetation along the edges  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 14, 39], [13, 9, 8]]  
+                        LeftDepth: [[100, 100, 100], [30, 33, 40], [21, 19, 22]]  
+                        RightDepth: [[100, 100, 100], [33, 14, 15], [8, 9, 15]]  
+                        DownDepth: [[16, 15, 8], [16, 14, 14], [16, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Car**, described as:  Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Car,
+                        Size: big(5.5*2.15=11.83 squares),
+                        Description: Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-149, -48]  
+                        **Y Range**: [min_y, max_y] = [-127, -26]
+
+                        # RGB Captions
+                        Front = two wooden sheds with white roofs; shed on the left has graffiti; several large rocks and a wooden fence in front; utility pole and wires in the foreground; distant tower and sparse vegetation in the background  
+                        Left = winding paved road with white center line; guardrails on both sides; trees and shrubs along the roadside; distant buildings and ocean horizon under a hazy sky  
+                        Right = curving dirt path alongside a paved road; series of white cylindrical structures in the mid-ground; rocky terrain and sparse vegetation; power lines and poles running parallel to the roads  
+                        Down = overhead view of a curved asphalt road with white center line; metal guardrails on both sides; grassy areas and small plants along the edges; shadows cast by unseen objects  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 15, 36], [8, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [35, 34, 28], [20, 20, 22]]  
+                        RightDepth: [[100, 100, 100], [33, 32, 15], [7, 7, 9]]  
+                        DownDepth: [[15, 6, 6], [16, 14, 6], [16, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Car**, described as:  Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Car,
+                        Size: big(5.5*2.15=11.83 squares),
+                        Description: Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-149, -48]  
+                        **Y Range**: [min_y, max_y] = [-127, -26]
+
+                        # RGB Captions
+                        Front = two wooden barns, snow-covered roofs; several hay bales, a blue vehicle, and industrial tanks; barns in the center, surrounded by fields and trees  
+                        Left = winding paved road, white lane markings; trees and low vegetation on both sides; distant industrial structures and a tower in the background  
+                        Right = curving dirt path, dry grass and shrubs on either side; a row of white arched structures in the mid-ground; rocky terrain and sparse vegetation in the foreground  
+                        Down = overhead view of a paved road with a white center line; adjacent railway tracks and greenery along the edges; utility poles and wires visible above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [35, 29, 33], [6, 7, 18]]  
+                        LeftDepth: [[100, 100, 100], [43, 34, 22], [21, 21, 11]]  
+                        RightDepth: [[100, 100, 100], [31, 31, 17], [18, 7, 7]]  
+                        DownDepth: [[5, 5, 5], [15, 5, 5], [16, 15, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Car**, described as:  Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Car,
+                        Size: big(5.5*2.15=11.83 squares),
+                        Description: Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-149, -48]  
+                        **Y Range**: [min_y, max_y] = [-127, -26]
+
+                        # RGB Captions
+                        Front = wooden barns, two large, adjacent; light blue car parked near barns; hay bales and crates scattered around; vineyard rows in the midground; tower in the distant background  
+                        Left = winding paved road, curving through landscape; guardrail on left side of road; trees and shrubs along roadside; buildings visible in the far distance under clear sky  
+                        Right = curved dirt path, bordered by fencing; greenery and bushes along path; arched structures and cultivated fields in the midground; rocky terrain and sparse vegetation in foreground; bright sun in the sky  
+                        Down = overhead view of a road with parallel metal cables; wooden utility pole with attached wires; stream or ditch with rocks and vegetation alongside road; tire tracks visible on dirt surface  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [32, 32, 29], [7, 7, 18]]  
+                        LeftDepth: [[100, 100, 100], [35, 35, 20], [22, 6, 7]]  
+                        RightDepth: [[100, 100, 100], [30, 30, 20], [18, 17, 8]]  
+                        DownDepth: [[5, 5, 13], [4, 4, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+    [(-89.34, -53.81, -10.0), 68.03],
+    [(-89.34, -53.81, -10.0), 68.03],
+    [(-89.34, -53.81, -10.0), 68.03],
+    [(-89.34, -53.81, -10.0), 68.03],
+    [(-89.34, -53.81, -10.0), 68.03],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.999999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Car**, described as:  Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Car,
+                        Size: big(5.5*2.15=11.83 squares),
+                        Description: Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-149, -48]  
+                        **Y Range**: [min_y, max_y] = [-127, -26]
+
+                        # RGB Captions
+                        Front = two wooden barns, snow-covered roofs; a light blue car parked in front; hay bales and farm equipment scattered around; a white sheep near the right barn; distant buildings and a tower in the background  
+                        Left = a winding paved road curving through a rural landscape; trees and bushes line both sides of the road; utility poles with wires running alongside; distant structures visible on the horizon  
+                        Right = a dirt road curving through a barren, rocky area; rows of crops or plants growing along the left side; a large white cylindrical tank on a stand near the foreground; a long tunnel-like structure in the distance  
+                        Down = an aerial view of a railway track cutting through a patchy landscape; green vegetation on the left side; dry, tilled earth on the right; overhead power lines crossing above the tracks  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [29, 28, 28], [7, 17, 18]]  
+                        LeftDepth: [[100, 100, 100], [36, 38, 18], [7, 6, 7]]  
+                        RightDepth: [[100, 100, 100], [27, 29, 40], [18, 18, 18]]  
+                        DownDepth: [[6, 5, 14], [5, 5, 12], [5, 5, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+    [(-89.34, -53.81, -10.0), 68.03],
+    [(-87.47, -49.17, -10.0), 68.03],
+    [(-87.47, -49.17, -10.0), 68.03],
+    [(-87.47, -49.17, -10.0), 68.03],
+    [(-87.47, -49.17, -10.0), 68.03],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Car**, described as:  Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Car,
+                        Size: big(5.5*2.15=11.83 squares),
+                        Description: Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-149, -48]  
+                        **Y Range**: [min_y, max_y] = [-127, -26]
+
+                        # RGB Captions
+                        Front = two wooden barns, snow-covered roofs; light blue car parked in front; hay bales and crates scattered nearby; dirt road to the left  
+                        Left = winding paved road with white lines; rows of trees on both sides; distant buildings and a windmill under a hazy sky  
+                        Right = white cylindrical tank on a stand; dirt path curving through rocky terrain; line of small structures in the background; sun low in the sky  
+                        Down = overhead view of railway tracks running diagonally; green tree on the left; patches of grass and rocks along the tracks  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [34, 24, 24], [17, 16, 17]]  
+                        LeftDepth: [[100, 100, 100], [38, 16, 20], [7, 7, 21]]  
+                        RightDepth: [[100, 100, 100], [25, 29, 33], [18, 17, 18]]  
+                        DownDepth: [[5, 11, 14], [4, 5, 12], [6, 6, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+    [(-89.34, -53.81, -10.0), 68.03],
+    [(-87.47, -49.17, -10.0), 68.03],
+    [(-85.6, -44.53, -10.0), 68.03],
+    [(-85.6, -44.53, -10.0), 68.03],
+    [(-85.6, -44.53, -10.0), 68.03],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Car**, described as:  Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Car,
+                        Size: big(5.5*2.15=11.83 squares),
+                        Description: Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-149, -48]  
+                        **Y Range**: [min_y, max_y] = [-127, -26]
+
+                        # RGB Captions
+                        Front = two barns, wooden, snow-covered roofs; barns are side-by-side in the foreground; a pile of logs and colorful crates near the right barn; a white vehicle partially visible in the bottom left  
+                        Left = winding paved road, bordered by guardrails; trees with light green foliage on both sides; distant buildings and a tower under a hazy sky; shadows cast across the road  
+                        Right = two large cylindrical tanks, metallic, on a metal frame; a white tank on a stand nearby; a long, low structure resembling a tunnel or shed in the mid-ground; dry grass and rocks in the foreground  
+                        Down = overhead view of railway tracks running diagonally; a light blue vehicle parked near the top left corner; patches of green vegetation and rocky terrain alongside the tracks  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [29, 20, 20], [15, 15, 15]]  
+                        LeftDepth: [[100, 100, 100], [40, 16, 24], [7, 11, 17]]  
+                        RightDepth: [[100, 100, 100], [23, 28, 34], [18, 16, 18]]  
+                        DownDepth: [[13, 13, 13], [6, 8, 13], [6, 7, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+    [(-89.34, -53.81, -10.0), 68.03],
+    [(-87.47, -49.17, -10.0), 68.03],
+    [(-85.6, -44.53, -10.0), 68.03],
+    [(-83.73, -39.9, -10.0), 68.03],
+    [(-83.73, -39.9, -10.0), 68.03],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Car**, described as:  Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Car,
+                        Size: big(5.5*2.15=11.83 squares),
+                        Description: Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-149, -48]  
+                        **Y Range**: [min_y, max_y] = [-127, -26]
+
+                        # RGB Captions
+                        Front = two wooden barns, snow-covered roofs; a crate with blue and orange objects in front; several barrels and a small shed nearby; farm fields and trees in the background  
+                        Left = a winding paved road; grassy areas and trees on both sides; distant buildings and a windmill under a hazy sky  
+                        Right = two large white water tanks; a smaller tank; a long greenhouse structure; dirt paths and scattered rocks; farm fields and hills in the distance  
+                        Down = a light blue convertible car on a dirt path; logs and wooden crates stacked nearby; a fence running parallel to the path; green bushes and rocky terrain  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [24, 17, 17], [16, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [16, 16, 22], [10, 15, 15]]  
+                        RightDepth: [[100, 100, 100], [22, 21, 31], [16, 16, 16]]  
+                        DownDepth: [[13, 12, 12], [11, 11, 12], [8, 9, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-98.69, -76.99, -10.0), 68.03],
+    [(-96.82, -72.35, -10.0), 68.03],
+    [(-94.95, -67.72, -10.0), 68.03],
+    [(-93.08, -63.08, -10.0), 68.03],
+    [(-91.21, -58.44, -10.0), 68.03],
+    [(-89.34, -53.81, -10.0), 68.03],
+    [(-87.47, -49.17, -10.0), 68.03],
+    [(-85.6, -44.53, -10.0), 68.03],
+    [(-83.73, -39.9, -10.0), 68.03],
+    [(-83.73, -39.9, -8.0), 68.03],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 41.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Car**, described as:  Geometric four-door sedan form, matte blue paint with black-tinted windows and alloy wheels, rear spoiler and full set of body panels, used for personal ground transportation.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

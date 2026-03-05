@@ -1,0 +1,35 @@
+{
+  "episode_id": "79",
+  "start_pose": {
+    "start_position": [
+      -177.62858663244202,
+      99.6968016618484,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.07871801452061658,
+      0.9968969225501361
+    ]
+  },
+  "info": {
+    "geodesic_distance": 71,
+    "euclidean_distance": 50.3551
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Coffee",
+  "object_name": "SM_Coffee_01b_57",
+  "pose": [
+    [
+      -200.39273071289062,
+      144.3072509765625,
+      -1.7712745666503906
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Geometric cylindrical form, dark container with a small protruding lid and handle, minimal detail with upright posture, typically used for holding hot beverages.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "12",
+  "start_pose": {
+    "start_position": [
+      -52.96051180201725,
+      -209.24593248355563,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.19586165654097323,
+      0.980631537070385
+    ]
+  },
+  "info": {
+    "geodesic_distance": 81,
+    "euclidean_distance": 49.0197
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Chair",
+  "object_name": "SM_Building_Int_Desk_Chair_20",
+  "pose": [
+    [
+      -14.792743682861328,
+      -182.99273681640625,
+      9.028725624084473
+    ]
+  ],
+  "size": " small(1*0.75=0.75 squares)",
+  "description": " Geometric upright form, dark wooden finish with curved armrests and slatted backrest, central pedestal base with four feet, designed for individual seating.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

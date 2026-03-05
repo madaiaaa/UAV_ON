@@ -1,0 +1,35 @@
+{
+  "episode_id": "32",
+  "start_pose": {
+    "start_position": [
+      5.723091071334608,
+      -203.6099147053257,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3177581949882763,
+      0.9481717827049023
+    ]
+  },
+  "info": {
+    "geodesic_distance": 55,
+    "euclidean_distance": 33.076
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Radio",
+  "object_name": "SM_Radio_61",
+  "pose": [
+    [
+      -13.892744064331055,
+      -181.69273376464844,
+      8.128725051879883
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "6",
+  "start_pose": {
+    "start_position": [
+      -203.04891744422122,
+      152.97290115142084,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.609326053831068,
+      -0.7929197690325663
+    ]
+  },
+  "info": {
+    "geodesic_distance": 17,
+    "euclidean_distance": 11.4063
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " GlassBottle",
+  "object_name": "SM_Glass_Bottle_Set1_11",
+  "pose": [
+    [
+      -199.99273681640625,
+      143.3072509765625,
+      -1.7712745666503906
+    ]
+  ],
+  "size": " small(1*1=1 square)",
+  "description": " Cylindrical organic form, translucent green glass material, gathered in a six-unit cluster within a crate, used for holding liquids or beverages.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}
