@@ -14,7 +14,7 @@ payload = {
 }
 
 headers = {
-  "Authorization": "sk-1992.Dwzh6PR3RKgeoF1XWaKzLU15t1z2DteOtDPeLpvguxvUOwAE",     # TODO: 这里的 API_KEY 需要替换，获取 API Key 入口：https://wcode.net/get-apikey
+  "Authorization": "xxx",     # TODO: 这里的 API_KEY 需要替换，获取 API Key 入口：https://wcode.net/get-apikey
   "content-type": "application/json"
 }
 
