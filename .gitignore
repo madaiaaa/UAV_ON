@@ -20,7 +20,3 @@ method/
 
 # Optional: Ignore any future *_logs folders dynamically
 *_logs/
-
-# Optional: Ignore logs or temp files
-*.log
-*.jsonl
