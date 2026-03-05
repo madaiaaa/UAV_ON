@@ -448,7 +448,6 @@ class EventHandler(object):
                 continue
             else:
                 
-                # 删除offscreen参数，保持与训练环境一致
                 subprocess_execute = "bash {} -RenderOffscreen -NoSound -NoVSync -GraphicsAdapter={} --settings={}".format(
                     choose_env_exe_paths[index],
                     gpu_id,
