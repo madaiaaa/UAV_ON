@@ -1,0 +1,504 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Slide,
+                        Size: mid(5.0*1.25=6.25 squares),
+                        Description: Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-179, -78]  
+                        **Y Range**: [min_y, max_y] = [-289, -188]
+
+                        # RGB Captions
+                        Front = green bushes, dense and widespread; trees in the background; overcast sky  
+                        Left = red barn building, metal roof; gray cylindrical silo; wooden structure; sun in the upper left; overcast sky  
+                        Right = yellow playhouse, small; pink slide; white base; red flag; green bushes; distant cityscape  
+                        Down = logs, stacked; bales of hay, rectangular; green bushes; aerial view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [37, 33, 32], [18, 18, 18]]  
+                        LeftDepth: [[100, 100, 100], [37, 40, 39], [19, 18, 19]]  
+                        RightDepth: [[100, 100, 100], [38, 30, 49], [19, 18, 19]]  
+                        DownDepth: [[12, 11, 15], [12, 11, 14], [15, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-128.62, -238.11, -10.0), -91.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Slide**, described as:  Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Slide,
+                        Size: mid(5.0*1.25=6.25 squares),
+                        Description: Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-179, -78]  
+                        **Y Range**: [min_y, max_y] = [-289, -188]
+
+                        # RGB Captions
+                        Front = green shrubbery, dense and widespread; scattered stone blocks, weathered and rectangular; trees in the distant background  
+                        Left = farm buildings, including a red barn and silo; stacks of logs and wooden crates; windmill structure; field of crops under bright sunlight  
+                        Right = playground equipment, yellow and orange; small white structure; scattered rocks; trees in the far distance  
+                        Down = bundles of rolled material, light brown; stacked blocks, blue and beige; green vegetation covering the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [37, 33, 30], [18, 18, 18]]  
+                        LeftDepth: [[100, 100, 100], [39, 34, 34], [20, 18, 15]]  
+                        RightDepth: [[100, 100, 100], [40, 28, 52], [19, 18, 19]]  
+                        DownDepth: [[11, 11, 14], [11, 12, 14], [15, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.9999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Slide**, described as:  Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Slide,
+                        Size: mid(5.0*1.25=6.25 squares),
+                        Description: Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-179, -78]  
+                        **Y Range**: [min_y, max_y] = [-289, -188]
+
+                        # RGB Captions
+                        Front = stone blocks, weathered and stacked; scattered across a grassy field; distant trees and rocky outcrop in the background  
+                        Left = red-roofed building, barn-like structure; wooden crates and barrels; small stream flowing through the foreground; sunlit sky with haze  
+                        Right = playground equipment, yellow and pink slide; white playhouse; scattered rocks; trees and hills in the distant background  
+                        Down = barrel wrapped in blue material; partially visible wooden crate; dense green foliage covering the ground; obscured by fog or mist  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [33, 33, 28], [18, 17, 17]]  
+                        LeftDepth: [[100, 100, 100], [42, 34, 34], [18, 17, 15]]  
+                        RightDepth: [[100, 100, 100], [40, 40, 54], [18, 18, 19]]  
+                        DownDepth: [[13, 14, 15], [13, 13, 14], [15, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Slide**, described as:  Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Slide,
+                        Size: mid(5.0*1.25=6.25 squares),
+                        Description: Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-179, -78]  
+                        **Y Range**: [min_y, max_y] = [-289, -188]
+
+                        # RGB Captions
+                        Front = stacked rectangular blocks, light brown and dark gray; blocks are in the foreground; scattered across a grassy field  
+                        Left = buildings, including red-roofed structures and a white dome; multiple hay bales; sun is high in the sky; structures and bales spread across a rural landscape  
+                        Right = playground equipment, including a yellow and blue structure with a pink slide and a small wooden slide; equipment is on a grassy hill; trees and distant hills in the background  
+                        Down = dense green foliage; aerial view of a forested area; no distinct objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [35, 35, 26], [18, 16, 16]]  
+                        LeftDepth: [[100, 100, 100], [42, 38, 37], [20, 15, 15]]  
+                        RightDepth: [[100, 100, 100], [44, 44, 56], [17, 16, 18]]  
+                        DownDepth: [[15, 13, 14], [14, 13, 13], [15, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Slide**, described as:  Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Slide,
+                        Size: mid(5.0*1.25=6.25 squares),
+                        Description: Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-179, -78]  
+                        **Y Range**: [min_y, max_y] = [-289, -188]
+
+                        # RGB Captions
+                        Front = three hay bales, rectangular and brown; one dark gray blocky object; objects are in the foreground on a grassy field; trees and ruins in the distant background  
+                        Left = multiple hay bales, cylindrical and light brown; several white and red farm structures; sun in the upper left sky; fields and trees in the midground with buildings in the far background  
+                        Right = playground equipment, including a yellow and blue playhouse and an orange slide; objects are in the foreground on a grassy hillside; trees and a distant cityscape in the background  
+                        Down = dense green foliage covering the entire frame; small patches of ground visible; a white structure partially seen in the upper right corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [36, 25, 25], [18, 15, 18]]  
+                        LeftDepth: [[100, 100, 100], [44, 40, 40], [19, 18, 17]]  
+                        RightDepth: [[100, 100, 100], [44, 45, 56], [15, 15, 17]]  
+                        DownDepth: [[15, 13, 14], [14, 13, 14], [15, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-108.63, -238.59, -10.0), -91.36],
+    [(-108.63, -238.59, -10.0), -91.36],
+    [(-108.63, -238.59, -10.0), -91.36],
+    [(-108.63, -238.59, -10.0), -91.36],
+    [(-108.63, -238.59, -10.0), -91.36],
+    [(-108.63, -238.59, -10.0), -91.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Slide**, described as:  Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Slide,
+                        Size: mid(5.0*1.25=6.25 squares),
+                        Description: Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-179, -78]  
+                        **Y Range**: [min_y, max_y] = [-289, -188]
+
+                        # RGB Captions
+                        Front = three hay bales, cylindrical and light brown; two black rectangular containers; objects are in the foreground on a grassy field with trees in the background  
+                        Left = several hay bales, cylindrical and light brown; multiple black rectangular containers; structures including a white arched building and a red barn; objects scattered across a vast field with distant buildings under a bright sky  
+                        Right = a small yellow playhouse, rectangular and wooden; a wooden swing set, partially visible; objects are in the foreground on a grassy hill with trees and hills in the distance  
+                        Down = a pink spiral slide, curved and plastic; a white rectangular box; a metal ladder; objects are in the foreground amidst dense green foliage with a misty atmosphere  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [37, 24, 35], [17, 16, 17]]  
+                        LeftDepth: [[100, 100, 100], [44, 40, 40], [20, 19, 19]]  
+                        RightDepth: [[100, 100, 100], [44, 44, 58], [15, 15, 17]]  
+                        DownDepth: [[14, 13, 13], [13, 13, 12], [15, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-108.63, -238.59, -10.0), -91.36],
+    [(-103.63, -238.71, -10.0), -91.36],
+    [(-103.63, -238.71, -10.0), -91.36],
+    [(-103.63, -238.71, -10.0), -91.36],
+    [(-103.63, -238.71, -10.0), -91.36],
+    [(-103.63, -238.71, -10.0), -91.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.999999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Slide**, described as:  Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Slide,
+                        Size: mid(5.0*1.25=6.25 squares),
+                        Description: Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-179, -78]  
+                        **Y Range**: [min_y, max_y] = [-289, -188]
+
+                        # RGB Captions
+                        Front = three hay bales, cylindrical and stacked; one dark rectangular object; objects are in the foreground on a grassy field; trees and hills in the distant background  
+                        Left = multiple hay bales, scattered; several structures including a white arched building and red-roofed buildings; sun visible in the sky; field extends into the distance with trees and hills  
+                        Right = grassy field with patches of rocks; trees and bushes scattered across the landscape; hills and a body of water visible in the far distance under a cloudy sky  
+                        Down = playground equipment including a yellow slide, a pink curved structure, and a ladder; objects are partially submerged in water; vegetation surrounds the area  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [28, 23, 33], [16, 16, 16]]  
+                        LeftDepth: [[100, 100, 100], [43, 30, 39], [18, 18, 18]]  
+                        RightDepth: [[100, 100, 100], [41, 40, 56], [13, 14, 17]]  
+                        DownDepth: [[14, 12, 11], [13, 10, 10], [14, 13, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-108.63, -238.59, -10.0), -91.36],
+    [(-103.63, -238.71, -10.0), -91.36],
+    [(-103.63, -238.71, -8.0), -91.36],
+    [(-103.63, -238.71, -8.0), -91.36],
+    [(-103.63, -238.71, -8.0), -91.36],
+    [(-103.63, -238.71, -8.0), -91.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 26.999999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Slide**, described as:  Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Slide,
+                        Size: mid(5.0*1.25=6.25 squares),
+                        Description: Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-179, -78]  
+                        **Y Range**: [min_y, max_y] = [-289, -188]
+
+                        # RGB Captions
+                        Front = three hay bales, stacked; two wooden crates, one black and one brown; scattered rocks; field of low green vegetation under overcast sky  
+                        Left = multiple hay bales, scattered; white arched greenhouse; small buildings; distant structures; sun in the upper left; field of low green vegetation  
+                        Right = group of trees, medium-sized; scattered rocks; field of low green vegetation; distant hills and structures; ocean horizon; overcast sky  
+                        Down = playground equipment: yellow slide with blue steps, red curved tube slide, metal ladder, wooden bench; surrounded by low green vegetation; aerial view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [24, 22, 27], [14, 8, 13]]  
+                        LeftDepth: [[100, 100, 100], [36, 25, 33], [16, 15, 15]]  
+                        RightDepth: [[100, 100, 100], [36, 37, 48], [13, 13, 14]]  
+                        DownDepth: [[11, 8, 8], [10, 7, 8], [11, 10, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-108.63, -238.59, -10.0), -91.36],
+    [(-103.63, -238.71, -10.0), -91.36],
+    [(-103.63, -238.71, -8.0), -91.36],
+    [(-103.63, -238.71, -6.0), -91.36],
+    [(-103.63, -238.71, -6.0), -91.36],
+    [(-103.63, -238.71, -6.0), -91.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 28.999999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Slide**, described as:  Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Slide,
+                        Size: mid(5.0*1.25=6.25 squares),
+                        Description: Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-179, -78]  
+                        **Y Range**: [min_y, max_y] = [-289, -188]
+
+                        # RGB Captions
+                        Front = hay bales, three large and one small; wooden crates, two stacked; play structure, yellow with blue panels; hay bales and crates in the midground; play structure in the foreground; field of low green vegetation  
+                        Left = greenhouses, two white and one partially visible; hay bales, scattered across the field; distant buildings and structures; sun high in the sky; field of low green vegetation  
+                        Right = trees, several medium-sized with green foliage; rocks, scattered across the ground; distant hills and sparse vegetation; clear sky with soft lighting; field of low green vegetation  
+                        Down = play structure, overhead view; red slide, curved and elevated; ladders, two metal and one wooden; platform with a black object on it; surrounding green vegetation; play structure components visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 19, 21], [10, 6, 7]]  
+                        LeftDepth: [[100, 100, 100], [25, 23, 24], [11, 11, 11]]  
+                        RightDepth: [[100, 100, 100], [29, 31, 38], [10, 8, 8]]  
+                        DownDepth: [[8, 5, 6], [8, 5, 6], [9, 5, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-128.62, -238.11, -10.0), -91.36],
+    [(-123.62, -238.23, -10.0), -91.36],
+    [(-118.63, -238.35, -10.0), -91.36],
+    [(-113.63, -238.47, -10.0), -91.36],
+    [(-108.63, -238.59, -10.0), -91.36],
+    [(-103.63, -238.71, -10.0), -91.36],
+    [(-103.63, -238.71, -8.0), -91.36],
+    [(-103.63, -238.71, -6.0), -91.36],
+    [(-103.63, -238.71, -4.0), -91.36],
+    [(-103.63, -238.71, -4.0), -91.36],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 30.999999999999982
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Slide**, described as:  Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

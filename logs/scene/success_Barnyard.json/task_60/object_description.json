@@ -1,0 +1,35 @@
+{
+  "episode_id": "60",
+  "start_pose": {
+    "start_position": [
+      -140.04161056069867,
+      -232.02151874317585,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.17957241212220085,
+      -0.983744757955342
+    ]
+  },
+  "info": {
+    "geodesic_distance": 60,
+    "euclidean_distance": 41.4045
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Playground",
+  "object_name": "SM_Set02_26",
+  "pose": [
+    [
+      -101.89273834228516,
+      -244.19273376464844,
+      3.5287256240844727
+    ]
+  ],
+  "size": " big7.0*7.0=49.0 squares)",
+  "description": " Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

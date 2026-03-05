@@ -1,0 +1,2016 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = winding asphalt road, white center line; trees on both sides; rocky terrain to the right; utility poles along the road  
+                        Left = wooden barn, weathered exterior; two tall silos, cylindrical shape; scattered wooden crates and barrels; trees in the background  
+                        Right = tree with green leaves; small red-roofed building; rocky ground; utility pole with wires; bright sun in the sky  
+                        Down = straight asphalt road, white center line; dirt and rocks on both sides; fence posts along the edges; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [40, 19, 13], [18, 18, 11]]  
+                        LeftDepth: [[100, 100, 100], [20, 19, 24], [20, 18, 19]]  
+                        RightDepth: [[100, 100, 100], [33, 9, 9], [8, 7, 8]]  
+                        DownDepth: [[14, 14, 14], [14, 13, 13], [15, 14, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -10.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = winding asphalt road, white center line; two utility poles on the right; trees and shrubs on both sides; rocky terrain to the right  
+                        Left = wooden barn, weathered exterior; two concrete silos, cylindrical shape; one water tank, metallic structure; farm equipment scattered around; trees in the background  
+                        Right = small wooden bridge, dark brown color; stream flowing underneath; trees and bushes on both banks; red-roofed building partially visible on the right  
+                        Down = straight asphalt road, white center line; metal guardrail on the left; wire fence on the right; green vegetation along the edges  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [35, 23, 11], [16, 16, 16]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 24], [17, 16, 16]]  
+                        RightDepth: [[100, 100, 44], [8, 7, 7], [16, 7, 16]]  
+                        DownDepth: [[13, 12, 13], [12, 11, 12], [13, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 2.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = paved road, two-lane, white center line; guardrail on left, rocky terrain and trees on right; road curves gently to the right in the distance  
+                        Left = wooden barn, weathered exterior; two silos, cylindrical, concrete; several crates and a small cart near barn entrance; farm structures in a rural setting  
+                        Right = wooden utility pole, leaning slightly; power lines extending across the frame; rocky hillside with sparse vegetation and trees in the background  
+                        Down = paved road, two-lane, white center line; wooden fence on right, dirt and sparse vegetation on left; overhead view showing road stretching into the distance  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [26, 22, 11], [13, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 24], [14, 13, 14]]  
+                        RightDepth: [[100, 100, 44], [7, 6, 7], [13, 9, 13]]  
+                        DownDepth: [[10, 10, 10], [10, 9, 10], [11, 10, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 4.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = winding asphalt road, white center line; guardrail on left; trees and rocks on both sides; utility poles with wires along the right side  
+                        Left = wooden barn, weathered exterior; three silos in the background; a small shed and stacked hay bales near the barn; dirt ground with sparse vegetation  
+                        Right = utility pole with wires; trees and rocky terrain in the background; sunlight creating lens flare effect; part of a red-roofed structure visible on the right  
+                        Down = overhead view of asphalt road, white center line; wooden fence on the left; grassy area with bushes on the right; shadows cast by unseen objects  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [25, 21, 11], [13, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 33], [14, 13, 14]]  
+                        RightDepth: [[100, 100, 100], [7, 7, 6], [13, 12, 9]]  
+                        DownDepth: [[10, 10, 10], [10, 9, 10], [11, 10, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 9.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = curved asphalt road, white center line; guardrail on left; trees and shrubs on both sides; utility poles with wires along the right side  
+                        Left = wooden barn, weathered exterior; two silos, cylindrical, concrete; one water tank, elevated, metal; scattered crates and barrels near barn entrance; trees in background  
+                        Right = rocky terrain, patches of snow; small stream or creek flowing through; trees and bushes along the banks; utility pole with wires in the foreground  
+                        Down = overhead view of asphalt road, white center line; wooden fence on the left; grass and shrubs on the right; shadows cast by unseen objects  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [25, 20, 11], [13, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [19, 18, 31], [14, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [7, 7, 7], [13, 12, 11]]  
+                        DownDepth: [[10, 10, 10], [10, 9, 10], [10, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 14.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = paved road, white center line; two wooden utility poles with wires; trees and shrubs on both sides; rocky terrain in the distance  
+                        Left = farm building, wooden barn with weathered roof; three cylindrical silos; wooden crates and hay bales near barn; dirt ground with sparse vegetation  
+                        Right = rocky terrain, patches of snow; trees and bushes scattered; overhead power lines; bright sun in the sky  
+                        Down = paved road, white center line; wooden fence on left; green shrubs on right; top-down aerial view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 45], [25, 19, 10], [12, 12, 13]]  
+                        LeftDepth: [[100, 100, 100], [19, 19, 30], [14, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [7, 7, 7], [13, 12, 13]]  
+                        DownDepth: [[10, 9, 10], [10, 9, 10], [10, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 19.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = asphalt road, white center line; guardrail on left; trees and rocks on both sides; power lines overhead  
+                        Left = wooden barn, weathered roof; two silos, cylindrical, metal; hay bales, stacked; person standing near barn entrance  
+                        Right = rocky terrain, sparse vegetation; trees in background; power lines crossing above; sun visible in sky  
+                        Down = asphalt road, white center line; grass and shrubs along edges; wooden fence on right; guardrail on left  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 43], [25, 18, 9], [13, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [20, 20, 29], [13, 13, 13]]  
+                        RightDepth: [[43, 100, 100], [7, 7, 7], [11, 12, 13]]  
+                        DownDepth: [[10, 9, 10], [9, 9, 9], [10, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 24.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = asphalt road, two-lane, white center line; guardrail on left; trees and shrubs on both sides; utility pole with wires on right  
+                        Left = wooden barn, weathered roof; cylindrical silo, metal; stack of hay bales; dirt ground; trees in the background  
+                        Right = utility pole, wooden; black power lines; rocky terrain with sparse vegetation; trees in the background; sun visible in sky  
+                        Down = asphalt road, two-lane, white center line; overgrown greenery on both sides; fence-like structure on left; top-down view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 41], [25, 19, 10], [13, 12, 13]]  
+                        LeftDepth: [[100, 100, 100], [20, 23, 28], [13, 12, 12]]  
+                        RightDepth: [[40, 100, 100], [7, 7, 7], [9, 12, 13]]  
+                        DownDepth: [[9, 9, 9], [9, 9, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 29.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = paved road, white center line; two wooden utility poles with wires; trees and shrubs on both sides; rocky terrain to the right; overcast sky  
+                        Left = farm building, weathered roof; large cylindrical silo; wooden crates and hay bale near building; open field with crops; trees in the distance; overcast sky  
+                        Right = utility pole, wooden; black power lines; trees and rocky ground; bright sun partially visible through trees; clear sky  
+                        Down = paved road, white center line; green bushes growing along edges; metal guardrail on left; dirt and vegetation on right; overhead view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 40], [25, 16, 9], [12, 12, 12]]  
+                        LeftDepth: [[100, 100, 100], [22, 24, 27], [13, 12, 13]]  
+                        RightDepth: [[38, 100, 100], [6, 7, 7], [13, 9, 13]]  
+                        DownDepth: [[9, 9, 10], [9, 8, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+    [(126.02, 16.68, -6.0), 39.71],
+    [(126.02, 16.68, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 34.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = asphalt road, white center line; wooden guardrail on left; utility poles with wires on right; trees and bushes along sides; clear sky above  
+                        Left = farm building, weathered roof; tall cylindrical silo; hay bales near building; dirt ground; trees in background; hazy sky  
+                        Right = utility pole, vertical; black wire stretched horizontally; bird perched on wire; rocky terrain below; trees in background; bright sun in sky  
+                        Down = asphalt road, white center line; small green plants growing on surface; wooden fence on left; foliage on right; overhead shadows from trees  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 39], [25, 15, 9], [12, 12, 12]]  
+                        LeftDepth: [[100, 100, 100], [23, 26, 25], [13, 12, 12]]  
+                        RightDepth: [[37, 100, 100], [7, 5, 7], [13, 8, 13]]  
+                        DownDepth: [[9, 9, 9], [9, 8, 9], [10, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -10.0), 39.71],
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+    [(126.02, 16.68, -6.0), 39.71],
+    [(129.86, 19.88, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 39.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = asphalt road, two-lane, white center line; guardrail on left; utility pole with wires on right; trees and shrubs along sides; overcast sky  
+                        Left = farm building, wooden structure with sloped roof; large cylindrical silo; hay bale near building; fields of crops in foreground; trees in background  
+                        Right = utility pole, wooden; power lines extending from pole; rocky terrain with sparse vegetation; trees in the distance; bright sun in sky  
+                        Down = asphalt road, two-lane, white center line; shadows cast by overhead foliage; green plants growing along edges; guardrail on left side  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [25, 14, 8], [12, 12, 12]]  
+                        LeftDepth: [[100, 100, 100], [25, 25, 25], [12, 11, 12]]  
+                        RightDepth: [[35, 100, 100], [6, 6, 5], [12, 11, 9]]  
+                        DownDepth: [[9, 9, 9], [9, 8, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -8.0), 39.71],
+    [(102.94, -2.48, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+    [(126.02, 16.68, -6.0), 39.71],
+    [(129.86, 19.88, -6.0), 39.71],
+    [(133.71, 23.07, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 44.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = paved road, two-lane, white center line; road stretches into the distance; utility pole with wires on the right side  
+                        Left = farm building, wooden structure with a sloped roof; cylindrical metal silo with ladder; hay bale near the building; field of crops in the foreground  
+                        Right = utility pole with wires; rocky terrain with sparse vegetation; trees in the background; sun visible in the sky  
+                        Down = paved road, two-lane, white center line; road viewed from above; shadows cast by trees on the left side  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [25, 13, 7], [12, 12, 12]]  
+                        LeftDepth: [[100, 100, 100], [27, 24, 25], [12, 11, 11]]  
+                        RightDepth: [[34, 100, 100], [6, 6, 7], [12, 11, 10]]  
+                        DownDepth: [[9, 9, 9], [8, 8, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(102.94, -2.48, -6.0), 39.71],
+    [(106.78, 0.71, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+    [(126.02, 16.68, -6.0), 39.71],
+    [(129.86, 19.88, -6.0), 39.71],
+    [(133.71, 23.07, -6.0), 39.71],
+    [(137.56, 26.27, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 49.00000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = asphalt road, two-lane, white center line; guardrail on left, wire fence on right; utility poles with wires on right side; trees and bushes along both sides; hazy sky in the background  
+                        Left = farm building, wooden structure with sloped roof; large cylindrical silo attached to building; dirt ground around building; rows of crops or plants in foreground; trees in distant background  
+                        Right = rocky terrain, uneven surface covered with small rocks and sparse vegetation; utility pole with wires extending across top of frame; trees scattered across background; bright sun visible in sky  
+                        Down = asphalt road, two-lane, white center line; wire fence on right side; metal guardrail on left side; shadows cast by overhead foliage on road surface; greenery visible along edges  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [25, 12, 7], [12, 12, 11]]  
+                        LeftDepth: [[100, 100, 100], [29, 24, 24], [12, 11, 11]]  
+                        RightDepth: [[33, 100, 100], [5, 5, 6], [12, 11, 12]]  
+                        DownDepth: [[9, 9, 9], [9, 8, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(106.78, 0.71, -6.0), 39.71],
+    [(110.63, 3.9, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+    [(126.02, 16.68, -6.0), 39.71],
+    [(129.86, 19.88, -6.0), 39.71],
+    [(133.71, 23.07, -6.0), 39.71],
+    [(137.56, 26.27, -6.0), 39.71],
+    [(141.4, 29.46, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 54.00000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = asphalt road, two-lane, white center line; guardrail on left; wooden utility pole with wires on right; trees and bushes along both sides; clear sky  
+                        Left = small building, corrugated metal roof; large cylindrical tank; dirt path; field of low-lying plants; trees in the background; overcast sky  
+                        Right = rocky terrain, uneven surface; small green trees; utility pole with wires; sparse vegetation; bright sun in the upper right; hazy sky  
+                        Down = asphalt road, two-lane, white center line; wooden fence on right; shadows from overhead objects; green foliage near fence; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [25, 11, 7], [12, 11, 11]]  
+                        LeftDepth: [[100, 100, 100], [30, 23, 25], [11, 11, 11]]  
+                        RightDepth: [[31, 35, 100], [5, 5, 5], [11, 11, 12]]  
+                        DownDepth: [[9, 9, 9], [9, 8, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(110.63, 3.9, -6.0), 39.71],
+    [(114.48, 7.1, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+    [(126.02, 16.68, -6.0), 39.71],
+    [(129.86, 19.88, -6.0), 39.71],
+    [(133.71, 23.07, -6.0), 39.71],
+    [(137.56, 26.27, -6.0), 39.71],
+    [(141.4, 29.46, -6.0), 39.71],
+    [(145.25, 32.65, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 59.00000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = asphalt road, white center line; two wooden utility poles with black wires; vegetation on both sides; road curves to the left in the distance  
+                        Left = abandoned building, corrugated metal roof; pile of rubble and debris; trees in the background; overcast sky  
+                        Right = pile of rubble and debris; small green trees; black power lines overhead; bright sun in the upper right  
+                        Down = asphalt road, white center line; wooden fence on the right; shadows from trees on the road; elevated perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 6], [25, 9, 7], [12, 11, 11]]  
+                        LeftDepth: [[100, 100, 100], [30, 22, 24], [11, 10, 11]]  
+                        RightDepth: [[5, 31, 100], [5, 4, 5], [11, 11, 11]]  
+                        DownDepth: [[9, 9, 9], [9, 8, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(114.48, 7.1, -6.0), 39.71],
+    [(118.32, 10.29, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+    [(126.02, 16.68, -6.0), 39.71],
+    [(129.86, 19.88, -6.0), 39.71],
+    [(133.71, 23.07, -6.0), 39.71],
+    [(137.56, 26.27, -6.0), 39.71],
+    [(141.4, 29.46, -6.0), 39.71],
+    [(145.25, 32.65, -6.0), 39.71],
+    [(149.1, 35.85, -6.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 64.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = curved asphalt road, white center line; wooden utility poles with black wires, one in the foreground right; low vegetation and rocks along the roadside; overcast sky  
+                        Left = thatched-roof building, dark roof; field of light-colored plants; trees in the background; guardrail in the foreground left; hazy sky  
+                        Right = rocky terrain, scattered green bushes; trees in the midground; sun visible near the top right; power lines crossing above; clear sky  
+                        Down = asphalt road, white center line; wooden fence alongside the road on the right; shadows cast by unseen objects; close-up view of road surface  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 31, 5], [25, 7, 7], [11, 11, 8]]  
+                        LeftDepth: [[100, 100, 100], [27, 22, 24], [11, 11, 12]]  
+                        RightDepth: [[4, 4, 100], [7, 4, 5], [11, 11, 12]]  
+                        DownDepth: [[9, 9, 9], [9, 8, 8], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(118.32, 10.29, -6.0), 39.71],
+    [(122.17, 13.49, -6.0), 39.71],
+    [(126.02, 16.68, -6.0), 39.71],
+    [(129.86, 19.88, -6.0), 39.71],
+    [(133.71, 23.07, -6.0), 39.71],
+    [(137.56, 26.27, -6.0), 39.71],
+    [(141.4, 29.46, -6.0), 39.71],
+    [(145.25, 32.65, -6.0), 39.71],
+    [(149.1, 35.85, -6.0), 39.71],
+    [(149.1, 35.85, -4.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 66.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = asphalt road, white center line; two rows of green plants in containers on the right; utility poles and wires overhead; trees and bushes in the background  
+                        Left = wooden house with dark roof; field of low-lying plants; dirt path leading to the house; trees in the distance under a hazy sky  
+                        Right = rocky terrain, dark gray; small green trees scattered across the slope; power lines stretching across the frame; bright sunlight in the upper right  
+                        Down = paved road, white edge line; wooden fence running alongside the road; shadows of trees cast on the road surface; greenery visible near the fence  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 5], [24, 5, 5], [11, 10, 11]]  
+                        LeftDepth: [[100, 100, 100], [24, 22, 23], [11, 11, 11]]  
+                        RightDepth: [[4, 4, 4], [6, 6, 5], [11, 11, 11]]  
+                        DownDepth: [[9, 8, 8], [8, 8, 8], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(122.17, 13.49, -6.0), 39.71],
+    [(126.02, 16.68, -6.0), 39.71],
+    [(129.86, 19.88, -6.0), 39.71],
+    [(133.71, 23.07, -6.0), 39.71],
+    [(137.56, 26.27, -6.0), 39.71],
+    [(141.4, 29.46, -6.0), 39.71],
+    [(145.25, 32.65, -6.0), 39.71],
+    [(149.1, 35.85, -6.0), 39.71],
+    [(149.1, 35.85, -4.0), 39.71],
+    [(149.1, 35.85, -2.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 68.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = asphalt road, white center line; two rows of green plants in containers; wooden utility pole with black wires; trees and overcast sky in background  
+                        Left = field of dry crops, scattered trees; small structure with sloped roof on left; concrete barrier in foreground; hazy sky above  
+                        Right = wooden utility pole, weathered; black power lines extending across frame; rocky terrain, sparse green plants; trees and bright sun in background  
+                        Down = asphalt road, white edge line; shadows cast by unseen objects; dirt path with rocks and green plants on right; wooden fence post near edge  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 7, 5], [23, 8, 3], [11, 10, 11]]  
+                        LeftDepth: [[100, 100, 100], [23, 21, 22], [11, 11, 11]]  
+                        RightDepth: [[4, 4, 4], [4, 7, 7], [5, 10, 11]]  
+                        DownDepth: [[8, 8, 7], [8, 7, 7], [9, 8, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(126.02, 16.68, -6.0), 39.71],
+    [(129.86, 19.88, -6.0), 39.71],
+    [(133.71, 23.07, -6.0), 39.71],
+    [(137.56, 26.27, -6.0), 39.71],
+    [(141.4, 29.46, -6.0), 39.71],
+    [(145.25, 32.65, -6.0), 39.71],
+    [(149.1, 35.85, -6.0), 39.71],
+    [(149.1, 35.85, -4.0), 39.71],
+    [(149.1, 35.85, -2.0), 39.71],
+    [(149.1, 35.85, 0.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 70.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = curved asphalt road, white lane markings; utility pole with overhead wires; rocky embankment with green shrubs on the right; trees in the distant background  
+                        Left = field of low-lying plants, light-colored flowers; small building with dark roof on the left; trees scattered across the landscape; concrete barrier in the foreground  
+                        Right = utility pole, weathered wood; streetlight attached to pole, tilted; overhead power lines; rocky terrain with sparse vegetation in the background  
+                        Down = asphalt road, two white lane markings; dirt path with green plants and a wooden fence on the right; shadows cast by unseen objects on the road surface  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 7, 5], [21, 9, 9], [10, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [21, 19, 20], [10, 10, 10]]  
+                        RightDepth: [[2, 3, 4], [15, 3, 10], [9, 4, 10]]  
+                        DownDepth: [[7, 7, 7], [7, 7, 6], [8, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(129.86, 19.88, -6.0), 39.71],
+    [(133.71, 23.07, -6.0), 39.71],
+    [(137.56, 26.27, -6.0), 39.71],
+    [(141.4, 29.46, -6.0), 39.71],
+    [(145.25, 32.65, -6.0), 39.71],
+    [(149.1, 35.85, -6.0), 39.71],
+    [(149.1, 35.85, -4.0), 39.71],
+    [(149.1, 35.85, -2.0), 39.71],
+    [(149.1, 35.85, 0.0), 39.71],
+    [(149.1, 35.85, 2.0), 39.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 72.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = curved asphalt road, white center line; overgrown vegetation on both sides; utility pole with wires on the right  
+                        Left = farm building, metal roof; cylindrical silo; dirt path leading to trees in the distance; guardrail in the foreground  
+                        Right = streetlight, tilted, attached to wooden pole; overhead power lines; rocky terrain and green trees in the background  
+                        Down = asphalt road, double white lines; shadows of trees cast on the road; wooden fence and greenery on the right side  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 6], [19, 15, 11], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [26, 21, 22], [11, 10, 10]]  
+                        RightDepth: [[2, 2, 4], [15, 3, 4], [9, 4, 10]]  
+                        DownDepth: [[7, 7, 7], [7, 7, 7], [8, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(133.71, 23.07, -6.0), 39.71],
+    [(137.56, 26.27, -6.0), 39.71],
+    [(141.4, 29.46, -6.0), 39.71],
+    [(145.25, 32.65, -6.0), 39.71],
+    [(149.1, 35.85, -6.0), 39.71],
+    [(149.1, 35.85, -4.0), 39.71],
+    [(149.1, 35.85, -2.0), 39.71],
+    [(149.1, 35.85, 0.0), 39.71],
+    [(149.1, 35.85, 2.0), 39.71],
+    [(149.1, 35.85, 2.0), 24.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 72.00000000000006
+                        AvgHeadingChange = 0.79
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = winding asphalt road, white center line; chain-link fence on left, wooden fence on right; utility poles with wires on the right side; trees and shrubs along both sides  
+                        Left = dilapidated barn-like building, corrugated metal roof; cylindrical silo attached to the building; guardrail in the foreground; field of low-lying plants in front of the building; trees in the distant background  
+                        Right = streetlight, curved pole, round fixture; wooden utility pole with multiple wires; rocky terrain with sparse vegetation in the foreground; trees in the distant background  
+                        Down = asphalt road, two white parallel lines; wooden fence running alongside the road on the right; shadows cast by unseen objects on the road surface; small plants near the fence  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 9], [21, 18, 11], [10, 10, 10]]  
+                        LeftDepth: [[100, 100, 100], [23, 20, 21], [11, 10, 10]]  
+                        RightDepth: [[5, 2, 2], [10, 15, 3], [9, 9, 4]]  
+                        DownDepth: [[7, 7, 7], [7, 7, 7], [8, 7, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(137.56, 26.27, -6.0), 39.71],
+    [(141.4, 29.46, -6.0), 39.71],
+    [(145.25, 32.65, -6.0), 39.71],
+    [(149.1, 35.85, -6.0), 39.71],
+    [(149.1, 35.85, -4.0), 39.71],
+    [(149.1, 35.85, -2.0), 39.71],
+    [(149.1, 35.85, 0.0), 39.71],
+    [(149.1, 35.85, 2.0), 39.71],
+    [(149.1, 35.85, 2.0), 24.71],
+    [(149.1, 35.85, 2.0), 9.71],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 72.00000000000006
+                        AvgHeadingChange = 1.5
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = curved asphalt road, white center line; guardrail along the left side; trees and shrubs in the background under a pale sky  
+                        Left = abandoned building, weathered wooden structure; cylindrical silo; road curves to the left; guardrail on the right; sparse vegetation around  
+                        Right = overhead power lines, three cables; street lamp with round globe; rocky terrain with scattered green plants; trees in the distant background  
+                        Down = asphalt road, diagonal white line; shadows cast by unseen objects; wooden fence and green plants along the right edge; close-up perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 18, 21], [10, 10, 10]]  
+                        LeftDepth: [[100, 100, 100], [24, 22, 22], [11, 10, 10]]  
+                        RightDepth: [[6, 4, 2], [10, 9, 4], [9, 9, 9]]  
+                        DownDepth: [[8, 7, 7], [7, 7, 7], [8, 7, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(141.4, 29.46, -6.0), 39.71],
+    [(145.25, 32.65, -6.0), 39.71],
+    [(149.1, 35.85, -6.0), 39.71],
+    [(149.1, 35.85, -4.0), 39.71],
+    [(149.1, 35.85, -2.0), 39.71],
+    [(149.1, 35.85, 0.0), 39.71],
+    [(149.1, 35.85, 2.0), 39.71],
+    [(149.1, 35.85, 2.0), 24.71],
+    [(149.1, 35.85, 2.0), 9.71],
+    [(149.1, 35.85, 2.0), -5.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 72.00000000000006
+                        AvgHeadingChange = 2.14
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = road, asphalt, curving; guardrail, metallic, along the left side; trees, green, scattered in the background; field of crops to the left of the road  
+                        Left = road, asphalt, curving; building, dilapidated, with a corrugated roof; silo, cylindrical, metal; vegetation, overgrown, around the structure; utility pole on the left side  
+                        Right = road, asphalt, visible on the left; utility pole, wooden, with wires extending across the frame; tree, green, leafy, near the center; rocky terrain and plants to the right  
+                        Down = road, concrete, with white lines; shadow of a tree cast onto the road; wooden fence, partially visible, along the edge; small plants growing beside the fence  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 18, 19], [10, 10, 10]]  
+                        LeftDepth: [[100, 100, 100], [23, 22, 23], [11, 10, 11]]  
+                        RightDepth: [[100, 5, 2], [9, 9, 15], [10, 9, 10]]  
+                        DownDepth: [[8, 7, 7], [7, 7, 7], [8, 7, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(145.25, 32.65, -6.0), 39.71],
+    [(149.1, 35.85, -6.0), 39.71],
+    [(149.1, 35.85, -4.0), 39.71],
+    [(149.1, 35.85, -2.0), 39.71],
+    [(149.1, 35.85, 0.0), 39.71],
+    [(149.1, 35.85, 2.0), 39.71],
+    [(149.1, 35.85, 2.0), 24.71],
+    [(149.1, 35.85, 2.0), 9.71],
+    [(149.1, 35.85, 2.0), -5.29],
+    [(149.1, 35.85, 2.0), -20.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 72.00000000000006
+                        AvgHeadingChange = 2.73
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = road, paved, with white guardrail; guardrail in the foreground; trees and shrubs in the midground; overcast sky in the background  
+                        Left = road, paved, with white centerline; windmill on wooden pole to the left; rustic building with silo to the right; vegetation along roadside; overcast sky in the distance  
+                        Right = road, paved, with dirt embankment; utility pole with wires; trees and rocky terrain in the midground; overcast sky in the background  
+                        Down = road, paved, with double white lines; shadows of overhead wires cast on the road; dirt and vegetation at the roadside edge  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 19, 21], [10, 10, 10]]  
+                        LeftDepth: [[9, 100, 100], [9, 22, 24], [11, 10, 11]]  
+                        RightDepth: [[100, 5, 5], [21, 9, 9], [10, 9, 9]]  
+                        DownDepth: [[8, 7, 7], [7, 7, 7], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, -6.0), 39.71],
+    [(149.1, 35.85, -4.0), 39.71],
+    [(149.1, 35.85, -2.0), 39.71],
+    [(149.1, 35.85, 0.0), 39.71],
+    [(149.1, 35.85, 2.0), 39.71],
+    [(149.1, 35.85, 2.0), 24.71],
+    [(149.1, 35.85, 2.0), 9.71],
+    [(149.1, 35.85, 2.0), -5.29],
+    [(149.1, 35.85, 2.0), -20.29],
+    [(149.1, 35.85, 2.0), -35.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 72.00000000000006
+                        AvgHeadingChange = 3.26
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = small wooden hut, weathered roof; one hut in the left foreground; surrounded by sparse vegetation and trees  
+                        Left = road, paved, curving into the distance; two utility poles with wires on the left; a rustic building with silos on the right; overgrown vegetation along both sides  
+                        Right = road, paved, curving into the distance; utility pole with wires on the left; overgrown vegetation on both sides; trees in the background  
+                        Down = road, paved, with white line; shadows of overhead wires cast on the road surface; small plants growing near the edge of the road  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 19, 20], [10, 10, 10]]  
+                        LeftDepth: [[6, 100, 100], [9, 17, 24], [10, 10, 11]]  
+                        RightDepth: [[100, 8, 5], [21, 9, 10], [10, 9, 9]]  
+                        DownDepth: [[8, 7, 7], [7, 7, 7], [7, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, -4.0), 39.71],
+    [(149.1, 35.85, -2.0), 39.71],
+    [(149.1, 35.85, 0.0), 39.71],
+    [(149.1, 35.85, 2.0), 39.71],
+    [(149.1, 35.85, 2.0), 24.71],
+    [(149.1, 35.85, 2.0), 9.71],
+    [(149.1, 35.85, 2.0), -5.29],
+    [(149.1, 35.85, 2.0), -20.29],
+    [(149.1, 35.85, 2.0), -35.29],
+    [(149.1, 35.85, 2.0), -50.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 72.00000000000006
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = small building with a sloped roof, weathered exterior; building is on the left side of the frame; surrounded by sparse vegetation and trees in the background  
+                        Left = curved asphalt road with white center line; utility pole with wires on the left; industrial-style buildings with silos on the right; trees and overgrown vegetation along both sides  
+                        Right = asphalt road curving into the distance; wooden utility poles with wires running parallel to the road; overgrown vegetation and rocks on both sides; trees in the mid-ground under a pale sky  
+                        Down = overhead view of a paved road with a white center line; shadows of overhead wires cast across the road; wooden fence and green vegetation along the roadside; small plants growing near the fence  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 18, 20], [10, 9, 9]]  
+                        LeftDepth: [[6, 100, 100], [9, 18, 22], [9, 10, 10]]  
+                        RightDepth: [[100, 8, 5], [20, 9, 11], [9, 9, 8]]  
+                        DownDepth: [[7, 7, 7], [7, 7, 7], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, -2.0), 39.71],
+    [(149.1, 35.85, 0.0), 39.71],
+    [(149.1, 35.85, 2.0), 39.71],
+    [(149.1, 35.85, 2.0), 24.71],
+    [(149.1, 35.85, 2.0), 9.71],
+    [(149.1, 35.85, 2.0), -5.29],
+    [(149.1, 35.85, 2.0), -20.29],
+    [(149.1, 35.85, 2.0), -35.29],
+    [(149.1, 35.85, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -50.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 77.00000000000006
+                        AvgHeadingChange = 3.6
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = farm building, weathered wooden structure; large cylindrical silo, white with green top; trees in the midground; field of crops in the foreground; road in the immediate foreground  
+                        Left = winding asphalt road, white center line; utility poles and wires on the left; rubble pile on the left side; trees and vegetation along the roadside; building on the right in the distance  
+                        Right = asphalt road curving to the right; concrete barriers on both sides; overgrown vegetation between barriers; utility poles and wires overhead; trees and open land in the background  
+                        Down = paved road surface with white lane markings; shadows cast by unseen objects; wooden fence or barrier in the foreground; small plants growing near the base of the fence  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 18, 19], [10, 9, 9]]  
+                        LeftDepth: [[5, 7, 100], [10, 9, 24], [8, 8, 10]]  
+                        RightDepth: [[100, 100, 6], [18, 18, 10], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [7, 7, 7], [6, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, 0.0), 39.71],
+    [(149.1, 35.85, 2.0), 39.71],
+    [(149.1, 35.85, 2.0), 24.71],
+    [(149.1, 35.85, 2.0), 9.71],
+    [(149.1, 35.85, 2.0), -5.29],
+    [(149.1, 35.85, 2.0), -20.29],
+    [(149.1, 35.85, 2.0), -35.29],
+    [(149.1, 35.85, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -65.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 77.00000000000006
+                        AvgHeadingChange = 4.04
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = abandoned building, rusted roof; cylindrical tank, tall and gray; guardrail, metal and curved; trees in the background; building is left of center  
+                        Left = windmill, wooden structure; utility poles, multiple; power lines, overhead; road curves to the right; sun shining from the left  
+                        Right = road, paved and curving; utility poles, multiple; trees, scattered; vegetation along roadside; view extends into the distance  
+                        Down = road, asphalt with white line; shadows cast by unseen objects; dirt and small plants along edge; guardrail partially visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [23, 19, 20], [10, 9, 10]]  
+                        LeftDepth: [[2, 5, 100], [4, 9, 24], [5, 8, 10]]  
+                        RightDepth: [[100, 100, 9], [18, 17, 12], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [7, 7, 7], [6, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, 2.0), 39.71],
+    [(149.1, 35.85, 2.0), 24.71],
+    [(149.1, 35.85, 2.0), 9.71],
+    [(149.1, 35.85, 2.0), -5.29],
+    [(149.1, 35.85, 2.0), -20.29],
+    [(149.1, 35.85, 2.0), -35.29],
+    [(149.1, 35.85, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -65.29],
+    [(152.29, 32.0, 2.0), -80.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 77.00000000000006
+                        AvgHeadingChange = 4.44
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = small weathered building, single-story; white cylindrical tank attached; road curves left in foreground; guardrail along right side; overcast sky  
+                        Left = wooden utility pole with circular sign; power lines stretch across scene; windmill visible in distance; rocky terrain with sparse vegetation; sunlight from right  
+                        Right = long straight road with double white line; grassy embankment on left; trees and bushes lining horizon; clear sky; no vehicles present  
+                        Down = asphalt road with double white line; shadows of overhead objects cast on road surface; wooden fence or barrier in foreground; green plants near fence; top-down view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 20, 21], [10, 9, 10]]  
+                        LeftDepth: [[2, 4, 9], [4, 9, 9], [5, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [20, 16, 20], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [6, 6, 7], [6, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, 2.0), 24.71],
+    [(149.1, 35.85, 2.0), 9.71],
+    [(149.1, 35.85, 2.0), -5.29],
+    [(149.1, 35.85, 2.0), -20.29],
+    [(149.1, 35.85, 2.0), -35.29],
+    [(149.1, 35.85, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -65.29],
+    [(152.29, 32.0, 2.0), -80.29],
+    [(152.29, 32.0, 2.0), -95.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 77.00000000000006
+                        AvgHeadingChange = 4.82
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = dilapidated building, single-story, weathered wood; cylindrical silo, white, adjacent to building; road curves left in foreground; guardrail runs alongside road; sparse vegetation on ground  
+                        Left = rusty wooden utility pole, single; circular light fixture attached to pole; power lines extend across image; trees and rocky terrain in background; sunlight filtering through foliage  
+                        Right = curved asphalt road with white lane markings; chain-link fence along roadside; rows of small trees or shrubs planted behind fence; open field and distant trees in background; clear sky above  
+                        Down = asphalt road surface, double white lane markings; shadows cast by overhead objects; wooden fence and green foliage in foreground; dirt patch near fence base; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 19, 19], [9, 9, 9]]  
+                        LeftDepth: [[5, 3, 10], [5, 5, 10], [5, 5, 10]]  
+                        RightDepth: [[100, 100, 100], [19, 15, 19], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [6, 6, 6], [6, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, 2.0), 9.71],
+    [(149.1, 35.85, 2.0), -5.29],
+    [(149.1, 35.85, 2.0), -20.29],
+    [(149.1, 35.85, 2.0), -35.29],
+    [(149.1, 35.85, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -65.29],
+    [(152.29, 32.0, 2.0), -80.29],
+    [(152.29, 32.0, 2.0), -95.29],
+    [(151.83, 27.02, 2.0), -95.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 82.00000000000006
+                        AvgHeadingChange = 4.66
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = road, paved, with white line; guardrail, metal, alongside road; wooden building, weathered, with sloped roof; water tank, cylindrical, metal; trees and bushes in background; scene is rural and overcast  
+                        Left = telephone poles, wooden, two visible; power lines, multiple, strung between poles; windmill, small, in the distance; trees and rocky terrain; sunlight creating lens flare effect  
+                        Right = road, paved, with white line; guardrail, metal, alongside road; trees, green, lining the road; field of crops or wildflowers; clear sky; scene is rural and open  
+                        Down = road, paved, with white line; shadows cast on road surface; vegetation, green, growing near edge; close-up view focusing on road texture and shadows  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 16, 16], [8, 7, 8]]  
+                        LeftDepth: [[7, 6, 100], [14, 7, 15], [7, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [16, 13, 16], [7, 7, 7]]  
+                        DownDepth: [[6, 5, 5], [5, 5, 5], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, 2.0), -5.29],
+    [(149.1, 35.85, 2.0), -20.29],
+    [(149.1, 35.85, 2.0), -35.29],
+    [(149.1, 35.85, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -65.29],
+    [(152.29, 32.0, 2.0), -80.29],
+    [(152.29, 32.0, 2.0), -95.29],
+    [(151.83, 27.02, 2.0), -95.29],
+    [(151.37, 22.04, 2.0), -95.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 87.00000000000006
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = two dilapidated wooden buildings, weathered and partially collapsed; road in the foreground with metal guardrail; sparse vegetation and trees in the midground; hazy sky in the background  
+                        Left = wooden utility pole with attached wires; windmill structure in the distance; trees and rocky terrain along the roadside; sunlight casting shadows on the road  
+                        Right = asphalt road curving to the right; concrete guardrail along the left side; green trees and bushes lining the roadside; clear sky above  
+                        Down = paved surface with a white painted line; small plants growing near the edge; shadow of an unseen object cast across the pavement  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 13, 13], [6, 6, 6]]  
+                        LeftDepth: [[9, 8, 100], [13, 10, 16], [6, 6, 6]]  
+                        RightDepth: [[100, 100, 100], [12, 9, 13], [6, 6, 6]]  
+                        DownDepth: [[5, 4, 5], [4, 4, 4], [5, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, 2.0), -20.29],
+    [(149.1, 35.85, 2.0), -35.29],
+    [(149.1, 35.85, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -65.29],
+    [(152.29, 32.0, 2.0), -80.29],
+    [(152.29, 32.0, 2.0), -95.29],
+    [(151.83, 27.02, 2.0), -95.29],
+    [(151.37, 22.04, 2.0), -95.29],
+    [(150.91, 17.07, 2.0), -95.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 92.00000000000006
+                        AvgHeadingChange = 4.35
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = wooden barn, weathered, with two white tanks; guardrail in the foreground; field of green plants to the right  
+                        Left = windmill, metal, tall; utility poles and wires; road curving to the right; trees and rocks in the background  
+                        Right = guardrail along a paved road; field of green plants; line of trees in the distance; sunlight casting shadows  
+                        Down = asphalt road surface; white painted line; small cluster of green plants near the edge; shadow from an unseen object  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 30], [11, 10, 10], [5, 4, 4]]  
+                        LeftDepth: [[11, 11, 100], [10, 11, 13], [5, 5, 5]]  
+                        RightDepth: [[26, 100, 100], [11, 7, 11], [4, 5, 5]]  
+                        DownDepth: [[4, 4, 4], [4, 4, 4], [4, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, 2.0), -35.29],
+    [(149.1, 35.85, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -65.29],
+    [(152.29, 32.0, 2.0), -80.29],
+    [(152.29, 32.0, 2.0), -95.29],
+    [(151.83, 27.02, 2.0), -95.29],
+    [(151.37, 22.04, 2.0), -95.29],
+    [(150.91, 17.07, 2.0), -95.29],
+    [(150.45, 12.09, 2.0), -95.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 97.00000000000006
+                        AvgHeadingChange = 4.22
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = small wooden shed, weathered roof; white cylindrical tank, attached to shed; overgrown vegetation in foreground; tree on right side; hazy sky in background  
+                        Left = paved road, white center line; utility poles with wires, aligned along road; windmill structure in distant background; trees and shrubs lining both sides of road; sunlight casting shadows  
+                        Right = metal guardrail, rusted; dirt path alongside guardrail; flowering plants and greenery in foreground; trees in midground; open field and sky in background  
+                        Down = small green plant, leafy; growing out of cracked asphalt surface; wooden fence post visible in upper right corner; sunlight illuminating the plant  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 25], [6, 5, 6], [2, 2, 2]]  
+                        LeftDepth: [[14, 16, 100], [8, 8, 8], [3, 3, 3]]  
+                        RightDepth: [[23, 24, 100], [5, 4, 4], [2, 2, 3]]  
+                        DownDepth: [[2, 2, 2], [2, 1, 2], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(149.1, 35.85, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -65.29],
+    [(152.29, 32.0, 2.0), -80.29],
+    [(152.29, 32.0, 2.0), -95.29],
+    [(151.83, 27.02, 2.0), -95.29],
+    [(151.37, 22.04, 2.0), -95.29],
+    [(150.91, 17.07, 2.0), -95.29],
+    [(150.45, 12.09, 2.0), -95.29],
+    [(150.45, 12.09, 4.0), -95.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 99.00000000000006
+                        AvgHeadingChange = 4.09
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 34 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = burned-out building, charred wood and metal; one structure; building stands in the mid-ground; surrounded by overgrown vegetation  
+                        Left = metal drainage ditch, rusted; road with shadows; utility poles and wires; windmill in the distance; trees on a hillside  
+                        Right = field of flowering plants, white blooms; dirt path; line of trees in the background; clear sky above  
+                        Down = green leafy plant, small and delicate; concrete edge in the foreground; dark soil; grass blades visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 22], [4, 3, 4], [2, 1, 2]]  
+                        LeftDepth: [[16, 20, 100], [5, 2, 2], [1, 0, 1]]  
+                        RightDepth: [[21, 20, 100], [4, 4, 4], [2, 2, 2]]  
+                        DownDepth: [[1, 1, 1], [1, 1, 1], [1, 0, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(152.29, 32.0, 2.0), -50.29],
+    [(152.29, 32.0, 2.0), -65.29],
+    [(152.29, 32.0, 2.0), -80.29],
+    [(152.29, 32.0, 2.0), -95.29],
+    [(151.83, 27.02, 2.0), -95.29],
+    [(151.37, 22.04, 2.0), -95.29],
+    [(150.91, 17.07, 2.0), -95.29],
+    [(150.45, 12.09, 2.0), -95.29],
+    [(150.45, 12.09, 4.0), -95.29],
+    [(149.99, 7.11, 4.0), -95.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 34
+                        DistanceTraveled = 104.00000000000006
+                        AvgHeadingChange = 3.97
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:34 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 35 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Dog,
+                        Size: small(1.25*0.5=0.63 squares),
+                        Description: Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [52, 153]  
+                        **Y Range**: [min_y, max_y] = [-53, 48]
+
+                        # RGB Captions
+                        Front = small white and pink flowers, green leaves; multiple plants growing in a cluster; foreground is blurred, background shows a building and trees  
+                        Left = green vines with small leaves; one vine has a single flower; wires and a concrete structure in the background; sun visible behind the structure  
+                        Right = pink and white flowers, green foliage; group of plants in the midground; large trees in the background under a pale sky  
+                        Down = blurred close-up of a textured surface, possibly stone or concrete, with mottled beige and dark gray patterns  
+
+                        # Depth Information  
+                        FrontDepth: [[1, 1, 2], [0, 0, 0], [0, 0, 0]]  
+                        LeftDepth: [[0, 23, 100], [0, 0, 0], [0, 0, 0]]  
+                        RightDepth: [[18, 17, 3], [0, 0, 0], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(152.29, 32.0, 2.0), -65.29],
+    [(152.29, 32.0, 2.0), -80.29],
+    [(152.29, 32.0, 2.0), -95.29],
+    [(151.83, 27.02, 2.0), -95.29],
+    [(151.37, 22.04, 2.0), -95.29],
+    [(150.91, 17.07, 2.0), -95.29],
+    [(150.45, 12.09, 2.0), -95.29],
+    [(150.45, 12.09, 4.0), -95.29],
+    [(149.99, 7.11, 4.0), -95.29],
+    [(149.99, 7.11, 6.0), -95.29],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 35
+                        DistanceTraveled = 106.00000000000006
+                        AvgHeadingChange = 3.86
+
+                        # Reminder  
+                        - The target is ** Dog**, described as:  Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:35 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

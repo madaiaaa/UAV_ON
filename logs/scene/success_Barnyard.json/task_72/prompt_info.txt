@@ -1,0 +1,784 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = grass field, expansive, flat; several trees scattered across the field; shadows cast by trees on the ground; sky is overcast  
+                        Left = grass field, expansive, flat; sun visible in the sky; multiple trees casting long shadows across the field; path or clearing visible in the center  
+                        Right = grass field, expansive, flat; blue and white tent pitched on the left side; cluster of rocks near the tent; trees scattered in the background; distant structure visible  
+                        Down = ground surface, textured, beige; dark tree shadows cast across the surface; partial view of tree branches at the top and bottom edges  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [29, 29, 30], [13, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [5, 27, 29], [13, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [31, 29, 20], [13, 13, 13]]  
+                        DownDepth: [[10, 9, 10], [9, 9, 10], [5, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-240.6, 166.76, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = dense shrubbery, low-lying, green; trees scattered in the background; overcast sky above  
+                        Left = rows of leafy trees, evenly spaced; sun visible in the upper left; clear sky with light haze  
+                        Right = blue and white tent, dome-shaped; shrubbery in the foreground; trees and a distant building in the background  
+                        Down = close-up of textured ground, small white specks on dark surface; shadows cast diagonally across  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 26, 28], [13, 12, 12]]  
+                        LeftDepth: [[100, 100, 100], [4, 26, 27], [5, 12, 13]]  
+                        RightDepth: [[100, 100, 100], [29, 26, 20], [12, 12, 13]]  
+                        DownDepth: [[9, 9, 9], [9, 8, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = field of low-lying green and white plants; trees in the distant background; overcast sky  
+                        Left = field of low-lying green and white plants; trees on both sides; bright sun in the upper left; clear sky  
+                        Right = field of low-lying green and white plants; blue tent in the lower left; distant building and trees; overcast sky  
+                        Down = dense cluster of small green and white plants; aerial view; no visible objects or structures  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 26, 29], [13, 12, 13]]  
+                        LeftDepth: [[10, 100, 100], [7, 9, 27], [9, 12, 12]]  
+                        RightDepth: [[100, 100, 100], [25, 25, 24], [9, 9, 12]]  
+                        DownDepth: [[9, 9, 9], [9, 8, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = field of dense green vegetation; trees scattered in the background; light blue object partially visible on the right  
+                        Left = field of dense green vegetation; trees with full canopies; bright sunlight creating lens flare effect; shadows cast across the field  
+                        Right = field of dense green vegetation; trees scattered in the background; small building visible in the distance; light blue object partially visible on the left  
+                        Down = close-up view of dense green vegetation; uniform texture; no distinct objects or features visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [28, 26, 29], [13, 12, 13]]  
+                        LeftDepth: [[13, 100, 100], [11, 13, 27], [11, 12, 13]]  
+                        RightDepth: [[100, 100, 100], [21, 26, 23], [13, 12, 13]]  
+                        DownDepth: [[9, 7, 7], [9, 7, 7], [10, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999984
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = field of crops, low-lying, dense; trees in the distant background; overcast sky  
+                        Left = field of crops, rows visible; trees scattered throughout; sun low on the horizon; bright light source  
+                        Right = field of crops, low-lying; blue tent-like structure in the foreground left; trees and small building in the distant background; overcast sky  
+                        Down = close-up view of crops, densely packed; top-down perspective; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [28, 26, 29], [13, 12, 13]]  
+                        LeftDepth: [[18, 100, 100], [16, 26, 27], [13, 12, 13]]  
+                        RightDepth: [[100, 100, 100], [28, 18, 29], [13, 12, 13]]  
+                        DownDepth: [[9, 7, 9], [7, 5, 7], [9, 6, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = blue and white tent, small, partially visible; tent is in the bottom right foreground; field of low green vegetation under overcast sky  
+                        Left = sun, bright, high in the sky; trees, green, scattered; field of low green vegetation; sunlight casting shadows across the field  
+                        Right = ruined stone structure, tall, rectangular; trees, green, surrounding; field of low green vegetation; structure in the distant background center  
+                        Down = dense cluster of light green bushes; ground beneath is dark brown; aerial view of vegetation with no visible structures or objects  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 27, 34], [13, 13, 13]]  
+                        LeftDepth: [[23, 100, 100], [19, 22, 24], [9, 8, 12]]  
+                        RightDepth: [[100, 100, 100], [39, 34, 36], [13, 12, 13]]  
+                        DownDepth: [[9, 9, 10], [7, 8, 9], [7, 8, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = field of low green vegetation; scattered trees in the midground; stone wall along the right edge; overcast sky  
+                        Left = field of low green vegetation; sun visible in the upper left; rows of trees casting shadows; distant structure faintly visible  
+                        Right = field of low green vegetation; blue and white tent in the lower left; rocky patches; distant tower-like structure; overcast sky  
+                        Down = close-up view of dense, light green foliage; textured surface; shadows cast across the plants  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [39, 35, 38], [14, 14, 14]]  
+                        LeftDepth: [[27, 100, 100], [23, 26, 32], [9, 12, 13]]  
+                        RightDepth: [[100, 100, 100], [32, 25, 26], [13, 12, 12]]  
+                        DownDepth: [[10, 10, 10], [9, 9, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = blue and white tent, partially visible; tent is in the bottom right foreground; field of low green vegetation under overcast sky  
+                        Left = sun, bright and round; sun is in the upper left background; rows of trees and low green vegetation in a field  
+                        Right = tall stone tower, distant; tower is in the center background; field of low green vegetation with scattered rocks and trees  
+                        Down = dense cluster of light green foliage; foliage fills the entire frame; aerial or close-up view of plant growth  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 26, 34], [13, 13, 14]]  
+                        LeftDepth: [[100, 100, 100], [24, 21, 23], [11, 11, 12]]  
+                        RightDepth: [[100, 100, 100], [34, 34, 38], [14, 9, 9]]  
+                        DownDepth: [[9, 9, 10], [9, 9, 9], [9, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+    [(-216.43, 154.9, -10.0), -94.32],
+    [(-216.43, 154.9, -10.0), -94.32],
+    [(-216.43, 154.9, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.99999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = field of low-lying green plants; several scattered trees in the midground; overcast sky with diffused light  
+                        Left = field of flowering plants, rows extending into the distance; bright sun visible in the upper left; trees lining the horizon  
+                        Right = field with dense green vegetation; small wooden structure and white object near center; blue canopy partially visible in the bottom left; trees and distant building on the horizon  
+                        Down = close-up view of textured surface with granular, light-colored material; dark streaks running diagonally across the frame  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [36, 32, 33], [14, 13, 15]]  
+                        LeftDepth: [[100, 100, 100], [27, 27, 31], [13, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [32, 26, 27], [13, 12, 10]]  
+                        DownDepth: [[10, 10, 10], [9, 9, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+    [(-216.43, 154.9, -10.0), -94.32],
+    [(-216.8, 149.92, -10.0), -94.32],
+    [(-216.8, 149.92, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.99999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = field of low-lying green plants; trees in the background; overcast sky  
+                        Left = field of flowering plants; sun visible in the upper left; trees in the distance  
+                        Right = blue tent, small structure; person standing nearby; field of green plants; distant building  
+                        Down = close-up view of dense green foliage; no distinct objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [30, 27, 29], [13, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [29, 27, 30], [13, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [30, 27, 28], [13, 13, 13]]  
+                        DownDepth: [[10, 9, 10], [9, 9, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-240.6, 166.76, -10.0), -94.32],
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+    [(-216.43, 154.9, -10.0), -94.32],
+    [(-216.8, 149.92, -10.0), -94.32],
+    [(-217.18, 144.93, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 44.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = field of low-lying green plants; dirt path curves through the field; trees line the horizon under a hazy sky  
+                        Left = field of crops with sunlight creating lens flare; dirt path winds through the field; trees in the background  
+                        Right = field of crops with rocks scattered across; dirt path leads to a distant building; small table and figure near the foreground  
+                        Down = close-up of textured surface with granular white material on a dark base; part of a blue object visible in the bottom right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [26, 26, 26], [13, 12, 12]]  
+                        LeftDepth: [[100, 100, 100], [21, 22, 23], [12, 11, 12]]  
+                        RightDepth: [[100, 100, 100], [38, 27, 38], [11, 13, 15]]  
+                        DownDepth: [[9, 9, 10], [9, 9, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-235.61, 166.38, -10.0), -94.32],
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+    [(-216.43, 154.9, -10.0), -94.32],
+    [(-216.8, 149.92, -10.0), -94.32],
+    [(-217.18, 144.93, -10.0), -94.32],
+    [(-212.19, 144.55, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 49.999999999999936
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = field of low-lying green plants; dirt path curves from right to left; trees line the horizon under a pale sky  
+                        Left = rows of dense green crops; sun visible in upper left; trees and structures faintly visible in distance  
+                        Right = field with scattered rocks; dirt path curves from left to right; small blue tent and wooden table in foreground; trees in background  
+                        Down = close-up view of textured ground covered in small green plants; partial white surface visible in top right corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [32, 22, 24], [14, 13, 14]]  
+                        LeftDepth: [[100, 100, 100], [27, 27, 30], [13, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [31, 27, 27], [10, 9, 13]]  
+                        DownDepth: [[10, 9, 10], [9, 9, 9], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-230.63, 166.01, -10.0), -94.32],
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+    [(-216.43, 154.9, -10.0), -94.32],
+    [(-216.8, 149.92, -10.0), -94.32],
+    [(-217.18, 144.93, -10.0), -94.32],
+    [(-212.19, 144.55, -10.0), -94.32],
+    [(-212.57, 139.57, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 54.99999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = field of low green vegetation; dirt path curves right; several small trees scattered in the midground; hazy sky above  
+                        Left = field of low green vegetation; sun visible in the upper left; dirt path winds through center; trees line the horizon  
+                        Right = field with patches of rocks and low green vegetation; dirt path extends into the distance; small building visible in the far background; trees surround the area  
+                        Down = overhead view of a field with dense green vegetation; light blue canopy tent in the upper right; small rectangular structure near bottom right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [28, 21, 23], [13, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [28, 27, 28], [13, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [30, 23, 30], [13, 13, 13]]  
+                        DownDepth: [[10, 8, 7], [9, 7, 7], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-225.64, 165.63, -10.0), -94.32],
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+    [(-216.43, 154.9, -10.0), -94.32],
+    [(-216.8, 149.92, -10.0), -94.32],
+    [(-217.18, 144.93, -10.0), -94.32],
+    [(-212.19, 144.55, -10.0), -94.32],
+    [(-212.57, 139.57, -10.0), -94.32],
+    [(-207.59, 139.19, -10.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 59.99999999999992
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Tent,
+                        Size: big(5.0*5.0=25.0 squares),
+                        Description: Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-291, -190]  
+                        **Y Range**: [min_y, max_y] = [116, 217]
+
+                        # RGB Captions
+                        Front = field of green and white plants; trees in the distance; dirt path curving through the field  
+                        Left = field of green and white plants; sun visible in the sky; trees lining the horizon  
+                        Right = field of green and white plants; rocks scattered across the foreground; building in the far background  
+                        Down = blue tent canopy, partially open; dense green foliage surrounding the tent; ground covered in leaves  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 20, 21], [10, 10, 10]]  
+                        LeftDepth: [[100, 100, 100], [23, 22, 24], [10, 10, 11]]  
+                        RightDepth: [[100, 100, 100], [22, 20, 22], [5, 5, 9]]  
+                        DownDepth: [[8, 6, 5], [7, 5, 5], [8, 7, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-226.02, 160.64, -10.0), -94.32],
+    [(-221.03, 160.27, -10.0), -94.32],
+    [(-221.41, 155.28, -10.0), -94.32],
+    [(-216.43, 154.9, -10.0), -94.32],
+    [(-216.8, 149.92, -10.0), -94.32],
+    [(-217.18, 144.93, -10.0), -94.32],
+    [(-212.19, 144.55, -10.0), -94.32],
+    [(-212.57, 139.57, -10.0), -94.32],
+    [(-207.59, 139.19, -10.0), -94.32],
+    [(-207.59, 139.19, -8.0), -94.32],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 61.99999999999992
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Tent**, described as:  Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,1904 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = four white arched tents, large, in a row; red barn with snow-covered roof; stone silo; windmill in the background; all structures are on a grassy field under a bright sky  
+                        Left = playground structure, yellow and pink; small wooden crate; pile of hay bales; scattered debris; overgrown vegetation; distant ruined buildings under a hazy sky  
+                        Right = wooden rack structure, open framework; multiple stacks of hay bales; several black rectangular objects; overgrown field; trees and ruins in the distant background under a clear sky  
+                        Down = three rolled-up beige tarps; two smaller grayish tarps; dense green foliage; dirt path; overhead perspective view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [35, 35, 38], [20, 19, 20]]  
+                        LeftDepth: [[100, 100, 100], [35, 43, 41], [19, 19, 19]]  
+                        RightDepth: [[100, 100, 100], [33, 29, 30], [20, 18, 18]]  
+                        DownDepth: [[14, 14, 15], [11, 10, 14], [11, 11, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -10.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = three white arched greenhouses, large, in a row; red barn with white roof, to the right of greenhouses; stone silo, small, near barn; field of low green plants in foreground; sun high in the sky  
+                        Left = playground set, yellow and pink, small; pile of rocks, medium-sized; scattered debris; overgrown field; distant trees and ruins under cloudy sky  
+                        Right = wooden structure, partially collapsed, central; stacks of hay bales, brown, around structure; barrels, dark, near hay; field of low green plants; trees and buildings in background  
+                        Down = cylindrical hay bale, light brown, in foreground; smaller rectangular hay bale, darker brown, near it; patch of bare earth; dense green vegetation; aerial view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [34, 31, 33], [17, 17, 17]]  
+                        LeftDepth: [[100, 100, 100], [35, 36, 40], [17, 17, 18]]  
+                        RightDepth: [[100, 100, 100], [30, 29, 30], [18, 16, 16]]  
+                        DownDepth: [[13, 13, 13], [9, 9, 12], [9, 9, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 2.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = three white arched greenhouses; red barn with gray roof; stone silo; structures in a field under bright sky  
+                        Left = yellow playhouse, orange slide, wooden structure; scattered objects in a field; trees and buildings in the distant background  
+                        Right = wooden open-sided structure; stacks of hay bales; scattered objects; trees and structures in the background  
+                        Down = four cylindrical hay bales; small rectangular object; vegetation-covered ground; narrow water channel nearby  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [33, 30, 30], [15, 14, 15]]  
+                        LeftDepth: [[100, 100, 100], [33, 31, 34], [11, 14, 15]]  
+                        RightDepth: [[100, 100, 100], [29, 22, 27], [15, 13, 13]]  
+                        DownDepth: [[10, 10, 11], [9, 7, 10], [7, 7, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 4.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = three white arched greenhouses; red barn with white roof; small stone structure; windmill; sun in the sky; structures are in a field of crops  
+                        Left = playground equipment including slide and climbing frame; hay bales; small shed; trees in the background; overcast sky; playground is in a field of crops  
+                        Right = wooden greenhouse frame; stacks of hay bales; wooden crates; trees in the background; greenhouse is in a field of crops  
+                        Down = cylindrical hay bale; rectangular hay bale; rock-like object; dense green vegetation; hay bale is in the foreground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [28, 25, 27], [11, 11, 11]]  
+                        LeftDepth: [[100, 100, 100], [26, 21, 22], [8, 11, 12]]  
+                        RightDepth: [[100, 100, 100], [18, 16, 21], [11, 10, 10]]  
+                        DownDepth: [[8, 8, 9], [7, 5, 8], [5, 5, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 6.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, three in a row; red barn with white roof; small stone structure; overgrown field; sun in the sky  
+                        Left = playground equipment, yellow slide and orange tunnel; hay bales stacked; overgrown field; distant city skyline  
+                        Right = wooden greenhouse frame; stacks of hay bales; overgrown field; trees in the background  
+                        Down = cut tree trunks, rough bark; dense green foliage; rocky ground; close-up view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 19, 20], [8, 8, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 19, 20], [5, 8, 7]]  
+                        RightDepth: [[100, 100, 100], [17, 15, 16], [9, 8, 7]]  
+                        DownDepth: [[6, 6, 7], [6, 3, 6], [3, 3, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 8.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = three white arched structures, long and low; red barn with white roof; stone building; all in a field of overgrown vegetation; sun high in the sky  
+                        Left = yellow play structure with slide; small yellow and white building; stacks of logs; overgrown field; city skyline in the distant background  
+                        Right = stacks of round hay bales; wooden structure resembling a greenhouse or shed; overgrown field; trees and buildings in the background  
+                        Down = large tree trunk in the foreground; dense patch of green plants; dirt path winding through the vegetation; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 12, 13], [6, 5, 5]]  
+                        LeftDepth: [[100, 100, 100], [4, 12, 14], [4, 5, 5]]  
+                        RightDepth: [[100, 100, 58], [13, 9, 9], [5, 5, 5]]  
+                        DownDepth: [[4, 4, 4], [4, 3, 3], [2, 1, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, two in number; red barn with white roof; stone structure; sun in the sky; field of flowering plants in the foreground  
+                        Left = large tree stump in the foreground; smaller stumps and logs; overgrown vegetation; distant trees and structures under a hazy sky  
+                        Right = stacks of hay bales, three visible; wooden structure with open framework; field of flowering plants; trees and buildings in the background  
+                        Down = tree stump with spiral growth pattern; patch of grass and small plants; ground covered in shadows; close-up view of natural textures  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [6, 6, 6], [3, 3, 3]]  
+                        LeftDepth: [[4, 100, 100], [4, 5, 5], [3, 2, 3]]  
+                        RightDepth: [[100, 100, 56], [7, 5, 5], [3, 3, 3]]  
+                        DownDepth: [[2, 2, 2], [2, 2, 2], [2, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 12.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = three white arched structures, elongated and low-profile; field of overgrown vegetation in the foreground; red barn-like building and stone structure in the midground; sun visible in the sky  
+                        Left = two large logs with dark tarps on top; overgrown field with small flowers and bushes; distant buildings and trees under a hazy sky  
+                        Right = wooden greenhouse frame, partially constructed; stacks of hay bales; overgrown field with wildflowers; trees and distant structures in the background  
+                        Down = close-up view of a tree stump with rough bark texture; surrounding ground covered in green plants and small white flowers; sunlight filtering through foliage  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [11, 10, 11], [5, 4, 5]]  
+                        LeftDepth: [[100, 100, 100], [4, 9, 12], [4, 4, 4]]  
+                        RightDepth: [[100, 100, 58], [11, 7, 7], [5, 4, 4]]  
+                        DownDepth: [[4, 3, 3], [3, 2, 2], [2, 1, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 14.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = three white arched greenhouses; red barn with white roof; stone structure; all surrounded by overgrown vegetation; sun in the upper right  
+                        Left = yellow and pink plastic playset; wooden stump in the foreground; overgrown field; trees and distant buildings in the background  
+                        Right = wooden structure resembling a greenhouse frame; stacks of hay bales; various wooden crates; overgrown field; trees and distant buildings in the background  
+                        Down = large tree trunk in the foreground; dense green foliage; rocky ground; upward view of vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 16, 17], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [8, 16, 17], [5, 7, 6]]  
+                        RightDepth: [[100, 100, 100], [16, 13, 14], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 3, 5], [2, 2, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 16.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = three white arched greenhouses; red barn with white trim; small stone building; windmill in the distance; structures are surrounded by overgrown vegetation  
+                        Left = playground equipment including a yellow slide and climbing structure; wooden barrels; small rectangular box; all situated in an overgrown field with trees in the background  
+                        Right = wooden structure resembling a greenhouse frame; stacks of hay bales; wooden crates; all located in an overgrown area with trees in the background  
+                        Down = overhead view of dense green vegetation; partially visible tree stump in the bottom left corner; ground appears muddy or wet  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 16, 18], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [17, 16, 16], [7, 5, 7]]  
+                        RightDepth: [[100, 100, 100], [17, 14, 14], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 6], [5, 5, 5], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -10.0), 121.92],
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-140.87, -237.3, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 21.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, three in a row; red barn with white roof; small stone shed; windmill in the distant background; sun high in the sky  
+                        Left = orange and yellow structures in the background; trees line the horizon; overgrown vegetation in the foreground; scattered debris and barrels  
+                        Right = wooden greenhouse frame; four round hay bales; two wooden crates; overgrown plants; trees in the background; ruins visible in the far distance  
+                        Down = dense patch of green plants; dirt path running through the center; mist or smoke rising from the left side; partial view of a corrugated metal surface on the right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 16, 17], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [17, 16, 18], [6, 6, 7]]  
+                        RightDepth: [[100, 100, 100], [16, 15, 15], [7, 7, 8]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -8.0), 121.92],
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-140.87, -237.3, -2.0), 121.92],
+    [(-143.51, -233.05, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 26.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, three in total; red barn with white roof; stone structure; windmill; vegetation in the foreground; farm buildings in the midground under a bright sky  
+                        Left = small white shed; wooden pallets; stacked logs; overgrown vegetation; distant city skyline; cloudy sky  
+                        Right = wooden greenhouse frame; hay bales, four in total; overgrown vegetation; trees and ruins in the background; clear sky  
+                        Down = dense patch of green and white plants; sandy or light-colored ground; top-down view of vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 16, 17], [8, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [17, 16, 17], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [16, 16, 16], [7, 7, 7]]  
+                        DownDepth: [[6, 5, 6], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -6.0), 121.92],
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-140.87, -237.3, -2.0), 121.92],
+    [(-143.51, -233.05, -2.0), 121.92],
+    [(-146.16, -228.81, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 31.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, three in total; red barn with white roof; stone tower; vegetation in the foreground; structures arranged linearly across the midground  
+                        Left = small white structure; large wooden log; open field with low-lying plants; trees and distant buildings in the background; sun high in the sky  
+                        Right = wooden greenhouse frame; stacks of wooden barrels; overgrown vegetation in the foreground; trees and ruins in the distant background; sunlight filtering through haze  
+                        Down = overhead view of dense green and white vegetation covering the ground; no distinct objects visible; uniform plant coverage across the entire frame  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 15, 15], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [16, 16, 17], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [17, 16, 16], [7, 7, 7]]  
+                        DownDepth: [[6, 5, 5], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -4.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-140.87, -237.3, -2.0), 121.92],
+    [(-143.51, -233.05, -2.0), 121.92],
+    [(-146.16, -228.81, -2.0), 121.92],
+    [(-148.8, -224.56, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 36.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouse, long and narrow; red barn with slanted roof; windmill in the distant background; sun high in the sky; structures arranged linearly across the field  
+                        Left = white arched greenhouse partially visible on the right; open field with flowering plants; small white box and wooden structure in the mid-ground; trees and buildings in the far distance under a hazy sky  
+                        Right = wooden greenhouse frame; stacks of round hay bales; stone or concrete structures in the background; field covered in low-lying green plants; trees and faint structures in the far distance  
+                        Down = overhead view of a field with patches of green plants and bare soil; plants are scattered sparsely across the terrain; no distinct structures or objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 16, 15], [7, 7, 8]]  
+                        LeftDepth: [[100, 100, 100], [16, 16, 16], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [16, 16, 16], [7, 7, 7]]  
+                        DownDepth: [[6, 5, 5], [5, 5, 5], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-140.87, -237.3, -2.0), 121.92],
+    [(-143.51, -233.05, -2.0), 121.92],
+    [(-146.16, -228.81, -2.0), 121.92],
+    [(-148.8, -224.56, -2.0), 121.92],
+    [(-151.44, -220.32, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 41.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, three in total; red barn with white roof; windmill in the background right; sun high in the sky; vegetation in the foreground  
+                        Left = white arched greenhouse, single structure; field of flowering plants; trees in the distant background; overcast sky  
+                        Right = wooden structures, multiple frames; hay bales stacked near center; small buildings on left and right; field of greenery in the foreground; trees in the background  
+                        Down = overhead view of dense green vegetation; patches of bare ground visible; no distinct objects or structures discernible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 15, 13], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [17, 16, 17], [8, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [16, 16, 17], [7, 7, 7]]  
+                        DownDepth: [[6, 5, 6], [5, 5, 5], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-140.87, -237.3, -2.0), 121.92],
+    [(-143.51, -233.05, -2.0), 121.92],
+    [(-146.16, -228.81, -2.0), 121.92],
+    [(-148.8, -224.56, -2.0), 121.92],
+    [(-151.44, -220.32, -2.0), 121.92],
+    [(-154.09, -216.08, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 46.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, two in the foreground; red barn with white roof, one in the midground; windmill, one in the distant background right; overgrown vegetation in the foreground  
+                        Left = white arched greenhouse, one on the right; field of flowering plants in the foreground; trees and structures in the distant background; bright sky with sun visible  
+                        Right = wooden greenhouse frame, one in the midground; hay bales, three in the midground right; field of flowering plants in the foreground; trees and buildings in the distant background  
+                        Down = overhead view of a dirt path winding through dense green and white flowering vegetation; no distinct objects other than natural plant growth  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [15, 13, 11], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [17, 15, 18], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [12, 16, 17], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, 2.0), 121.92],
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-140.87, -237.3, -2.0), 121.92],
+    [(-143.51, -233.05, -2.0), 121.92],
+    [(-146.16, -228.81, -2.0), 121.92],
+    [(-148.8, -224.56, -2.0), 121.92],
+    [(-151.44, -220.32, -2.0), 121.92],
+    [(-154.09, -216.08, -2.0), 121.92],
+    [(-156.73, -211.83, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 51.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, two in the foreground; red barn with weathered roof, one in the midground; windmill, one in the distant background right; sun high in the sky; bushes and dirt paths in the foreground  
+                        Left = white arched greenhouse, one in the midground right; field of low-lying plants covering the ground; trees and structures in the distant background; overcast sky  
+                        Right = small wooden shed, one on the left; white arched greenhouses, two in the midground; stacks of hay or straw, several in the midground center; trees and buildings in the distant background; overcast sky  
+                        Down = dense patch of small green plants growing on a light-colored surface; close-up view focusing on plant texture and distribution  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [11, 10, 12], [7, 7, 8]]  
+                        LeftDepth: [[100, 100, 100], [17, 16, 13], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [10, 15, 17], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [5, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, 0.0), 121.92],
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-140.87, -237.3, -2.0), 121.92],
+    [(-143.51, -233.05, -2.0), 121.92],
+    [(-146.16, -228.81, -2.0), 121.92],
+    [(-148.8, -224.56, -2.0), 121.92],
+    [(-151.44, -220.32, -2.0), 121.92],
+    [(-154.09, -216.08, -2.0), 121.92],
+    [(-156.73, -211.83, -2.0), 121.92],
+    [(-159.37, -207.59, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 56.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, two in the foreground; red barn with weathered roof, to the right of greenhouses; windmill in the distant background; sun high in the sky  
+                        Left = white arched greenhouse, partially visible on the left; field of low-lying green plants in the foreground; trees and structures in the distant background  
+                        Right = small gray shed with dark roof, on the left; wooden structures and hay bales in the center-right; field of green plants in the foreground; buildings in the distant background  
+                        Down = gravel path with tire tracks, running diagonally across the image; patches of green grass and small plants along the path; dust or debris settled on the vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 8, 11], [7, 7, 8]]  
+                        LeftDepth: [[100, 100, 100], [16, 16, 11], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [8, 9, 17], [7, 6, 7]]  
+                        DownDepth: [[5, 5, 6], [5, 5, 5], [5, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-138.23, -241.54, -2.0), 121.92],
+    [(-140.87, -237.3, -2.0), 121.92],
+    [(-143.51, -233.05, -2.0), 121.92],
+    [(-146.16, -228.81, -2.0), 121.92],
+    [(-148.8, -224.56, -2.0), 121.92],
+    [(-151.44, -220.32, -2.0), 121.92],
+    [(-154.09, -216.08, -2.0), 121.92],
+    [(-156.73, -211.83, -2.0), 121.92],
+    [(-159.37, -207.59, -2.0), 121.92],
+    [(-162.02, -203.34, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 61.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, three in total; red barn with weathered roof, one; windmill structure, distant background right; hay bales, stacked near barn; low bushes in foreground  
+                        Left = white arched greenhouses, two in total; dirt path winding through field; trees and structures visible in far distance; overcast sky  
+                        Right = small wooden shed, one; wooden frame structure, one; hay bales, several; overgrown vegetation in foreground; ruins or old buildings in distant background  
+                        Down = gravel path with tire tracks, central; sparse low-lying green plants scattered around; dry, dusty ground; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 11, 13], [5, 5, 5]]  
+                        LeftDepth: [[100, 100, 100], [17, 10, 9], [8, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [8, 7, 17], [7, 6, 6]]  
+                        DownDepth: [[5, 5, 6], [5, 5, 5], [5, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.87, -237.3, -2.0), 121.92],
+    [(-143.51, -233.05, -2.0), 121.92],
+    [(-146.16, -228.81, -2.0), 121.92],
+    [(-148.8, -224.56, -2.0), 121.92],
+    [(-151.44, -220.32, -2.0), 121.92],
+    [(-154.09, -216.08, -2.0), 121.92],
+    [(-156.73, -211.83, -2.0), 121.92],
+    [(-159.37, -207.59, -2.0), 121.92],
+    [(-162.02, -203.34, -2.0), 121.92],
+    [(-164.66, -199.1, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 66.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouse, long and narrow; red barn with weathered roof; windmill in the background right; hay bales stacked near barn; sun high in the sky  
+                        Left = white arched greenhouse, partially visible; field of green crops; distant trees and structures under overcast sky; circular object on ground left  
+                        Right = gray cylindrical silo with conical roof; wooden hay rack; hay bales stacked nearby; open field with scattered bushes; buildings in distant background  
+                        Down = overhead view of dirt path winding through sparse vegetation; patches of dry soil and small green plants; natural lighting from above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 9, 13], [4, 4, 5]]  
+                        LeftDepth: [[100, 100, 100], [17, 7, 7], [7, 7, 4]]  
+                        RightDepth: [[100, 100, 100], [11, 7, 9], [6, 7, 7]]  
+                        DownDepth: [[4, 4, 4], [5, 5, 5], [5, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-143.51, -233.05, -2.0), 121.92],
+    [(-146.16, -228.81, -2.0), 121.92],
+    [(-148.8, -224.56, -2.0), 121.92],
+    [(-151.44, -220.32, -2.0), 121.92],
+    [(-154.09, -216.08, -2.0), 121.92],
+    [(-156.73, -211.83, -2.0), 121.92],
+    [(-159.37, -207.59, -2.0), 121.92],
+    [(-162.02, -203.34, -2.0), 121.92],
+    [(-164.66, -199.1, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 121.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 71.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, multiple; red barn with wooden roof, one; green bushes scattered; barn is to the right of the greenhouses  
+                        Left = white arched greenhouse, one; field of low green plants; dirt path in front; trees and structures in the distant background  
+                        Right = windmill, tall and white; stone silo, cylindrical; wooden structure under construction; logs stacked near silo; all set in a rural landscape with trees and buildings in the background  
+                        Down = ground covered in dry soil and sparse green vegetation; small bushes and patches of grass; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [7, 9, 11], [3, 3, 5]]  
+                        LeftDepth: [[100, 100, 100], [16, 9, 7], [8, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [10, 8, 7], [5, 5, 7]]  
+                        DownDepth: [[3, 3, 4], [5, 4, 4], [5, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-146.16, -228.81, -2.0), 121.92],
+    [(-148.8, -224.56, -2.0), 121.92],
+    [(-151.44, -220.32, -2.0), 121.92],
+    [(-154.09, -216.08, -2.0), 121.92],
+    [(-156.73, -211.83, -2.0), 121.92],
+    [(-159.37, -207.59, -2.0), 121.92],
+    [(-162.02, -203.34, -2.0), 121.92],
+    [(-164.66, -199.1, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 106.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 71.0
+                        AvgHeadingChange = 0.75
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, multiple, in a row; red barn with gray roof to the right; overgrown plants in the foreground; city skyline in the distant background  
+                        Left = field of low-lying green plants; dirt path winding through center; small structures and trees in the midground; hazy sky above  
+                        Right = red barn with gray roof, one; stone silo with conical roof, one; windmill in the background; hay bales stacked near barn; overgrown plants in the foreground  
+                        Down = overhead view of patchy ground with sparse green vegetation; dirt or gravel paths intersecting; small bushes scattered across the terrain  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [6, 8, 11], [4, 3, 4]]  
+                        LeftDepth: [[100, 100, 100], [17, 16, 8], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [18, 9, 7], [5, 5, 5]]  
+                        DownDepth: [[4, 3, 4], [5, 4, 4], [5, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-148.8, -224.56, -2.0), 121.92],
+    [(-151.44, -220.32, -2.0), 121.92],
+    [(-154.09, -216.08, -2.0), 121.92],
+    [(-156.73, -211.83, -2.0), 121.92],
+    [(-159.37, -207.59, -2.0), 121.92],
+    [(-162.02, -203.34, -2.0), 121.92],
+    [(-164.66, -199.1, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 106.92],
+    [(-167.3, -194.85, -2.0), 91.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 71.0
+                        AvgHeadingChange = 1.43
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, multiple in a row; red barn with gray roof; small white building; bushes in the foreground; cityscape in the distant background  
+                        Left = white arched greenhouse, partially visible; field of low-lying crops; trees and structures in the midground; hazy sky in the background  
+                        Right = red barn with gray roof; stone silo; windmill; stacks of hay bales; bundles on the ground; patches of vegetation; sunlight from the left  
+                        Down = dry shrubs with sparse green leaves; sandy or gravelly ground; partial view of a white structure in the top left corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [7, 6, 9], [5, 5, 7]]  
+                        LeftDepth: [[100, 100, 100], [17, 10, 6], [7, 4, 4]]  
+                        RightDepth: [[100, 100, 100], [18, 9, 9], [8, 4, 5]]  
+                        DownDepth: [[2, 2, 4], [2, 2, 4], [5, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-151.44, -220.32, -2.0), 121.92],
+    [(-154.09, -216.08, -2.0), 121.92],
+    [(-156.73, -211.83, -2.0), 121.92],
+    [(-159.37, -207.59, -2.0), 121.92],
+    [(-162.02, -203.34, -2.0), 121.92],
+    [(-164.66, -199.1, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 106.92],
+    [(-167.3, -194.85, -2.0), 91.92],
+    [(-167.3, -194.85, 0.0), 91.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 73.0
+                        AvgHeadingChange = 1.36
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, multiple; greenery in the foreground; red barn with metal roof to the right; cityscape in the distant background  
+                        Left = white arched greenhouse, single; field of low-lying plants; small structures and trees in the midground; hazy sky above  
+                        Right = red barn with metal roof, single; gray silo, cylindrical; windmill, tall and white; hay bales, stacked; dirt ground with patches of greenery  
+                        Down = overhead view of sandy ground with scattered green shrubs; partial view of a white structure on the left; natural lighting from above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [6, 5, 8], [4, 4, 5]]  
+                        LeftDepth: [[100, 100, 100], [16, 5, 5], [3, 3, 5]]  
+                        RightDepth: [[100, 100, 100], [16, 9, 8], [8, 7, 5]]  
+                        DownDepth: [[5, 5, 5], [3, 3, 5], [2, 2, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-154.09, -216.08, -2.0), 121.92],
+    [(-156.73, -211.83, -2.0), 121.92],
+    [(-159.37, -207.59, -2.0), 121.92],
+    [(-162.02, -203.34, -2.0), 121.92],
+    [(-164.66, -199.1, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 106.92],
+    [(-167.3, -194.85, -2.0), 91.92],
+    [(-167.3, -194.85, 0.0), 91.92],
+    [(-167.3, -194.85, 2.0), 91.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 1.3
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, long row; another greenhouse in the mid-ground; overgrown plants in the foreground; distant buildings under a pale sky  
+                        Left = white arched greenhouse, partially visible; field of low-lying crops; stacks of hay bales and small structures in the mid-ground; trees and distant landscape in the background  
+                        Right = red barn with weathered roof; cylindrical silo, gray metal; windmill in the distance; hay bales and scattered objects near the barn; open field and trees in the background  
+                        Down = overhead view of sandy ground; clusters of small green shrubs; partial view of a white structure on the left; diffuse lighting suggesting haze or dust  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [7, 5, 13], [5, 4, 5]]  
+                        LeftDepth: [[100, 100, 100], [16, 10, 5], [4, 4, 5]]  
+                        RightDepth: [[100, 100, 100], [18, 15, 9], [5, 7, 8]]  
+                        DownDepth: [[5, 4, 5], [3, 3, 5], [3, 3, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-156.73, -211.83, -2.0), 121.92],
+    [(-159.37, -207.59, -2.0), 121.92],
+    [(-162.02, -203.34, -2.0), 121.92],
+    [(-164.66, -199.1, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 106.92],
+    [(-167.3, -194.85, -2.0), 91.92],
+    [(-167.3, -194.85, 0.0), 91.92],
+    [(-167.3, -194.85, 2.0), 91.92],
+    [(-167.3, -194.85, 2.0), 76.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 1.88
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = long white greenhouse tunnel, arched structure; multiple tunnels in a row; distant cityscape and trees in the background  
+                        Left = field with low green vegetation; several stacks of hay bales; small structures and trees in the midground; overcast sky  
+                        Right = red barn building, wooden exterior; large water tanks on either side; hay bales and crates near the barn; windmill and structures in the background  
+                        Down = overhead view of ground with patches of green shrubs; light-colored dirt or gravel surface; partial view of a white structure in the top left  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [6, 5, 6], [5, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [16, 15, 6], [4, 3, 4]]  
+                        RightDepth: [[100, 100, 100], [14, 15, 18], [5, 5, 7]]  
+                        DownDepth: [[4, 4, 4], [3, 4, 5], [3, 3, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-159.37, -207.59, -2.0), 121.92],
+    [(-162.02, -203.34, -2.0), 121.92],
+    [(-164.66, -199.1, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 106.92],
+    [(-167.3, -194.85, -2.0), 91.92],
+    [(-167.3, -194.85, 0.0), 91.92],
+    [(-167.3, -194.85, 2.0), 91.92],
+    [(-167.3, -194.85, 2.0), 76.92],
+    [(-167.3, -194.85, 2.0), 61.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 2.4
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = series of white arched greenhouses, long and connected; greenery in foreground; trees and structures in distant background  
+                        Left = field with low-growing plants, scattered hay bales; trees and structures in the distance under a pale sky  
+                        Right = red barn with weathered roof, adjacent white greenhouse; stacks of hay bales, water tanks, windmill in background; dirt ground with green shrubs nearby  
+                        Down = overhead view of sandy ground with sparse green bushes; light-colored structure partially visible in top left corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [5, 6, 6], [5, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [18, 15, 17], [4, 3, 3]]  
+                        RightDepth: [[100, 100, 100], [7, 7, 15], [5, 5, 7]]  
+                        DownDepth: [[4, 5, 4], [3, 4, 5], [3, 3, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.02, -203.34, -2.0), 121.92],
+    [(-164.66, -199.1, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 106.92],
+    [(-167.3, -194.85, -2.0), 91.92],
+    [(-167.3, -194.85, 0.0), 91.92],
+    [(-167.3, -194.85, 2.0), 91.92],
+    [(-167.3, -194.85, 2.0), 76.92],
+    [(-167.3, -194.85, 2.0), 61.92],
+    [(-167.3, -194.85, 2.0), 46.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 75.0
+                        AvgHeadingChange = 2.88
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouses, long and connected; row of greenhouses in the midground; trees and distant structures in the background  
+                        Left = field with scattered hay bales, small structures, and trees; field extends into the distance under a hazy sky  
+                        Right = red barn with weathered roof, white water tank to the left, windmill in the background; several hay bales and sacks near the barn  
+                        Down = overhead view of sparse vegetation on dry ground; small bushes and patches of grass scattered across the surface  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [7, 6, 11], [4, 3, 4]]  
+                        LeftDepth: [[100, 100, 100], [16, 7, 6], [4, 4, 5]]  
+                        RightDepth: [[100, 100, 100], [11, 15, 18], [4, 4, 7]]  
+                        DownDepth: [[4, 4, 4], [5, 5, 4], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-164.66, -199.1, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 106.92],
+    [(-167.3, -194.85, -2.0), 91.92],
+    [(-167.3, -194.85, 0.0), 91.92],
+    [(-167.3, -194.85, 2.0), 91.92],
+    [(-167.3, -194.85, 2.0), 76.92],
+    [(-167.3, -194.85, 2.0), 61.92],
+    [(-167.3, -194.85, 2.0), 46.92],
+    [(-167.3, -194.85, 0.0), 46.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 77.0
+                        AvgHeadingChange = 2.78
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = long white greenhouse, arched structure; greenhouse extends into the distance; trees and a small building in the background  
+                        Left = field of crops, rows of green plants; several stacks of hay bales; wooden structures and a yellow object in the background  
+                        Right = white dome-shaped structure, small door; red barn with weathered roof; windmill to the right; smaller white structure to the left  
+                        Down = overhead view of ground with scattered green bushes; dirt path visible between vegetation; top-left corner shows part of a white structure  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [6, 7, 5], [6, 3, 3]]  
+                        LeftDepth: [[100, 100, 100], [11, 14, 17], [6, 4, 5]]  
+                        RightDepth: [[100, 100, 75], [11, 11, 15], [4, 3, 3]]  
+                        DownDepth: [[4, 3, 3], [5, 5, 3], [5, 5, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-167.3, -194.85, -2.0), 121.92],
+    [(-167.3, -194.85, -2.0), 106.92],
+    [(-167.3, -194.85, -2.0), 91.92],
+    [(-167.3, -194.85, 0.0), 91.92],
+    [(-167.3, -194.85, 2.0), 91.92],
+    [(-167.3, -194.85, 2.0), 76.92],
+    [(-167.3, -194.85, 2.0), 61.92],
+    [(-167.3, -194.85, 2.0), 46.92],
+    [(-167.3, -194.85, 0.0), 46.92],
+    [(-167.3, -194.85, 0.0), 31.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 77.0
+                        AvgHeadingChange = 3.21
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = long white greenhouse, arched structure; greenhouse extends across the midground; trees and distant buildings in the background  
+                        Left = agricultural field with green crops; several stacks of hay bales; wooden rack; small colorful structure; trees and sky in the background  
+                        Right = white arched greenhouse, open doorway; red barn with corrugated roof; water tank on a stand; gravel path; green vegetation in foreground  
+                        Down = overhead view of dry, sparse vegetation; light-colored ground; branches and leaves scattered; no distinct structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [7, 7, 9], [3, 3, 3]]  
+                        LeftDepth: [[100, 100, 100], [13, 7, 7], [7, 6, 4]]  
+                        RightDepth: [[100, 100, 75], [9, 9, 15], [4, 3, 7]]  
+                        DownDepth: [[3, 3, 3], [5, 2, 2], [5, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-167.3, -194.85, -2.0), 106.92],
+    [(-167.3, -194.85, -2.0), 91.92],
+    [(-167.3, -194.85, 0.0), 91.92],
+    [(-167.3, -194.85, 2.0), 91.92],
+    [(-167.3, -194.85, 2.0), 76.92],
+    [(-167.3, -194.85, 2.0), 61.92],
+    [(-167.3, -194.85, 2.0), 46.92],
+    [(-167.3, -194.85, 0.0), 46.92],
+    [(-167.3, -194.85, 0.0), 31.92],
+    [(-163.06, -192.21, 0.0), 31.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 82.0
+                        AvgHeadingChange = 3.1
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = large white greenhouse, arched structure; greenhouse in the foreground; trees and sky in the background  
+                        Left = several hay bales, stacked; wooden structures; bushes and trees in a field; vehicle in the distant right  
+                        Right = white arched greenhouse, open doorway; red barn with corrugated roof; gravel path between structures; trees in the background  
+                        Down = dense cluster of green and yellowish bushes; ground covered in dry soil and small plants; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [7, 7, 9], [3, 2, 2]]  
+                        LeftDepth: [[100, 100, 100], [11, 7, 7], [7, 6, 4]]  
+                        RightDepth: [[100, 100, 100], [8, 8, 16], [6, 3, 3]]  
+                        DownDepth: [[3, 3, 3], [3, 2, 2], [3, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-167.3, -194.85, -2.0), 91.92],
+    [(-167.3, -194.85, 0.0), 91.92],
+    [(-167.3, -194.85, 2.0), 91.92],
+    [(-167.3, -194.85, 2.0), 76.92],
+    [(-167.3, -194.85, 2.0), 61.92],
+    [(-167.3, -194.85, 2.0), 46.92],
+    [(-167.3, -194.85, 0.0), 46.92],
+    [(-167.3, -194.85, 0.0), 31.92],
+    [(-163.06, -192.21, 0.0), 31.92],
+    [(-163.06, -192.21, 0.0), 16.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 82.0
+                        AvgHeadingChange = 3.5
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouse, large, elongated; greenhouse is in the midground; overgrown plants in the foreground  
+                        Left = wooden structure, elevated, rustic; wooden structure is in the left midground; hay bales and scattered vegetation around; trees in the distant background  
+                        Right = white arched greenhouse, small, with a door; white water tank, tall, cylindrical; red barn, long, with a sloped roof; greenhouse is in the foreground, water tank is behind it to the right, barn is further back to the right  
+                        Down = tree, overhead view, leafy; tree is centered in the frame; ground below is covered in gravel and smaller plants  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [4, 8, 10], [2, 3, 4]]  
+                        LeftDepth: [[100, 100, 100], [10, 9, 4], [2, 3, 4]]  
+                        RightDepth: [[100, 100, 100], [5, 5, 15], [6, 6, 7]]  
+                        DownDepth: [[2, 2, 4], [2, 2, 3], [2, 2, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-167.3, -194.85, 0.0), 91.92],
+    [(-167.3, -194.85, 2.0), 91.92],
+    [(-167.3, -194.85, 2.0), 76.92],
+    [(-167.3, -194.85, 2.0), 61.92],
+    [(-167.3, -194.85, 2.0), 46.92],
+    [(-167.3, -194.85, 0.0), 46.92],
+    [(-167.3, -194.85, 0.0), 31.92],
+    [(-163.06, -192.21, 0.0), 31.92],
+    [(-163.06, -192.21, 0.0), 16.92],
+    [(-163.06, -192.21, 2.0), 16.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 84.0
+                        AvgHeadingChange = 3.39
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouse, large, elongated; greenhouse is in the midground; plants growing in front of it  
+                        Left = wooden structures, multiple, rustic; hay bales, several, scattered; trees and foliage in the background; scene appears to be a farmyard  
+                        Right = white arched building, small, with a door; red barn-like structure, long, with a sloped roof; both structures are side by side; greenery in the foreground  
+                        Down = gravel surface, coarse texture; small plants growing through the gravel; dust or smoke rising from the ground near the plants  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [4, 9, 4], [3, 3, 3]]  
+                        LeftDepth: [[100, 100, 100], [3, 3, 4], [2, 2, 2]]  
+                        RightDepth: [[100, 100, 100], [4, 4, 11], [4, 4, 5]]  
+                        DownDepth: [[4, 3, 4], [2, 3, 4], [2, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-167.3, -194.85, 2.0), 91.92],
+    [(-167.3, -194.85, 2.0), 76.92],
+    [(-167.3, -194.85, 2.0), 61.92],
+    [(-167.3, -194.85, 2.0), 46.92],
+    [(-167.3, -194.85, 0.0), 46.92],
+    [(-167.3, -194.85, 0.0), 31.92],
+    [(-163.06, -192.21, 0.0), 31.92],
+    [(-163.06, -192.21, 0.0), 16.92],
+    [(-163.06, -192.21, 2.0), 16.92],
+    [(-163.06, -192.21, 4.0), 16.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 86.0
+                        AvgHeadingChange = 3.28
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: FabricSack,
+                        Size: small(1.5*1.5=2.25 squares),
+                        Description: Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-189, -88]  
+                        **Y Range**: [min_y, max_y] = [-292, -191]
+
+                        # RGB Captions
+                        Front = white arched greenhouse, large, translucent; greenhouse is in the foreground on the left; overgrown plants with white flowers at base  
+                        Left = white arched greenhouse, large, translucent; wooden structure with slanted roof in background; trees and greenery surrounding area  
+                        Right = white arched greenhouse, large, translucent; red barn-like building with weathered roof in background; chimney visible on roof  
+                        Down = gravel ground surface, small green plants growing in cracks; white fabric or material partially visible in top right corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 3, 2], [9, 3, 2], [3, 3, 2]]  
+                        LeftDepth: [[100, 100, 100], [5, 4, 5], [4, 3, 4]]  
+                        RightDepth: [[2, 2, 100], [2, 1, 2], [2, 2, 2]]  
+                        DownDepth: [[4, 4, 2], [4, 4, 2], [4, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-167.3, -194.85, 2.0), 76.92],
+    [(-167.3, -194.85, 2.0), 61.92],
+    [(-167.3, -194.85, 2.0), 46.92],
+    [(-167.3, -194.85, 0.0), 46.92],
+    [(-167.3, -194.85, 0.0), 31.92],
+    [(-163.06, -192.21, 0.0), 31.92],
+    [(-163.06, -192.21, 0.0), 16.92],
+    [(-163.06, -192.21, 2.0), 16.92],
+    [(-163.06, -192.21, 4.0), 16.92],
+    [(-163.06, -192.21, 2.0), 16.92],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 88.0
+                        AvgHeadingChange = 3.18
+
+                        # Reminder  
+                        - The target is ** FabricSack**, described as:  Organic sack-like form, coarse beige fabric texture, bulging multi-lobed shape with tied tops, likely used for carrying or storing loose goods.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

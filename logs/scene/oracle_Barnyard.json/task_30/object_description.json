@@ -1,0 +1,35 @@
+{
+  "episode_id": "30",
+  "start_pose": {
+    "start_position": [
+      -103.17530587486736,
+      -275.2779815259977,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8003439103357101,
+      0.5995411788931139
+    ]
+  },
+  "info": {
+    "geodesic_distance": 83,
+    "euclidean_distance": 54.7277
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " MilkContainer",
+  "object_name": "SM_Milk_Container_Set2_57",
+  "pose": [
+    [
+      -128.29273986816406,
+      -227.99273681640625,
+      4.328725337982178
+    ]
+  ],
+  "size": " small(1.5*1.25=1.88 squares)",
+  "description": " Geometric cylindrical form, weathered blue metallic surface, grouped in a cluster of three with sealed tops and side handles, typically used for dairy storage or transport.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "66",
+  "start_pose": {
+    "start_position": [
+      -119.6846219042064,
+      -68.97221428655013,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9964641839003989,
+      -0.08401863009899578
+    ]
+  },
+  "info": {
+    "geodesic_distance": 68,
+    "euclidean_distance": 42.8017
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Chair",
+  "object_name": "Garden_Chair_01_41",
+  "pose": [
+    [
+      -95.59274291992188,
+      -34.79274368286133,
+      2.128725290298462
+    ]
+  ],
+  "size": " small(1*0.75=0.75 squares)",
+  "description": " Geometric vertical-back form, dark wood texture with slatted backrest and legs, compact and functional structure, intended for individual seating.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

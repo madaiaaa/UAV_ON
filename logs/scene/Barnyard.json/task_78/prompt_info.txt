@@ -1,0 +1,1904 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = several trees, medium-sized, leafy; scattered across a field of low-lying vegetation; sky is overcast  
+                        Left = three trees, medium-sized, leafy; positioned in a row within a field of dense, low vegetation; sun is visible in the background  
+                        Right = multiple trees, medium-sized, leafy; aligned along a dirt path that cuts through a field of low vegetation; distant horizon shows faint structures  
+                        Down = dense cluster of small, light-colored plants; fills the entire frame; viewed from directly above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 16, 16], [10, 10, 10]]  
+                        LeftDepth: [[100, 100, 100], [25, 22, 22], [10, 10, 11]]  
+                        RightDepth: [[100, 100, 100], [21, 20, 22], [10, 10, 11]]  
+                        DownDepth: [[8, 7, 8], [7, 7, 7], [8, 7, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small tree, leafy green; single tree in the center foreground; surrounded by dense low-lying vegetation  
+                        Left = group of five trees, leafy green; trees arranged in a horizontal line across the midground; bright sun visible above and behind them  
+                        Right = small tree, leafy green; single tree on the right side of the frame; open field with low vegetation extending to the horizon  
+                        Down = dense cluster of small light-green plants; top-down view; plants fill the entire frame with no visible sky or ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 16, 15], [8, 7, 8]]  
+                        LeftDepth: [[100, 100, 100], [14, 10, 18], [8, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [17, 16, 18], [8, 7, 8]]  
+                        DownDepth: [[6, 6, 6], [6, 5, 6], [6, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 2.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = field of low-lying green and white plants; several medium-sized trees with full canopies; trees are scattered across the midground; sky is overcast  
+                        Left = field of low-lying green and white plants; four medium-sized trees with full canopies; trees are aligned in a row in the midground; bright sun visible in the upper center; sky is hazy  
+                        Right = field of low-lying green and white plants; several medium-sized trees with full canopies; trees are sparsely distributed in the background; sky is overcast; distant structures faintly visible  
+                        Down = close-up view of dense, light-green foliage; plants appear tightly packed; no distinct objects or background features visible; lighting is diffused  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 18, 17], [11, 10, 11], [5, 5, 5]]  
+                        LeftDepth: [[100, 100, 100], [9, 8, 12], [5, 5, 5]]  
+                        RightDepth: [[100, 100, 100], [11, 10, 12], [5, 5, 5]]  
+                        DownDepth: [[4, 4, 4], [4, 4, 4], [4, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 4.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small tree, green leaves; single tree in the center-right of a field covered in low vegetation  
+                        Left = three trees, green leaves; trees are aligned horizontally across the mid-ground; bright sun visible behind them  
+                        Right = several trees, green leaves; trees are scattered in the background; field with low vegetation in the foreground  
+                        Down = dense cluster of light-colored, fluffy objects; tightly packed and filling the entire frame  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 17, 17], [15, 14, 15], [7, 6, 7]]  
+                        LeftDepth: [[100, 100, 100], [13, 9, 16], [7, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [15, 14, 15], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 6.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small tree, sparse foliage; positioned slightly right of center in the midground; surrounded by dense low-lying vegetation  
+                        Left = three trees, medium-sized, full green canopies; aligned horizontally across the midground; sunlight flares from behind the central tree  
+                        Right = large tree, full green canopy; located in the right midground; partially obscured by dense foreground vegetation  
+                        Down = dense cluster of small light-green plants; fills the entire frame; viewed from directly above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 18, 16], [11, 10, 11], [5, 5, 5]]  
+                        LeftDepth: [[100, 100, 100], [9, 8, 12], [5, 5, 5]]  
+                        RightDepth: [[100, 100, 100], [11, 10, 12], [5, 5, 5]]  
+                        DownDepth: [[4, 4, 4], [4, 4, 4], [4, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 8.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small tree, green leaves; single tree in the center-right of a field covered in low-lying vegetation; clear sky above  
+                        Left = three trees, green leaves; trees are spaced apart across the midground; bright sun creating lens flare in the upper center; field with low vegetation in the foreground  
+                        Right = several trees, green leaves; trees line the horizon in the background; field with low vegetation in the foreground; distant structure visible on the right  
+                        Down = dense cluster of light-colored foliage; close-up view showing texture and pattern of leaves; dark background surrounding the foliage  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 18, 18], [15, 14, 15], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [13, 9, 16], [7, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [15, 14, 15], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 10.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = field of dense green and white vegetation; several large leafy trees in the background; clear sky above  
+                        Left = field of dense green and white vegetation; three prominent leafy trees in the midground; bright sun creating glare in the upper center; clear sky  
+                        Right = field of dense green and white vegetation; several leafy trees visible in the distant background; overcast sky with diffused light  
+                        Down = overhead view of dense green foliage; canopy of leaves fills the frame; dark patches of ground or shadow visible beneath  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 18, 16], [11, 10, 11], [5, 5, 5]]  
+                        LeftDepth: [[100, 100, 100], [9, 8, 12], [5, 5, 5]]  
+                        RightDepth: [[100, 100, 100], [11, 10, 13], [5, 5, 5]]  
+                        DownDepth: [[4, 4, 4], [4, 3, 4], [4, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 12.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small trees, sparse foliage; scattered across a field of low-lying green vegetation; sky is overcast  
+                        Left = medium-sized trees, full green leaves; aligned in a row behind a field of flowering plants; sun is bright and low on the horizon  
+                        Right = small trees, sparse foliage; spread across a field of low-lying green vegetation; distant structures faintly visible on the horizon  
+                        Down = dense cluster of small white flowers; fills the entire frame; appears to be an extreme close-up view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 17, 17], [15, 14, 15], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [13, 9, 16], [7, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [15, 14, 15], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 14.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small tree, sparse foliage; positioned slightly right of center in the midground; surrounded by dense low-lying vegetation  
+                        Left = group of five trees, varying in size and fullness; sun visible behind them creating a bright glare; located in the midground under a hazy sky  
+                        Right = field of low-lying plants covering the foreground; dirt path running horizontally across the middle ground; several trees in the background under a pale sky  
+                        Down = dense cluster of leafy trees viewed from directly above; canopy appears textured and layered; shadows cast on the ground below  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 16, 16], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [24, 12, 21], [9, 9, 10]]  
+                        RightDepth: [[100, 100, 100], [21, 19, 21], [9, 9, 10]]  
+                        DownDepth: [[7, 7, 7], [7, 7, 7], [7, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 16.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small tree, leafy green; positioned slightly right of center in the midground; surrounded by dense low-lying vegetation  
+                        Left = three trees, leafy green; arranged horizontally across the midground; sun visible behind the central tree creating a bright glare  
+                        Right = several small trees, leafy green; scattered sparsely in the midground; one taller tree with a light-colored trunk on the far right  
+                        Down = dense cluster of leafy green plants; fills the entire frame from an overhead perspective; shadows cast across the foliage  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 16, 15], [8, 7, 8]]  
+                        LeftDepth: [[100, 100, 100], [14, 10, 18], [8, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [17, 16, 18], [8, 7, 8]]  
+                        DownDepth: [[6, 5, 6], [6, 5, 6], [6, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 18.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small tree, leafy green, medium height; tree is in the right foreground; surrounded by dense low-lying vegetation  
+                        Left = three trees, leafy green, medium height; trees are in a line across the midground; sunlight flares behind them  
+                        Right = several trees, leafy green, medium height; trees are scattered in the background; dirt path winds through the foreground vegetation  
+                        Down = dense cluster of small plants, light green and white; fills the entire frame; viewed from directly above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 18, 16], [16, 13, 13], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [15, 10, 17], [9, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [17, 16, 18], [8, 7, 8]]  
+                        DownDepth: [[6, 5, 6], [5, 5, 5], [6, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-251.46, 93.8, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 23.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small tree, green leaves; tree is in the right foreground; overcast sky above  
+                        Left = group of five trees, green foliage; trees are in a line across the midground; bright sun visible behind them  
+                        Right = cluster of small trees, green leaves; trees are scattered in the background; distant structure partially visible  
+                        Down = dense cluster of light-colored plants, top-down view; plants fill the entire frame; no distinct objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 13, 12], [16, 11, 11], [8, 7, 8]]  
+                        LeftDepth: [[100, 100, 100], [10, 11, 16], [9, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [14, 16, 17], [8, 7, 8]]  
+                        DownDepth: [[6, 5, 6], [5, 5, 5], [6, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-251.46, 93.8, -8.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 28.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = dense shrubbery, low-lying and green; several medium-sized trees with full canopies; trees are scattered across the midground; clear sky above  
+                        Left = dense shrubbery, low-lying and green; five medium-sized trees with full canopies; trees form a horizontal line in the background; bright sun visible behind the trees  
+                        Right = dense shrubbery, low-lying and green; several small trees with sparse foliage; trees are sparsely distributed in the midground; hazy sky in the background  
+                        Down = highly detailed plant texture, close-up view; dense cluster of small white flowers or buds; dark background contrasts with light-colored floral elements  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 14, 9], [13, 8, 9], [6, 5, 6]]  
+                        LeftDepth: [[100, 100, 100], [11, 13, 13], [6, 6, 6]]  
+                        RightDepth: [[11, 100, 100], [10, 13, 14], [6, 6, 6]]  
+                        DownDepth: [[5, 4, 5], [4, 4, 4], [5, 4, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-251.46, 93.8, -8.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 30.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = dense green shrubbery, tall trees; multiple trees scattered throughout; trees stand in the background  
+                        Left = field of flowering plants, tall trees; sun visible through trees; trees line the horizon  
+                        Right = thick green foliage, small bushes; few tall trees in the distance; bushes dominate the foreground  
+                        Down = close-up of white flowers, green stems; flowers densely packed; stems radiate outward from center  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 11, 7], [5, 5, 6], [3, 2, 3]]  
+                        LeftDepth: [[100, 35, 36], [7, 6, 7], [3, 3, 3]]  
+                        RightDepth: [[9, 100, 100], [6, 5, 7], [3, 2, 3]]  
+                        DownDepth: [[2, 2, 2], [2, 2, 2], [2, 2, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-251.46, 93.8, -8.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 32.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = dense shrubbery, light green and white flowers; trees in the background; clear sky above  
+                        Left = field of flowering plants, light green and white; five trees in a row; bright sky with sun  
+                        Right = thick grass and flowering plants, light green and white; trees in the distance; overcast sky  
+                        Down = close-up of dense foliage, small green leaves; dark background; top-down view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 7], [7, 5, 5], [3, 4, 4]]  
+                        LeftDepth: [[100, 35, 100], [9, 7, 9], [4, 4, 4]]  
+                        RightDepth: [[8, 100, 100], [7, 7, 9], [4, 4, 4]]  
+                        DownDepth: [[3, 3, 3], [2, 2, 2], [3, 2, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-251.46, 93.8, -8.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 34.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = large tree, leafy green canopy; positioned on the right side of the frame; surrounded by dense shrubbery and smaller plants  
+                        Left = group of five trees, medium-sized, leafy green canopies; aligned horizontally across the midground; set against a pale sky with a bright sun visible behind them  
+                        Right = large tree, leafy green canopy, light brown trunk; located on the left side of the frame; partially obscured by foreground shrubs; more trees visible in the distant background  
+                        Down = dense cluster of small white flowers or buds; fills the entire frame; appears to be an overhead close-up view of a flowering plant  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 8], [13, 6, 6], [6, 6, 6]]  
+                        LeftDepth: [[100, 100, 100], [13, 13, 13], [7, 6, 7]]  
+                        RightDepth: [[8, 100, 100], [7, 13, 15], [7, 6, 6]]  
+                        DownDepth: [[5, 5, 5], [5, 4, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -6.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-251.46, 93.8, -8.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 36.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = large tree, tall, leafy; positioned on the right side of the frame; surrounded by dense shrubbery and smaller bushes  
+                        Left = group of five trees, medium-sized, green foliage; aligned horizontally in the midground; set against a hazy sky  
+                        Right = cluster of small trees, leafy, scattered; located in the background; partially obscured by mist or haze  
+                        Down = dense patch of low-lying plants, light-colored flowers, dark stems; fills the entire frame from a top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 11, 7], [9, 5, 5], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [12, 10, 10], [5, 4, 5]]  
+                        RightDepth: [[9, 100, 100], [7, 10, 11], [4, 4, 4]]  
+                        DownDepth: [[4, 3, 4], [4, 3, 3], [4, 3, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-251.46, 93.8, -8.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 38.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = dense green shrubbery with white flowers; large tree on the right; clear sky in the background  
+                        Left = field of flowering plants; several trees in the midground; hazy sky above  
+                        Right = wide expanse of flowering plants; trees scattered in the distance; tree on the left edge  
+                        Down = close-up of flowering plants; dense cluster of white blooms and green stems; dark background  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 9, 7], [4, 3, 4], [2, 2, 2]]  
+                        LeftDepth: [[100, 35, 36], [4, 4, 4], [2, 2, 2]]  
+                        RightDepth: [[7, 100, 100], [4, 3, 4], [2, 2, 2]]  
+                        DownDepth: [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -10.0), -128.0],
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-251.46, 93.8, -8.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 40.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small bush, leafy, light green; positioned in the center foreground; surrounded by taller grasses and shrubs  
+                        Left = group of five trees, medium-sized, leafy green; arranged horizontally across the midground; sunlight filtering through their canopies  
+                        Right = large tree, tall, with a thick trunk and dense foliage; located on the right side of the frame; partially obscuring smaller bushes behind it  
+                        Down = close-up view of dense vegetation, predominantly white flowers and thin stems; fills the entire frame; appears to be an overhead shot  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 7], [7, 5, 5], [4, 3, 4]]  
+                        LeftDepth: [[100, 34, 100], [9, 7, 9], [4, 4, 4]]  
+                        RightDepth: [[8, 100, 100], [7, 7, 9], [4, 4, 4]]  
+                        DownDepth: [[3, 2, 3], [2, 2, 2], [3, 2, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-248.38, 97.74, -8.0), -128.0],
+    [(-251.46, 93.8, -8.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 42.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = trees, varying heights and leaf density; scattered across the landscape; sunlight filtering through foliage in the background  
+                        Left = cluster of trees, medium-sized with green leaves; arranged in a line across the midground; bright sun visible behind them  
+                        Right = group of trees, including one large tree on the right; dense shrubbery in the foreground; open field extending into the distance  
+                        Down = dense cluster of small plants or flowers, light green and white; fills the entire frame; viewed from directly above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 8], [13, 6, 6], [6, 6, 6]]  
+                        LeftDepth: [[100, 100, 100], [12, 13, 13], [7, 6, 7]]  
+                        RightDepth: [[8, 100, 100], [7, 13, 15], [7, 6, 6]]  
+                        DownDepth: [[5, 4, 5], [5, 4, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-251.46, 93.8, -8.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 44.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = large tree, full green foliage; positioned on the right side of the frame; surrounded by dense shrubs and grass in the foreground  
+                        Left = group of five trees, medium-sized with green leaves; aligned horizontally in the midground; sunlight flares behind them creating a bright haze  
+                        Right = tree with light-colored bark and green leaves, located on the left edge; several smaller trees in the background; overcast sky above a field of low-lying vegetation  
+                        Down = dense cluster of small white flowers and green stems; fills the entire frame; viewed from a top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 7], [9, 5, 6], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [12, 10, 10], [5, 4, 5]]  
+                        RightDepth: [[9, 100, 100], [7, 9, 11], [4, 4, 4]]  
+                        DownDepth: [[4, 3, 4], [4, 3, 3], [4, 3, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 46.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = trees, leafy green; multiple trees scattered across the midground and background; sky is overcast and pale  
+                        Left = trees, leafy green; sun visible behind a cluster of trees in the center; dense foliage in the foreground  
+                        Right = trees, leafy green; one prominent tree on the left; open field with low vegetation in the foreground; distant trees along the horizon  
+                        Down = vegetation, dense and light-colored; close-up view showing fine texture of leaves and stems; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 9], [13, 6, 6], [6, 6, 6]]  
+                        LeftDepth: [[100, 100, 100], [13, 13, 14], [7, 6, 7]]  
+                        RightDepth: [[8, 100, 100], [7, 13, 15], [7, 6, 6]]  
+                        DownDepth: [[5, 4, 5], [5, 4, 4], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 48.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = dense green bushes, tall trees; trees are on the right and in the background; sky is overcast  
+                        Left = field of low green vegetation, several medium-sized trees; trees are scattered across the midground; bright sun partially visible behind trees  
+                        Right = thick green shrubbery, tall tree on the left; smaller trees in the distant background; light blue sky with soft sunlight  
+                        Down = close-up view of dense white and green foliage; no distinct objects or structures visible; texture appears chaotic and layered  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 11, 7], [9, 5, 5], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [12, 10, 10], [5, 4, 5]]  
+                        RightDepth: [[9, 100, 100], [7, 9, 11], [4, 4, 4]]  
+                        DownDepth: [[4, 3, 4], [4, 3, 3], [4, 3, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 50.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = field of green plants with white flowers, dense vegetation; trees in the background; clear sky above  
+                        Left = field of green plants with white flowers, sun shining brightly; trees line the horizon; hazy sky  
+                        Right = field of green plants with white flowers, trees on the left and horizon; clear sky with soft light  
+                        Down = close-up view of green plants with white flowers, densely packed; dark background beneath  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 9, 7], [4, 3, 4], [2, 2, 2]]  
+                        LeftDepth: [[100, 34, 37], [5, 4, 4], [2, 2, 2]]  
+                        RightDepth: [[7, 100, 100], [4, 3, 4], [2, 2, 2]]  
+                        DownDepth: [[1, 1, 1], [1, 1, 1], [2, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 52.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = large tree, light-colored trunk, dense green foliage; positioned on the right side of the frame; surrounded by low-lying shrubs and flowering plants in the foreground  
+                        Left = group of five trees, varying in size and fullness of green leaves; arranged horizontally across the midground; sunlight filtering through their canopies creating a bright glare in the center  
+                        Right = smaller tree with sparse, light-green leaves; located slightly left of center in the midground; flanked by taller trees on both sides; low vegetation covers the ground in the foreground  
+                        Down = dense cluster of white flowers, small and numerous, growing among green stems and leaves; fills the entire frame in a top-down view; dark background contrasting with the bright blooms  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 7], [7, 5, 5], [4, 3, 4]]  
+                        LeftDepth: [[100, 34, 100], [9, 7, 9], [4, 4, 4]]  
+                        RightDepth: [[8, 100, 100], [7, 7, 9], [4, 4, 4]]  
+                        DownDepth: [[3, 2, 3], [2, 2, 2], [3, 2, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 54.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = large tree, green leaves, thick trunk; positioned on the right side of the frame; surrounded by dense shrubbery and smaller plants  
+                        Left = five trees, varying in size and leaf density; arranged in a horizontal line across the midground; sunlight filtering through their branches creating a bright focal point  
+                        Right = large tree, green leaves, prominent on the left; smaller trees and bushes scattered across the midground and background; open field with low vegetation in the foreground  
+                        Down = dense cluster of small, light-colored plants; tightly packed and filling the entire frame; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 8], [13, 6, 6], [6, 6, 6]]  
+                        LeftDepth: [[100, 100, 100], [12, 13, 14], [7, 6, 7]]  
+                        RightDepth: [[8, 100, 100], [7, 13, 15], [6, 6, 6]]  
+                        DownDepth: [[5, 4, 5], [5, 4, 4], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 56.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = large tree, full green canopy; multiple smaller trees in the background; tree is on the right side of the frame  
+                        Left = row of five medium-sized trees with green foliage; trees are evenly spaced and stand in a line across the midground  
+                        Right = large tree, full green canopy; several smaller trees in the background; tree is on the left side of the frame  
+                        Down = dense cluster of small light-green plants; plants fill the entire frame from a top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 7], [9, 5, 6], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [12, 10, 10], [5, 4, 5]]  
+                        RightDepth: [[9, 100, 100], [7, 10, 11], [4, 4, 4]]  
+                        DownDepth: [[4, 3, 4], [4, 3, 3], [4, 3, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 58.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = field of tall green and white flowering plants; trees with dense green foliage in the background; clear sky above  
+                        Left = field of dense green and white flowering plants; cluster of medium-sized trees with green leaves in the midground; bright light source near horizon; clear sky  
+                        Right = field of green and white flowering plants; large tree with broad green canopy on the left; smaller trees in the distance; clear sky with soft lighting  
+                        Down = close-up view of tangled green and white plant stems and leaves; dark background; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 9, 7], [4, 3, 4], [2, 2, 2]]  
+                        LeftDepth: [[100, 35, 37], [4, 4, 4], [2, 2, 2]]  
+                        RightDepth: [[7, 100, 100], [4, 3, 4], [2, 2, 2]]  
+                        DownDepth: [[1, 1, 1], [1, 1, 1], [2, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 60.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = large tree, tall, leafy; smaller bush with light-colored foliage; both are in the foreground; surrounding area filled with dense green and white vegetation  
+                        Left = group of five trees, medium-sized, leafy; positioned in a line across the midground; sun visible behind them creating a bright glare; field of low-lying green and white plants in the foreground  
+                        Right = large tree on the left, leafy; cluster of smaller trees in the background; field of green and white plants covering the midground and foreground; sky is pale and overcast  
+                        Down = dense cluster of small plants with light-colored leaves; plants fill the entire frame; dark soil or ground visible between the plants  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 7], [7, 5, 5], [4, 3, 4]]  
+                        LeftDepth: [[100, 34, 100], [9, 7, 9], [4, 4, 4]]  
+                        RightDepth: [[8, 100, 100], [7, 7, 9], [4, 4, 4]]  
+                        DownDepth: [[3, 2, 3], [2, 2, 2], [3, 2, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 62.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = field of tall green and white flowering plants; large tree with dense foliage on the right; trees in the distant background  
+                        Left = field of tall green and white flowering plants; bright sun creating lens flare in the center background; trees visible in the distance  
+                        Right = field of tall green and white flowering plants; large tree with dense foliage on the left; trees in the distant background  
+                        Down = close-up view of tangled green and white plant stems and leaves; dark background; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 9, 7], [4, 3, 4], [2, 2, 2]]  
+                        LeftDepth: [[100, 35, 36], [4, 4, 4], [2, 2, 2]]  
+                        RightDepth: [[7, 100, 100], [4, 3, 4], [2, 2, 2]]  
+                        DownDepth: [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 64.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small bush, leafy, light green; positioned in the center foreground; surrounded by dense grass and wildflowers  
+                        Left = group of five trees, medium-sized, green foliage; arranged in a horizontal line across the midground; sunlight filtering through leaves  
+                        Right = large tree, tall, with broad canopy; located on the right side of the frame; partially obscuring smaller bushes behind it  
+                        Down = close-up view of dense foliage, small white flowers; fills the entire frame; appears to be illuminated from above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 11, 7], [7, 5, 5], [4, 3, 4]]  
+                        LeftDepth: [[100, 34, 100], [9, 7, 9], [4, 4, 4]]  
+                        RightDepth: [[8, 100, 100], [7, 7, 9], [4, 4, 4]]  
+                        DownDepth: [[3, 2, 3], [2, 2, 2], [3, 2, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 66.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = large tree, leafy green canopy; positioned on the right side of the frame; surrounded by dense shrubbery and smaller trees in the midground  
+                        Left = group of five trees, medium-sized, leafy green; aligned horizontally across the middle ground; bright sunlight flaring behind them; clear sky above  
+                        Right = cluster of small trees and bushes, light green foliage; scattered across a sloped terrain in the foreground; larger trees visible in the distant background  
+                        Down = dense cluster of small plants, light green leaves; fills the entire frame; appears to be an overhead or close-up shot with a dark background  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 8], [13, 6, 6], [6, 6, 6]]  
+                        LeftDepth: [[100, 100, 100], [12, 13, 13], [7, 6, 7]]  
+                        RightDepth: [[8, 100, 100], [7, 13, 15], [6, 6, 6]]  
+                        DownDepth: [[5, 4, 5], [5, 4, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 68.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = small trees, sparse foliage; scattered throughout the midground; no visible movement  
+                        Left = group of five medium-sized trees, green leaves; aligned horizontally in the background; sunlight filtering through  
+                        Right = large tree, dense canopy; positioned on the left side of the frame; partially obscuring smaller bushes  
+                        Down = dense cluster of small white flowers, tightly packed; fills the entire frame from a top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 7], [9, 5, 5], [5, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [12, 10, 10], [5, 4, 5]]  
+                        RightDepth: [[9, 100, 100], [7, 10, 12], [5, 4, 5]]  
+                        DownDepth: [[4, 3, 4], [4, 3, 3], [4, 3, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 70.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Binoculars,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-299, -198]  
+                        **Y Range**: [min_y, max_y] = [47, 148]
+
+                        # RGB Captions
+                        Front = field of tall green and white flowering plants; several leafy trees in the background; clear sky above  
+                        Left = field of dense green and white flowering plants; cluster of five medium-sized trees in the midground; bright sun partially obscured by trees; clear sky  
+                        Right = field of mixed green and white flowering plants; large tree on the left; line of smaller trees in the distant background; overcast sky  
+                        Down = close-up view of green grass with white flowers; dark background; grass blades and flowers fill the frame  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 9, 7], [4, 3, 4], [2, 2, 2]]  
+                        LeftDepth: [[100, 35, 36], [4, 4, 4], [2, 2, 2]]  
+                        RightDepth: [[7, 100, 100], [4, 3, 4], [2, 2, 2]]  
+                        DownDepth: [[1, 1, 1], [1, 1, 1], [2, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -8.0), -128.0],
+    [(-254.53, 89.86, -6.0), -128.0],
+    [(-254.53, 89.86, -4.0), -128.0],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 72.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Binoculars**, described as:  Geometric compact form, dark body with dual cylindrical eyepieces and central hinge, small and symmetrical structure, intended for distant visual magnification.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

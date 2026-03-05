@@ -1,0 +1,35 @@
+{
+  "episode_id": "74",
+  "start_pose": {
+    "start_position": [
+      -179.47909885439753,
+      130.42151924087213,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5401770409303129,
+      0.8415514033330175
+    ]
+  },
+  "info": {
+    "geodesic_distance": 39,
+    "euclidean_distance": 25.3843
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " PicnicTable",
+  "object_name": "SM_PicnicTable_01_48",
+  "pose": [
+    [
+      -200.19273376464844,
+      143.70726013183594,
+      -0.7712745666503906
+    ]
+  ],
+  "size": " mid(2*1.5=3 squares)",
+  "description": " Geometric form with extended benches, dark wooden texture, integrated tabletop with two attached seats,*]()",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

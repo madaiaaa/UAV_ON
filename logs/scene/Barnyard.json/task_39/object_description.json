@@ -1,0 +1,35 @@
+{
+  "episode_id": "39",
+  "start_pose": {
+    "start_position": [
+      144.79919468782745,
+      -57.393536217320595,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5485908570007528,
+      0.8360909469759731
+    ]
+  },
+  "info": {
+    "geodesic_distance": 84,
+    "euclidean_distance": 54.6246
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Bed",
+  "object_name": "SM_Bed01_73",
+  "pose": [
+    [
+      112.10725402832031,
+      -14.992743492126465,
+      3.828725576400757
+    ]
+  ],
+  "size": " small(2.5*1.25=3.125 squares)",
+  "description": " Geometric rectangular form, dark metal frame with rounded headboard and footboard, patterned mattress surface, intended for single-person sleeping use.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

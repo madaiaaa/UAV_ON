@@ -1,0 +1,784 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = wooden chair, small; cardboard box, rectangular; small structure with colorful panels; scattered objects in a grassy field; trees and hills in the background  
+                        Left = wooden frame structure, partially built; wooden logs, stacked; various items on the ground; trees and hills in the background  
+                        Right = white plastic tunnels, long and curved; stacks of wooden logs; small structure with colorful panels; trees and distant buildings in the background  
+                        Down = stacks of rolled hay, cylindrical; wooden planks, rectangular; green vegetation covering the ground; close-up view of the items  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [41, 37, 38], [16, 16, 20]]  
+                        LeftDepth: [[100, 100, 100], [33, 36, 47], [21, 19, 20]]  
+                        RightDepth: [[100, 100, 100], [35, 34, 30], [19, 18, 18]]  
+                        DownDepth: [[14, 13, 15], [15, 13, 14], [15, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-140.04, -232.02, -10.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = hay bales, stacked; small wooden structure; white plastic tunnel; overgrown field; trees in the background  
+                        Left = wooden frame structure; hay bales; scattered rocks; overgrown field; trees in the background  
+                        Right = hay bales; small dark object; white plastic tunnels; overgrown field; distant buildings and trees  
+                        Down = hay bales, rolled; dark rectangular object; dense green vegetation; ground covered in foliage  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [35, 34, 40], [15, 19, 20]]  
+                        LeftDepth: [[100, 100, 100], [34, 36, 37], [20, 18, 15]]  
+                        RightDepth: [[100, 100, 100], [34, 34, 35], [19, 18, 20]]  
+                        DownDepth: [[13, 14, 15], [13, 13, 14], [15, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = wooden chair, small, weathered; plastic play structure, yellow and white; two logs, cylindrical, stacked; scattered debris; all on a grassy field with trees in the background  
+                        Left = wooden frame structure, partially built; several logs, cylindrical, stacked; bushes covering the ground; trees and hills in the distant background  
+                        Right = three white arched greenhouses, elongated, aligned; logs, cylindrical, stacked nearby; overgrown vegetation; hills and structures visible in the far distance  
+                        Down = two rolled hay bales, large, cylindrical; wooden pallets, rectangular, stacked; overgrown grass and shrubs; part of a larger outdoor area with similar vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [37, 32, 36], [19, 19, 20]]  
+                        LeftDepth: [[100, 100, 100], [36, 36, 35], [19, 14, 19]]  
+                        RightDepth: [[100, 100, 100], [45, 33, 35], [18, 18, 20]]  
+                        DownDepth: [[13, 14, 15], [13, 13, 14], [15, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and pink; small playhouse, white; scattered debris; trees in the background; playground is in the mid-ground  
+                        Left = wooden crates, stacked; metal frame structure; bushes in the foreground; trees in the background; scene appears abandoned  
+                        Right = barrels, stacked; white plastic tunnels; stone wall; trees in the background; open field with distant structures  
+                        Down = rolled materials, beige; metal container, gray; green foliage; dirt path; overhead view of scattered items  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [34, 29, 43], [19, 19, 20]]  
+                        LeftDepth: [[100, 100, 100], [38, 34, 37], [19, 15, 18]]  
+                        RightDepth: [[100, 100, 100], [45, 33, 37], [20, 17, 20]]  
+                        DownDepth: [[12, 14, 15], [12, 13, 14], [13, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999984
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and pink; small slide, ladder; scattered rocks; trees in the background  
+                        Left = stacks of logs, wooden; wooden crates; grassy field; trees in the distance  
+                        Right = greenhouses, white plastic-covered; stacked logs; grassy terrain; distant structures visible  
+                        Down = piles of sacks, beige; metal container, gray; dense green vegetation; water body partially visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [31, 29, 46], [19, 18, 20]]  
+                        LeftDepth: [[100, 100, 100], [38, 33, 38], [15, 18, 18]]  
+                        RightDepth: [[100, 100, 100], [56, 33, 38], [20, 17, 20]]  
+                        DownDepth: [[15, 14, 15], [11, 13, 14], [13, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.99999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = playground set, including a yellow and pink slide, a small house-like structure, and a red climbing frame; located in the center foreground; surrounded by grassy terrain with scattered rocks and trees in the background  
+                        Left = stacks of wooden logs and crates; positioned on the left side of the frame; partially obscured by vegetation; distant hills visible under a hazy sky  
+                        Right = three white, arched greenhouses; aligned in a row on the right side of the frame; near a pile of logs and crates; distant cityscape and hills in the background  
+                        Down = dense patch of green bushes and plants; occupies the entire frame; a few logs and crates are partially visible at the bottom edges; no distinct structures or objects are clearly identifiable  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [29, 36, 45], [18, 18, 19]]  
+                        LeftDepth: [[100, 100, 100], [38, 33, 37], [17, 18, 18]]  
+                        RightDepth: [[100, 100, 100], [56, 33, 40], [20, 18, 18]]  
+                        DownDepth: [[15, 14, 15], [12, 13, 14], [12, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.99999999999997
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and pink; slide and climbing wall; located in the center foreground; surrounded by grass and rocks  
+                        Left = stack of wooden logs, brown; placed on the left side of the frame; partially obscured by foliage  
+                        Right = white arched tents, multiple; arranged in a row on the right side; distant buildings visible in the background  
+                        Down = dense green vegetation, aerial view; patch of cleared ground with scattered debris; small structures partially visible at the bottom  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [37, 37, 51], [17, 18, 19]]  
+                        LeftDepth: [[100, 100, 100], [38, 33, 37], [19, 18, 18]]  
+                        RightDepth: [[100, 100, 100], [57, 33, 42], [20, 19, 20]]  
+                        DownDepth: [[15, 14, 15], [14, 13, 14], [13, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999964
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and pink; slide and ladder; located in the foreground on a grassy hill; surrounded by trees and rocks  
+                        Left = stacks of wooden logs and a black rectangular object; scattered across a grassy field; distant trees and hills visible in the background  
+                        Right = white cylindrical structures, possibly greenhouses; logs and a black object nearby; situated on a grassy area with trees and hills in the distance  
+                        Down = dense vegetation covering the ground; small patches of bare earth visible; aerial view showing a mix of greenery and open space  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [37, 40, 49], [18, 16, 16]]  
+                        LeftDepth: [[100, 100, 100], [38, 33, 37], [18, 17, 17]]  
+                        RightDepth: [[100, 100, 100], [57, 34, 34], [19, 19, 20]]  
+                        DownDepth: [[15, 14, 15], [13, 13, 14], [15, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+    [(-107.3, -244.39, -10.0), -20.69],
+    [(-107.3, -244.39, -10.0), -20.69],
+    [(-107.3, -244.39, -10.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.99999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and white; small, child-sized; located in the foreground on a grassy hill; surrounded by trees and rocks  
+                        Left = hay bales, brown and cylindrical; three clustered together; wooden crate, dark brown; both are in the mid-ground on a field; trees and hills in the background  
+                        Right = white plastic sheeting, rolled up; two stacks; hay bale, brown and round; all are in the mid-ground on a field; distant hills and structures under a hazy sky  
+                        Down = vegetation, dense and green; aerial view showing a mix of bushes and open ground; playground equipment, partially visible at the top; no clear human presence  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [37, 39, 46], [18, 13, 15]]  
+                        LeftDepth: [[100, 100, 100], [38, 34, 36], [18, 16, 17]]  
+                        RightDepth: [[100, 100, 100], [58, 43, 35], [18, 19, 20]]  
+                        DownDepth: [[14, 13, 15], [13, 13, 14], [14, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+    [(-107.3, -244.39, -10.0), -20.69],
+    [(-102.62, -246.15, -10.0), -20.69],
+    [(-102.62, -246.15, -10.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.99999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = small yellow structure, low-poly; structure is in the foreground right; trees and rocky terrain in the midground; ocean horizon in the distant background  
+                        Left = three wooden crates, rectangular, weathered; two hay bales, cylindrical, brown; objects are clustered in the midground right; trees and open field in the background  
+                        Right = two hay bales, cylindrical, brown; one dark crate, rectangular, weathered; objects are in the midground right; white arched structure in the far right background; trees and hills in the distance  
+                        Down = playground equipment, including slide and ladder, light-colored; scattered debris, including a white box and wooden planks; vegetation covers the ground; aerial view of the scene  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [39, 40, 47], [18, 14, 15]]  
+                        LeftDepth: [[100, 100, 100], [35, 35, 36], [18, 16, 17]]  
+                        RightDepth: [[100, 100, 100], [58, 43, 37], [17, 16, 20]]  
+                        DownDepth: [[14, 11, 13], [13, 13, 14], [14, 14, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-140.04, -232.02, -10.0), -20.69],
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+    [(-107.3, -244.39, -10.0), -20.69],
+    [(-102.62, -246.15, -10.0), -20.69],
+    [(-97.94, -247.92, -10.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 44.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = hilly terrain, covered with green grass and scattered rocks; several trees with light green foliage; distant hills and a faint horizon line under a pale sky  
+                        Left = hilly terrain, similar to the first image; three hay bales (two brown, one dark gray) in the foreground; additional hay bales and logs further back; trees and distant hills visible  
+                        Right = hilly terrain, consistent with previous images; a white cylindrical structure on the right; a small red object near the bottom center; trees and distant hills in the background  
+                        Down = overhead view of dense green foliage; a wooden play structure with a yellow slide and pink circular element; nearby objects include a white box and a red ladder-like item  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [38, 39, 47], [17, 17, 18]]  
+                        LeftDepth: [[100, 100, 100], [36, 34, 35], [17, 16, 17]]  
+                        RightDepth: [[100, 100, 100], [58, 44, 38], [16, 16, 19]]  
+                        DownDepth: [[13, 9, 12], [13, 11, 13], [14, 13, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-135.36, -233.79, -10.0), -20.69],
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+    [(-107.3, -244.39, -10.0), -20.69],
+    [(-102.62, -246.15, -10.0), -20.69],
+    [(-97.94, -247.92, -10.0), -20.69],
+    [(-97.94, -247.92, -8.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 46.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = hilly terrain, covered in green shrubs and scattered rocks; several trees with light green foliage; distant hills and a faint horizon line under a pale sky  
+                        Left = hilly terrain, covered in green shrubs and scattered rocks; three stacked hay bales in the foreground; additional hay bales and wooden crates to the left; trees in the midground; distant hills and a faint horizon line under a pale sky  
+                        Right = hilly terrain, covered in green shrubs and scattered rocks; a small cluster of rocks in the center; various objects including a wooden crate and a rolled item to the right; trees in the midground; distant hills and a faint horizon line under a pale sky  
+                        Down = overhead view of a playground structure; white and pink components forming a slide and climbing area; surrounded by dense green foliage; ground partially visible beneath the vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [36, 36, 44], [16, 16, 16]]  
+                        LeftDepth: [[100, 100, 100], [35, 31, 32], [13, 14, 15]]  
+                        RightDepth: [[100, 100, 100], [56, 42, 39], [15, 15, 18]]  
+                        DownDepth: [[13, 9, 10], [12, 8, 10], [13, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-130.69, -235.55, -10.0), -20.69],
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+    [(-107.3, -244.39, -10.0), -20.69],
+    [(-102.62, -246.15, -10.0), -20.69],
+    [(-97.94, -247.92, -10.0), -20.69],
+    [(-97.94, -247.92, -8.0), -20.69],
+    [(-97.94, -247.92, -6.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 48.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = hilly landscape, green vegetation, scattered rocks; trees line the horizon; ocean visible in the distance  
+                        Left = stack of hay bales, wooden crate, rectangular block; objects are on the ground; trees and hills in the background  
+                        Right = field with rocks, hay bale, metal ladder, red poles; structures are on the ground; trees and hills in the background  
+                        Down = overhead view of playground equipment, white and orange structure, netted area; surrounded by greenery; no people visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [32, 32, 40], [14, 13, 14]]  
+                        LeftDepth: [[100, 100, 100], [24, 17, 28], [13, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [49, 39, 38], [15, 13, 15]]  
+                        DownDepth: [[11, 7, 7], [10, 6, 7], [11, 10, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-126.01, -237.32, -10.0), -20.69],
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+    [(-107.3, -244.39, -10.0), -20.69],
+    [(-102.62, -246.15, -10.0), -20.69],
+    [(-97.94, -247.92, -10.0), -20.69],
+    [(-97.94, -247.92, -8.0), -20.69],
+    [(-97.94, -247.92, -6.0), -20.69],
+    [(-97.94, -247.92, -4.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 50.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Playground,
+                        Size: big7.0*7.0=49.0 squares),
+                        Description: Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-191, -90]  
+                        **Y Range**: [min_y, max_y] = [-283, -182]
+
+                        # RGB Captions
+                        Front = rocky ground, scattered rocks, green shrubs; trees in the midground; hazy sky in the background  
+                        Left = three hay bales, stacked; wooden crate, blue tarp; green shrubs, trees in the distance  
+                        Right = metal ladder, orange frame; monkey bars, red and black poles; green shrubs, trees in the background  
+                        Down = play structure, yellow and orange; slide, curved shape; green foliage, ground cover in the background  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [24, 24, 31], [10, 10, 11]]  
+                        LeftDepth: [[100, 100, 100], [17, 15, 20], [11, 10, 10]]  
+                        RightDepth: [[100, 100, 100], [39, 31, 31], [11, 11, 11]]  
+                        DownDepth: [[8, 7, 8], [7, 5, 4], [8, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-121.33, -239.09, -10.0), -20.69],
+    [(-116.65, -240.85, -10.0), -20.69],
+    [(-111.98, -242.62, -10.0), -20.69],
+    [(-107.3, -244.39, -10.0), -20.69],
+    [(-102.62, -246.15, -10.0), -20.69],
+    [(-97.94, -247.92, -10.0), -20.69],
+    [(-97.94, -247.92, -8.0), -20.69],
+    [(-97.94, -247.92, -6.0), -20.69],
+    [(-97.94, -247.92, -4.0), -20.69],
+    [(-97.94, -247.92, -2.0), -20.69],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 52.99999999999994
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Playground**, described as:  Geometric modular structure, yellow-painted wood and red plastic, curved tube slide with rope climbing net and ladder steps, designed for children's recreational play.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,35 @@
+{
+  "episode_id": "71",
+  "start_pose": {
+    "start_position": [
+      -25.217922033733743,
+      -135.2009387670331,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8744719442308989,
+      0.4850760958375827
+    ]
+  },
+  "info": {
+    "geodesic_distance": 71,
+    "euclidean_distance": 49.1715
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Dog",
+  "object_name": "hellenic_hound_idleSit_anim_32",
+  "pose": [
+    [
+      -15.192744255065918,
+      -180.5927276611328,
+      9.028725624084473
+    ]
+  ],
+  "size": " small(1.25*0.5=0.63 squares)",
+  "description": " Organic quadruped form, smooth black fur with upright posture, visible ears and snout, likely domesticated and suitable for pet or companion role.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

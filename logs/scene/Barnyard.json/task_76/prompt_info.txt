@@ -1,0 +1,2352 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and white dome tent; one tent; tent is in the mid-ground left; surrounded by green vegetation and rocks  
+                        Left = row of trees; multiple trees; trees line a dirt path on the left; sunlight visible above the canopy  
+                        Right = stone tower, cylindrical shape; one tower; tower is in the distant background left; surrounded by greenery and trees  
+                        Down = dense green vegetation; close-up view; rocks partially visible through the foliage  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 18, 18], [10, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [32, 26, 27], [12, 11, 11]]  
+                        RightDepth: [[100, 100, 100], [14, 13, 14], [9, 8, 8]]  
+                        DownDepth: [[8, 7, 8], [8, 7, 7], [8, 8, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-162.49, 191.43, -10.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = white dome tent, small; rocks, scattered; vegetation, low-lying and dense; tent is in the mid-left foreground  
+                        Left = sun, bright; trees, leafy and green; shadows cast on ground; sun is in the upper left background  
+                        Right = white building, multi-story; trees, leafy and green; rocks, scattered; building is in the distant background center  
+                        Down = vegetation, low-lying and dense; rocks, scattered; shadows cast by unseen objects; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [24, 23, 24], [11, 11, 10]]  
+                        LeftDepth: [[100, 100, 100], [28, 26, 28], [11, 11, 12]]  
+                        RightDepth: [[100, 100, 100], [17, 14, 15], [10, 10, 9]]  
+                        DownDepth: [[8, 7, 8], [8, 7, 7], [8, 7, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue tent, small, dome-shaped; tent is in the foreground left; surrounded by rocky terrain and sparse vegetation  
+                        Left = sun, bright, circular; sun is high in the sky; trees with green foliage line the horizon  
+                        Right = white cylindrical structure, tall, tower-like; structure is in the distant background center; surrounded by trees and open field  
+                        Down = rocks, gray, irregularly shaped; rocks are scattered throughout the foreground; interspersed with low-lying green plants  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [25, 24, 25], [11, 10, 11]]  
+                        LeftDepth: [[100, 100, 100], [28, 26, 28], [11, 11, 11]]  
+                        RightDepth: [[100, 100, 100], [21, 14, 17], [9, 9, 10]]  
+                        DownDepth: [[9, 8, 8], [8, 7, 7], [9, 7, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999972
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue dome tent; tent is in the left foreground; field of low vegetation and scattered rocks  
+                        Left = sun, bright and round; trees in a line behind a field of low vegetation  
+                        Right = tall cylindrical silo; silo is in the distant background center; field of low vegetation with scattered rocks in the foreground  
+                        Down = rocks of various sizes; rocks are densely packed in the foreground; patches of low vegetation between rocks  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 24, 26], [11, 10, 11]]  
+                        LeftDepth: [[100, 100, 100], [28, 26, 28], [11, 11, 11]]  
+                        RightDepth: [[100, 100, 100], [23, 16, 16], [10, 10, 10]]  
+                        DownDepth: [[8, 7, 8], [7, 7, 7], [8, 7, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999957
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and white tent, small, dome-shaped; tent is in the left foreground; field of low green vegetation with scattered rocks  
+                        Left = sun, bright, circular; trees, leafy, medium-sized; trees form a line across the midground; field of dense white flowers in the foreground  
+                        Right = white cylindrical structure, tall, slender; building, multi-story, stone-like; both structures are in the distant background; field of low green vegetation in the foreground  
+                        Down = rocks, large, gray, irregularly shaped; rocks are densely clustered in the center; field of low green vegetation surrounding the rocks  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 25, 26], [11, 11, 11]]  
+                        LeftDepth: [[100, 100, 100], [28, 26, 29], [11, 11, 12]]  
+                        RightDepth: [[100, 100, 100], [22, 21, 18], [11, 10, 10]]  
+                        DownDepth: [[8, 7, 8], [7, 7, 7], [8, 7, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.999999999999943
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue tent, small, pitched; tent is in the left foreground; field of low green vegetation with scattered rocks  
+                        Left = sun, bright, visible; trees, green, clustered; field of low green vegetation; sun is in the upper left background  
+                        Right = white building, multi-story, distant; dirt path, winding; field of low green vegetation; building is in the mid-background  
+                        Down = rocks, large, gray, irregularly shaped; rocks are scattered across a field of low green vegetation; close-up view from above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [29, 28, 34], [13, 12, 12]]  
+                        LeftDepth: [[100, 100, 100], [25, 25, 31], [11, 11, 12]]  
+                        RightDepth: [[100, 100, 100], [26, 21, 21], [11, 10, 10]]  
+                        DownDepth: [[9, 8, 9], [8, 7, 8], [8, 7, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.99999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = field of low green vegetation; winding dirt path; cluster of trees in the midground; hazy sky; no visible movement  
+                        Left = field of low green vegetation; sun visible in the upper left; blue and white tent on the right; trees in the background; no visible movement  
+                        Right = field of low green vegetation; dirt path curving from left to right; stone structure in the far distance; trees scattered in the midground; hazy sky; no visible movement  
+                        Down = close-up view of low green vegetation; several large gray rocks scattered throughout; dry earth patches visible between plants; no visible movement  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [24, 23, 27], [12, 11, 11]]  
+                        LeftDepth: [[100, 100, 100], [27, 25, 27], [11, 11, 11]]  
+                        RightDepth: [[100, 100, 100], [25, 22, 23], [11, 10, 11]]  
+                        DownDepth: [[9, 8, 8], [8, 7, 8], [8, 7, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999915
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = dirt path, winding; field of low green vegetation; several trees in the midground; overcast sky  
+                        Left = blue and white dome tent; field of low green vegetation; trees in the background; sun visible in the sky  
+                        Right = dirt path, winding; field of low green vegetation; stone wall along the path; building with a tower in the distant background  
+                        Down = field of low green vegetation; dirt path running diagonally; large rocks scattered across the foreground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 20, 29], [12, 11, 12]]  
+                        LeftDepth: [[100, 100, 100], [27, 25, 29], [11, 11, 11]]  
+                        RightDepth: [[100, 100, 100], [24, 22, 22], [11, 11, 11]]  
+                        DownDepth: [[9, 8, 9], [8, 7, 8], [8, 8, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 34.9999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = winding dirt path; cluster of rocks along the path; several small trees in the midground; overcast sky  
+                        Left = blue and white dome tent; scattered rocks; dense low-lying vegetation; sun visible in the upper left; trees in the background  
+                        Right = dirt path curving through field; stone wall along the path; distant building with tower; trees in the midground; overcast sky  
+                        Down = dense patchy vegetation; brown earth patches; aerial perspective; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [30, 26, 24], [12, 11, 12]]  
+                        LeftDepth: [[100, 100, 100], [26, 25, 29], [11, 11, 12]]  
+                        RightDepth: [[100, 100, 100], [23, 22, 23], [11, 11, 11]]  
+                        DownDepth: [[9, 8, 9], [8, 7, 8], [8, 8, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-168.64, 151.9, -10.0), -98.85],
+    [(-168.64, 151.9, -10.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 39.999999999999886
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = dirt path, winding; rocks, scattered; trees, sparse and green; field, covered in low vegetation; sky, overcast  
+                        Left = blue tent, dome-shaped; rows of plants, covered with black material; trees, in the background; sun, visible in the sky  
+                        Right = dirt path, winding; rocks, along the path; trees, sparse and green; tower, white and cylindrical; building, near the tower; field, covered in low vegetation; sky, overcast  
+                        Down = field, densely covered in small plants; aerial view; shadows cast across the field  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [30, 26, 20], [9, 9, 11]]  
+                        LeftDepth: [[100, 100, 100], [25, 25, 29], [11, 11, 12]]  
+                        RightDepth: [[100, 100, 100], [23, 22, 22], [11, 10, 11]]  
+                        DownDepth: [[9, 8, 9], [8, 7, 8], [8, 8, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-162.49, 191.43, -10.0), -98.85],
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-168.64, 151.9, -10.0), -98.85],
+    [(-169.41, 146.96, -10.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 44.99999999999987
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = curved dirt path; rocky circular area with trees; low green shrubs in foreground; hazy sky in background  
+                        Left = blue dome tent; low green shrubs in foreground; trees and open field in midground; bright sun in sky  
+                        Right = dirt path curving through field; rocky area with trees; distant building visible; overcast sky  
+                        Down = aerial view of dense green vegetation; circular pattern of plants; shadows cast on ground; no distinct objects  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 19, 20], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [22, 20, 14], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [18, 16, 19], [9, 8, 9]]  
+                        DownDepth: [[7, 6, 7], [6, 6, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-163.26, 186.49, -10.0), -98.85],
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-168.64, 151.9, -10.0), -98.85],
+    [(-169.41, 146.96, -10.0), -98.85],
+    [(-169.41, 146.96, -8.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 46.99999999999987
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = dirt road, winding; rocks, scattered; shrubs, dense and green; trees, in the distance; sky, overcast  
+                        Left = blue tent, dome-shaped; rocks, scattered; shrubs, dense and green; trees, in the distance; sun, low in the sky  
+                        Right = dirt road, winding; rocks, along the side; shrubs, dense and green; trees, in the distance; building, in the far background  
+                        Down = ground covered in dense, light-green vegetation; shadows cast by unseen objects; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 20, 18], [7, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [21, 13, 13], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [18, 16, 19], [9, 8, 9]]  
+                        DownDepth: [[7, 6, 7], [7, 6, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-164.03, 181.55, -10.0), -98.85],
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-168.64, 151.9, -10.0), -98.85],
+    [(-169.41, 146.96, -10.0), -98.85],
+    [(-169.41, 146.96, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -98.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 51.99999999999986
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = winding dirt path; scattered rocks and low green shrubs in the foreground; trees and a distant structure on the horizon  
+                        Left = blue and yellow tent; dense green shrubbery covering the ground; trees in the background under a bright sky  
+                        Right = dirt path curving through rocky terrain; white building with a tall cylindrical structure in the distance; trees scattered around  
+                        Down = dense foliage, predominantly light green leaves; overhead perspective; no distinct objects or structures visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 20, 18], [7, 7, 9]]  
+                        LeftDepth: [[100, 100, 100], [21, 20, 24], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [18, 16, 17], [9, 8, 9]]  
+                        DownDepth: [[7, 6, 7], [6, 6, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-164.8, 176.61, -10.0), -98.85],
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-168.64, 151.9, -10.0), -98.85],
+    [(-169.41, 146.96, -10.0), -98.85],
+    [(-169.41, 146.96, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -113.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 51.99999999999986
+                        AvgHeadingChange = 1.25
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and white tent, small, dome-shaped; tent is on the left foreground; surrounded by rocks and low vegetation  
+                        Left = field of dense, light-colored vegetation; trees in the distant background; no visible human activity  
+                        Right = dirt road, winding; stone wall along the right side; building with a tower in the far distance; trees scattered around  
+                        Down = aerial view of dense, light-colored vegetation; circular pattern radiating outward from center; shadows cast by unseen objects  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 13, 22], [9, 7, 8]]  
+                        LeftDepth: [[100, 100, 100], [21, 19, 22], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [17, 17, 18], [9, 9, 9]]  
+                        DownDepth: [[7, 6, 7], [6, 6, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-165.57, 171.67, -10.0), -98.85],
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-168.64, 151.9, -10.0), -98.85],
+    [(-169.41, 146.96, -10.0), -98.85],
+    [(-169.41, 146.96, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -113.85],
+    [(-170.18, 142.02, -8.0), -128.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 51.99999999999986
+                        AvgHeadingChange = 2.31
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue dome tent, small; tent is in the mid-ground left; surrounded by low green vegetation and rocks  
+                        Left = field of low green vegetation with scattered rocks; no visible objects or people; sun visible in the upper right sky  
+                        Right = farm building complex, includes silo and barn; farm buildings are in the distant background center-right; field of low green vegetation in the foreground  
+                        Down = aerial view of dense green vegetation; shadows cast by unseen structures; ground appears dry and textured  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [14, 12, 22], [9, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [20, 19, 21], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [20, 17, 19], [9, 9, 9]]  
+                        DownDepth: [[7, 6, 7], [6, 6, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-166.33, 166.73, -10.0), -98.85],
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-168.64, 151.9, -10.0), -98.85],
+    [(-169.41, 146.96, -10.0), -98.85],
+    [(-169.41, 146.96, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -113.85],
+    [(-170.18, 142.02, -8.0), -128.85],
+    [(-170.18, 142.02, -8.0), -143.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 51.99999999999986
+                        AvgHeadingChange = 3.21
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue dome tent, small; tent is in the center of the field; surrounded by low-lying green vegetation and scattered rocks  
+                        Left = field covered in dense, low-lying green vegetation; no visible objects or structures; trees line the horizon in the background  
+                        Right = curved dirt path; large pile of gray rocks on the path; trees and a distant building in the background; open field with green vegetation in the foreground  
+                        Down = overhead view of dense green foliage; sunlight filtering through leaves; ground partially visible beneath the canopy  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 12, 22], [9, 8, 7]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 20], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [20, 18, 20], [9, 9, 9]]  
+                        DownDepth: [[7, 6, 7], [6, 6, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-167.1, 161.78, -10.0), -98.85],
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-168.64, 151.9, -10.0), -98.85],
+    [(-169.41, 146.96, -10.0), -98.85],
+    [(-169.41, 146.96, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -113.85],
+    [(-170.18, 142.02, -8.0), -128.85],
+    [(-170.18, 142.02, -8.0), -143.85],
+    [(-170.18, 142.02, -8.0), -158.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 51.99999999999986
+                        AvgHeadingChange = 4.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and white tent, dome-shaped; tent is in the mid-ground; surrounded by dense green vegetation  
+                        Left = no objects present; vast expanse of green vegetation under a hazy sky  
+                        Right = dirt path, winding; several small trees; rocks along the path; vegetation covers the foreground  
+                        Down = dense cluster of green foliage; top-down view; no distinct objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 13, 22], [9, 9, 8]]  
+                        LeftDepth: [[100, 100, 100], [19, 18, 21], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [22, 17, 18], [7, 9, 9]]  
+                        DownDepth: [[7, 6, 7], [6, 6, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-167.87, 156.84, -10.0), -98.85],
+    [(-168.64, 151.9, -10.0), -98.85],
+    [(-169.41, 146.96, -10.0), -98.85],
+    [(-169.41, 146.96, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -113.85],
+    [(-170.18, 142.02, -8.0), -128.85],
+    [(-170.18, 142.02, -8.0), -143.85],
+    [(-170.18, 142.02, -8.0), -158.85],
+    [(-170.18, 142.02, -8.0), -173.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 51.99999999999986
+                        AvgHeadingChange = 4.69
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and white tent, dome-shaped; tent is in the mid-ground; surrounded by rocky terrain and sparse vegetation  
+                        Left = group of animals, possibly sheep or goats; animals are grazing in the mid-ground; scattered across a field with low vegetation  
+                        Right = dirt path, winding; path curves through the mid-ground; bordered by rocks and shrubs on both sides  
+                        Down = overhead view of dense foliage; leaves are light green and cover the entire frame; branches and stems are visible beneath  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 12, 22], [9, 9, 7]]  
+                        LeftDepth: [[100, 100, 100], [19, 18, 21], [9, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [22, 19, 17], [6, 5, 9]]  
+                        DownDepth: [[7, 6, 5], [6, 6, 5], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-168.64, 151.9, -10.0), -98.85],
+    [(-169.41, 146.96, -10.0), -98.85],
+    [(-169.41, 146.96, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -113.85],
+    [(-170.18, 142.02, -8.0), -128.85],
+    [(-170.18, 142.02, -8.0), -143.85],
+    [(-170.18, 142.02, -8.0), -158.85],
+    [(-170.18, 142.02, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), -173.85],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 56.99999999999985
+                        AvgHeadingChange = 4.41
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue dome tent, small; tent is in the right foreground; sun is high and bright in the sky  
+                        Left = group of sheep, numerous; sheep are scattered across the field; trees line the background horizon  
+                        Right = dirt path, winding; path curves through the center-right; rocks and shrubs line the path edges  
+                        Down = tree canopy, dense; canopy fills the entire frame; leaves are light green and textured  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 12, 13], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 20], [9, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [20, 20, 17], [5, 5, 9]]  
+                        DownDepth: [[7, 6, 5], [6, 6, 5], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-169.41, 146.96, -10.0), -98.85],
+    [(-169.41, 146.96, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -113.85],
+    [(-170.18, 142.02, -8.0), -128.85],
+    [(-170.18, 142.02, -8.0), -143.85],
+    [(-170.18, 142.02, -8.0), -158.85],
+    [(-170.18, 142.02, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), 171.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 56.99999999999985
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and yellow tent, small, dome-shaped; tent is in the mid-ground right; surrounded by rocks and low green vegetation  
+                        Left = group of birds, medium-sized, grayish-white plumage; birds are scattered across the mid-ground; flying or walking in a field  
+                        Right = dirt path, winding, unpaved; path curves from the right side into the background; bordered by rocks and sparse trees  
+                        Down = dense cluster of light-colored foliage, aerial view; foliage fills the entire frame; appears textured and layered  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 20, 22], [9, 8, 8]]  
+                        LeftDepth: [[100, 100, 100], [18, 18, 20], [9, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [22, 19, 19], [6, 5, 5]]  
+                        DownDepth: [[7, 6, 5], [6, 6, 5], [7, 6, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-169.41, 146.96, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -113.85],
+    [(-170.18, 142.02, -8.0), -128.85],
+    [(-170.18, 142.02, -8.0), -143.85],
+    [(-170.18, 142.02, -8.0), -158.85],
+    [(-170.18, 142.02, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), 171.15],
+    [(-180.09, 142.26, -8.0), 171.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 61.999999999999844
+                        AvgHeadingChange = 4.74
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and white dome tent; tent is in the right foreground; sun is high in the hazy sky  
+                        Left = group of rocks, scattered; rocks are in the midground; trees line the distant background  
+                        Right = dirt path, winding; path curves from the right into the midground; rocks and shrubs line the path; trees stand in the far background  
+                        Down = dense green foliage, overhead view; small rocks visible through gaps in the leaves; light filters through the canopy  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 21, 22], [9, 6, 6]]  
+                        LeftDepth: [[100, 100, 100], [19, 18, 20], [9, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [22, 19, 21], [6, 6, 6]]  
+                        DownDepth: [[7, 6, 6], [6, 6, 5], [7, 6, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-170.18, 142.02, -8.0), -98.85],
+    [(-170.18, 142.02, -8.0), -113.85],
+    [(-170.18, 142.02, -8.0), -128.85],
+    [(-170.18, 142.02, -8.0), -143.85],
+    [(-170.18, 142.02, -8.0), -158.85],
+    [(-170.18, 142.02, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), 171.15],
+    [(-180.09, 142.26, -8.0), 171.15],
+    [(-185.03, 143.02, -8.0), 171.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 66.99999999999983
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and yellow tent, small, dome-shaped; tent is on the right side of the frame; surrounded by rocks and green vegetation  
+                        Left = group of sheep, woolly coat; sheep are scattered across the field; trees in the distant background  
+                        Right = dirt road, winding; road curves from the right into the distance; rocks and shrubs line both sides of the road  
+                        Down = overhead view of dense green foliage; rocks partially visible through the leaves; sunlight filtering through  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 20, 22], [9, 5, 5]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 21], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [22, 20, 21], [6, 5, 7]]  
+                        DownDepth: [[7, 5, 5], [6, 6, 5], [7, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-170.18, 142.02, -8.0), -113.85],
+    [(-170.18, 142.02, -8.0), -128.85],
+    [(-170.18, 142.02, -8.0), -143.85],
+    [(-170.18, 142.02, -8.0), -158.85],
+    [(-170.18, 142.02, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), 171.15],
+    [(-180.09, 142.26, -8.0), 171.15],
+    [(-185.03, 143.02, -8.0), 171.15],
+    [(-189.97, 143.79, -8.0), 171.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 71.99999999999982
+                        AvgHeadingChange = 4.29
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and white tent, dome-shaped; small table with items; person standing nearby; tent is in the right foreground; field of low green plants and rocks  
+                        Left = field of low green plants and rocks; dirt path curving through center; trees in the distant background; no visible people or structures  
+                        Right = dirt path curving through a field of low green plants and rocks; trees in the distant background; overcast sky; no visible people or structures  
+                        Down = overhead view of dense green foliage and scattered gray rocks; sunlight filtering through leaves; no visible people or structures  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [23, 18, 19], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 20], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [23, 20, 22], [9, 5, 5]]  
+                        DownDepth: [[7, 4, 4], [6, 4, 4], [7, 7, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-170.18, 142.02, -8.0), -128.85],
+    [(-170.18, 142.02, -8.0), -143.85],
+    [(-170.18, 142.02, -8.0), -158.85],
+    [(-170.18, 142.02, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), 171.15],
+    [(-180.09, 142.26, -8.0), 171.15],
+    [(-185.03, 143.02, -8.0), 171.15],
+    [(-189.97, 143.79, -8.0), 171.15],
+    [(-194.91, 144.56, -8.0), 171.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 76.9999999999998
+                        AvgHeadingChange = 4.09
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and white tent, dome-shaped; small table with items; person standing near tent; field of low green plants; trees in the background  
+                        Left = field of low green plants; scattered rocks; dirt path curving to the right; trees in the distance under a hazy sky  
+                        Right = field of low green plants; scattered rocks; dirt path curving to the right; trees in the distance under a hazy sky  
+                        Down = close-up view of low green plants; scattered rocks; dirt path winding through vegetation; sunlight filtering through  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [23, 21, 18], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 21], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [23, 20, 21], [9, 9, 6]]  
+                        DownDepth: [[7, 7, 7], [7, 4, 4], [7, 4, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-170.18, 142.02, -8.0), -143.85],
+    [(-170.18, 142.02, -8.0), -158.85],
+    [(-170.18, 142.02, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), 171.15],
+    [(-180.09, 142.26, -8.0), 171.15],
+    [(-185.03, 143.02, -8.0), 171.15],
+    [(-189.97, 143.79, -8.0), 171.15],
+    [(-194.91, 144.56, -8.0), 171.15],
+    [(-199.85, 145.33, -8.0), 171.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 81.99999999999979
+                        AvgHeadingChange = 3.91
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and yellow tent, dome-shaped; tent is in the right foreground; person sitting near tent; field of low green plants with small white flowers; trees in the background  
+                        Left = field of low green plants with small white flowers; rocks scattered throughout; trees in the distant background; no visible human presence  
+                        Right = field of low green plants with small white flowers; rocks scattered throughout; dirt path curving from right to left; trees in the distant background; small blue object in bottom left corner  
+                        Down = field of low green plants with small white flowers; large gray rocks scattered throughout; narrow water channel winding through center; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 21, 16], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 20], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [23, 21, 22], [9, 9, 9]]  
+                        DownDepth: [[7, 6, 7], [6, 5, 5], [5, 4, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-170.18, 142.02, -8.0), -158.85],
+    [(-170.18, 142.02, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), 171.15],
+    [(-180.09, 142.26, -8.0), 171.15],
+    [(-185.03, 143.02, -8.0), 171.15],
+    [(-189.97, 143.79, -8.0), 171.15],
+    [(-194.91, 144.56, -8.0), 171.15],
+    [(-199.85, 145.33, -8.0), 171.15],
+    [(-204.79, 146.1, -8.0), 171.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 86.99999999999977
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = blue and white tent, partially set up; wooden picnic table with items on it; person standing near the table; field of low green vegetation under bright sky  
+                        Left = field of low green vegetation with scattered rocks; trees in the distant background; no visible structures or people  
+                        Right = blue and white tent, partially visible on the left; person lying on the ground near the tent; rocky terrain with sparse vegetation; dirt path curving in the distance  
+                        Down = overhead view of rocky terrain with patches of green vegetation; rocks are irregularly shaped and scattered across the area  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 20, 15], [9, 9, 10]]  
+                        LeftDepth: [[100, 100, 100], [20, 19, 21], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [23, 21, 22], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [7, 6, 7], [7, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-170.18, 142.02, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), 171.15],
+    [(-180.09, 142.26, -8.0), 171.15],
+    [(-185.03, 143.02, -8.0), 171.15],
+    [(-189.97, 143.79, -8.0), 171.15],
+    [(-194.91, 144.56, -8.0), 171.15],
+    [(-199.85, 145.33, -8.0), 171.15],
+    [(-204.79, 146.1, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 171.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 91.99999999999976
+                        AvgHeadingChange = 3.6
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = field of dense green plants with white flowers; sun in the upper center; person standing near a small table with items on it in the lower right  
+                        Left = field of low green plants with white flowers; several large gray rocks scattered throughout; trees in the distant background  
+                        Right = blue and yellow dome tent; child sitting near the tent entrance; dirt path curving to the right in the background; trees in the far distance  
+                        Down = close-up view of green plants with white flowers; numerous large gray rocks embedded in the plant growth; no visible human presence  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 19, 21], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 19], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [14, 22, 24], [10, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [7, 6, 7], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-175.15, 141.49, -8.0), -173.85],
+    [(-175.15, 141.49, -8.0), 171.15],
+    [(-180.09, 142.26, -8.0), 171.15],
+    [(-185.03, 143.02, -8.0), 171.15],
+    [(-189.97, 143.79, -8.0), 171.15],
+    [(-194.91, 144.56, -8.0), 171.15],
+    [(-199.85, 145.33, -8.0), 171.15],
+    [(-204.79, 146.1, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 156.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 91.99999999999976
+                        AvgHeadingChange = 4.04
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = field of low-lying green plants; trees in the background; sun high in the sky  
+                        Left = field of low-lying green plants with scattered rocks; trees in the distant background; overcast sky  
+                        Right = blue and yellow dome tent; two people near the tent; dirt path in the background; trees in the distance  
+                        Down = cluster of gray rocks among green plants; close-up view of ground-level vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 19, 24], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 21], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [14, 15, 22], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [7, 6, 7], [7, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-175.15, 141.49, -8.0), 171.15],
+    [(-180.09, 142.26, -8.0), 171.15],
+    [(-185.03, 143.02, -8.0), 171.15],
+    [(-189.97, 143.79, -8.0), 171.15],
+    [(-194.91, 144.56, -8.0), 171.15],
+    [(-199.85, 145.33, -8.0), 171.15],
+    [(-204.79, 146.1, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 156.15],
+    [(-209.73, 146.87, -8.0), 141.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 91.99999999999976
+                        AvgHeadingChange = 4.44
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = field of low-lying plants, sun in the upper right; trees line the horizon  
+                        Left = field of low-lying plants, rocks scattered in the foreground; trees line the horizon  
+                        Right = blue and white tent, dome-shaped; two small figures near the tent; field of low-lying plants  
+                        Down = rocks, irregular shapes, light gray; plants, green and yellow, cover the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 20, 19], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 19, 19], [6, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [23, 14, 23], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [7, 6, 7], [6, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-180.09, 142.26, -8.0), 171.15],
+    [(-185.03, 143.02, -8.0), 171.15],
+    [(-189.97, 143.79, -8.0), 171.15],
+    [(-194.91, 144.56, -8.0), 171.15],
+    [(-199.85, 145.33, -8.0), 171.15],
+    [(-204.79, 146.1, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 156.15],
+    [(-209.73, 146.87, -8.0), 141.15],
+    [(-209.73, 146.87, -8.0), 126.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 91.99999999999976
+                        AvgHeadingChange = 4.82
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = field of low green and white vegetation; scattered rocks in the foreground; trees line the horizon under a bright sky  
+                        Left = field of low green and white vegetation; dirt path curves leftward; castle-like structure visible in the distant background  
+                        Right = blue and yellow tent, dome-shaped; picnic table with items on it; two small figures near the tent; trees in the background  
+                        Down = cluster of large gray rocks among low green and white vegetation; overhead perspective focusing on rocky area  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 19, 19], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [15, 19, 20], [6, 7, 9]]  
+                        RightDepth: [[100, 100, 100], [23, 14, 23], [9, 9, 10]]  
+                        DownDepth: [[7, 7, 7], [7, 6, 7], [6, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-185.03, 143.02, -8.0), 171.15],
+    [(-189.97, 143.79, -8.0), 171.15],
+    [(-194.91, 144.56, -8.0), 171.15],
+    [(-199.85, 145.33, -8.0), 171.15],
+    [(-204.79, 146.1, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 156.15],
+    [(-209.73, 146.87, -8.0), 141.15],
+    [(-209.73, 146.87, -8.0), 126.15],
+    [(-209.73, 146.87, -8.0), 111.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 91.99999999999976
+                        AvgHeadingChange = 5.17
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = rocky terrain, scattered rocks; field of low green vegetation; trees in the distant background  
+                        Left = rocky terrain, scattered rocks; field of low green vegetation; a tall cylindrical structure in the background left  
+                        Right = blue and yellow tent, partially set up; wooden picnic table; people near the tent; field of low green vegetation; trees in the background  
+                        Down = rocky terrain, large gray rocks; dense patch of low green vegetation; overhead perspective view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 19, 21], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [14, 16, 20], [6, 6, 9]]  
+                        RightDepth: [[100, 100, 100], [19, 16, 14], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [6, 6, 7], [6, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-189.97, 143.79, -8.0), 171.15],
+    [(-194.91, 144.56, -8.0), 171.15],
+    [(-199.85, 145.33, -8.0), 171.15],
+    [(-204.79, 146.1, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 156.15],
+    [(-209.73, 146.87, -8.0), 141.15],
+    [(-209.73, 146.87, -8.0), 126.15],
+    [(-209.73, 146.87, -8.0), 111.15],
+    [(-209.73, 146.87, -8.0), 96.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 91.99999999999976
+                        AvgHeadingChange = 5.5
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = rocky terrain, scattered rocks; dense green vegetation; trees in the distant background  
+                        Left = field with patches of grass and dirt; a tall cylindrical structure in the mid-ground; trees in the far background  
+                        Right = blue and yellow tent, partially set up; wooden picnic table with items on it; person standing near the table; trees in the background  
+                        Down = overhead view of rocky ground; large gray rocks interspersed with small green plants; sandy patches visible between rocks  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 19, 22], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [15, 16, 20], [7, 7, 9]]  
+                        RightDepth: [[100, 100, 100], [17, 21, 13], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [6, 6, 7], [7, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-194.91, 144.56, -8.0), 171.15],
+    [(-199.85, 145.33, -8.0), 171.15],
+    [(-204.79, 146.1, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 156.15],
+    [(-209.73, 146.87, -8.0), 141.15],
+    [(-209.73, 146.87, -8.0), 126.15],
+    [(-209.73, 146.87, -8.0), 111.15],
+    [(-209.73, 146.87, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 96.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 96.99999999999976
+                        AvgHeadingChange = 5.32
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = rocky terrain, scattered rocks; dense green vegetation; trees in the distant background  
+                        Left = rocky terrain, scattered rocks; dense green vegetation; a tall tower visible in the far distance  
+                        Right = rocky terrain, scattered rocks; dense green vegetation; a person standing near a table with items on it; bright sunlight in the upper left  
+                        Down = rocky terrain, large gray rocks; dense green vegetation; overhead perspective showing rock and plant arrangement  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 19, 21], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [12, 12, 19], [8, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [16, 16, 23], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [6, 6, 7], [7, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-199.85, 145.33, -8.0), 171.15],
+    [(-204.79, 146.1, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 156.15],
+    [(-209.73, 146.87, -8.0), 141.15],
+    [(-209.73, 146.87, -8.0), 126.15],
+    [(-209.73, 146.87, -8.0), 111.15],
+    [(-209.73, 146.87, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 81.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 96.99999999999976
+                        AvgHeadingChange = 5.62
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = rocky outcrops, gray and jagged; scattered throughout a field of low green vegetation; trees line the horizon in the background  
+                        Left = rocky outcrops, gray and jagged; path winds through a field of low green vegetation; distant building with a tower visible on the horizon  
+                        Right = low green vegetation, dense and sprawling; trees with green foliage line both sides of a sunlit path; bright sun visible in the sky  
+                        Down = rocky outcrops, gray and jagged; partially covered by low green vegetation; overhead perspective showing a mix of rocks and plants  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 18, 20], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 12, 20], [9, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [22, 16, 23], [9, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [6, 6, 7], [7, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-204.79, 146.1, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 156.15],
+    [(-209.73, 146.87, -8.0), 141.15],
+    [(-209.73, 146.87, -8.0), 126.15],
+    [(-209.73, 146.87, -8.0), 111.15],
+    [(-209.73, 146.87, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 81.15],
+    [(-210.27, 151.84, -8.0), 66.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 96.99999999999976
+                        AvgHeadingChange = 5.91
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 34 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = field of low green vegetation with scattered gray rocks; trees line the horizon; sky is overcast  
+                        Left = field of low green vegetation with scattered gray rocks; trees line the horizon; a tall structure is visible in the distance  
+                        Right = field of low green vegetation with scattered gray rocks; trees line the horizon; sun is low on the horizon, casting light  
+                        Down = field of low green vegetation with scattered gray rocks; rocks are prominent in the foreground; a small rectangular object is partially visible in the bottom right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 18, 20], [9, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [21, 12, 20], [9, 9, 9]]  
+                        RightDepth: [[100, 100, 100], [22, 15, 23], [10, 9, 9]]  
+                        DownDepth: [[7, 7, 7], [7, 6, 7], [7, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-209.73, 146.87, -8.0), 171.15],
+    [(-209.73, 146.87, -8.0), 156.15],
+    [(-209.73, 146.87, -8.0), 141.15],
+    [(-209.73, 146.87, -8.0), 126.15],
+    [(-209.73, 146.87, -8.0), 111.15],
+    [(-209.73, 146.87, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 81.15],
+    [(-210.27, 151.84, -8.0), 66.15],
+    [(-210.27, 151.84, -6.0), 66.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 34
+                        DistanceTraveled = 98.99999999999976
+                        AvgHeadingChange = 5.74
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:34 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 35 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = low green shrubs, rocky patches; trees in the distant background; clear sky above  
+                        Left = low green shrubs, rocky patches; a tall tower visible in the far distance; trees line the horizon  
+                        Right = low green shrubs, bright sunlight; trees with dense foliage on both sides; sun positioned high in the sky  
+                        Down = low green shrubs, scattered rocks; a pink rectangular object partially buried in the foreground; sunlight casting shadows  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 18, 20], [9, 8, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 12, 20], [9, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [20, 12, 22], [9, 9, 9]]  
+                        DownDepth: [[7, 6, 7], [6, 6, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-209.73, 146.87, -8.0), 156.15],
+    [(-209.73, 146.87, -8.0), 141.15],
+    [(-209.73, 146.87, -8.0), 126.15],
+    [(-209.73, 146.87, -8.0), 111.15],
+    [(-209.73, 146.87, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 81.15],
+    [(-210.27, 151.84, -8.0), 66.15],
+    [(-210.27, 151.84, -6.0), 66.15],
+    [(-210.27, 151.84, -4.0), 66.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 35
+                        DistanceTraveled = 100.99999999999976
+                        AvgHeadingChange = 5.57
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:35 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 36 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = rocky terrain, scattered rocks; dense green shrubs; trees in the distant background  
+                        Left = rocky terrain, scattered rocks; dense green shrubs; a tall cylindrical structure in the distant background  
+                        Right = dense green shrubs; trees with full canopies; bright sun in the sky  
+                        Down = dense green shrubs; large flat rock; small pink rectangular object on the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 17, 19], [8, 7, 8]]  
+                        LeftDepth: [[100, 100, 100], [19, 14, 19], [8, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [20, 11, 21], [9, 8, 9]]  
+                        DownDepth: [[6, 6, 7], [6, 5, 6], [7, 6, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-209.73, 146.87, -8.0), 141.15],
+    [(-209.73, 146.87, -8.0), 126.15],
+    [(-209.73, 146.87, -8.0), 111.15],
+    [(-209.73, 146.87, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 81.15],
+    [(-210.27, 151.84, -8.0), 66.15],
+    [(-210.27, 151.84, -6.0), 66.15],
+    [(-210.27, 151.84, -4.0), 66.15],
+    [(-208.25, 156.41, -4.0), 66.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 36
+                        DistanceTraveled = 105.99999999999977
+                        AvgHeadingChange = 5.42
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:36 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 37 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = field of low green plants with white flowers; scattered rocks; trees in the distant background  
+                        Left = field of low green plants with white flowers; numerous gray rocks; trees and a tall structure in the distant background  
+                        Right = field of low green plants with white flowers; trees line the horizon; bright sun in the sky  
+                        Down = overhead view of dense green foliage; small patch of ground visible; corner shows part of a pink object  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [15, 15, 17], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [17, 16, 16], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [17, 8, 18], [8, 7, 8]]  
+                        DownDepth: [[6, 5, 5], [5, 5, 5], [6, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-209.73, 146.87, -8.0), 126.15],
+    [(-209.73, 146.87, -8.0), 111.15],
+    [(-209.73, 146.87, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 81.15],
+    [(-210.27, 151.84, -8.0), 66.15],
+    [(-210.27, 151.84, -6.0), 66.15],
+    [(-210.27, 151.84, -4.0), 66.15],
+    [(-208.25, 156.41, -4.0), 66.15],
+    [(-208.25, 156.41, -2.0), 66.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 37
+                        DistanceTraveled = 107.99999999999977
+                        AvgHeadingChange = 5.27
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:37 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 38 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = field of green and purple plants; trees in the background; clear sky above  
+                        Left = field with scattered gray rocks among green plants; trees in the background; clear sky  
+                        Right = field with dense green and white plants; trees line the horizon; bright sun in the sky  
+                        Down = close-up of green leafy plants; ground visible beneath; shadows cast on the surface  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [12, 12, 13], [6, 6, 6]]  
+                        LeftDepth: [[100, 100, 100], [13, 12, 13], [6, 5, 6]]  
+                        RightDepth: [[100, 100, 100], [6, 5, 15], [6, 5, 6]]  
+                        DownDepth: [[5, 4, 4], [4, 4, 4], [5, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-209.73, 146.87, -8.0), 111.15],
+    [(-209.73, 146.87, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 81.15],
+    [(-210.27, 151.84, -8.0), 66.15],
+    [(-210.27, 151.84, -6.0), 66.15],
+    [(-210.27, 151.84, -4.0), 66.15],
+    [(-208.25, 156.41, -4.0), 66.15],
+    [(-208.25, 156.41, -2.0), 66.15],
+    [(-208.25, 156.41, 0.0), 66.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 38
+                        DistanceTraveled = 109.99999999999977
+                        AvgHeadingChange = 5.13
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:38 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 39 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = field of green and white plants, dense vegetation; trees in the distant background; clear sky above  
+                        Left = field of green and white plants, scattered gray rocks; trees and a tall structure in the distant background; clear sky  
+                        Right = field of green and white plants, central bush with white flowers; trees in the background; bright sun in the sky  
+                        Down = close-up of green and white plants, dense foliage; ground partially visible at the top left; no distinct objects or structures  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [7, 7, 8], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [9, 7, 8], [4, 4, 4]]  
+                        RightDepth: [[100, 100, 100], [4, 3, 9], [4, 4, 4]]  
+                        DownDepth: [[3, 2, 3], [2, 2, 2], [3, 2, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-209.73, 146.87, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 81.15],
+    [(-210.27, 151.84, -8.0), 66.15],
+    [(-210.27, 151.84, -6.0), 66.15],
+    [(-210.27, 151.84, -4.0), 66.15],
+    [(-208.25, 156.41, -4.0), 66.15],
+    [(-208.25, 156.41, -2.0), 66.15],
+    [(-208.25, 156.41, 0.0), 66.15],
+    [(-208.25, 156.41, 2.0), 66.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 39
+                        DistanceTraveled = 111.99999999999977
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:39 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 40 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = field of tall green plants with white flowers; dense, covering the foreground and middle ground; trees in the distant background  
+                        Left = picnic table with items on it; field of tall green plants with white flowers; trees and a building in the distant background  
+                        Right = large bush with light-colored leaves; field of tall green plants with white flowers; trees in the distant background  
+                        Down = close-up view of green plants with white flowers; densely packed, filling the entire frame  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 45], [4, 3, 3], [2, 2, 2]]  
+                        LeftDepth: [[100, 100, 100], [3, 2, 2], [1, 1, 1]]  
+                        RightDepth: [[2, 2, 3], [2, 2, 3], [2, 1, 1]]  
+                        DownDepth: [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-210.27, 151.84, -8.0), 96.15],
+    [(-210.27, 151.84, -8.0), 81.15],
+    [(-210.27, 151.84, -8.0), 66.15],
+    [(-210.27, 151.84, -6.0), 66.15],
+    [(-210.27, 151.84, -4.0), 66.15],
+    [(-208.25, 156.41, -4.0), 66.15],
+    [(-208.25, 156.41, -2.0), 66.15],
+    [(-208.25, 156.41, 0.0), 66.15],
+    [(-208.25, 156.41, 2.0), 66.15],
+    [(-208.25, 156.41, 4.0), 66.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 40
+                        DistanceTraveled = 113.99999999999977
+                        AvgHeadingChange = 4.87
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:40 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 41 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Lantern,
+                        Size: small(0.75*0.75=0.56 square),
+                        Description: Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-213, -112]  
+                        **Y Range**: [min_y, max_y] = [141, 242]
+
+                        # RGB Captions
+                        Front = low-growing green plants with clover-like leaves; dense cluster in the foreground; trees and sky in the distant background  
+                        Left = tall grasses with pinkish flowers; scattered throughout the midground; clover-like plants in the foreground  
+                        Right = tree with bare branches; positioned centrally in the midground; tall grasses and clover-like plants in the foreground  
+                        Down = light green, variegated leaves; clustered together in the close-up view; dark background  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 41], [0, 0, 0], [0, 0, 0]]  
+                        LeftDepth: [[0, 100, 100], [0, 0, 0], [0, 0, 0]]  
+                        RightDepth: [[2, 0, 0], [0, 0, 0], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-210.27, 151.84, -8.0), 81.15],
+    [(-210.27, 151.84, -8.0), 66.15],
+    [(-210.27, 151.84, -6.0), 66.15],
+    [(-210.27, 151.84, -4.0), 66.15],
+    [(-208.25, 156.41, -4.0), 66.15],
+    [(-208.25, 156.41, -2.0), 66.15],
+    [(-208.25, 156.41, 0.0), 66.15],
+    [(-208.25, 156.41, 2.0), 66.15],
+    [(-208.25, 156.41, 4.0), 66.15],
+    [(-208.25, 156.41, 2.0), 66.15],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 41
+                        DistanceTraveled = 115.99999999999977
+                        AvgHeadingChange = 4.76
+
+                        # Reminder  
+                        - The target is ** Lantern**, described as:  Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:41 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

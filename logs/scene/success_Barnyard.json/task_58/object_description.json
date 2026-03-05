@@ -1,0 +1,35 @@
+{
+  "episode_id": "58",
+  "start_pose": {
+    "start_position": [
+      -128.623271291347,
+      -238.11226982244,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7154438590099017,
+      -0.6986702259328216
+    ]
+  },
+  "info": {
+    "geodesic_distance": 43,
+    "euclidean_distance": 32.8467
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Slide",
+  "object_name": "SM_Slide01_23",
+  "pose": [
+    [
+      -97.49274444580078,
+      -237.0927276611328,
+      3.428725481033325
+    ]
+  ],
+  "size": " mid(5.0*1.25=6.25 squares)",
+  "description": " Geometric form with angled incline, metallic slide surface with wooden side supports, curved bottom exit with ladder steps, designed for children's play.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

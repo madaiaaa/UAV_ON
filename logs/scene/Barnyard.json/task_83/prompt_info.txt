@@ -1,0 +1,1064 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = dirt path, winding; cluster of trees in the midground; rocks scattered in the foreground; foggy atmosphere  
+                        Left = blue and yellow tent, pitched; small pile of items near tent; rocks and shrubs in foreground; trees in the distance  
+                        Right = dirt path, curving leftward; rocks and shrubs in the midground; trees and structures in the far background; hazy sky  
+                        Down = rocks, numerous and irregularly shaped; green shrubbery covering the ground; overhead perspective; shadows cast by rocks  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 21, 21], [12, 11, 12]]  
+                        LeftDepth: [[100, 100, 100], [22, 22, 25], [12, 12, 12]]  
+                        RightDepth: [[100, 100, 100], [25, 24, 25], [8, 8, 11]]  
+                        DownDepth: [[9, 6, 7], [6, 5, 7], [7, 6, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -10.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = dirt path, winding; cluster of trees in the midground; rocks scattered in the foreground; hazy sky above  
+                        Left = blue and yellow tent, small; rocks and vegetation in the foreground; dirt path curving behind; trees and haze in the distance  
+                        Right = dirt path, winding; cluster of trees in the midground; rocks and vegetation in the foreground; hazy sky above  
+                        Down = rocks, large and gray; bushes and small trees; sandy ground; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 20, 20], [10, 9, 10]]  
+                        LeftDepth: [[100, 100, 100], [21, 21, 23], [9, 9, 10]]  
+                        RightDepth: [[100, 100, 100], [20, 19, 20], [6, 5, 9]]  
+                        DownDepth: [[6, 4, 5], [5, 4, 5], [5, 4, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 2.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = small rocks, scattered; low green shrubs, covering ground; dirt path, winding through center; trees in the distant background  
+                        Left = blue and yellow tent, pitched; small rocks, scattered around; low green shrubs, covering ground; trees in the distant background  
+                        Right = small rocks, scattered; low green shrubs, covering ground; dirt path, winding through center; trees in the distant background; structure partially visible on far left  
+                        Down = small rocks, scattered; low green shrubs, covering ground; narrow dirt path, curving through center; close-up view from above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [15, 13, 14], [4, 4, 7]]  
+                        LeftDepth: [[100, 100, 100], [16, 15, 16], [4, 6, 7]]  
+                        RightDepth: [[100, 100, 100], [6, 6, 14], [4, 4, 6]]  
+                        DownDepth: [[2, 2, 2], [2, 2, 2], [2, 2, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 4.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = rocky terrain, sparse vegetation; large rocks scattered throughout; dirt path curves through the middle ground; trees in the distant background  
+                        Left = blue and yellow tent, dome-shaped; tent is pitched on rocky terrain with sparse vegetation; small white object near the tent entrance; trees in the distant background  
+                        Right = rocky terrain, sparse vegetation; dirt path winds from the left foreground into the middle ground; trees in the distant background; no visible structures or objects  
+                        Down = overhead view of rocky terrain, dense green shrubs; large rocks are interspersed among the shrubs; narrow dirt path runs diagonally through the center  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 18, 18], [9, 8, 9]]  
+                        LeftDepth: [[100, 100, 100], [20, 18, 21], [9, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [17, 17, 18], [5, 5, 8]]  
+                        DownDepth: [[5, 4, 5], [4, 3, 5], [4, 3, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 6.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = dirt path, winding; trees, scattered; rocks, large and gray; vegetation, low-lying and dense; foggy atmosphere  
+                        Left = blue tent, dome-shaped; rocks, large and gray; vegetation, low-lying and dense; items, outside the tent; dirt path in background  
+                        Right = dirt path, winding; trees, scattered; rocks, large and gray; vegetation, low-lying and dense; building, distant and stone  
+                        Down = rocks, large and gray; vegetation, low-lying and dense; shadows, from unseen objects; close-up perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 18, 18], [9, 8, 9]]  
+                        LeftDepth: [[100, 100, 100], [18, 19, 21], [8, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [18, 17, 18], [6, 6, 8]]  
+                        DownDepth: [[6, 4, 4], [6, 3, 3], [5, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 11.000000000000002
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = rocky terrain, scattered white rocks; low green shrubs cover the ground; winding dirt path in the mid-ground; trees in the distant background  
+                        Left = blue and yellow tent, dome-shaped; two small figures near the tent; rocky terrain with scattered white rocks; low green shrubs; dirt path in the background  
+                        Right = rocky terrain, scattered white rocks; low green shrubs cover the ground; dirt path curving through the mid-ground; trees and a building in the distant background  
+                        Down = overhead view of rocky terrain; numerous white rocks of various sizes; low green shrubs densely covering the ground; shadows cast by rocks  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [20, 18, 19], [9, 8, 9]]  
+                        LeftDepth: [[100, 100, 100], [16, 16, 20], [9, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [12, 9, 18], [5, 4, 5]]  
+                        DownDepth: [[6, 6, 5], [6, 5, 4], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 16.000000000000004
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = dirt path, winding; rocks, scattered; trees, small and sparse; field, covered in low green vegetation; sky, overcast  
+                        Left = blue and yellow tent, partially set up; rocks, scattered; field, covered in low green vegetation; trees, small and sparse in the background  
+                        Right = dirt path, winding; rocks, scattered; trees, small and sparse; field, covered in low green vegetation; building, distant and white on the left  
+                        Down = rocks, numerous and irregularly shaped; plants, low and green; ground, sandy with patches of vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 18, 21], [9, 8, 8]]  
+                        LeftDepth: [[100, 100, 100], [15, 19, 18], [9, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [19, 11, 19], [6, 6, 5]]  
+                        DownDepth: [[7, 6, 7], [6, 5, 6], [7, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 21.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = curved dirt path; cluster of rocks; several trees in the distance; overcast sky  
+                        Left = blue and yellow tent; low-lying green vegetation; rocks in the foreground; trees in the background  
+                        Right = dirt path extending into the distance; rocks lining the path; trees and a building in the far background; hazy sky  
+                        Down = dense cluster of gray rocks; interspersed green vegetation; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 16, 16], [7, 7, 8]]  
+                        LeftDepth: [[100, 100, 100], [15, 17, 15], [8, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [14, 9, 9], [7, 7, 7]]  
+                        DownDepth: [[6, 5, 5], [5, 5, 5], [6, 5, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 23.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = dirt path, winding; trees, scattered; rocks, small and light-colored; bushes, low and dense; sky, overcast  
+                        Left = blue tent, partially visible; dirt path, winding; trees, scattered in the distance; rocks, small and light-colored; bushes, low and dense; sky, overcast  
+                        Right = dirt path, winding; rocks, small and light-colored; bushes, low and dense; trees, scattered; building, distant and stone; sky, overcast  
+                        Down = rocks, large and irregularly shaped; grass, sparse and light green; shadows cast by rocks; ground, dry and earthy  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [14, 16, 17], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [16, 16, 13], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [15, 13, 9], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-187.03, 125.93, -6.0), -70.12],
+    [(-187.03, 125.93, -6.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 28.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = dirt road, winding; several trees, medium-sized, leafy; low stone wall along the road; field of green and white plants in the foreground  
+                        Left = field of green and white plants; dirt path through the center; trees in the distant background; hazy sky above  
+                        Right = dirt road, curving to the left; low stone wall along the right side; trees in the midground; a tall cylindrical structure and a building in the far background; field of green and white plants in the foreground  
+                        Down = rocks, large and gray, scattered among green and white plants; dirt path visible between the rocks; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 15, 16], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [18, 11, 12], [8, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [15, 14, 14], [7, 7, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 5, 5], [6, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -10.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-187.03, 125.93, -6.0), -70.12],
+    [(-185.33, 121.23, -6.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 33.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = curved dirt path; low wooden fence; several green trees; field of flowering plants in the foreground; rocky area in the midground  
+                        Left = field of dense, low-lying green and white plants; scattered small bushes; line of trees in the distant background under a hazy sky  
+                        Right = dirt path curving leftward; cluster of green trees; large gray rock formation in the midground; water tower visible in the far left background  
+                        Down = overhead view of dense green and white flowering plants; ground appears wet or muddy; partial view of a light-colored surface in the bottom right corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [15, 13, 15], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [12, 11, 16], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [13, 12, 15], [7, 6, 7]]  
+                        DownDepth: [[5, 5, 5], [5, 4, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-187.03, 125.93, -6.0), -70.12],
+    [(-185.33, 121.23, -6.0), -70.12],
+    [(-183.63, 116.53, -6.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 38.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = dirt road, winding; wooden fence, short and rustic; several trees, medium-sized with green foliage; rocky area, light-colored; fields of low-lying green plants in the foreground  
+                        Left = fields of dense, low-lying green vegetation; scattered trees in the background; hazy sky, overcast; no visible structures or paths  
+                        Right = dirt road, curving to the left; wooden fence, short and weathered; rocky area, light-colored; small building, white and cylindrical, possibly a silo; trees in the background under a pale sky  
+                        Down = close-up view of dense, low-lying green vegetation; ground appears dry and brown; shadows cast by unseen objects; no distinct structures or pathways visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 30], [13, 13, 15], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [12, 14, 16], [7, 6, 7]]  
+                        RightDepth: [[100, 100, 100], [13, 12, 15], [7, 6, 7]]  
+                        DownDepth: [[5, 4, 5], [5, 4, 5], [5, 5, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -6.0), -70.12],
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-187.03, 125.93, -6.0), -70.12],
+    [(-185.33, 121.23, -6.0), -70.12],
+    [(-183.63, 116.53, -6.0), -70.12],
+    [(-181.93, 111.82, -6.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 43.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = dirt road, winding, tire tracks; wooden fence, short, linear; large rocks, piled; trees, scattered, green; sky, overcast; scene is rural and open  
+                        Left = field, dense with light-green plants; rows of crops visible; trees in the distant background; bright, hazy sky; overall view is expansive and flat  
+                        Right = dirt road, curving leftward; wooden fence, short, running alongside; large rocks, piled on the right; trees, scattered, green; building, small, white, in the far left background; field of light-green plants in the foreground  
+                        Down = aerial view of a field, densely packed with light-green plants; shadows cast by unseen objects create patterns on the ground; texture appears uniform and closely cropped  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 24], [15, 15, 15], [5, 6, 6]]  
+                        LeftDepth: [[100, 100, 100], [15, 14, 15], [7, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [15, 12, 13], [6, 6, 7]]  
+                        DownDepth: [[5, 4, 5], [4, 4, 5], [5, 4, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-181.03, 138.73, -8.0), -70.12],
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-187.03, 125.93, -6.0), -70.12],
+    [(-185.33, 121.23, -6.0), -70.12],
+    [(-183.63, 116.53, -6.0), -70.12],
+    [(-181.93, 111.82, -6.0), -70.12],
+    [(-180.23, 107.12, -6.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 48.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = dirt road, winding, tire tracks; wooden fence, light-colored, runs parallel to the road; rocky embankment, large, behind the fence; trees, green, scattered in the background  
+                        Left = field, covered in low-lying white flowers; dirt road, curving from right to left; trees, green, line the horizon in the distance  
+                        Right = dirt road, winding, tire tracks; wooden fence, light-colored, borders the left side of the road; rocky embankment, large, behind the fence; trees, green, scattered in the background  
+                        Down = close-up of dirt road with deep tire tracks; low-lying green and white plants growing along the edge of the road  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 21, 19], [13, 13, 14], [7, 7, 7]]  
+                        LeftDepth: [[100, 100, 100], [15, 13, 15], [6, 5, 6]]  
+                        RightDepth: [[21, 100, 100], [13, 13, 14], [7, 6, 6]]  
+                        DownDepth: [[5, 4, 5], [4, 4, 4], [4, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-185.73, 137.03, -8.0), -70.12],
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-187.03, 125.93, -6.0), -70.12],
+    [(-185.33, 121.23, -6.0), -70.12],
+    [(-183.63, 116.53, -6.0), -70.12],
+    [(-181.93, 111.82, -6.0), -70.12],
+    [(-180.23, 107.12, -6.0), -70.12],
+    [(-178.53, 102.42, -6.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 53.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = wooden fence, light brown; rocks, large and gray, piled in the midground; trees, green and leafy, scattered in the background  
+                        Left = dirt road, winding and tire-marked; white flowering bushes, dense and low-growing, lining the left side; trees, green and distant, under a hazy sky  
+                        Right = dirt road, extending into the distance; wooden fence, light brown, running along the left side; rocks, large and gray, to the left of the fence; trees, green and leafy, in the background  
+                        Down = tire tracks, deep and parallel, on a dirt surface; wooden fence, light brown, visible at the top right corner; small plants, green and sparse, growing near the fence  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 16, 16], [13, 11, 12], [6, 5, 7]]  
+                        LeftDepth: [[100, 100, 100], [12, 12, 15], [6, 6, 7]]  
+                        RightDepth: [[15, 100, 100], [13, 11, 13], [6, 6, 6]]  
+                        DownDepth: [[5, 5, 5], [5, 4, 5], [5, 4, 5]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-190.44, 135.33, -8.0), -70.12],
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-187.03, 125.93, -6.0), -70.12],
+    [(-185.33, 121.23, -6.0), -70.12],
+    [(-183.63, 116.53, -6.0), -70.12],
+    [(-181.93, 111.82, -6.0), -70.12],
+    [(-180.23, 107.12, -6.0), -70.12],
+    [(-178.53, 102.42, -6.0), -70.12],
+    [(-176.83, 97.72, -6.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 58.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = wooden fence, light brown, linear; fence runs along a dirt path in the foreground; rocky hillside with green trees in the background  
+                        Left = dirt road, deeply rutted; road curves to the right; white flowering bushes line the left side; trees in the distant background  
+                        Right = wooden fence, light brown, linear; fence borders a dirt road that curves to the right; rocky hillside with green trees on the left; clear sky above  
+                        Down = close-up of textured ground, light beige with dark streaks and patches of green moss; tire tracks visible across the surface  
+
+                        # Depth Information  
+                        FrontDepth: [[36, 14, 15], [5, 4, 7], [4, 3, 4]]  
+                        LeftDepth: [[100, 100, 100], [6, 6, 7], [4, 3, 4]]  
+                        RightDepth: [[16, 100, 100], [5, 7, 9], [4, 4, 4]]  
+                        DownDepth: [[3, 2, 3], [2, 2, 2], [2, 2, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-188.74, 130.63, -8.0), -70.12],
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-187.03, 125.93, -6.0), -70.12],
+    [(-185.33, 121.23, -6.0), -70.12],
+    [(-183.63, 116.53, -6.0), -70.12],
+    [(-181.93, 111.82, -6.0), -70.12],
+    [(-180.23, 107.12, -6.0), -70.12],
+    [(-178.53, 102.42, -6.0), -70.12],
+    [(-176.83, 97.72, -6.0), -70.12],
+    [(-176.83, 97.72, -4.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 60.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = wooden fence, light brown, horizontal; fence runs along the foreground; rocky hill with green trees in the background  
+                        Left = dirt road, curved, tire tracks; road is in the foreground; field of white flowers and trees in the background  
+                        Right = dirt road, curved, tire tracks; road extends into the distance; wooden fence on the left, rocky hill with green trees in the background  
+                        Down = tire tracks, deep, parallel; tracks are in the foreground; soil and sparse vegetation visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 14, 15], [10, 9, 9], [5, 5, 5]]  
+                        LeftDepth: [[100, 100, 100], [10, 10, 11], [5, 5, 5]]  
+                        RightDepth: [[16, 100, 100], [11, 9, 12], [5, 5, 5]]  
+                        DownDepth: [[4, 4, 4], [4, 4, 4], [4, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-188.74, 130.63, -6.0), -70.12],
+    [(-187.03, 125.93, -6.0), -70.12],
+    [(-185.33, 121.23, -6.0), -70.12],
+    [(-183.63, 116.53, -6.0), -70.12],
+    [(-181.93, 111.82, -6.0), -70.12],
+    [(-180.23, 107.12, -6.0), -70.12],
+    [(-178.53, 102.42, -6.0), -70.12],
+    [(-176.83, 97.72, -6.0), -70.12],
+    [(-176.83, 97.72, -4.0), -70.12],
+    [(-176.83, 97.72, -6.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 62.00000000000001
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = wooden fence, light brown, X-shaped posts; fence runs along a dirt path; large rocks and green trees in the background  
+                        Left = dirt road, deeply rutted with tire tracks; field of white flowers to the left; trees in the distant background  
+                        Right = wooden fence, light brown, X-shaped posts; fence lines the left side of a dirt road; large rocks and green trees in the background  
+                        Down = close-up of a textured surface, light beige with dark streaks and small green patches  
+
+                        # Depth Information  
+                        FrontDepth: [[38, 14, 15], [5, 4, 7], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [6, 6, 8], [4, 3, 4]]  
+                        RightDepth: [[16, 33, 100], [5, 6, 8], [4, 4, 4]]  
+                        DownDepth: [[3, 2, 3], [2, 2, 2], [2, 2, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-187.03, 125.93, -6.0), -70.12],
+    [(-185.33, 121.23, -6.0), -70.12],
+    [(-183.63, 116.53, -6.0), -70.12],
+    [(-181.93, 111.82, -6.0), -70.12],
+    [(-180.23, 107.12, -6.0), -70.12],
+    [(-178.53, 102.42, -6.0), -70.12],
+    [(-176.83, 97.72, -6.0), -70.12],
+    [(-176.83, 97.72, -4.0), -70.12],
+    [(-176.83, 97.72, -6.0), -70.12],
+    [(-176.83, 97.72, -4.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 64.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Bookbag,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-232, -131]  
+                        **Y Range**: [min_y, max_y] = [88, 189]
+
+                        # RGB Captions
+                        Front = wooden fence, long, light brown; fence runs horizontally across the midground; trees with green leaves in the background  
+                        Left = dirt road, muddy, tire tracks; white flowering plants along the left side; trees in the distant background  
+                        Right = wooden fence, long, light brown; fence curves slightly to the right; large tree with green leaves on the left; dirt road extending into the distance  
+                        Down = ground surface, rocky, mixed colors of beige, gray, and green; close-up view with no distinct objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[34, 15, 15], [2, 1, 1], [0, 0, 0]]  
+                        LeftDepth: [[100, 100, 100], [1, 1, 2], [0, 0, 0]]  
+                        RightDepth: [[17, 35, 100], [2, 2, 2], [0, 0, 0]]  
+                        DownDepth: [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-185.33, 121.23, -6.0), -70.12],
+    [(-183.63, 116.53, -6.0), -70.12],
+    [(-181.93, 111.82, -6.0), -70.12],
+    [(-180.23, 107.12, -6.0), -70.12],
+    [(-178.53, 102.42, -6.0), -70.12],
+    [(-176.83, 97.72, -6.0), -70.12],
+    [(-176.83, 97.72, -4.0), -70.12],
+    [(-176.83, 97.72, -6.0), -70.12],
+    [(-176.83, 97.72, -4.0), -70.12],
+    [(-176.83, 97.72, -2.0), -70.12],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 66.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Bookbag**, described as:  Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

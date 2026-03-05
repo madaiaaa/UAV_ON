@@ -1,0 +1,35 @@
+{
+  "episode_id": "24",
+  "start_pose": {
+    "start_position": [
+      -170.2622366355749,
+      -267.11562219719684,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7912375893219166,
+      -0.6115088529563918
+    ]
+  },
+  "info": {
+    "geodesic_distance": 100,
+    "euclidean_distance": 64.3636
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Chair",
+  "object_name": "SM_Building_Int_Reqular_Chair_48",
+  "pose": [
+    [
+      -123.29273986816406,
+      -224.5927276611328,
+      4.328725337982178
+    ]
+  ],
+  "size": " small(1*0.75=0.75 squares)",
+  "description": " Geometric upright form, wooden texture with tall slatted backrest and straight legs, minimalistic design without armrests, intended for single-person seating.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

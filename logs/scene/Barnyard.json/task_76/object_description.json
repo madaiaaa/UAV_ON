@@ -1,0 +1,35 @@
+{
+  "episode_id": "76",
+  "start_pose": {
+    "start_position": [
+      -162.49030729668283,
+      191.427918087009,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7595310331606285,
+      -0.6504710675087312
+    ]
+  },
+  "info": {
+    "geodesic_distance": 89,
+    "euclidean_distance": 61.87
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Lantern",
+  "object_name": "SM_Lantern_01a_51",
+  "pose": [
+    [
+      -200.39273071289062,
+      142.8072509765625,
+      -1.7712745666503906
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 square)",
+  "description": " Geometric cylindrical form, red metal housing with a transparent glass core, metal handle on top and visible wick mechanism, used for portable lighting.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

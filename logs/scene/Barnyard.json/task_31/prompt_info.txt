@@ -1,0 +1,1736 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = trees, leafy, medium-sized; scattered across a grassy slope; rocks and shrubs interspersed  
+                        Left = road, paved, straight; two utility poles; trees in the distance under a hazy sky  
+                        Right = buildings, rustic, wooden; road running through a rural area; vehicles parked near structures; fields of crops visible  
+                        Down = structure, wooden, slatted roof; large pile of rocks to the left; small plants nearby; top-down view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [29, 29, 55], [23, 23, 25]]  
+                        LeftDepth: [[100, 100, 100], [35, 45, 31], [25, 24, 23]]  
+                        RightDepth: [[100, 100, 100], [60, 35, 52], [23, 23, 22]]  
+                        DownDepth: [[18, 18, 18], [18, 18, 18], [20, 20, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.04, -211.9, -10.0), 37.05],
+    [(28.04, -211.9, -10.0), 37.05],
+    [(28.04, -211.9, -10.0), 37.05],
+    [(28.04, -211.9, -10.0), 37.05],
+    [(28.04, -211.9, -10.0), 37.05],
+    [(28.04, -211.9, -10.0), 37.05],
+    [(28.04, -211.9, -10.0), 37.05],
+    [(28.04, -211.9, -10.0), 37.05],
+    [(28.04, -211.9, -10.0), 37.05],
+    [(28.04, -211.9, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = trees, leafy green, scattered; rocky ground with sparse vegetation; distant structure on the right  
+                        Left = road, paved, winding; utility poles with wires; trees and shrubs along roadside; ocean horizon in background  
+                        Right = farm buildings, wooden structures; silos, cylindrical metal; vehicles parked near road; fields of crops; sun in sky  
+                        Down = wooden building roof, weathered, slanted; rocky terrain with patches of grass; path leading to building; overhead view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 27, 45], [22, 22, 24]]  
+                        LeftDepth: [[100, 100, 100], [40, 55, 30], [27, 25, 24]]  
+                        RightDepth: [[100, 100, 100], [53, 31, 30], [20, 20, 20]]  
+                        DownDepth: [[18, 17, 18], [17, 17, 17], [20, 20, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.04, -211.9, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = trees, leafy, medium-sized; scattered across a rocky hillside; no visible movement  
+                        Left = road, paved, straight; two utility poles with wires; trees in the midground; ocean horizon in the distance  
+                        Right = farm buildings, wooden, rustic; silos, metal, cylindrical; vehicles, parked; crops, green, in fields; road running through the scene  
+                        Down = rocks, gray, numerous; grass, sparse and dry; wooden structure, slanted roof, partially visible; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [24, 24, 44], [21, 21, 23]]  
+                        LeftDepth: [[100, 100, 100], [45, 46, 28], [27, 24, 24]]  
+                        RightDepth: [[100, 100, 100], [54, 34, 31], [22, 20, 22]]  
+                        DownDepth: [[17, 17, 20], [17, 16, 17], [20, 19, 20]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.04, -211.9, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000014
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = trees, leafy, medium-sized; scattered across a rocky, grassy terrain; sky is overcast  
+                        Left = road, paved; trees, leafy, medium-sized; ocean in the distant background; road curves to the left  
+                        Right = farm buildings, wooden; fields of crops; vehicles parked near structures; sun high in the sky  
+                        Down = rocks, gray and jagged; small plants, sparse; wooden structure with a corrugated roof; overhead view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 22, 43], [20, 20, 22]]  
+                        LeftDepth: [[100, 100, 100], [51, 30, 26], [25, 23, 24]]  
+                        RightDepth: [[100, 100, 100], [53, 37, 33], [22, 20, 20]]  
+                        DownDepth: [[17, 16, 18], [16, 15, 17], [19, 19, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.04, -211.9, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000021
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = trees, leafy, medium-sized; scattered across a rocky hillside; no visible movement  
+                        Left = road, paved; stretches horizontally; bordered by trees and utility poles; ocean in the distant background  
+                        Right = farm buildings, rustic; barns and silos; dirt road running through center; crops growing in fields; sun high in the sky  
+                        Down = rocks, large and gray; cover most of the ground; small patches of grass; wooden structure with corrugated roof in the bottom right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 22, 42], [18, 20, 21]]  
+                        LeftDepth: [[100, 100, 100], [56, 25, 25], [25, 23, 23]]  
+                        RightDepth: [[100, 100, 100], [48, 40, 35], [26, 20, 20]]  
+                        DownDepth: [[16, 16, 18], [16, 15, 17], [18, 18, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.04, -211.9, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.00000000000003
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = trees, leafy, medium-sized; scattered across a rocky hillside; ocean visible in the distant background  
+                        Left = trees, leafy, medium-sized; aligned along a road with streetlights; ocean and horizon line in the far distance  
+                        Right = farm buildings, rustic wooden structures; fields of crops; barns, silos, and vehicles; road running through the scene; sun high in the sky  
+                        Down = rocks, gray and jagged; patches of low-lying green vegetation; wooden structure with a corrugated roof in the bottom right corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 29, 42], [16, 18, 21]]  
+                        LeftDepth: [[100, 100, 100], [61, 24, 26], [24, 23, 21]]  
+                        RightDepth: [[100, 100, 100], [45, 43, 36], [25, 21, 21]]  
+                        DownDepth: [[16, 16, 17], [16, 15, 17], [18, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.04, -211.9, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000036
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = five trees, medium-sized, leafy; trees are scattered across a rocky hillside; sky is overcast  
+                        Left = one large tree, dense foliage, prominent in the foreground; road with utility poles stretches into the distance; ocean visible on the horizon  
+                        Right = windmill, tall and traditional; barns, wooden structures with sloped roofs; field of crops; vehicles parked along a road; sun high in the hazy sky  
+                        Down = rooftop, corrugated metal, brownish; cluster of rocks, light gray, irregularly shaped; patches of low-lying vegetation; top-down aerial view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 34, 39], [13, 18, 20]]  
+                        LeftDepth: [[100, 100, 100], [60, 24, 14], [24, 22, 14]]  
+                        RightDepth: [[100, 100, 100], [43, 45, 38], [24, 22, 22]]  
+                        DownDepth: [[15, 15, 16], [15, 15, 16], [17, 17, 19]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.04, -211.9, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000043
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = small trees, green foliage; scattered across a rocky hillside; no visible movement  
+                        Left = large tree, dense green canopy; positioned on the right side of a grassy area; road and distant structures in the background  
+                        Right = farm buildings, rustic wooden structures; one with a corrugated metal roof; windmill to the left; crops growing in a field; road running horizontally; sun high in the sky  
+                        Down = rocks, light gray; interspersed with sparse vegetation; small building with a sloped roof in the bottom right corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [12, 31, 39], [11, 16, 17]]  
+                        LeftDepth: [[100, 100, 100], [60, 24, 11], [24, 21, 11]]  
+                        RightDepth: [[100, 100, 100], [40, 48, 40], [23, 23, 23]]  
+                        DownDepth: [[13, 15, 16], [15, 14, 16], [17, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.04, -211.9, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = five trees, medium-sized, leafy; trees are scattered across a rocky hillside; sky is overcast  
+                        Left = large tree, dense foliage, prominent in the foreground; smaller trees and rocks in the midground; ocean and road visible in the background  
+                        Right = windmill, tall, metal; several small wooden buildings; fields of crops; road running horizontally; sun high in the sky  
+                        Down = rocks, gray, numerous; patches of low-lying green vegetation; corner of a wooden structure with a corrugated roof in the bottom right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [32, 34, 36], [9, 15, 20]]  
+                        LeftDepth: [[100, 100, 100], [59, 11, 9], [23, 10, 8]]  
+                        RightDepth: [[100, 100, 100], [38, 49, 43], [20, 22, 24]]  
+                        DownDepth: [[10, 14, 15], [12, 14, 15], [16, 16, 18]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.04, -211.9, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+    [(59.96, -187.8, -10.0), 37.05],
+    [(59.96, -187.8, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000006
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = five trees, medium-sized, leafy; trees are spaced across a rocky, grassy foreground; sky is overcast  
+                        Left = single large tree, dense foliage, light green leaves; tree dominates the foreground; background shows a road and distant hills  
+                        Right = windmill, tall, metal; several small buildings with corrugated roofs; a field of white flowers in the center; road runs horizontally through the scene  
+                        Down = overhead view of a patchy landscape; light green vegetation mixed with gray rocks; sunlight casts shadows on the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [33, 33, 33], [11, 16, 19]]  
+                        LeftDepth: [[100, 100, 100], [25, 9, 9], [22, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [36, 51, 46], [19, 22, 25]]  
+                        DownDepth: [[10, 12, 13], [9, 14, 15], [16, 15, 17]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(28.04, -211.9, -10.0), 37.05],
+    [(32.03, -208.89, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+    [(59.96, -187.8, -10.0), 37.05],
+    [(63.96, -184.79, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.000000000000064
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = five trees, medium-sized, leafy; trees are in a line across the midground; rocky ground with sparse vegetation  
+                        Left = single large tree, dense foliage; tree is in the foreground; open landscape with road and water in the distance  
+                        Right = windmill, wooden structure; several small buildings, rustic; dirt road; sun in the sky; field of crops in the center  
+                        Down = mixed vegetation, low-lying plants and shrubs; rocky terrain in the foreground; sandy area in the center; elevated perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [30, 30, 30], [15, 17, 18]]  
+                        LeftDepth: [[100, 100, 100], [25, 8, 20], [9, 6, 8]]  
+                        RightDepth: [[100, 100, 100], [34, 50, 48], [18, 19, 25]]  
+                        DownDepth: [[9, 11, 13], [8, 11, 12], [11, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(32.03, -208.89, -10.0), 37.05],
+    [(36.02, -205.88, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+    [(59.96, -187.8, -10.0), 37.05],
+    [(63.96, -184.79, -10.0), 37.05],
+    [(67.95, -181.77, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.00000000000007
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = five trees, medium-sized, leafy; rocks scattered around the base of trees; trees in a line across the midground  
+                        Left = large bush, dense foliage; road and ocean visible in the background; power lines to the left  
+                        Right = windmill, tall, wooden; several small buildings with sloped roofs; field of crops in the center; road running through the scene  
+                        Down = mixed vegetation, including bushes and grasses; rocky patches interspersed; aerial view showing varied terrain  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 27, 27], [15, 17, 18]]  
+                        LeftDepth: [[100, 100, 100], [9, 9, 22], [7, 7, 10]]  
+                        RightDepth: [[100, 100, 100], [33, 36, 51], [20, 17, 23]]  
+                        DownDepth: [[12, 12, 15], [8, 10, 11], [10, 15, 16]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(36.02, -205.88, -10.0), 37.05],
+    [(40.01, -202.87, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+    [(59.96, -187.8, -10.0), 37.05],
+    [(63.96, -184.79, -10.0), 37.05],
+    [(67.95, -181.77, -10.0), 37.05],
+    [(71.94, -178.76, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000008
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = five trees, medium-sized, leafy; scattered across a rocky, grassy terrain; sky is overcast  
+                        Left = large bush, dense foliage; located in the foreground on a rocky slope; road and ocean visible in the background  
+                        Right = windmill, tall, wooden; positioned near a cluster of small buildings; sun is high in the hazy sky  
+                        Down = mixed vegetation, including shrubs and small plants; interspersed with rocks; aerial view of a natural landscape  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [24, 24, 24], [16, 16, 18]]  
+                        LeftDepth: [[100, 100, 100], [11, 12, 26], [8, 9, 12]]  
+                        RightDepth: [[100, 100, 100], [31, 33, 53], [20, 17, 23]]  
+                        DownDepth: [[12, 13, 14], [9, 11, 12], [9, 11, 12]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(40.01, -202.87, -10.0), 37.05],
+    [(44.0, -199.85, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+    [(59.96, -187.8, -10.0), 37.05],
+    [(63.96, -184.79, -10.0), 37.05],
+    [(67.95, -181.77, -10.0), 37.05],
+    [(71.94, -178.76, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 37.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.000000000000085
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = five trees, leafy green, medium-sized; scattered across a rocky, grassy terrain; positioned in the midground with a hazy sky above  
+                        Left = large bush, dense green foliage; situated in the foreground; partially obscuring a road and distant landscape  
+                        Right = several buildings, rustic style; one with a dark roof; surrounded by fields of white flowers; a road runs alongside; sun visible in the upper right sky  
+                        Down = dense cluster of small bushes, light green leaves; covering a sandy area; rocks visible at the bottom edge; viewed from an overhead angle  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [25, 24, 26], [16, 16, 16]]  
+                        LeftDepth: [[100, 100, 100], [11, 10, 18], [8, 8, 11]]  
+                        RightDepth: [[100, 100, 100], [24, 31, 51], [18, 17, 18]]  
+                        DownDepth: [[11, 11, 13], [9, 11, 13], [11, 11, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(44.0, -199.85, -10.0), 37.05],
+    [(47.99, -196.84, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+    [(59.96, -187.8, -10.0), 37.05],
+    [(63.96, -184.79, -10.0), 37.05],
+    [(67.95, -181.77, -10.0), 37.05],
+    [(71.94, -178.76, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 22.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 60.000000000000085
+                        AvgHeadingChange = 1.15
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = small trees, light green leaves; rocks, gray and jagged; vegetation, low-lying and sparse; scene is a natural landscape with a focus on the foreground  
+                        Left = road, paved and straight; trees, light green foliage; ocean, visible in the distant background; sky, overcast with white clouds; scene shows a coastal landscape  
+                        Right = trees, light green leaves; small wooden building, thatched roof; windmill, tall and slender; field, crops growing in rows; path, winding through the center; scene depicts a rural countryside  
+                        Down = vegetation, low-lying and light green; rocks, gray and scattered; sandy ground, light brown; scene is an aerial view of a dry, rocky terrain with sparse plant life  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [31, 24, 24], [13, 16, 17]]  
+                        LeftDepth: [[100, 100, 100], [62, 10, 19], [9, 8, 9]]  
+                        RightDepth: [[100, 100, 100], [24, 27, 35], [18, 18, 19]]  
+                        DownDepth: [[9, 11, 14], [9, 11, 13], [11, 11, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(47.99, -196.84, -10.0), 37.05],
+    [(51.98, -193.83, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+    [(59.96, -187.8, -10.0), 37.05],
+    [(63.96, -184.79, -10.0), 37.05],
+    [(67.95, -181.77, -10.0), 37.05],
+    [(71.94, -178.76, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 22.05],
+    [(75.93, -175.75, -10.0), 7.05],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 60.000000000000085
+                        AvgHeadingChange = 2.14
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = several trees, medium-sized, leafy; scattered rocks on ground; ocean visible in distant background  
+                        Left = road, paved, winding; trees and shrubs along roadside; ocean and sky in distant background  
+                        Right = group of trees, varying sizes, leafy; small structures with thatched roofs; dirt path leading through vegetation  
+                        Down = dense patch of low-lying plants, light green; rocky surface partially visible; sandy area in upper section  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 24, 24], [12, 13, 16]]  
+                        LeftDepth: [[100, 100, 100], [56, 9, 10], [21, 8, 8]]  
+                        RightDepth: [[100, 100, 100], [24, 24, 31], [18, 18, 19]]  
+                        DownDepth: [[9, 11, 14], [11, 11, 13], [15, 11, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(51.98, -193.83, -10.0), 37.05],
+    [(55.97, -190.81, -10.0), 37.05],
+    [(59.96, -187.8, -10.0), 37.05],
+    [(63.96, -184.79, -10.0), 37.05],
+    [(67.95, -181.77, -10.0), 37.05],
+    [(71.94, -178.76, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 22.05],
+    [(75.93, -175.75, -10.0), 7.05],
+    [(75.93, -175.75, -10.0), -7.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 60.000000000000085
+                        AvgHeadingChange = 3.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = trees, green foliage; rocks, gray and white; ocean in the distant background; trees are in the foreground and midground  
+                        Left = road, paved; trees, green foliage; ocean in the distant background; road runs horizontally across the midground; trees line both sides of the road  
+                        Right = trees, green foliage; small structure, wooden with a sloped roof; ocean in the distant background; trees are scattered throughout the midground and foreground  
+                        Down = vegetation, light green and brown; rocky ground, gray and white; vegetation covers most of the foreground; rocky ground is visible at the bottom  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 20, 24], [9, 12, 16]]  
+                        LeftDepth: [[100, 100, 100], [53, 13, 10], [22, 9, 8]]  
+                        RightDepth: [[100, 100, 100], [24, 24, 32], [17, 16, 18]]  
+                        DownDepth: [[9, 11, 13], [11, 11, 13], [15, 11, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(55.97, -190.81, -10.0), 37.05],
+    [(59.96, -187.8, -10.0), 37.05],
+    [(63.96, -184.79, -10.0), 37.05],
+    [(67.95, -181.77, -10.0), 37.05],
+    [(71.94, -178.76, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 22.05],
+    [(75.93, -175.75, -10.0), 7.05],
+    [(75.93, -175.75, -10.0), -7.95],
+    [(75.93, -175.75, -10.0), -22.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 60.000000000000085
+                        AvgHeadingChange = 3.75
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = leafy green trees, scattered; rocky ground with sparse vegetation; ocean visible in the distant background  
+                        Left = wooden barn with corrugated metal roof, white spherical tanks nearby; road running horizontally; trees and hills in the midground; ocean in the far distance  
+                        Right = five leafy green trees, evenly spaced; low-lying shrubs and rocks on uneven terrain; small structure partially visible on the right  
+                        Down = dense patch of light green foliage; dry, cracked earth to the right; rocks and sparse vegetation in the foreground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [12, 18, 25], [8, 9, 13]]  
+                        LeftDepth: [[100, 100, 100], [53, 53, 11], [22, 20, 8]]  
+                        RightDepth: [[100, 100, 100], [24, 24, 24], [17, 16, 18]]  
+                        DownDepth: [[8, 11, 12], [12, 11, 13], [13, 11, 15]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(59.96, -187.8, -10.0), 37.05],
+    [(63.96, -184.79, -10.0), 37.05],
+    [(67.95, -181.77, -10.0), 37.05],
+    [(71.94, -178.76, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 22.05],
+    [(75.93, -175.75, -10.0), 7.05],
+    [(75.93, -175.75, -10.0), -7.95],
+    [(75.93, -175.75, -10.0), -22.95],
+    [(75.93, -175.75, -10.0), -37.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 60.000000000000085
+                        AvgHeadingChange = 4.41
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = road, paved; trees, green and leafy; rocks, scattered; ocean in the distant background  
+                        Left = building, wooden with a corrugated roof; trees, green; rocks, scattered; road in the midground  
+                        Right = trees, evenly spaced; ground covered with low-lying vegetation; rocks, scattered  
+                        Down = vegetation, dense and low-lying; rocks, scattered; sandy area in the center  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [10, 11, 31], [8, 9, 13]]  
+                        LeftDepth: [[100, 100, 100], [42, 45, 61], [22, 20, 10]]  
+                        RightDepth: [[100, 100, 100], [24, 24, 24], [16, 16, 18]]  
+                        DownDepth: [[9, 9, 11], [11, 11, 13], [12, 12, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(63.96, -184.79, -10.0), 37.05],
+    [(67.95, -181.77, -10.0), 37.05],
+    [(71.94, -178.76, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 22.05],
+    [(75.93, -175.75, -10.0), 7.05],
+    [(75.93, -175.75, -10.0), -7.95],
+    [(75.93, -175.75, -10.0), -22.95],
+    [(75.93, -175.75, -10.0), -37.95],
+    [(75.93, -175.75, -10.0), -52.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 60.000000000000085
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = large bush, green leaves, rocky ground; positioned in the foreground; ocean and road visible in the background  
+                        Left = wooden cabin, weathered roof; several barrels and containers; road and trees in the midground; hazy sky above  
+                        Right = five small trees, light green foliage; scattered rocks and dry grass; rolling hills in the distant background  
+                        Down = dense cluster of small bushes and shrubs; rocky terrain with patches of sand; sunlight casting shadows across the scene  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [11, 10, 18], [8, 8, 10]]  
+                        LeftDepth: [[100, 100, 100], [42, 45, 55], [23, 21, 21]]  
+                        RightDepth: [[100, 100, 100], [25, 24, 27], [16, 16, 17]]  
+                        DownDepth: [[11, 9, 11], [11, 11, 11], [15, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(67.95, -181.77, -10.0), 37.05],
+    [(71.94, -178.76, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 22.05],
+    [(75.93, -175.75, -10.0), 7.05],
+    [(75.93, -175.75, -10.0), -7.95],
+    [(75.93, -175.75, -10.0), -22.95],
+    [(75.93, -175.75, -10.0), -37.95],
+    [(75.93, -175.75, -10.0), -52.95],
+    [(75.93, -175.75, -10.0), -67.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 60.000000000000085
+                        AvgHeadingChange = 5.53
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = road, paved; bushes, green and leafy, medium-sized; rocks, scattered; ocean, visible in the distant background  
+                        Left = wooden house, weathered roof; water tank, white and cylindrical; vehicles, parked; trees, sparse; rocky ground; ocean, visible in the far distance  
+                        Right = trees, light-green foliage, five total; rocky terrain, scattered stones; grass, patchy; ocean, faintly visible on the horizon  
+                        Down = vegetation, dense and low-lying; rocks, gray and irregular; sandy patches; overexposed sky, bright white; no distinct structures or objects  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [10, 12, 20], [9, 9, 13]]  
+                        LeftDepth: [[100, 100, 100], [44, 45, 56], [22, 20, 20]]  
+                        RightDepth: [[100, 100, 100], [22, 21, 24], [16, 16, 16]]  
+                        DownDepth: [[12, 11, 11], [11, 11, 12], [15, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(71.94, -178.76, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 22.05],
+    [(75.93, -175.75, -10.0), 7.05],
+    [(75.93, -175.75, -10.0), -7.95],
+    [(75.93, -175.75, -10.0), -22.95],
+    [(75.93, -175.75, -10.0), -37.95],
+    [(75.93, -175.75, -10.0), -52.95],
+    [(75.93, -175.75, -10.0), -67.95],
+    [(75.93, -175.75, -8.0), -67.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 62.000000000000085
+                        AvgHeadingChange = 5.25
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = leafy green bushes, dense and low-lying; rocky terrain with scattered stones; ocean visible in the distant background  
+                        Left = wooden cabin with a corrugated metal roof; two white cylindrical tanks on the roof; dirt road and sparse vegetation in the foreground; ocean in the far distance  
+                        Right = five tall leafy green trees, evenly spaced; rocky ground with patches of grass; ocean horizon visible in the background  
+                        Down = dense cluster of small leafy green plants; rocky and sandy ground; sunlight casting shadows across the scene  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [12, 18, 27], [11, 12, 19]]  
+                        LeftDepth: [[100, 100, 100], [47, 43, 13], [21, 20, 13]]  
+                        RightDepth: [[100, 100, 100], [19, 18, 19], [14, 15, 16]]  
+                        DownDepth: [[12, 11, 11], [12, 11, 13], [15, 13, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(75.93, -175.75, -10.0), 37.05],
+    [(75.93, -175.75, -10.0), 22.05],
+    [(75.93, -175.75, -10.0), 7.05],
+    [(75.93, -175.75, -10.0), -7.95],
+    [(75.93, -175.75, -10.0), -22.95],
+    [(75.93, -175.75, -10.0), -37.95],
+    [(75.93, -175.75, -10.0), -52.95],
+    [(75.93, -175.75, -10.0), -67.95],
+    [(75.93, -175.75, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -67.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 67.00000000000007
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = road, narrow and paved; bushes, green and leafy, in the foreground; ocean, visible in the distant background  
+                        Left = farmhouse, wooden structure with a sloped roof; field, planted with crops; animals, scattered around the yard; sun, bright and high in the sky  
+                        Right = trees, three with light green foliage; rocks, numerous and gray, scattered on the ground; hillside, covered with sparse vegetation  
+                        Down = vegetation, dense and low-lying; rocks, large and gray, interspersed among plants; sandy area, light brown, partially visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 13, 18], [11, 11, 13]]  
+                        LeftDepth: [[100, 100, 100], [55, 44, 59], [18, 20, 21]]  
+                        RightDepth: [[100, 100, 100], [20, 18, 17], [13, 13, 15]]  
+                        DownDepth: [[12, 11, 11], [13, 11, 11], [14, 13, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(75.93, -175.75, -10.0), 22.05],
+    [(75.93, -175.75, -10.0), 7.05],
+    [(75.93, -175.75, -10.0), -7.95],
+    [(75.93, -175.75, -10.0), -22.95],
+    [(75.93, -175.75, -10.0), -37.95],
+    [(75.93, -175.75, -10.0), -52.95],
+    [(75.93, -175.75, -10.0), -67.95],
+    [(75.93, -175.75, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -82.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 67.00000000000007
+                        AvgHeadingChange = 5.45
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = road, winding; trees, scattered; ocean, distant horizon; sky, overcast; rocks, in foreground  
+                        Left = buildings, wooden; field, crops; vehicles, parked; sun, bright; trees, surrounding; rocks, on ground  
+                        Right = trees, three large; rocks, numerous; grass, sparse; hillside, sloped; sky, clear  
+                        Down = vegetation, dense; rocks, scattered; dirt path, winding; hillside, steep; light, diffused  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 13, 19], [13, 11, 13]]  
+                        LeftDepth: [[100, 100, 100], [36, 48, 51], [20, 18, 21]]  
+                        RightDepth: [[100, 100, 20], [26, 18, 17], [16, 13, 15]]  
+                        DownDepth: [[13, 11, 11], [12, 11, 11], [14, 13, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(75.93, -175.75, -10.0), 7.05],
+    [(75.93, -175.75, -10.0), -7.95],
+    [(75.93, -175.75, -10.0), -22.95],
+    [(75.93, -175.75, -10.0), -37.95],
+    [(75.93, -175.75, -10.0), -52.95],
+    [(75.93, -175.75, -10.0), -67.95],
+    [(75.93, -175.75, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -82.95],
+    [(77.8, -180.38, -8.0), -97.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 67.00000000000007
+                        AvgHeadingChange = 5.87
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = large bush, green leaves; rocky terrain with scattered stones; ocean visible in the distant background  
+                        Left = farm buildings, wooden structures; herd of cattle; field of white flowers; sun high in the sky  
+                        Right = group of trees, green foliage; rocky ground with large stones; ocean and cliffs in the far distance  
+                        Down = dense vegetation, small bushes; rocky patches; sandy path winding through the center  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 13, 18], [12, 11, 12]]  
+                        LeftDepth: [[100, 100, 100], [34, 44, 49], [20, 19, 16]]  
+                        RightDepth: [[100, 100, 18], [27, 16, 15], [15, 13, 15]]  
+                        DownDepth: [[12, 10, 11], [13, 10, 12], [14, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(75.93, -175.75, -10.0), -7.95],
+    [(75.93, -175.75, -10.0), -22.95],
+    [(75.93, -175.75, -10.0), -37.95],
+    [(75.93, -175.75, -10.0), -52.95],
+    [(75.93, -175.75, -10.0), -67.95],
+    [(75.93, -175.75, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -82.95],
+    [(77.8, -180.38, -8.0), -97.95],
+    [(77.11, -185.34, -8.0), -97.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 72.00000000000006
+                        AvgHeadingChange = 5.62
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = leafy green bush, medium-sized; bush is in the foreground; ocean and cliffs visible in the distant background  
+                        Left = small wooden hut, thatched roof; field of white flowers; several animals grazing; sun high in the sky; rocky terrain with sparse vegetation  
+                        Right = group of leafy green trees, tall; rocks scattered on the ground; ocean and cliffs in the far distance under a hazy sky  
+                        Down = dense patch of low-lying green shrubs; large gray rocks; sandy or dirt ground; sunlight filtering through the foliage  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [14, 14, 16], [12, 12, 16]]  
+                        LeftDepth: [[100, 100, 100], [34, 45, 46], [18, 17, 16]]  
+                        RightDepth: [[100, 100, 15], [26, 13, 13], [16, 13, 14]]  
+                        DownDepth: [[11, 10, 12], [11, 10, 10], [13, 12, 12]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(75.93, -175.75, -10.0), -22.95],
+    [(75.93, -175.75, -10.0), -37.95],
+    [(75.93, -175.75, -10.0), -52.95],
+    [(75.93, -175.75, -10.0), -67.95],
+    [(75.93, -175.75, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -82.95],
+    [(77.8, -180.38, -8.0), -97.95],
+    [(77.11, -185.34, -8.0), -97.95],
+    [(76.42, -190.29, -8.0), -97.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 77.00000000000004
+                        AvgHeadingChange = 5.4
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = two leafy green bushes, medium-sized; bushes are in the foreground; rocky ground beneath  
+                        Left = several wooden structures, rustic; structures are in the midground; sun is high in the sky above  
+                        Right = single tree with light green leaves, medium height; tree is centered in the frame; rocky terrain below  
+                        Down = cluster of small green shrubs, low-growing; shrubs cover the ground; large gray rocks scattered throughout  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 15, 15], [11, 11, 14]]  
+                        LeftDepth: [[100, 100, 100], [36, 44, 15], [16, 15, 13]]  
+                        RightDepth: [[100, 13, 13], [36, 11, 11], [15, 12, 12]]  
+                        DownDepth: [[9, 10, 11], [9, 8, 8], [11, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(75.93, -175.75, -10.0), -37.95],
+    [(75.93, -175.75, -10.0), -52.95],
+    [(75.93, -175.75, -10.0), -67.95],
+    [(75.93, -175.75, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -82.95],
+    [(77.8, -180.38, -8.0), -97.95],
+    [(77.11, -185.34, -8.0), -97.95],
+    [(76.42, -190.29, -8.0), -97.95],
+    [(76.42, -190.29, -6.0), -97.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 79.00000000000004
+                        AvgHeadingChange = 5.19
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = large tree with green leaves, medium-sized; tree is in the foreground; no visible movement  
+                        Left = farm buildings with corrugated metal roofs, wooden structure; multiple structures; sun is high in the sky, bright light illuminates the scene  
+                        Right = single tree with green leaves, slender trunk; tree stands on rocky ground; positioned slightly left of center  
+                        Down = cluster of small bushes and rocks; ground is dry and sandy; shadows cast by sunlight  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 14, 15], [11, 12, 13]]  
+                        LeftDepth: [[100, 100, 100], [36, 44, 14], [17, 15, 13]]  
+                        RightDepth: [[100, 12, 13], [36, 11, 10], [15, 11, 12]]  
+                        DownDepth: [[9, 9, 11], [10, 7, 8], [11, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(75.93, -175.75, -10.0), -52.95],
+    [(75.93, -175.75, -10.0), -67.95],
+    [(75.93, -175.75, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -82.95],
+    [(77.8, -180.38, -8.0), -97.95],
+    [(77.11, -185.34, -8.0), -97.95],
+    [(76.42, -190.29, -8.0), -97.95],
+    [(76.42, -190.29, -6.0), -97.95],
+    [(75.73, -195.24, -6.0), -97.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 84.00000000000003
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = leafy green bushes, large, dense; bushes in the foreground; rocky terrain beneath  
+                        Left = small wooden houses, thatched roofs; field of white flowers; sun in the sky; village layout visible  
+                        Right = single tree, tall, leafy green; rocky ground with scattered stones; distant hills in background  
+                        Down = low-lying shrubs, light green; rocky patches; sandy soil; aerial view of arid landscape  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 14, 14], [11, 11, 13]]  
+                        LeftDepth: [[100, 100, 100], [36, 44, 14], [16, 15, 13]]  
+                        RightDepth: [[100, 13, 14], [36, 11, 11], [15, 12, 12]]  
+                        DownDepth: [[9, 9, 10], [9, 8, 8], [11, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(75.93, -175.75, -10.0), -67.95],
+    [(75.93, -175.75, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -82.95],
+    [(77.8, -180.38, -8.0), -97.95],
+    [(77.11, -185.34, -8.0), -97.95],
+    [(76.42, -190.29, -8.0), -97.95],
+    [(76.42, -190.29, -6.0), -97.95],
+    [(75.73, -195.24, -6.0), -97.95],
+    [(75.04, -200.19, -6.0), -97.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 89.00000000000001
+                        AvgHeadingChange = 4.82
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = leafy green bushes, medium-sized; two bushes in the foreground; rocky terrain beneath  
+                        Left = small wooden buildings, rustic; several structures clustered together; sun high in the sky above  
+                        Right = leafy green tree, slender trunk; single tree centered in the frame; rocky ground with sparse vegetation  
+                        Down = rocky terrain, light gray stones; small green shrubs scattered across the surface; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 14, 15], [10, 10, 13]]  
+                        LeftDepth: [[100, 100, 100], [36, 44, 45], [16, 15, 14]]  
+                        RightDepth: [[100, 13, 13], [35, 11, 11], [15, 12, 13]]  
+                        DownDepth: [[9, 9, 10], [9, 8, 8], [11, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(75.93, -175.75, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -82.95],
+    [(77.8, -180.38, -8.0), -97.95],
+    [(77.11, -185.34, -8.0), -97.95],
+    [(76.42, -190.29, -8.0), -97.95],
+    [(76.42, -190.29, -6.0), -97.95],
+    [(75.73, -195.24, -6.0), -97.95],
+    [(75.04, -200.19, -6.0), -97.95],
+    [(74.35, -205.14, -6.0), -97.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 94.0
+                        AvgHeadingChange = 4.66
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Radio,
+                        Size: small(0.5*0.5=0.25 squares),
+                        Description: Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-22, 79]  
+                        **Y Range**: [min_y, max_y] = [-262, -161]
+
+                        # RGB Captions
+                        Front = leafy green bushes, large, dense; bushes occupy the foreground and midground; no visible movement  
+                        Left = small wooden structures, rustic; structures are scattered across a field; sun is high in the sky, casting light on the scene  
+                        Right = single tree, medium-sized, leafy green; tree stands on rocky ground in the center; surrounding smaller bushes and rocks  
+                        Down = rocks, gray, irregularly shaped; rocks are densely packed in the foreground; interspersed with small green plants  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 15, 15], [11, 11, 14]]  
+                        LeftDepth: [[100, 100, 100], [35, 44, 45], [16, 15, 14]]  
+                        RightDepth: [[100, 13, 13], [35, 11, 11], [15, 12, 13]]  
+                        DownDepth: [[9, 9, 10], [9, 8, 8], [12, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(77.8, -180.38, -8.0), -67.95],
+    [(77.8, -180.38, -8.0), -82.95],
+    [(77.8, -180.38, -8.0), -97.95],
+    [(77.11, -185.34, -8.0), -97.95],
+    [(76.42, -190.29, -8.0), -97.95],
+    [(76.42, -190.29, -6.0), -97.95],
+    [(75.73, -195.24, -6.0), -97.95],
+    [(75.04, -200.19, -6.0), -97.95],
+    [(74.35, -205.14, -6.0), -97.95],
+    [(73.66, -210.1, -6.0), -97.95],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 98.99999999999999
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** Radio**, described as:  Geometric vertical capsule shape, weathered brown metal with tuning dial and speaker grill, small handle on top, used for audio broadcasting reception.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

@@ -1,0 +1,35 @@
+{
+  "episode_id": "33",
+  "start_pose": {
+    "start_position": [
+      -5.856151498832304,
+      -143.7121945965195,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.05477358612095247,
+      -0.998498800331503
+    ]
+  },
+  "info": {
+    "geodesic_distance": 62,
+    "euclidean_distance": 44.411
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " MetalTub",
+  "object_name": "SM_Metal_Tub_Set1_64",
+  "pose": [
+    [
+      -13.092743873596191,
+      -184.49273681640625,
+      9.028725624084473
+    ]
+  ],
+  "size": " small(2.25*1=2.25 squares)",
+  "description": " Geometric basin-like form, dark metallic surface with reflective texture, contains rim handles and water inside, used for carrying or holding liquids.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

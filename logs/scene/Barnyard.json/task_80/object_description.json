@@ -1,0 +1,35 @@
+{
+  "episode_id": "80",
+  "start_pose": {
+    "start_position": [
+      -237.20086277809406,
+      150.24053176631912,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.999417640954804,
+      0.03412299735273208
+    ]
+  },
+  "info": {
+    "geodesic_distance": 59,
+    "euclidean_distance": 41.4922
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Chair",
+  "object_name": "SM_LawnChair_01_61",
+  "pose": [
+    [
+      -199.19273376464844,
+      134.8072509765625,
+      -0.7712745666503906
+    ]
+  ],
+  "size": " small(1*1=1 square)",
+  "description": " Geometric frame structure, woven tan seat and backrest with metal legs, simple lightweight build, used for portable seating.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

@@ -1,0 +1,35 @@
+{
+  "episode_id": "83",
+  "start_pose": {
+    "start_position": [
+      -181.03180721654962,
+      138.73450005948007,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.5744211123085026,
+      -0.8185599463290778
+    ]
+  },
+  "info": {
+    "geodesic_distance": 25,
+    "euclidean_distance": 19.2918
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Bookbag",
+  "object_name": "SM_Bookbag_01b_67",
+  "pose": [
+    [
+      -199.0927276611328,
+      135.1072540283203,
+      -1.2712745666503906
+    ]
+  ],
+  "size": " small(0.5*0.5=0.25 squares)",
+  "description": " Geometric rounded form, solid blue fabric texture with visible straps and zipper outline, compact and upright posture, designed for carrying books or personal items.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

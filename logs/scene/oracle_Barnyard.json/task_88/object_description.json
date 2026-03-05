@@ -1,0 +1,35 @@
+{
+  "episode_id": "88",
+  "start_pose": {
+    "start_position": [
+      -70.6718165789332,
+      -279.0821500997771,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9408603491555685,
+      0.33879463305498475
+    ]
+  },
+  "info": {
+    "geodesic_distance": 85,
+    "euclidean_distance": 54.5286
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Statue",
+  "object_name": "Monument_01_79",
+  "pose": [
+    [
+      -104.29273986816406,
+      -237.5927276611328,
+      4.028725624084473
+    ]
+  ],
+  "size": " mid(3.0*2.0=6.0 squares)",
+  "description": " Geometric pedestal base with organic animal figure, dark metallic sculpture of a leaping deer atop a brick and stone plinth, commemorative plaque on front face, decorative or memorial purpose.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

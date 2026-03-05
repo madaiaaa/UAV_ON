@@ -1,0 +1,35 @@
+{
+  "episode_id": "43",
+  "start_pose": {
+    "start_position": [
+      -59.09661993989988,
+      -14.522367333769985,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8114358773354524,
+      0.584441457267402
+    ]
+  },
+  "info": {
+    "geodesic_distance": 56,
+    "euclidean_distance": 40.2885
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " FoodCan",
+  "object_name": "SM_Food_Can_Set1_79",
+  "pose": [
+    [
+      -95.99274444580078,
+      -28.792743682861328,
+      0.6287254095077515
+    ]
+  ],
+  "size": " small(1*1=1 square)",
+  "description": " Cylindrical shape, metallic texture with labeled wrapping, pop-top lid, intended for storing preserved food items.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

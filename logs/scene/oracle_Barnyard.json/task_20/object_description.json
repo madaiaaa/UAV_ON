@@ -1,0 +1,35 @@
+{
+  "episode_id": "20",
+  "start_pose": {
+    "start_position": [
+      -77.95649920149361,
+      -116.43489717820572,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.8467065928878792,
+      -0.5320600958164399
+    ]
+  },
+  "info": {
+    "geodesic_distance": 44,
+    "euclidean_distance": 27.425
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Rock",
+  "object_name": "SM_Medium_Rock_41",
+  "pose": [
+    [
+      -93.69274139404297,
+      -133.3927459716797,
+      7.728725433349609
+    ]
+  ],
+  "size": " mid(2*2.25=4.5 squares)",
+  "description": " Organic bulky form, sandy beige stone texture, rounded protrusions and crevices throughout, decorative or environmental landscape feature.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

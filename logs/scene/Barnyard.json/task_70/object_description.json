@@ -1,0 +1,35 @@
+{
+  "episode_id": "70",
+  "start_pose": {
+    "start_position": [
+      102.93792501778907,
+      -2.4842082903819858,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.3396240919061602,
+      0.9405612559514218
+    ]
+  },
+  "info": {
+    "geodesic_distance": 32,
+    "euclidean_distance": 21.653
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Dog",
+  "object_name": "pug_bark_anim_29",
+  "pose": [
+    [
+      108.8072509765625,
+      -20.292743682861328,
+      3.828725576400757
+    ]
+  ],
+  "size": " small(1.25*0.5=0.63 squares)",
+  "description": " Organic quadruped form, light brown fur with compact frame, pointed ears and short tail, suitable for domesticated pet or companion animal.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

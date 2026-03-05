@@ -1,0 +1,35 @@
+{
+  "episode_id": "57",
+  "start_pose": {
+    "start_position": [
+      -61.26835215826567,
+      -275.1692838394209,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6714937326634355,
+      0.7410102340681447
+    ]
+  },
+  "info": {
+    "geodesic_distance": 88,
+    "euclidean_distance": 56.4665
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " MonkeyBars",
+  "object_name": "SM_Climber01_20",
+  "pose": [
+    [
+      -100.49274444580078,
+      -235.9927215576172,
+      3.7287254333496094
+    ]
+  ],
+  "size": " mid(4.5*1.75=7.88 squares)",
+  "description": " Geometric rectangular frame, metal construction with yellow horizontal rungs and black vertical supports, open structure elevated from the ground, designed for playground climbing and swinging activity.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

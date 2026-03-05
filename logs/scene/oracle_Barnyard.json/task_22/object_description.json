@@ -1,0 +1,35 @@
+{
+  "episode_id": "22",
+  "start_pose": {
+    "start_position": [
+      -114.0146285402719,
+      -266.02844778683817,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9972626351691872,
+      0.0739407634218675
+    ]
+  },
+  "info": {
+    "geodesic_distance": 63,
+    "euclidean_distance": 44.1752
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Piano",
+  "object_name": "SM_Piano_45",
+  "pose": [
+    [
+      -125.09274291992188,
+      -224.792724609375,
+      4.328725337982178
+    ]
+  ],
+  "size": " small(1.5*1=1.5 squares)",
+  "description": " Geometric upright form, dark wooden body with carved detailing, visible keyboard with white and black keys, used for playing musical notes and compositions.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

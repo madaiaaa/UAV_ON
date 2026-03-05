@@ -1,0 +1,35 @@
+{
+  "episode_id": "87",
+  "start_pose": {
+    "start_position": [
+      -238.51368090514708,
+      -180.38242060306163,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.9824700123928759,
+      -0.1864206929199177
+    ]
+  },
+  "info": {
+    "geodesic_distance": 74,
+    "euclidean_distance": 49.3551
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Wheelbarrow",
+  "object_name": "SM_WheelBarrow_01_76",
+  "pose": [
+    [
+      -262.5927429199219,
+      -138.09274291992188,
+      1.2287254333496094
+    ]
+  ],
+  "size": " small(2.5*1.5=3.75 squares)",
+  "description": " Geometric cart-like form, dark brown wooden structure with single central metal wheel and long handles, deep basin for carrying loads, designed for manual material transport.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}

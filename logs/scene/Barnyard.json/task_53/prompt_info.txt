@@ -1,0 +1,2464 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground equipment, colorful and small; scattered across the foreground; no visible people; white tents in the mid-ground; rocky terrain and sparse trees in the background  
+                        Left = small bushes, green and leafy; scattered across the rolling hills; patches of snow on the ground; distant buildings on the horizon  
+                        Right = trees, green and leafy; growing on a grassy hillside; shadows cast by sunlight; clear sky above  
+                        Down = large rocks, gray and irregularly shaped; arranged in a line across the sandy ground; small shrub near the center; water flow between the rocks  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [66, 90, 100], [20, 20, 27]]  
+                        LeftDepth: [[100, 100, 100], [16, 15, 29], [11, 12, 14]]  
+                        RightDepth: [[100, 100, 100], [68, 48, 33], [24, 17, 17]]  
+                        DownDepth: [[12, 12, 13], [10, 9, 11], [8, 9, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-85.89, -277.28, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = white tents, large, clustered; yellow and orange play structure; hay bales, stacked; scattered debris; sun in the background  
+                        Left = trees, green, medium-sized; rocky terrain; distant structures; clear sky  
+                        Right = grass, low-lying; rocks, gray, scattered; trees, green, in the background; overcast sky  
+                        Down = rocks, gray, jagged; grass, sparse; dirt path; overexposed lighting  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [34, 25, 26], [15, 12, 13]]  
+                        LeftDepth: [[100, 100, 100], [65, 41, 44], [15, 14, 16]]  
+                        RightDepth: [[100, 100, 42], [26, 22, 23], [12, 12, 13]]  
+                        DownDepth: [[11, 10, 10], [10, 9, 9], [10, 8, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 5.000000000000012
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground equipment, yellow and orange; hay bales, stacked; scattered rocks; overgrown vegetation; sun in the background  
+                        Left = trees, green foliage; scattered rocks; overgrown vegetation; distant structures under a hazy sky  
+                        Right = trees, green foliage; scattered rocks; overgrown vegetation; open field extending to the horizon  
+                        Down = rocks, gray and irregular; overgrown vegetation; aerial view of a natural landscape  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [32, 23, 24], [15, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [58, 40, 43], [15, 14, 16]]  
+                        RightDepth: [[100, 100, 44], [28, 24, 25], [11, 12, 13]]  
+                        DownDepth: [[11, 10, 10], [11, 9, 10], [11, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 10.000000000000025
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = yellow and orange vehicle, small, stationary; hay bales, stacked in foreground; tents, multiple, scattered in midground; sun, bright, high in sky; field covered in low vegetation  
+                        Left = trees, green, medium-sized, clustered; rocks, scattered; overgrown ground with low vegetation; distant structures faintly visible; hazy sky  
+                        Right = trees, green, medium-sized, sparsely distributed; overgrown ground with low vegetation; no visible structures or vehicles; hazy sky  
+                        Down = rocks, gray, irregular, medium-sized; scattered across grassy terrain; patches of dry grass and sparse vegetation; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [30, 22, 22], [15, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [58, 39, 46], [15, 15, 16]]  
+                        RightDepth: [[100, 100, 100], [29, 25, 25], [12, 11, 13]]  
+                        DownDepth: [[11, 9, 10], [11, 9, 9], [11, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 15.000000000000037
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = yellow and red vehicle, small, stationary; two hay bales, stacked, near foreground; scattered debris and structures in midground; sun high in hazy sky  
+                        Left = group of trees, medium-sized, leafy; rocky terrain with sparse vegetation in foreground; distant buildings on horizon under overcast sky  
+                        Right = field with low-lying green vegetation; scattered rocks and small bushes; distant trees and faint structures on horizon under bright sky  
+                        Down = rocks, irregular shapes, gray; patches of grass and weeds; aerial view of uneven ground with natural textures  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [28, 28, 29], [15, 14, 14]]  
+                        LeftDepth: [[100, 100, 100], [59, 40, 46], [15, 15, 16]]  
+                        RightDepth: [[100, 100, 100], [30, 25, 26], [13, 11, 12]]  
+                        DownDepth: [[11, 10, 10], [11, 8, 9], [11, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 20.00000000000005
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = yellow and red structure, small, industrial-looking; several hay bales, stacked; white tents in the mid-ground; sun high in the sky; field covered in low vegetation  
+                        Left = group of trees, medium-sized, leafy; scattered rocks; ruins or old structures in the distant background; overcast sky with soft light  
+                        Right = field with low green vegetation; scattered bushes; line of trees in the mid-ground; faint outlines of structures in the far distance; hazy atmosphere  
+                        Down = rocks, gray, irregularly shaped; patches of grass and weeds; narrow dirt path winding through the center; top-down perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 27, 30], [15, 14, 15]]  
+                        LeftDepth: [[100, 100, 100], [56, 38, 49], [16, 15, 16]]  
+                        RightDepth: [[100, 100, 100], [30, 25, 26], [14, 11, 11]]  
+                        DownDepth: [[11, 10, 10], [11, 8, 9], [11, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 25.000000000000064
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = yellow and red vehicle, small, in foreground; hay bales, stacked, to the right; tents, multiple, in mid-ground; structures, scattered, in background under bright sky  
+                        Left = trees, green, clustered; bushes, low-lying, covering ground; rocks, scattered; distant buildings on horizon under hazy sky  
+                        Right = bushes, low-lying, covering ground; trees, green, in mid-ground; rocks, scattered; no visible vehicles or people  
+                        Down = grass, green, with patches of dirt; rocks, gray, scattered; narrow path winding through center; no visible objects or people  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [25, 38, 38], [15, 14, 14]]  
+                        LeftDepth: [[100, 100, 100], [57, 38, 50], [16, 15, 15]]  
+                        RightDepth: [[100, 100, 100], [30, 26, 26], [14, 13, 12]]  
+                        DownDepth: [[11, 10, 10], [10, 9, 9], [11, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 30.000000000000078
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and red, plastic; white tents, multiple; rolled blankets, several; structure in the left foreground; tents in the mid-ground; blankets in the right foreground  
+                        Left = trees, green, medium-sized; rocks, scattered; stream, winding; trees in the mid-ground; stream in the foreground  
+                        Right = vegetation, dense and low-lying; rocks, scattered; trees, sparse; vegetation covers most of the ground; rocks interspersed throughout  
+                        Down = vegetation, dense and low-lying; rocks, scattered; stream, narrow and winding; vegetation in the background; rocks and stream in the foreground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [41, 38, 39], [16, 15, 12]]  
+                        LeftDepth: [[100, 100, 100], [55, 38, 51], [16, 15, 16]]  
+                        RightDepth: [[100, 100, 100], [31, 26, 27], [15, 13, 13]]  
+                        DownDepth: [[11, 10, 11], [10, 9, 9], [11, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 35.00000000000009
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = yellow and red structure, partially collapsed; white tents in the mid-ground; scattered debris across the field; sun high in the hazy sky  
+                        Left = cluster of green trees; rocky terrain in the foreground; distant buildings on the horizon; overcast sky with diffused light  
+                        Right = field covered in low-lying vegetation; small rocks scattered throughout; faint outlines of structures in the far distance; bright but hazy sunlight  
+                        Down = ground covered in sparse green plants; several large gray rocks; rolled-up material in the top right corner; close-up perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [42, 36, 40], [15, 15, 11]]  
+                        LeftDepth: [[100, 100, 100], [53, 39, 50], [16, 15, 16]]  
+                        RightDepth: [[100, 100, 100], [31, 27, 27], [13, 14, 14]]  
+                        DownDepth: [[11, 11, 11], [10, 9, 10], [11, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-112.43, -247.35, -10.0), 131.56],
+    [(-112.43, -247.35, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 40.00000000000011
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and red; white plastic tunnels; small vehicle; scattered debris; sun in the sky  
+                        Left = trees, green foliage; rocky terrain; distant buildings; overcast sky  
+                        Right = vegetation, dense and low-lying; rocks; dirt path; trees in the background  
+                        Down = logs, rolled; bales, stacked; rocks; vegetation covering ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [41, 35, 38], [16, 15, 15]]  
+                        LeftDepth: [[100, 100, 100], [42, 39, 51], [15, 15, 15]]  
+                        RightDepth: [[100, 100, 100], [31, 27, 28], [11, 13, 14]]  
+                        DownDepth: [[11, 11, 10], [11, 10, 10], [11, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-85.89, -277.28, -10.0), 131.56],
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-112.43, -247.35, -10.0), 131.56],
+    [(-115.74, -243.61, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 45.00000000000012
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = white tents, multiple, clustered; small buildings; scattered debris; sun in the sky; yellow and red structure in the foreground left  
+                        Left = trees, several, medium-sized; open field; distant structures; clear sky; path through vegetation  
+                        Right = vegetation, dense and low-lying; rocks scattered; path visible; trees in the background; bright sky  
+                        Down = logs, stacked; rocks; vegetation; wooden crate; close-up view of ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [41, 32, 32], [16, 15, 15]]  
+                        LeftDepth: [[100, 100, 100], [42, 39, 52], [16, 15, 16]]  
+                        RightDepth: [[100, 100, 100], [33, 28, 29], [10, 11, 15]]  
+                        DownDepth: [[12, 11, 9], [11, 10, 9], [11, 10, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-89.21, -273.54, -10.0), 131.56],
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-112.43, -247.35, -10.0), 131.56],
+    [(-115.74, -243.61, -10.0), 131.56],
+    [(-119.06, -239.87, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 50.000000000000135
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = white tents, large, clustered; sun in the sky; scattered debris and structures in a field  
+                        Left = trees, green, leafy; rocks, scattered; distant buildings on the horizon; overcast sky  
+                        Right = vegetation, dense, low-lying; rocks, scattered; part of a larger landscape with trees in the background  
+                        Down = logs, stacked; bales, rectangular, light-colored; rocks, scattered; vegetation covering the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [41, 31, 31], [15, 14, 14]]  
+                        LeftDepth: [[100, 100, 100], [43, 39, 51], [16, 15, 15]]  
+                        RightDepth: [[100, 100, 100], [33, 29, 29], [13, 9, 14]]  
+                        DownDepth: [[12, 11, 11], [11, 10, 8], [11, 11, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-92.52, -269.8, -10.0), 131.56],
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-112.43, -247.35, -10.0), 131.56],
+    [(-115.74, -243.61, -10.0), 131.56],
+    [(-119.06, -239.87, -10.0), 131.56],
+    [(-122.38, -236.13, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 55.00000000000015
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = white tents, multiple, clustered; chickens, several, scattered; sun in the background; field covered in low vegetation  
+                        Left = trees, group of medium-sized; distant buildings; playground equipment in the foreground right; field with low vegetation  
+                        Right = field with low vegetation; trees in the midground; distant structures; sunlight creating haze  
+                        Down = playground equipment, yellow and orange; rolled mats, two large, stacked; rocks, several small; field with low vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [42, 30, 29], [13, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [40, 41, 50], [15, 15, 13]]  
+                        RightDepth: [[100, 100, 100], [32, 28, 30], [13, 9, 10]]  
+                        DownDepth: [[12, 11, 12], [11, 10, 8], [11, 11, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-95.84, -266.06, -10.0), 131.56],
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-112.43, -247.35, -10.0), 131.56],
+    [(-115.74, -243.61, -10.0), 131.56],
+    [(-119.06, -239.87, -10.0), 131.56],
+    [(-122.38, -236.13, -10.0), 131.56],
+    [(-125.69, -232.39, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 60.00000000000016
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = white arched tents, multiple; small red-roofed buildings; scattered debris; sun in the upper right; overgrown vegetation covering the ground  
+                        Left = group of green trees; distant structures; clear sky; playground equipment in the foreground; overgrown grass and rocks  
+                        Right = overgrown vegetation; scattered rocks; partial view of a structure in the bottom center; sun in the upper right; hazy sky  
+                        Down = stack of hay bales, three; orange and black object; yellow and blue machinery part; gray fabric piece; overgrown greenery  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [42, 36, 31], [17, 16, 16]]  
+                        LeftDepth: [[100, 100, 100], [41, 44, 51], [16, 13, 12]]  
+                        RightDepth: [[100, 100, 100], [33, 29, 30], [13, 11, 10]]  
+                        DownDepth: [[12, 11, 11], [11, 10, 10], [12, 11, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-99.16, -262.32, -10.0), 131.56],
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-112.43, -247.35, -10.0), 131.56],
+    [(-115.74, -243.61, -10.0), 131.56],
+    [(-119.06, -239.87, -10.0), 131.56],
+    [(-122.38, -236.13, -10.0), 131.56],
+    [(-125.69, -232.39, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 131.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 65.00000000000017
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = white tents, multiple, clustered; small buildings, scattered; trees in the midground; sun in the upper right; overgrown vegetation covering the ground  
+                        Left = trees, large, leafy; rocks, scattered; a yellow structure with red railings in the foreground right; open field with sparse vegetation  
+                        Right = overgrown field with bushes and rocks; distant structures and trees on the horizon; hazy sky; no visible people or moving objects  
+                        Down = agricultural equipment, yellow and orange, partially visible; hay bales, round and rectangular, stacked; green vegetation covering the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [40, 35, 42], [12, 16, 17]]  
+                        LeftDepth: [[100, 100, 100], [34, 41, 48], [15, 15, 13]]  
+                        RightDepth: [[100, 100, 100], [37, 31, 33], [14, 12, 13]]  
+                        DownDepth: [[12, 11, 11], [11, 10, 11], [11, 11, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-102.47, -258.58, -10.0), 131.56],
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-112.43, -247.35, -10.0), 131.56],
+    [(-115.74, -243.61, -10.0), 131.56],
+    [(-119.06, -239.87, -10.0), 131.56],
+    [(-122.38, -236.13, -10.0), 131.56],
+    [(-125.69, -232.39, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 116.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 65.00000000000017
+                        AvgHeadingChange = 1.07
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = white tents, multiple, clustered; red-roofed building; trees and bushes; distant structures under overcast sky  
+                        Left = trees, scattered; bushes, dense; rocks, small and gray; distant cityscape; overcast sky  
+                        Right = ruined buildings, brown and gray; bushes, green and dense; rocks, scattered; distant structures; bright sun in sky  
+                        Down = playground equipment, yellow and orange; wooden logs, stacked; fabric pieces, beige and blue; grassy ground; overhead view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [44, 39, 37], [12, 16, 17]]  
+                        LeftDepth: [[100, 100, 100], [32, 39, 44], [15, 15, 14]]  
+                        RightDepth: [[100, 100, 100], [32, 32, 31], [16, 12, 13]]  
+                        DownDepth: [[12, 11, 11], [11, 10, 11], [11, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-105.79, -254.84, -10.0), 131.56],
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-112.43, -247.35, -10.0), 131.56],
+    [(-115.74, -243.61, -10.0), 131.56],
+    [(-119.06, -239.87, -10.0), 131.56],
+    [(-122.38, -236.13, -10.0), 131.56],
+    [(-125.69, -232.39, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 116.56],
+    [(-129.01, -228.65, -10.0), 101.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 65.00000000000017
+                        AvgHeadingChange = 2.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = white arched tents, multiple; tents are in the mid-ground; a small structure with red poles is in the foreground left  
+                        Left = trees, scattered; trees are in the mid-ground; open grassy area with rocks in the foreground  
+                        Right = ruined buildings, several; ruined buildings are in the mid-ground; overgrown vegetation covers the ground  
+                        Down = yellow vehicle, large, mechanical; vehicle is in the top-left; bales of hay and logs on the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [44, 38, 41], [15, 16, 17]]  
+                        LeftDepth: [[100, 100, 100], [34, 39, 44], [15, 15, 13]]  
+                        RightDepth: [[100, 100, 100], [30, 33, 31], [17, 13, 13]]  
+                        DownDepth: [[11, 11, 11], [11, 11, 10], [11, 11, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-109.11, -251.09, -10.0), 131.56],
+    [(-112.43, -247.35, -10.0), 131.56],
+    [(-115.74, -243.61, -10.0), 131.56],
+    [(-119.06, -239.87, -10.0), 131.56],
+    [(-122.38, -236.13, -10.0), 131.56],
+    [(-125.69, -232.39, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 116.56],
+    [(-129.01, -228.65, -10.0), 101.56],
+    [(-129.01, -228.65, -8.0), 101.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 67.00000000000017
+                        AvgHeadingChange = 1.88
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground equipment, including a slide and climbing structure; scattered rocks and debris; white tents in the background right; overcast sky  
+                        Left = vegetated field with scattered rocks; trees in the midground; distant cityscape under an overcast sky  
+                        Right = abandoned vehicles, rusted and overturned; white tents in the background left; overgrown vegetation; bright sun in the sky  
+                        Down = agricultural machinery, yellow and orange; partially submerged in water; surrounding green crops; muddy ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [49, 39, 42], [11, 16, 18]]  
+                        LeftDepth: [[100, 100, 100], [34, 34, 42], [15, 15, 16]]  
+                        RightDepth: [[100, 100, 100], [42, 29, 35], [17, 16, 14]]  
+                        DownDepth: [[11, 11, 12], [11, 10, 9], [11, 11, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-112.43, -247.35, -10.0), 131.56],
+    [(-115.74, -243.61, -10.0), 131.56],
+    [(-119.06, -239.87, -10.0), 131.56],
+    [(-122.38, -236.13, -10.0), 131.56],
+    [(-125.69, -232.39, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 116.56],
+    [(-129.01, -228.65, -10.0), 101.56],
+    [(-129.01, -228.65, -8.0), 101.56],
+    [(-129.01, -228.65, -8.0), 86.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 67.00000000000017
+                        AvgHeadingChange = 2.65
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground equipment, including a yellow slide and climbing structure; scattered rocks and bushes; distant cityscape under overcast sky  
+                        Left = grassy field with scattered rocks and small trees; winding path; distant hills and structures under overcast sky  
+                        Right = agricultural area with white greenhouse tunnels; rusted vehicles and debris; distant buildings and cranes under bright sky  
+                        Down = overhead view of green vegetation; yellow and blue machinery on the left; scattered wooden blocks and metal objects in foreground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [52, 41, 42], [13, 11, 17]]  
+                        LeftDepth: [[100, 100, 100], [33, 33, 40], [15, 15, 15]]  
+                        RightDepth: [[100, 100, 100], [41, 28, 37], [17, 16, 14]]  
+                        DownDepth: [[12, 11, 13], [11, 10, 9], [11, 11, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-115.74, -243.61, -10.0), 131.56],
+    [(-119.06, -239.87, -10.0), 131.56],
+    [(-122.38, -236.13, -10.0), 131.56],
+    [(-125.69, -232.39, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 116.56],
+    [(-129.01, -228.65, -10.0), 101.56],
+    [(-129.01, -228.65, -8.0), 101.56],
+    [(-129.01, -228.65, -8.0), 86.56],
+    [(-129.01, -228.65, -8.0), 71.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 67.00000000000017
+                        AvgHeadingChange = 3.33
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = yellow structure, partially visible; small wooden gate; white pedestal with statue; trees and rocks in midground; distant ruins under overcast sky  
+                        Left = trees, scattered; rocks, numerous; grassy terrain; distant hills and structures under overcast sky  
+                        Right = white arched tents, multiple; small buildings, several; vehicles, two; debris, scattered; sun low on horizon; overgrown vegetation  
+                        Down = yellow vehicle, large, partially visible; wooden logs, stacked; metal object, rectangular; green vegetation covering ground; close-up view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [45, 45, 45], [16, 11, 17]]  
+                        LeftDepth: [[100, 100, 100], [28, 29, 36], [11, 14, 15]]  
+                        RightDepth: [[100, 100, 100], [40, 30, 30], [18, 16, 17]]  
+                        DownDepth: [[12, 11, 13], [11, 10, 10], [11, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-119.06, -239.87, -10.0), 131.56],
+    [(-122.38, -236.13, -10.0), 131.56],
+    [(-125.69, -232.39, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 116.56],
+    [(-129.01, -228.65, -10.0), 101.56],
+    [(-129.01, -228.65, -8.0), 101.56],
+    [(-129.01, -228.65, -8.0), 86.56],
+    [(-129.01, -228.65, -8.0), 71.56],
+    [(-129.01, -228.65, -8.0), 56.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 67.00000000000017
+                        AvgHeadingChange = 3.95
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and wooden; horse statue on pedestal; trees in mid-ground; distant buildings under overcast sky  
+                        Left = trees, green foliage; rocky terrain with sparse vegetation; distant structures faintly visible; overcast sky  
+                        Right = tents, white and clustered; wooden crates scattered; distant ruins and structures; bright sun in hazy sky  
+                        Down = harvester machine, yellow and orange; harvested crops piled; bales of hay or straw; field with dense greenery  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [42, 44, 52], [16, 11, 11]]  
+                        LeftDepth: [[100, 100, 100], [29, 27, 34], [11, 14, 15]]  
+                        RightDepth: [[100, 100, 100], [41, 38, 42], [18, 16, 17]]  
+                        DownDepth: [[12, 11, 11], [11, 10, 10], [11, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-122.38, -236.13, -10.0), 131.56],
+    [(-125.69, -232.39, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 116.56],
+    [(-129.01, -228.65, -10.0), 101.56],
+    [(-129.01, -228.65, -8.0), 101.56],
+    [(-129.01, -228.65, -8.0), 86.56],
+    [(-129.01, -228.65, -8.0), 71.56],
+    [(-129.01, -228.65, -8.0), 56.56],
+    [(-129.01, -228.65, -8.0), 41.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 67.00000000000017
+                        AvgHeadingChange = 4.5
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and brown; structure is in the bottom right foreground; field with rocks and trees in the midground; distant buildings under a hazy sky  
+                        Left = tree trunk, brown and textured; tree trunk is in the bottom left foreground; field with low vegetation and scattered rocks in the midground; trees and distant structures in the background  
+                        Right = white tents, multiple; tents are clustered in the midground; small animal, possibly a deer, near a red pole in the foreground; distant buildings and windmill under a bright sky  
+                        Down = agricultural equipment, yellow and red; equipment is in the top right; hay bales, rolled and rectangular, on the ground in the foreground; field with green crops under a bright sky  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [37, 42, 51], [16, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [30, 27, 31], [11, 11, 15]]  
+                        RightDepth: [[100, 100, 100], [41, 38, 41], [16, 16, 17]]  
+                        DownDepth: [[12, 11, 11], [11, 11, 12], [11, 9, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-125.69, -232.39, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 116.56],
+    [(-129.01, -228.65, -10.0), 101.56],
+    [(-129.01, -228.65, -8.0), 101.56],
+    [(-129.01, -228.65, -8.0), 86.56],
+    [(-129.01, -228.65, -8.0), 71.56],
+    [(-129.01, -228.65, -8.0), 56.56],
+    [(-129.01, -228.65, -8.0), 41.56],
+    [(-129.01, -228.65, -8.0), 26.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 67.00000000000017
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = green trees, scattered; rocks, small and gray, scattered; distant cityscape under overcast sky; camera angle from elevated position  
+                        Left = green trees, scattered; brown rolled-up mat in foreground; overcast sky; camera angle from elevated position  
+                        Right = white tents, arranged in rows; wooden structures, scattered; distant cityscape under hazy sky; camera angle from elevated position  
+                        Down = green vegetation, dense; yellow and blue structure, partially visible; rolled-up mats on ground; camera angle from directly above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [35, 39, 45], [15, 15, 13]]  
+                        LeftDepth: [[100, 100, 100], [29, 27, 29], [13, 11, 15]]  
+                        RightDepth: [[100, 100, 100], [44, 38, 40], [15, 16, 17]]  
+                        DownDepth: [[12, 11, 11], [11, 11, 11], [11, 9, 12]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-129.01, -228.65, -10.0), 131.56],
+    [(-129.01, -228.65, -10.0), 116.56],
+    [(-129.01, -228.65, -10.0), 101.56],
+    [(-129.01, -228.65, -8.0), 101.56],
+    [(-129.01, -228.65, -8.0), 86.56],
+    [(-129.01, -228.65, -8.0), 71.56],
+    [(-129.01, -228.65, -8.0), 56.56],
+    [(-129.01, -228.65, -8.0), 41.56],
+    [(-129.01, -228.65, -8.0), 26.56],
+    [(-129.01, -228.65, -8.0), 11.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 67.00000000000017
+                        AvgHeadingChange = 5.45
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and orange; rocks scattered in the mid-ground; trees and distant buildings under a hazy sky  
+                        Left = stack of hay bales, brown; dark rectangular object; grassy field with rocks; trees and distant structures in the background  
+                        Right = white arched tents, multiple; red-roofed building; playground equipment; trees and distant cityscape under bright sky  
+                        Down = playground structure, yellow and orange; wooden crates, two; dense green foliage; overhead perspective with shadows  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [36, 40, 47], [15, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [30, 28, 29], [13, 12, 15]]  
+                        RightDepth: [[100, 100, 100], [41, 38, 41], [16, 17, 17]]  
+                        DownDepth: [[12, 11, 10], [11, 9, 12], [11, 9, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-129.01, -228.65, -10.0), 116.56],
+    [(-129.01, -228.65, -10.0), 101.56],
+    [(-129.01, -228.65, -8.0), 101.56],
+    [(-129.01, -228.65, -8.0), 86.56],
+    [(-129.01, -228.65, -8.0), 71.56],
+    [(-129.01, -228.65, -8.0), 56.56],
+    [(-129.01, -228.65, -8.0), 41.56],
+    [(-129.01, -228.65, -8.0), 26.56],
+    [(-129.01, -228.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), 11.56],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 72.00000000000017
+                        AvgHeadingChange = 5.22
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = green trees, scattered; rocky ground with sparse vegetation; distant hills under overcast sky  
+                        Left = brown chair, fabric-covered; black box-like object; green trees in background; overcast sky  
+                        Right = white tents, row of; orange metal structure; red bars; small white building; green trees and hills in distance  
+                        Down = yellow and blue equipment, partially visible; red and white objects; green vegetation; sandy patches  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [36, 36, 43], [15, 15, 13]]  
+                        LeftDepth: [[100, 100, 100], [31, 29, 30], [13, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [48, 37, 38], [14, 16, 17]]  
+                        DownDepth: [[12, 11, 10], [9, 9, 11], [9, 9, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-129.01, -228.65, -10.0), 101.56],
+    [(-129.01, -228.65, -8.0), 101.56],
+    [(-129.01, -228.65, -8.0), 86.56],
+    [(-129.01, -228.65, -8.0), 71.56],
+    [(-129.01, -228.65, -8.0), 56.56],
+    [(-129.01, -228.65, -8.0), 41.56],
+    [(-129.01, -228.65, -8.0), 26.56],
+    [(-129.01, -228.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), -3.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 72.00000000000017
+                        AvgHeadingChange = 5.62
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = trees, green foliage; scattered rocks; grassy field; ocean horizon in the distance  
+                        Left = trees, green foliage; scattered rocks; grassy field; two covered objects in the foreground  
+                        Right = trees, green foliage; scattered rocks; grassy field; urban skyline in the distance; playground equipment in the foreground  
+                        Down = rocks, various sizes; grassy ground; covered object on the right; top-down view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [31, 33, 42], [15, 15, 16]]  
+                        LeftDepth: [[100, 100, 100], [31, 29, 30], [13, 12, 13]]  
+                        RightDepth: [[100, 100, 100], [53, 40, 41], [13, 14, 18]]  
+                        DownDepth: [[12, 11, 10], [9, 9, 11], [9, 10, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-129.01, -228.65, -8.0), 101.56],
+    [(-129.01, -228.65, -8.0), 86.56],
+    [(-129.01, -228.65, -8.0), 71.56],
+    [(-129.01, -228.65, -8.0), 56.56],
+    [(-129.01, -228.65, -8.0), 41.56],
+    [(-129.01, -228.65, -8.0), 26.56],
+    [(-129.01, -228.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), -3.44],
+    [(-124.11, -227.65, -8.0), -18.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 72.00000000000017
+                        AvgHeadingChange = 6.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 26 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = small trees, green foliage; scattered rocks on grassy terrain; distant hills under overcast sky  
+                        Left = covered crates, two visible; grassy field with scattered rocks; trees in the background  
+                        Right = exercise equipment, metal bars and platforms; covered crates; white cylindrical structures; trees and hills in the distance  
+                        Down = playground structure, yellow and blue; grassy ground with scattered debris; partial view of a yellow object in the corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [29, 33, 43], [15, 15, 13]]  
+                        LeftDepth: [[100, 100, 100], [31, 29, 31], [13, 12, 15]]  
+                        RightDepth: [[100, 100, 100], [52, 38, 40], [13, 15, 17]]  
+                        DownDepth: [[12, 11, 10], [10, 11, 12], [11, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-129.01, -228.65, -8.0), 86.56],
+    [(-129.01, -228.65, -8.0), 71.56],
+    [(-129.01, -228.65, -8.0), 56.56],
+    [(-129.01, -228.65, -8.0), 41.56],
+    [(-129.01, -228.65, -8.0), 26.56],
+    [(-129.01, -228.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), -3.44],
+    [(-124.11, -227.65, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -18.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 26
+                        DistanceTraveled = 77.00000000000016
+                        AvgHeadingChange = 5.77
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:26 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 27 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = green trees, scattered; rocky ground with sparse vegetation; distant hills under overcast sky  
+                        Left = red brick structure, small and rectangular; green trees, scattered; open field with low vegetation; distant buildings on horizon  
+                        Right = wooden structure, partially visible; white pillar, vertical; red stakes, in-ground; green trees, background; distant cityscape  
+                        Down = stack of logs, brown and weathered; yellow vehicle, partially visible; green bushes, dense; rocks, scattered; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [30, 29, 39], [15, 15, 15]]  
+                        LeftDepth: [[100, 100, 100], [34, 31, 31], [17, 12, 12]]  
+                        RightDepth: [[100, 100, 100], [45, 42, 41], [13, 13, 17]]  
+                        DownDepth: [[11, 11, 10], [10, 11, 11], [13, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-129.01, -228.65, -8.0), 71.56],
+    [(-129.01, -228.65, -8.0), 56.56],
+    [(-129.01, -228.65, -8.0), 41.56],
+    [(-129.01, -228.65, -8.0), 26.56],
+    [(-129.01, -228.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), -3.44],
+    [(-124.11, -227.65, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 27
+                        DistanceTraveled = 77.00000000000016
+                        AvgHeadingChange = 6.11
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:27 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 28 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = stack of wooden planks, reddish-brown; rocks scattered across grassy terrain; trees in the midground; ocean visible in the distant background  
+                        Left = group of crates and barrels; dirt path winding through overgrown vegetation; trees lining the horizon; bright sky above  
+                        Right = small wooden structure with a light fixture; red poles near the structure; rocks and vegetation covering the ground; trees and hills in the distance  
+                        Down = overhead view of dense green foliage; part of a yellow and white structure visible in the top right corner; ground appears wet or reflective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [30, 29, 39], [15, 15, 13]]  
+                        LeftDepth: [[100, 100, 100], [34, 31, 31], [16, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [46, 45, 38], [14, 13, 17]]  
+                        DownDepth: [[11, 11, 10], [11, 11, 11], [13, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-129.01, -228.65, -8.0), 56.56],
+    [(-129.01, -228.65, -8.0), 41.56],
+    [(-129.01, -228.65, -8.0), 26.56],
+    [(-129.01, -228.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), -3.44],
+    [(-124.11, -227.65, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -33.44],
+    [(-115.2, -231.98, -8.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 28
+                        DistanceTraveled = 82.00000000000016
+                        AvgHeadingChange = 5.89
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:28 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 29 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = stack of logs, brown and weathered; small yellow structure with ladder; logs are in the foreground left; structure is partially visible on the right  
+                        Left = wooden crates, scattered; large pile of logs; crates are in the mid-ground left; logs are behind them; structure with roof is in the far background  
+                        Right = small wooden structure, orange frame; stone path winding through grassy field; structure is in the foreground center-right; path leads toward distant trees  
+                        Down = overhead view of dense green foliage; small clearing with circular patch of dirt; white object near the clearing; foliage dominates the entire frame  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [31, 31, 41], [16, 11, 11]]  
+                        LeftDepth: [[100, 100, 100], [33, 31, 33], [16, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [51, 47, 36], [15, 15, 17]]  
+                        DownDepth: [[12, 11, 11], [12, 11, 12], [13, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-129.01, -228.65, -8.0), 41.56],
+    [(-129.01, -228.65, -8.0), 26.56],
+    [(-129.01, -228.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), -3.44],
+    [(-124.11, -227.65, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -33.44],
+    [(-115.2, -231.98, -8.0), -33.44],
+    [(-112.44, -227.81, -8.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 29
+                        DistanceTraveled = 87.00000000000016
+                        AvgHeadingChange = 5.69
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:29 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 30 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and blue; structure is in the foreground; trees and rocks in the midground; hazy sky in the background  
+                        Left = stacks of hay bales, brown; hay bales are scattered in the midground; trees and open field in the background  
+                        Right = trees, green foliage; trees are in the midground; distant buildings and hills in the background; clear sky above  
+                        Down = playground equipment, including a red slide and climbing frame; equipment is partially submerged in water; overcast sky above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [31, 31, 42], [16, 11, 13]]  
+                        LeftDepth: [[100, 100, 100], [35, 33, 27], [17, 16, 15]]  
+                        RightDepth: [[100, 100, 100], [52, 49, 42], [16, 16, 17]]  
+                        DownDepth: [[13, 12, 11], [12, 11, 12], [13, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-129.01, -228.65, -8.0), 26.56],
+    [(-129.01, -228.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), -3.44],
+    [(-124.11, -227.65, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -33.44],
+    [(-115.2, -231.98, -8.0), -33.44],
+    [(-112.44, -227.81, -8.0), -33.44],
+    [(-108.27, -230.56, -8.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 30
+                        DistanceTraveled = 92.00000000000016
+                        AvgHeadingChange = 5.5
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:30 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 31 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and orange; structure is in the foreground; trees and hills in the background  
+                        Left = stacks of hay bales, brown; hay bales are scattered across the field; trees and open land in the background  
+                        Right = trees, green; trees are in the midground; hills and distant structures in the background  
+                        Down = playground equipment, including a slide and climbing frame; equipment is partially submerged in water; surrounding vegetation is dense  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [33, 35, 44], [11, 13, 16]]  
+                        LeftDepth: [[100, 100, 100], [36, 29, 26], [17, 16, 16]]  
+                        RightDepth: [[100, 100, 100], [56, 49, 46], [18, 16, 18]]  
+                        DownDepth: [[12, 9, 12], [12, 9, 11], [13, 13, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-129.01, -228.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), -3.44],
+    [(-124.11, -227.65, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -33.44],
+    [(-115.2, -231.98, -8.0), -33.44],
+    [(-112.44, -227.81, -8.0), -33.44],
+    [(-108.27, -230.56, -8.0), -33.44],
+    [(-104.1, -233.32, -8.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 31
+                        DistanceTraveled = 97.00000000000016
+                        AvgHeadingChange = 5.32
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:31 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 32 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = hilly terrain, covered in green shrubs and scattered rocks; trees with green foliage on the left and right; distant hills and sky in the background  
+                        Left = field with low green vegetation; three hay bales stacked on the right; a black box-like object near the hay; distant trees and hills under a pale sky  
+                        Right = landscape with rolling hills, patches of green trees, and rocky outcrops; a structure resembling a tower or ruin in the far distance; overcast sky above  
+                        Down = playground equipment including a yellow slide, orange tube, and ladder; surrounded by dense green foliage; viewed from directly above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [35, 35, 43], [12, 15, 16]]  
+                        LeftDepth: [[100, 100, 100], [34, 27, 25], [17, 16, 16]]  
+                        RightDepth: [[100, 100, 100], [55, 49, 49], [17, 16, 18]]  
+                        DownDepth: [[10, 10, 11], [12, 9, 10], [13, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-124.11, -227.65, -8.0), 11.56],
+    [(-124.11, -227.65, -8.0), -3.44],
+    [(-124.11, -227.65, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -33.44],
+    [(-115.2, -231.98, -8.0), -33.44],
+    [(-112.44, -227.81, -8.0), -33.44],
+    [(-108.27, -230.56, -8.0), -33.44],
+    [(-104.1, -233.32, -8.0), -33.44],
+    [(-99.92, -236.08, -8.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 32
+                        DistanceTraveled = 102.00000000000016
+                        AvgHeadingChange = 5.16
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:32 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 33 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = hilly terrain, covered in green shrubs and scattered rocks; several trees with light green foliage; distant view of a hazy horizon with faint structures  
+                        Left = field with green vegetation and scattered rocks; three stacked hay bales, one partially collapsed; yellow object in the foreground right; distant trees and structures under a bright sky  
+                        Right = hilly landscape, similar to first image, with green shrubs and rocks; trees with light green leaves; distant view of a hazy horizon with faint structures  
+                        Down = playground equipment from above, including a red slide, wooden climbing frame, and small platform; surrounded by dense green foliage; part of a yellow structure visible in bottom left  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [29, 30, 38], [10, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [28, 21, 25], [14, 10, 10]]  
+                        RightDepth: [[100, 100, 100], [48, 44, 46], [15, 15, 15]]  
+                        DownDepth: [[9, 8, 10], [8, 8, 9], [8, 9, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-124.11, -227.65, -8.0), -3.44],
+    [(-124.11, -227.65, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -33.44],
+    [(-115.2, -231.98, -8.0), -33.44],
+    [(-112.44, -227.81, -8.0), -33.44],
+    [(-108.27, -230.56, -8.0), -33.44],
+    [(-104.1, -233.32, -8.0), -33.44],
+    [(-99.92, -236.08, -8.0), -33.44],
+    [(-99.92, -236.08, -6.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 33
+                        DistanceTraveled = 104.00000000000016
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:33 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 34 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = rocky ground, scattered rocks; trees in the midground; hazy sky in the background  
+                        Left = playground equipment, yellow and red; hay bales stacked; trees in the distance; overgrown vegetation in the foreground  
+                        Right = rocky ground, scattered rocks; trees in a line across the midground; distant structures on the horizon  
+                        Down = playground slide, gray; ladder, wooden; climbing structure, yellow; surrounding greenery; aerial view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 24, 31], [10, 9, 10]]  
+                        LeftDepth: [[100, 100, 100], [23, 20, 21], [11, 7, 8]]  
+                        RightDepth: [[100, 100, 100], [38, 35, 33], [12, 11, 12]]  
+                        DownDepth: [[7, 5, 8], [7, 5, 6], [6, 6, 8]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-124.11, -227.65, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -33.44],
+    [(-115.2, -231.98, -8.0), -33.44],
+    [(-112.44, -227.81, -8.0), -33.44],
+    [(-108.27, -230.56, -8.0), -33.44],
+    [(-104.1, -233.32, -8.0), -33.44],
+    [(-99.92, -236.08, -8.0), -33.44],
+    [(-99.92, -236.08, -6.0), -33.44],
+    [(-99.92, -236.08, -4.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 34
+                        DistanceTraveled = 106.00000000000016
+                        AvgHeadingChange = 4.85
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:34 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 35 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = green trees, scattered; rocks, numerous and gray; overgrown vegetation; yellow structure partially visible in the bottom left  
+                        Left = green trees, scattered; hay bales, three stacked; wooden crates, two; overgrown vegetation; yellow structure partially visible in the bottom right  
+                        Right = green trees, clustered; overgrown vegetation; rocks, scattered; distant structures faintly visible in the background  
+                        Down = playground equipment: orange slide, wooden ladder, metal stairs, red bars; surrounded by dense green foliage; viewed from above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 21, 30], [7, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [24, 18, 20], [10, 7, 7]]  
+                        RightDepth: [[100, 100, 100], [38, 35, 32], [11, 10, 12]]  
+                        DownDepth: [[6, 6, 6], [6, 5, 6], [6, 5, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-119.37, -229.23, -8.0), -18.44],
+    [(-119.37, -229.23, -8.0), -33.44],
+    [(-115.2, -231.98, -8.0), -33.44],
+    [(-112.44, -227.81, -8.0), -33.44],
+    [(-108.27, -230.56, -8.0), -33.44],
+    [(-104.1, -233.32, -8.0), -33.44],
+    [(-99.92, -236.08, -8.0), -33.44],
+    [(-99.92, -236.08, -6.0), -33.44],
+    [(-99.92, -236.08, -4.0), -33.44],
+    [(-102.68, -240.25, -4.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 35
+                        DistanceTraveled = 111.00000000000016
+                        AvgHeadingChange = 4.71
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:35 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 36 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playhouse structure, yellow, wooden; playhouse is in the foreground left; field of green plants and rocks extends to distant trees  
+                        Left = stack of hay bales, brown; hay bales are in the midground right; field of green plants and distant structures under a hazy sky  
+                        Right = playhouse structure, orange, wooden; playhouse is in the foreground bottom; field of green plants and rocks with distant trees and structures  
+                        Down = playground slide, pink; slide is in the top left; wooden climbing frame and stairs in the midground; ground covered in green plants  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [6, 15, 19], [5, 4, 8]]  
+                        LeftDepth: [[100, 100, 100], [18, 15, 5], [7, 7, 5]]  
+                        RightDepth: [[100, 100, 100], [25, 23, 24], [6, 5, 6]]  
+                        DownDepth: [[3, 4, 6], [3, 4, 5], [6, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-119.37, -229.23, -8.0), -33.44],
+    [(-115.2, -231.98, -8.0), -33.44],
+    [(-112.44, -227.81, -8.0), -33.44],
+    [(-108.27, -230.56, -8.0), -33.44],
+    [(-104.1, -233.32, -8.0), -33.44],
+    [(-99.92, -236.08, -8.0), -33.44],
+    [(-99.92, -236.08, -6.0), -33.44],
+    [(-99.92, -236.08, -4.0), -33.44],
+    [(-102.68, -240.25, -4.0), -33.44],
+    [(-102.68, -240.25, -2.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 36
+                        DistanceTraveled = 113.00000000000016
+                        AvgHeadingChange = 4.58
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:36 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 37 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground structure, yellow with a red tube slide; swing hanging from the structure; located in the foreground amidst green foliage  
+                        Left = playground structure, yellow with a red tube slide; swing hanging from the structure; situated in a field of green plants under a hazy sky  
+                        Right = outdoor exercise equipment, wooden and metal bars; set in a grassy area with trees in the background  
+                        Down = overhead view of a playground structure, pink circular element visible at the top left; surrounded by dense green foliage  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [4, 3, 3], [4, 1, 2]]  
+                        LeftDepth: [[100, 100, 100], [11, 9, 4], [5, 3, 3]]  
+                        RightDepth: [[100, 100, 100], [5, 5, 7], [5, 3, 4]]  
+                        DownDepth: [[1, 2, 4], [3, 3, 4], [4, 3, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-115.2, -231.98, -8.0), -33.44],
+    [(-112.44, -227.81, -8.0), -33.44],
+    [(-108.27, -230.56, -8.0), -33.44],
+    [(-104.1, -233.32, -8.0), -33.44],
+    [(-99.92, -236.08, -8.0), -33.44],
+    [(-99.92, -236.08, -6.0), -33.44],
+    [(-99.92, -236.08, -4.0), -33.44],
+    [(-102.68, -240.25, -4.0), -33.44],
+    [(-102.68, -240.25, -2.0), -33.44],
+    [(-102.68, -240.25, 0.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 37
+                        DistanceTraveled = 115.00000000000016
+                        AvgHeadingChange = 4.46
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:37 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 38 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = playground structure, yellow and orange; slide is in the foreground left; surrounded by green bushes and trees  
+                        Left = playground structure, yellow and orange; red slide is in the foreground right; bushes and trees in the background  
+                        Right = playground structure, wooden railings; ladder is in the foreground center; bushes and trees in the background  
+                        Down = overhead view of playground equipment; wooden beams and metal poles are visible; surrounded by dense foliage  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [3, 3, 9], [3, 3, 5]]  
+                        LeftDepth: [[100, 100, 100], [11, 5, 2], [5, 4, 2]]  
+                        RightDepth: [[100, 100, 100], [4, 12, 14], [4, 2, 3]]  
+                        DownDepth: [[4, 3, 2], [4, 3, 2], [3, 3, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-112.44, -227.81, -8.0), -33.44],
+    [(-108.27, -230.56, -8.0), -33.44],
+    [(-104.1, -233.32, -8.0), -33.44],
+    [(-99.92, -236.08, -8.0), -33.44],
+    [(-99.92, -236.08, -6.0), -33.44],
+    [(-99.92, -236.08, -4.0), -33.44],
+    [(-102.68, -240.25, -4.0), -33.44],
+    [(-102.68, -240.25, -2.0), -33.44],
+    [(-102.68, -240.25, 0.0), -33.44],
+    [(-99.92, -236.08, 0.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 38
+                        DistanceTraveled = 120.00000000000016
+                        AvgHeadingChange = 4.34
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:38 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 39 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = green shrubbery, dense and low-lying; scattered rocks; trees in the background; overcast sky  
+                        Left = playground structure, yellow with red slide; swing set; barrels stacked behind; overgrown vegetation; distant trees  
+                        Right = green shrubbery, dense and low-lying; scattered rocks; trees in the background; overcast sky  
+                        Down = wooden ladder, orange-brown; partially submerged in water; surrounded by floating debris; top-down view  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 9, 10], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [4, 4, 3], [4, 2, 2]]  
+                        RightDepth: [[100, 100, 100], [15, 13, 14], [5, 2, 2]]  
+                        DownDepth: [[4, 4, 4], [4, 2, 2], [4, 3, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-108.27, -230.56, -8.0), -33.44],
+    [(-104.1, -233.32, -8.0), -33.44],
+    [(-99.92, -236.08, -8.0), -33.44],
+    [(-99.92, -236.08, -6.0), -33.44],
+    [(-99.92, -236.08, -4.0), -33.44],
+    [(-102.68, -240.25, -4.0), -33.44],
+    [(-102.68, -240.25, -2.0), -33.44],
+    [(-102.68, -240.25, 0.0), -33.44],
+    [(-99.92, -236.08, 0.0), -33.44],
+    [(-95.75, -238.83, 0.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 39
+                        DistanceTraveled = 125.00000000000016
+                        AvgHeadingChange = 4.23
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:39 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 40 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = rocky terrain, overgrown with green vegetation and scattered pink flowers; trees in the background under a hazy sky  
+                        Left = playground structure, yellow with orange slide; two small house-like towers connected by bridge; set amidst overgrown field with distant trees  
+                        Right = wooden ladder, leaning against ground; overgrown field with rocks and scattered pink flowers; trees and faint structures in distant background  
+                        Down = overhead view of dense green foliage and scattered pink flowers; partial view of playground structure in bottom corners  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 8, 9], [5, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [5, 3, 3], [4, 1, 2]]  
+                        RightDepth: [[100, 100, 100], [12, 12, 4], [4, 4, 4]]  
+                        DownDepth: [[3, 3, 4], [2, 3, 4], [1, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-104.1, -233.32, -8.0), -33.44],
+    [(-99.92, -236.08, -8.0), -33.44],
+    [(-99.92, -236.08, -6.0), -33.44],
+    [(-99.92, -236.08, -4.0), -33.44],
+    [(-102.68, -240.25, -4.0), -33.44],
+    [(-102.68, -240.25, -2.0), -33.44],
+    [(-102.68, -240.25, 0.0), -33.44],
+    [(-99.92, -236.08, 0.0), -33.44],
+    [(-95.75, -238.83, 0.0), -33.44],
+    [(-98.51, -243.0, 0.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 40
+                        DistanceTraveled = 130.00000000000017
+                        AvgHeadingChange = 4.12
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:40 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 41 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = rocky ground, covered with green plants and small pink flowers; scattered rocks of various sizes; trees in the midground; distant buildings on a hilly horizon  
+                        Left = playground structure, yellow and red plastic; two towers connected by horizontal bars; red slide on the left; swing set on the right; surrounded by green bushes and flowers  
+                        Right = rocky ground, covered with green plants and small pink flowers; scattered rocks of various sizes; trees in the midground; distant buildings on a hilly horizon  
+                        Down = overhead view of dense green foliage; wooden ladder with rungs extending from the bottom right corner; sunlight filtering through leaves creating dappled light patterns  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 8, 11], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 80], [5, 4, 4], [2, 3, 4]]  
+                        RightDepth: [[100, 100, 100], [15, 14, 16], [4, 4, 3]]  
+                        DownDepth: [[4, 4, 4], [4, 3, 3], [4, 3, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-99.92, -236.08, -8.0), -33.44],
+    [(-99.92, -236.08, -6.0), -33.44],
+    [(-99.92, -236.08, -4.0), -33.44],
+    [(-102.68, -240.25, -4.0), -33.44],
+    [(-102.68, -240.25, -2.0), -33.44],
+    [(-102.68, -240.25, 0.0), -33.44],
+    [(-99.92, -236.08, 0.0), -33.44],
+    [(-95.75, -238.83, 0.0), -33.44],
+    [(-98.51, -243.0, 0.0), -33.44],
+    [(-95.75, -238.83, 0.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 41
+                        DistanceTraveled = 135.00000000000017
+                        AvgHeadingChange = 4.02
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:41 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 42 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = rocky ground, covered in green and white vegetation; scattered rocks of various sizes; trees in the distant background  
+                        Left = playground structure, yellow with blue accents; orange slide, wooden platforms; located in the foreground; trees and open field in the background  
+                        Right = vegetated field, patches of green and brown plants; scattered rocks; trees line the horizon; a tall tower visible in the far distance  
+                        Down = overhead view of dense green foliage; small sections of playground equipment (yellow pole, wooden ladder) visible at the edges  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 8, 11], [5, 4, 5]]  
+                        LeftDepth: [[100, 100, 100], [5, 3, 2], [2, 2, 3]]  
+                        RightDepth: [[100, 100, 100], [14, 13, 15], [4, 4, 4]]  
+                        DownDepth: [[4, 3, 4], [3, 4, 4], [2, 4, 4]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-99.92, -236.08, -6.0), -33.44],
+    [(-99.92, -236.08, -4.0), -33.44],
+    [(-102.68, -240.25, -4.0), -33.44],
+    [(-102.68, -240.25, -2.0), -33.44],
+    [(-102.68, -240.25, 0.0), -33.44],
+    [(-99.92, -236.08, 0.0), -33.44],
+    [(-95.75, -238.83, 0.0), -33.44],
+    [(-98.51, -243.0, 0.0), -33.44],
+    [(-95.75, -238.83, 0.0), -33.44],
+    [(-98.51, -243.0, 0.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 42
+                        DistanceTraveled = 140.00000000000017
+                        AvgHeadingChange = 3.93
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:42 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 43 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: PullUpBars,
+                        Size: small(0.25*2.75=0.69 squares),
+                        Description: Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-136, -35]  
+                        **Y Range**: [min_y, max_y] = [-328, -227]
+
+                        # RGB Captions
+                        Front = green shrubs, dense and leafy; scattered pink flowers; trees in the distant background  
+                        Left = playground structure, yellow wooden frame with red slide and tunnel; swing set with brown seats; surrounded by green shrubs  
+                        Right = wooden swing set, dark brown frame; single swing seat; located on a patch of ground amidst green shrubs; trees in the background  
+                        Down = white daisy-like flowers, small and clustered; green leaves densely covering the ground; close-up view of vegetation  
+
+                        # Depth Information  
+                        FrontDepth: [[75, 100, 100], [3, 3, 2], [2, 2, 2]]  
+                        LeftDepth: [[1, 1, 1], [1, 1, 1], [1, 1, 1]]  
+                        RightDepth: [[100, 100, 100], [4, 4, 4], [2, 2, 2]]  
+                        DownDepth: [[2, 1, 2], [2, 1, 1], [1, 1, 2]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-99.92, -236.08, -4.0), -33.44],
+    [(-102.68, -240.25, -4.0), -33.44],
+    [(-102.68, -240.25, -2.0), -33.44],
+    [(-102.68, -240.25, 0.0), -33.44],
+    [(-99.92, -236.08, 0.0), -33.44],
+    [(-95.75, -238.83, 0.0), -33.44],
+    [(-98.51, -243.0, 0.0), -33.44],
+    [(-95.75, -238.83, 0.0), -33.44],
+    [(-98.51, -243.0, 0.0), -33.44],
+    [(-98.51, -243.0, 2.0), -33.44],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 43
+                        DistanceTraveled = 142.00000000000017
+                        AvgHeadingChange = 3.84
+
+                        # Reminder  
+                        - The target is ** PullUpBars**, described as:  Geometric vertical posts with horizontal crossbars, red poles and yellow bars, three height levels in ascending order, designed for physical exercise and upper-body training.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:43 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

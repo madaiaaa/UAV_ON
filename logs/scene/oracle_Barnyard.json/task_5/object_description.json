@@ -1,0 +1,35 @@
+{
+  "episode_id": "5",
+  "start_pose": {
+    "start_position": [
+      -104.04592992111239,
+      -273.2428111621732,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.6485648548003095,
+      0.761159397969869
+    ]
+  },
+  "info": {
+    "geodesic_distance": 48,
+    "euclidean_distance": 32.7376
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " SoccerBall",
+  "object_name": "SoccerBall_8",
+  "pose": [
+    [
+      -113.69274139404297,
+      -243.89273071289062,
+      3.828725576400757
+    ]
+  ],
+  "size": " small(0.75*0.75=0.56 squares)",
+  "description": " Spherical shape, white surface with black pentagonal panels, classic stitched design, used for playing soccer.",
+  "category": "",
+  "used-in-train": 0,
+  "commonsenible": 1
+}

@@ -1,0 +1,1456 @@
+
+[STEP 0 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = wooden barn, snow-covered roof; white water tank on stand; several wooden crates and barrels; barn in the left foreground  
+                        Left = blue car parked on dirt road; wooden barn with windmill; rows of crops; road curves through the landscape; barn in the right background  
+                        Right = white greenhouse tunnel; dirt tracks; rows of crops; road with guardrails; sunlit scene with distant structures; greenhouse in the mid-left  
+                        Down = tire tracks on dirt path; metal fence alongside path; small stream running parallel to path; sparse vegetation; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [27, 22, 33], [18, 17, 17]]  
+                        LeftDepth: [[100, 100, 100], [16, 13, 33], [11, 12, 18]]  
+                        RightDepth: [[100, 100, 100], [35, 35, 19], [18, 18, 17]]  
+                        DownDepth: [[14, 13, 14], [13, 12, 13], [15, 13, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.0, -52.88, -10.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 0
+                        DistanceTraveled = 0.0
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:0 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 1 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = wooden barn, large, with white roof; several stacked boxes and a white cylindrical tank nearby; barn is on the left side of the frame  
+                        Left = road curves through a rural area; a light-colored vehicle is driving on the road; a wooden barn with a windmill is on the right side of the road  
+                        Right = dirt road winds through a field; long white greenhouse structures are visible in the distance; a paved road runs parallel to the dirt road on the right  
+                        Down = tire tracks crisscross over rocky terrain; sparse vegetation grows alongside the tracks; a metal fence runs along the edge of the frame  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [25, 19, 29], [18, 16, 15]]  
+                        LeftDepth: [[100, 100, 100], [14, 16, 29], [13, 15, 18]]  
+                        RightDepth: [[100, 100, 100], [34, 34, 23], [18, 17, 18]]  
+                        DownDepth: [[14, 13, 14], [13, 12, 13], [13, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 1
+                        DistanceTraveled = 4.999999999999998
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:1 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 2 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = wooden barn, slanted roof; two white cylindrical tanks on stands; several crates and containers; barn in the left foreground; tanks near center-right  
+                        Left = white van; wooden barn with corrugated roof; hay bales and crates; van on a dirt road; barn to the right of the road  
+                        Right = arched greenhouse; dirt road curving through field; guardrail along road; greenhouse in the mid-left; field extending into background  
+                        Down = tire tracks on dirt ground; scattered rocks and vegetation; rope or cable running diagonally across scene; elevated view from above  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [23, 25, 34], [16, 15, 14]]  
+                        LeftDepth: [[100, 100, 100], [16, 34, 24], [15, 17, 17]]  
+                        RightDepth: [[100, 100, 100], [34, 33, 31], [16, 16, 18]]  
+                        DownDepth: [[14, 13, 13], [13, 12, 13], [14, 13, 14]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 2
+                        DistanceTraveled = 9.999999999999996
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:2 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 3 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = wooden barn, slanted roof; white cylindrical tank, covered; small trailer with green tarp; barn is on the left; tank and trailer are in the midground; rocky terrain surrounds the area  
+                        Left = wooden barn, slanted roof; hay bales, three large; blue container; white car parked near the barn; barn is on the right; hay bales are in the foreground; road curves in the background  
+                        Right = white elongated structure, dome-like ends; dirt road curves through the scene; overgrown vegetation; structure is in the midground; road leads toward a distant settlement  
+                        Down = tire tracks, multiple parallel; pile of gray debris; wooden crate; tree with brown leaves; debris is in the center; crate is to the left; tracks extend across the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 21, 32], [16, 11, 14]]  
+                        LeftDepth: [[100, 100, 100], [20, 34, 20], [17, 16, 16]]  
+                        RightDepth: [[100, 100, 100], [33, 31, 37], [14, 15, 18]]  
+                        DownDepth: [[13, 13, 11], [13, 12, 11], [14, 12, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 3
+                        DistanceTraveled = 14.999999999999995
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:3 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 4 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = metal barn roof, weathered; white cylindrical tank on stand; small trailer with green tarp; barn in the left foreground; tank and trailer on a dirt path; silo in the distant background  
+                        Left = wooden barn with metal roof; white car parked near a road; hay bales and crates near the barn; road curves to the left; buildings and trees in the distant background  
+                        Right = white arched structure, elongated; dirt path leading to it; wooden fence along the path; overgrown vegetation in the foreground; structures and trees in the distant background  
+                        Down = white rectangular structure with chimney; pile of brown debris nearby; grayish-white material scattered on the ground; wooden fence in the foreground; green bushes to the right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [23, 16, 31], [16, 16, 13]]  
+                        LeftDepth: [[100, 100, 100], [31, 24, 18], [17, 16, 15]]  
+                        RightDepth: [[100, 100, 100], [32, 31, 38], [13, 13, 17]]  
+                        DownDepth: [[13, 8, 12], [12, 12, 10], [14, 13, 13]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 4
+                        DistanceTraveled = 19.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:4 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 5 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = white cylindrical water tank, elevated on metal legs; barn with corrugated roof, left foreground; silo in distant background; rocky terrain and sparse trees  
+                        Left = white car parked near road; barns with corrugated roofs, one in foreground right; piles of materials including sacks and crates; winding road and hilly landscape in background  
+                        Right = train car on tracks, center background; overgrown vegetation and small stream in foreground; wooden fence along the track; buildings and trees in distant background  
+                        Down = white cylindrical tank, elevated on metal legs; tractor tire tracks on dirt ground; scattered debris including fabric and wood pieces; tree and wooden structure in background  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [23, 13, 29], [13, 13, 15]]  
+                        LeftDepth: [[100, 100, 100], [36, 16, 16], [16, 14, 13]]  
+                        RightDepth: [[100, 100, 100], [30, 31, 36], [12, 12, 13]]  
+                        DownDepth: [[13, 6, 11], [12, 6, 11], [13, 13, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 5
+                        DistanceTraveled = 24.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:5 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 6 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = large cylindrical water tank, white, weathered; barn with corrugated roof, light-colored; silo in the background left; dirt path winding through rocky terrain  
+                        Left = barn with corrugated roof, light-colored; pile of sacks and crates near barn; white car parked on road to the left; distant buildings and trees under hazy sky  
+                        Right = small dome-shaped structure, white; dirt road curving through rocky landscape; sparse vegetation; distant structures and hills under bright sky  
+                        Down = white rectangular trailer, weathered; smaller white tank with lid; scattered debris including sacks and wooden planks; tire tracks on dirt ground; trees and greenery to the right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [24, 9, 25], [16, 9, 15]]  
+                        LeftDepth: [[100, 100, 100], [38, 16, 17], [16, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [29, 29, 34], [13, 11, 13]]  
+                        DownDepth: [[11, 12, 12], [12, 6, 10], [13, 6, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 6
+                        DistanceTraveled = 29.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:6 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 7 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = two large cylindrical silos, weathered metal; silo in the foreground is closer and larger; dirt road curves behind them; trees and another silo in the distant background  
+                        Left = one corrugated metal-roofed barn; barn is in the foreground on the left; a light-colored car parked near a wall to the left of the barn; buildings and trees visible in the distant background  
+                        Right = one small dome-shaped structure, white; structure is centered in the midground; winding dirt path leads toward it; rocky terrain and sparse vegetation surround it; distant buildings under a hazy sky  
+                        Down = one rectangular green and white container, partially filled with brown material; container is on the left; circular white tank on a stand to the right; tire tracks in the dirt ground; green foliage on the right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 6, 22], [6, 5, 14]]  
+                        LeftDepth: [[100, 100, 100], [34, 15, 16], [12, 12, 13]]  
+                        RightDepth: [[100, 100, 100], [25, 26, 31], [11, 11, 11]]  
+                        DownDepth: [[9, 7, 11], [9, 8, 10], [11, 7, 7]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 7
+                        DistanceTraveled = 31.999999999999993
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:7 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 8 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = large cylindrical silo, white, metallic; smaller silo in the background left; dirt road winding through rocky terrain  
+                        Left = corrugated metal roof, weathered, light brown; wooden barn structure; wind vane on distant building; overcast sky  
+                        Right = small dome-shaped building, white, rustic; dirt path curving through rocky landscape; trees and shrubs scattered; bright sun in sky  
+                        Down = vertical cylindrical silo, white, metallic; agricultural machinery, green and white, discharging material; tractor tracks in tilled soil; tree with green foliage  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [8, 7, 19], [3, 3, 13]]  
+                        LeftDepth: [[100, 100, 100], [15, 15, 16], [13, 12, 13]]  
+                        RightDepth: [[100, 100, 100], [24, 25, 31], [13, 10, 12]]  
+                        DownDepth: [[4, 3, 11], [9, 7, 10], [11, 9, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.77, -18.21, -8.0), 97.83],
+    [(-104.77, -18.21, -8.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 8
+                        DistanceTraveled = 36.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:8 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 9 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = large cylindrical water tank, white, metal; barn with sloped roof, wooden; silo, tall, white; dirt road winding through rocky terrain; trees scattered in background  
+                        Left = corrugated metal roof, weathered, light-colored; barn structure below; windmill in distant background; overcast sky  
+                        Right = small arched-roof building, white; dirt path bordered by wooden fence; rocky terrain with sparse vegetation; trees and structures visible in far distance  
+                        Down = circular water tank top, white, metal; agricultural machinery, partially visible; tilled soil with tire tracks; green foliage to the right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [22, 21, 17], [4, 4, 12]]  
+                        LeftDepth: [[100, 100, 100], [16, 15, 16], [13, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [23, 24, 31], [13, 11, 11]]  
+                        DownDepth: [[2, 2, 3], [2, 2, 2], [2, 2, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.0, -52.88, -10.0), 97.83],
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.77, -18.21, -8.0), 97.83],
+    [(-105.45, -13.26, -8.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 9
+                        DistanceTraveled = 41.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:9 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 10 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = rocky terrain, uneven surface; winding dirt path; wooden fence along path; small building with sloped roof in foreground left; silo-like structure in distant background left  
+                        Left = large corrugated metal-roofed barn; wind vane on roof peak; trees and structures in distant background; sunlight casting shadow on barn side  
+                        Right = rocky hillside, sparse vegetation; dirt path curving through scene; wooden fence lining path; small white shed in mid-ground right; trees and buildings in distant background  
+                        Down = white cylindrical tank, vertical orientation; ladder attached to tank side; dirt ground with tire tracks; green bushes and rocks nearby; top of tank visible at image top  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [24, 20, 20], [3, 3, 13]]  
+                        LeftDepth: [[100, 100, 100], [16, 15, 16], [13, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [25, 22, 29], [13, 13, 12]]  
+                        DownDepth: [[2, 2, 10], [2, 2, 9], [3, 3, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-100.68, -47.93, -10.0), 97.83],
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.77, -18.21, -8.0), 97.83],
+    [(-105.45, -13.26, -8.0), 97.83],
+    [(-106.13, -8.3, -8.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 10
+                        DistanceTraveled = 46.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:10 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 11 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = rocky terrain, large gray rocks; dirt road curves through the center; sparse green trees in the background  
+                        Left = barn building, corrugated metal roof; white weathered surface; silos and other farm structures in the distant background  
+                        Right = small white shed, single-story structure; dirt road with wooden fence on the right; rocky landscape and trees in the midground  
+                        Down = white cylindrical tank, partially visible at the bottom; muddy ground with tire tracks; small green bush to the right  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [21, 18, 22], [13, 11, 11]]  
+                        LeftDepth: [[100, 100, 100], [16, 15, 16], [13, 13, 14]]  
+                        RightDepth: [[100, 100, 100], [25, 21, 27], [12, 12, 13]]  
+                        DownDepth: [[11, 9, 9], [2, 2, 9], [2, 2, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-101.36, -42.98, -10.0), 97.83],
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.77, -18.21, -8.0), 97.83],
+    [(-105.45, -13.26, -8.0), 97.83],
+    [(-106.13, -8.3, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 97.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 11
+                        DistanceTraveled = 51.99999999999999
+                        AvgHeadingChange = 0.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:11 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 12 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = small wooden shed, corrugated roof; rocky terrain with sparse greenery; dirt path winding through rocks; distant buildings including a silo and barn  
+                        Left = large barn-like structure, corrugated metal roof; windmill on the right side of the roof; ocean visible in the background; trees and other farm buildings in the distance  
+                        Right = rocky landscape with scattered green vegetation; dirt path bordered by low wooden fence; small white arched building on the right; distant structures including a silo and barns  
+                        Down = white cylindrical container, partially submerged in muddy water; muddy ground with tire tracks; rocks and green plants near the water's edge; overhead perspective  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [19, 19, 19], [14, 12, 11]]  
+                        LeftDepth: [[100, 100, 100], [17, 15, 16], [4, 13, 13]]  
+                        RightDepth: [[100, 100, 100], [24, 21, 23], [11, 11, 12]]  
+                        DownDepth: [[11, 10, 10], [2, 3, 9], [2, 2, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-102.04, -38.02, -10.0), 97.83],
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.77, -18.21, -8.0), 97.83],
+    [(-105.45, -13.26, -8.0), 97.83],
+    [(-106.13, -8.3, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 82.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 12
+                        DistanceTraveled = 51.99999999999999
+                        AvgHeadingChange = 1.25
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:12 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 13 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = windmill, tall, metal; barns with corrugated roofs, multiple; silo, cylindrical, tall; trees, scattered; dirt path winding through rocky terrain; windmill in the left background  
+                        Left = barns with corrugated roofs, two; small white animal, possibly a goat, near barn; trees and distant buildings in the background; ocean visible on the horizon  
+                        Right = dirt path, winding; wooden fence, short, along path; rocky hillside, covered with sparse vegetation; trees in the distance under a bright sky  
+                        Down = large white container, partially visible; muddy water, shallow, with green plants; tire tracks, deep, in dry soil; rocks and debris scattered around  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [17, 20, 20], [13, 13, 12]]  
+                        LeftDepth: [[100, 100, 100], [20, 16, 16], [3, 3, 13]]  
+                        RightDepth: [[100, 100, 100], [23, 23, 25], [11, 11, 12]]  
+                        DownDepth: [[11, 10, 10], [2, 3, 9], [2, 3, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-102.73, -33.07, -10.0), 97.83],
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.77, -18.21, -8.0), 97.83],
+    [(-105.45, -13.26, -8.0), 97.83],
+    [(-106.13, -8.3, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 82.83],
+    [(-106.81, -3.35, -8.0), 67.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 13
+                        DistanceTraveled = 51.99999999999999
+                        AvgHeadingChange = 2.31
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:13 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 14 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = barn with corrugated metal roof, weathered; windmill in the mid-ground; trees and silos in the distant background  
+                        Left = two barns with corrugated metal roofs, one white and one brown; silo to the left; open yard with small animals; ocean visible in the far distance  
+                        Right = rocky terrain with sparse vegetation; dirt path running horizontally; trees and hills in the background under a bright sky  
+                        Down = cylindrical silo, partially visible on the left; rocky ground with scattered stones; small green plant growing near the center  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 16, 20], [13, 14, 14]]  
+                        LeftDepth: [[100, 100, 100], [7, 17, 16], [2, 2, 13]]  
+                        RightDepth: [[100, 100, 100], [22, 22, 24], [11, 10, 11]]  
+                        DownDepth: [[3, 10, 10], [2, 3, 9], [3, 3, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-103.41, -28.12, -10.0), 97.83],
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.77, -18.21, -8.0), 97.83],
+    [(-105.45, -13.26, -8.0), 97.83],
+    [(-106.13, -8.3, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 82.83],
+    [(-106.81, -3.35, -8.0), 67.83],
+    [(-106.81, -3.35, -8.0), 52.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 14
+                        DistanceTraveled = 51.99999999999999
+                        AvgHeadingChange = 3.21
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:14 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 15 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = corrugated metal barn roof, weathered; barn in the foreground; windmill and silo in the distant background  
+                        Left = two large cylindrical silos, white with vertical ridges; barn with corrugated roof; outdoor seating area with table and chairs between structures  
+                        Right = rocky terrain, sparse vegetation; dirt path curving through rocks; low wooden fence along path; trees in the mid-ground  
+                        Down = white cylindrical tank, partially visible; muddy ground with tire tracks; small patch of green plants near tank  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 16, 26], [13, 13, 15]]  
+                        LeftDepth: [[100, 100, 100], [6, 7, 17], [3, 2, 3]]  
+                        RightDepth: [[100, 100, 100], [19, 18, 24], [12, 11, 11]]  
+                        DownDepth: [[2, 10, 10], [2, 4, 9], [3, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-104.09, -23.16, -10.0), 97.83],
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.77, -18.21, -8.0), 97.83],
+    [(-105.45, -13.26, -8.0), 97.83],
+    [(-106.13, -8.3, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 82.83],
+    [(-106.81, -3.35, -8.0), 67.83],
+    [(-106.81, -3.35, -8.0), 52.83],
+    [(-106.81, -3.35, -8.0), 37.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 15
+                        DistanceTraveled = 51.99999999999999
+                        AvgHeadingChange = 4.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:15 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 16 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = barn with corrugated metal roof, weathered appearance; silos and windmill in the background; structures are part of a rural farmstead  
+                        Left = cylindrical silo, white, textured surface; barn with similar roof; trees and open land surround the farm buildings  
+                        Right = dirt road curves through rocky terrain; wooden fence runs alongside the road; sparse trees dot the landscape  
+                        Down = large cylindrical tank, metallic, partially submerged in water; muddy ground with tire tracks; vegetation grows near the water's edge  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [15, 15, 17], [13, 13, 15]]  
+                        LeftDepth: [[100, 100, 100], [31, 6, 19], [3, 2, 2]]  
+                        RightDepth: [[100, 100, 100], [20, 18, 22], [13, 11, 11]]  
+                        DownDepth: [[2, 3, 11], [2, 4, 9], [3, 9, 9]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-104.09, -23.16, -8.0), 97.83],
+    [(-104.77, -18.21, -8.0), 97.83],
+    [(-105.45, -13.26, -8.0), 97.83],
+    [(-106.13, -8.3, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 82.83],
+    [(-106.81, -3.35, -8.0), 67.83],
+    [(-106.81, -3.35, -8.0), 52.83],
+    [(-106.81, -3.35, -8.0), 37.83],
+    [(-106.81, -3.35, -8.0), 22.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 16
+                        DistanceTraveled = 51.99999999999999
+                        AvgHeadingChange = 4.69
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:16 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 17 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = corrugated metal roof, light-colored; building in the foreground; trees and structures in the distant background  
+                        Left = two cylindrical silos, weathered metal; road with a vehicle in the midground; trees and buildings in the background  
+                        Right = rocky terrain, uneven surface; dirt path winding through; small wooden fence along the path; silos and trees in the distance  
+                        Down = white container, partially submerged; muddy water with scattered rocks; tire tracks visible on the ground  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 15, 16], [13, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [25, 6, 22], [14, 3, 2]]  
+                        RightDepth: [[100, 100, 100], [21, 18, 22], [13, 12, 11]]  
+                        DownDepth: [[2, 2, 11], [2, 3, 10], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-104.77, -18.21, -8.0), 97.83],
+    [(-105.45, -13.26, -8.0), 97.83],
+    [(-106.13, -8.3, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 82.83],
+    [(-106.81, -3.35, -8.0), 67.83],
+    [(-106.81, -3.35, -8.0), 52.83],
+    [(-106.81, -3.35, -8.0), 37.83],
+    [(-106.81, -3.35, -8.0), 22.83],
+    [(-106.81, -3.35, -8.0), 7.83],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 17
+                        DistanceTraveled = 51.99999999999999
+                        AvgHeadingChange = 5.29
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:17 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 18 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = large barn-like structure, corrugated metal roof; wind vane on right corner; trees and distant buildings in background  
+                        Left = cylindrical silo, corrugated metal exterior; ladder attached to side; pond with green vegetation in foreground; road and buildings in distance  
+                        Right = small wooden shed, corrugated metal roof; rocky terrain with dirt path; trees and silo in the background  
+                        Down = white cylindrical tank, partially submerged in muddy water; tire tracks on dry ground; rocks and greenery around  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [18, 15, 16], [3, 13, 13]]  
+                        LeftDepth: [[100, 100, 100], [29, 7, 6], [13, 3, 3]]  
+                        RightDepth: [[100, 100, 100], [19, 19, 19], [14, 12, 12]]  
+                        DownDepth: [[2, 2, 11], [2, 3, 10], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-105.45, -13.26, -8.0), 97.83],
+    [(-106.13, -8.3, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 82.83],
+    [(-106.81, -3.35, -8.0), 67.83],
+    [(-106.81, -3.35, -8.0), 52.83],
+    [(-106.81, -3.35, -8.0), 37.83],
+    [(-106.81, -3.35, -8.0), 22.83],
+    [(-106.81, -3.35, -8.0), 7.83],
+    [(-106.81, -3.35, -8.0), -7.17],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 18
+                        DistanceTraveled = 51.99999999999999
+                        AvgHeadingChange = 5.83
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:18 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 19 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = corrugated metal roof, large, weathered; windmill with three blades, rusted; trees and distant structures in the background  
+                        Left = two cylindrical metal silos, large, rusted; grassy field with water lilies; dirt path and small building to the right  
+                        Right = rocky terrain, uneven; dirt path curving through rocks; wooden fence along the path; barn and silo in the distance  
+                        Down = corrugated metal structure, long, partially submerged; muddy ground with tire tracks; rocks and greenery near the structure  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 14, 14], [13, 11, 11]]  
+                        LeftDepth: [[100, 100, 100], [33, 5, 9], [13, 4, 4]]  
+                        RightDepth: [[100, 100, 100], [17, 17, 19], [13, 12, 11]]  
+                        DownDepth: [[5, 11, 11], [5, 9, 10], [10, 9, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-106.13, -8.3, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 82.83],
+    [(-106.81, -3.35, -8.0), 67.83],
+    [(-106.81, -3.35, -8.0), 52.83],
+    [(-106.81, -3.35, -8.0), 37.83],
+    [(-106.81, -3.35, -8.0), 22.83],
+    [(-106.81, -3.35, -8.0), 7.83],
+    [(-106.81, -3.35, -8.0), -7.17],
+    [(-101.85, -3.97, -8.0), -7.17],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 19
+                        DistanceTraveled = 56.999999999999986
+                        AvgHeadingChange = 5.53
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:19 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 20 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = corrugated metal roof, weathered, in the foreground; windmill with vanes, to the right; farm buildings and silos in the midground; overcast sky in the background  
+                        Left = two large cylindrical silos, metallic, with ladders; small white structure, possibly a shed; dirt path and greenery in the midground; distant buildings and trees under an overcast sky  
+                        Right = corrugated metal roof, partially visible in the foreground; rocky terrain with patches of snow; dirt path winding through the landscape; trees and farm structures in the midground; overcast sky in the background  
+                        Down = corrugated metal roof, sloped, in the upper part; dirt ground with tire tracks; pile of rocks and debris in the lower right; ladder leaning against the roof edge; small green plants near the base  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [13, 11, 11], [10, 9, 9]]  
+                        LeftDepth: [[100, 100, 100], [7, 7, 20], [6, 6, 13]]  
+                        RightDepth: [[100, 100, 100], [14, 18, 18], [10, 12, 12]]  
+                        DownDepth: [[10, 9, 9], [9, 9, 10], [9, 10, 10]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-106.81, -3.35, -8.0), 97.83],
+    [(-106.81, -3.35, -8.0), 82.83],
+    [(-106.81, -3.35, -8.0), 67.83],
+    [(-106.81, -3.35, -8.0), 52.83],
+    [(-106.81, -3.35, -8.0), 37.83],
+    [(-106.81, -3.35, -8.0), 22.83],
+    [(-106.81, -3.35, -8.0), 7.83],
+    [(-106.81, -3.35, -8.0), -7.17],
+    [(-101.85, -3.97, -8.0), -7.17],
+    [(-96.89, -4.6, -8.0), -7.17],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 20
+                        DistanceTraveled = 61.999999999999986
+                        AvgHeadingChange = 5.25
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:20 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 21 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = corrugated metal roof, white and rusted; windmill with three blades, tall and metallic; barn, red-roofed and distant; trees and structures in the background under a hazy sky  
+                        Left = two large cylindrical silos, gray and metallic; small white vehicle, boxy and parked; corrugated metal roof, white and rusted; dirt ground, scattered vegetation; distant buildings and trees under a hazy sky  
+                        Right = corrugated metal roof, white and rusted; silo, tall and cylindrical; barn, dark-roofed and distant; trees, green and leafy; rocky terrain, uneven and gray; curved path or road in the midground under a hazy sky  
+                        Down = corrugated metal wall, white and rusted; dirt ground, textured and brown; tire tracks, deep and parallel; pile of gray rocks or debris; small green plants near the bottom left corner  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [9, 9, 17], [7, 6, 6]]  
+                        LeftDepth: [[100, 100, 100], [9, 14, 15], [10, 14, 9]]  
+                        RightDepth: [[100, 100, 100], [10, 20, 19], [7, 8, 13]]  
+                        DownDepth: [[7, 7, 7], [7, 7, 7], [11, 11, 11]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-106.81, -3.35, -8.0), 82.83],
+    [(-106.81, -3.35, -8.0), 67.83],
+    [(-106.81, -3.35, -8.0), 52.83],
+    [(-106.81, -3.35, -8.0), 37.83],
+    [(-106.81, -3.35, -8.0), 22.83],
+    [(-106.81, -3.35, -8.0), 7.83],
+    [(-106.81, -3.35, -8.0), -7.17],
+    [(-101.85, -3.97, -8.0), -7.17],
+    [(-96.89, -4.6, -8.0), -7.17],
+    [(-91.93, -5.22, -8.0), -7.17],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 21
+                        DistanceTraveled = 66.99999999999999
+                        AvgHeadingChange = 5.0
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:21 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 22 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = corrugated metal roof, white and brown; roof occupies the foreground; distant view of trees, buildings, and a windmill under a hazy sky  
+                        Left = corrugated metal roof, white and brown; roof in the foreground; white camper van parked on dirt near two large cylindrical tanks; distant view of fields and structures  
+                        Right = corrugated metal roof, white and brown; roof in the foreground; cluster of green trees, a tall silo, and a small building on a rocky hillside in the midground; distant horizon with faint structures  
+                        Down = corrugated metal roof, white and brown; roof fills the frame; dark tire tracks visible on dirt ground below; close-up perspective focusing on roof texture  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [16, 14, 14], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [14, 15, 10], [14, 7, 6]]  
+                        RightDepth: [[100, 100, 100], [24, 9, 22], [4, 5, 7]]  
+                        DownDepth: [[4, 4, 4], [5, 4, 4], [7, 6, 6]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-106.81, -3.35, -8.0), 67.83],
+    [(-106.81, -3.35, -8.0), 52.83],
+    [(-106.81, -3.35, -8.0), 37.83],
+    [(-106.81, -3.35, -8.0), 22.83],
+    [(-106.81, -3.35, -8.0), 7.83],
+    [(-106.81, -3.35, -8.0), -7.17],
+    [(-101.85, -3.97, -8.0), -7.17],
+    [(-96.89, -4.6, -8.0), -7.17],
+    [(-91.93, -5.22, -8.0), -7.17],
+    [(-86.97, -5.85, -8.0), -7.17],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 22
+                        DistanceTraveled = 71.99999999999999
+                        AvgHeadingChange = 4.77
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:22 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 23 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = corrugated metal roof, snow-covered; windmill structure, tall and metallic, to the right; distant farm buildings and trees under overcast sky  
+                        Left = corrugated metal roof, snow-covered; white cylindrical tank, small and white, to the left; water troughs, stacked, near tank; distant farm structures and trees  
+                        Right = corrugated metal roof, snow-covered; silo, tall and cylindrical, in the background center; trees, green and leafy, surrounding area; distant farm buildings  
+                        Down = close-up of corrugated metal roof, snow-covered; rust-colored streaks along ridges; sunlight casting shadows across surface  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [10, 9, 9], [4, 5, 6]]  
+                        LeftDepth: [[100, 100, 100], [15, 1, 4], [0, 0, 2]]  
+                        RightDepth: [[100, 100, 100], [11, 4, 2], [3, 2, 1]]  
+                        DownDepth: [[1, 1, 2], [1, 1, 1], [0, 0, 0]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-106.81, -3.35, -8.0), 52.83],
+    [(-106.81, -3.35, -8.0), 37.83],
+    [(-106.81, -3.35, -8.0), 22.83],
+    [(-106.81, -3.35, -8.0), 7.83],
+    [(-106.81, -3.35, -8.0), -7.17],
+    [(-101.85, -3.97, -8.0), -7.17],
+    [(-96.89, -4.6, -8.0), -7.17],
+    [(-91.93, -5.22, -8.0), -7.17],
+    [(-86.97, -5.85, -8.0), -7.17],
+    [(-86.97, -5.85, -6.0), -7.17],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 23
+                        DistanceTraveled = 73.99999999999999
+                        AvgHeadingChange = 4.57
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:23 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 24 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = corrugated metal roof, white with rust streaks; windmill structure, tall and wooden, on the right; red barn, small, in the mid-ground; silos, two cylindrical, in the background; overcast sky  
+                        Left = corrugated metal roof, white with rust streaks, in the foreground; another similar roof to the right; trees and structures in the distant background; overcast sky  
+                        Right = corrugated metal roof, white with rust streaks, in the foreground; trees, green and leafy, scattered around; red barn, small, in the mid-ground; silo, tall and cylindrical, in the background; overcast sky  
+                        Down = corrugated metal roof, white with rust streaks, in the foreground; dark brown ridge beam running horizontally across the roof; sunlight casting shadows on the roof surface  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 100], [6, 5, 5], [4, 4, 4]]  
+                        LeftDepth: [[100, 100, 100], [5, 5, 10], [4, 4, 5]]  
+                        RightDepth: [[100, 100, 100], [7, 8, 7], [5, 5, 4]]  
+                        DownDepth: [[4, 4, 4], [3, 3, 4], [3, 3, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-106.81, -3.35, -8.0), 37.83],
+    [(-106.81, -3.35, -8.0), 22.83],
+    [(-106.81, -3.35, -8.0), 7.83],
+    [(-106.81, -3.35, -8.0), -7.17],
+    [(-101.85, -3.97, -8.0), -7.17],
+    [(-96.89, -4.6, -8.0), -7.17],
+    [(-91.93, -5.22, -8.0), -7.17],
+    [(-86.97, -5.85, -8.0), -7.17],
+    [(-86.97, -5.85, -6.0), -7.17],
+    [(-82.01, -6.47, -6.0), -7.17],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 24
+                        DistanceTraveled = 78.99999999999999
+                        AvgHeadingChange = 4.38
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:24 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+
+
+[STEP 25 PROMPT]
+
+                        # Target Information 
+                        Target = [Name: Caravan,
+                        Size: big(7.25*4.0=29.0 squares),
+                        Description: Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.]
+
+                        # Search Area
+                        All positions are represented as 3D coordinates in the format: **(x, y, z)**  
+                        You must strictly stay within the following 2D navigation boundary (horizontal plane):
+                        **X Range**: [min_x, max_x] = [-151, -50]  
+                        **Y Range**: [min_y, max_y] = [-103, -2]
+
+                        # RGB Captions
+                        Front = corrugated metal roof, white and rusted; windmill with four blades; barn building, red walls; silos, two cylindrical; trees and fields in the midground; overcast sky in the background  
+                        Left = corrugated metal roofs, two sections; one dark brown, one white and rusted; shadows cast across the roofs; trees and distant structures in the background under an overcast sky  
+                        Right = corrugated metal roof, white and rusted; windmill with three blades; barn building, partially visible; silo, tall and cylindrical; trees and rocky terrain in the midground; overcast sky in the background  
+                        Down = corrugated metal roof, white and rusted; close-up view showing texture and shadow patterns; no other objects visible  
+
+                        # Depth Information  
+                        FrontDepth: [[100, 100, 63], [3, 2, 2], [2, 2, 2]]  
+                        LeftDepth: [[100, 100, 100], [8, 7, 5], [5, 3, 3]]  
+                        RightDepth: [[100, 100, 100], [3, 4, 8], [2, 2, 3]]  
+                        DownDepth: [[2, 2, 2], [2, 2, 2], [3, 3, 3]]
+
+                        # Previous UAV Poses (last 10 steps)
+                        {
+    [(-106.81, -3.35, -8.0), 22.83],
+    [(-106.81, -3.35, -8.0), 7.83],
+    [(-106.81, -3.35, -8.0), -7.17],
+    [(-101.85, -3.97, -8.0), -7.17],
+    [(-96.89, -4.6, -8.0), -7.17],
+    [(-91.93, -5.22, -8.0), -7.17],
+    [(-86.97, -5.85, -8.0), -7.17],
+    [(-86.97, -5.85, -6.0), -7.17],
+    [(-82.01, -6.47, -6.0), -7.17],
+    [(-77.05, -7.1, -6.0), -7.17],
+}
+
+                        # Trajectory Summary
+                        StepsSoFar = 25
+                        DistanceTraveled = 83.99999999999999
+                        AvgHeadingChange = 4.2
+
+                        # Reminder  
+                        - The target is ** Caravan**, described as:  Geometric rectangular form with curved roof, weathered metal surface with green moss and rust patches, multiple windows and rear lights, designed for mobile habitation or towing.  
+                        - Compare the target description with all RGB captions (Front, Left, Right, Down).  
+                        - The goal is to **explore the environment** and get **visually close to the target** before deciding to stop.  
+                        - Do not rotate repeatedly. If you rotated in the last step, prioritize moving instead.  
+                        - If any caption strongly matches the target name or description (e.g., object type, shape, color, function), and the visual evidence suggests that the object is **close and clearly visible**, you may consider stopping.  
+                        - Avoid stopping immediately after a weak or partial match. Keep moving until the evidence is **strong and consistent**.  
+                        - Stopping too early on a vague match is a **mission failure**. It's better to get closer and confirm than to stop prematurely.  
+                        - **If StepsSoFar:25 is more than 100 steps**, and the target seems to match any current caption reasonably well, you may relax your stopping condition and consider stopping based on a **single strong match**.
+                        
+

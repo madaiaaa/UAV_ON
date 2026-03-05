@@ -1,0 +1,35 @@
+{
+  "episode_id": "72",
+  "start_pose": {
+    "start_position": [
+      -240.60055279133144,
+      166.75981161071087,
+      -10.0
+    ],
+    "start_quaternionr": [
+      0.0,
+      0.0,
+      0.7332787310223443,
+      -0.6799281599038685
+    ]
+  },
+  "info": {
+    "geodesic_distance": 71,
+    "euclidean_distance": 47.5338
+  },
+  "map_name": "Barnyard_test",
+  "true_name": " Tent",
+  "object_name": "SM_Tent_01b_45",
+  "pose": [
+    [
+      -203.99273681640625,
+      137.1072540283203,
+      -0.6712745428085327
+    ]
+  ],
+  "size": " big(5.0*5.0=25.0 squares)",
+  "description": " Geometric dome-like form, deep blue fabric with yellow trim and tension rods, taut surface with visible seams, used for outdoor shelter or camping.",
+  "category": "",
+  "used-in-train": 1,
+  "commonsenible": 1
+}
